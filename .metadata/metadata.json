@@ -2,9 +2,9 @@
   "name" : "New Victoria  Government Mod",
   "id" : "",
   "version" : "1.0",
-  "supported_game_version" : "",
+  "supported_game_version" : "1.4.*",
   "short_description" : "",
-  "tags" : [],
+  "tags" : ["Diplomacy", "Gameplay"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true

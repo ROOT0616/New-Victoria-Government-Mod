@@ -1,0 +1,493 @@
+﻿# pop_support に関するドキュメント
+
+# IGがムーブメントをサポートする場合、ポップは常にそのムーブメントをサポートする。
+# 	IGをサポートしているポップの100%が参加する。
+
+# ポップサポートがスクリプト化されている場合、トリガーが真であるポップの残りの割合もムーブメントに参加します。
+# 政治的に関与しているポップはその全額が加算され、政治的に非同盟のポップはその半分が加算される。
+# 例：あるポップが50％政治的に非同盟である場合、0.1のウェイトをつけると、そのポップの7.5％が運動に参加することになります。
+
+# ポップのサポートがスクリプト化されていない場合、ムーブメントをサポートするIGをサポートするポップだけがムーブメントに参加します。
+
+
+# ai_enact_weight_modifierのドキュメント
+# これは法律を制定するためにAIの基本ウェイトから加減される値で、0に設定すると基本ウェイトのみが使用され、-50に設定すると( 基本ウェイト - 50 ) となります。
+# 基本的な重みは、戦略やその法律が運動によって支えられているかどうかなどの要素から設定され、通常は数百の低い範囲になるため、+100はかなり大きく、+1000は非常に大きくなります。
+# もし本当に法律を通過させたいのであれば、AIの政治戦略のchange_law_chanceとrevolution_aversionも調整したほうがよい。
+# change_law_chanceを100000、change_law_chanceを100に設定しても、AIに政府・運動の支持がなかったり、革命を恐れていたり、ai_will_doの評価がfalseだったりすると、AIが法律を制定できるとは限りません。
+# ルートスコープはAIの国、スコープ:lawにはその国の関連する法律が含まれる。
+
+# Example
+#ai_enact_weight_modifier = {
+#	value = 0
+#	
+#	if = {
+#		limit = { 
+#			this = c:GBR
+#			exists = var:GBR_favorite_law
+#			scope:law = var:GBR_favorite_law
+#		}
+#		add = 10
+#	}
+#}
+
+# 1 政治特権(貴族特権：囲い込み、財産特権：官僚制、軍人特権：参謀本部、特権廃止：民主主義で解放)
+# 伝統的特権(宗教、地主)	聖職者政治力+30%、地主政治力+15%、権力+100、政府内の元首に由来する正統性+10
+# （無神論国家、評議会共和制ではない）	(アジア、アフリカ、ロシア、教皇)(敬虔、神政主義者、伝統主義者が強く賛成、家父長制主義、王党派が賛成、虚無主義、反教権主義、実証主義者、急進派、改革論者、社会民主主義者が強く反対)
+law_nvgm_privilege_traditional = {
+	group = lawgroup_nvgm_political_privilege
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_devout_pop_attraction_mult = 0.3
+		interest_group_ig_landowners_pol_str_mult = 0.15
+		country_authority_add = 100
+		country_legitimacy_govt_leader_clout_add = 10
+	}
+	disallowing_laws = {
+		law_atheist_state
+		law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_CLERGYMEN"
+			if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				value = 200
+			}
+		}
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				value = 200
+			}
+		}
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 貴族特権(地主、農村民)	地主政治力+30%、農村民政治力+15%、貴族投資プール出資+30%、農民投資プール出資+20%	（評議会共和制ではない）		(上下以外の国)			(父権主義が強く賛成、農本主義、王党派が賛成、改革論者、共和主義者、社会民主主義者が反対、平等主義、共産主義者、急進派が強く反対)
+law_nvgm_privilege_nobility = {
+	group = lawgroup_nvgm_political_privilege
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_landowners_pol_str_mult = 0.3
+		interest_group_ig_rural_folk_pol_str_mult = 0.15
+		state_aristocrats_investment_pool_efficiency_mult = 0.3
+		state_farmers_investment_pool_efficiency_mult = 0.2
+	}
+	disallowing_laws = {
+		law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_FARMERS"
+			if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				value = 200
+			}
+		}
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				value = 200
+			}
+		}
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 財産特権(資本家、小ブル)	資本家政治力+30%、小ブル政治力+15%、資本家投資プール出資+30%、店主投資プール出資+20%	（評議会共和制ではない）		(フランス、ベルギー、米)	(金権主義、市場自由主義者が強く賛成、実力主義、保護主義者が賛成、平等主義、急進派が反対、共産主義者、社会民主主義者が強く反対)
+law_nvgm_privilege_wealth = {
+	group = lawgroup_nvgm_political_privilege
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_industrialists_pop_attraction_mult = 0.3
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.15
+		state_capitalists_investment_pool_efficiency_mult = 0.3
+		state_shopkeepers_investment_pool_efficiency_mult = 0.2
+	}
+	disallowing_laws = {
+		law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_CAPITALISTS"
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				value = 200
+			}
+		}
+		add = {
+			desc = "POP_SHOPKEEPERS"
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				value = 200
+			}
+		}
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 軍人特権(軍部、資本家)	軍部政治力+30%、資本家政治力+15%、権力+200、政治運動急進主義-25%								(シク、日本、スイス)		(好戦主義、好戦主義者が強く賛成、金権主義、保護主義者、市場自由主義者が賛成、無政府主義者が反対、平和主義者、人道主義者が強く反対)
+law_nvgm_privilege_military = {
+	group = lawgroup_nvgm_political_privilege
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_armed_forces_pol_str_mult = 0.3
+		interest_group_ig_industrialists_pop_attraction_mult = 0.15
+		country_authority_add = 200
+		political_movement_radicalism_mult = -0.25
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_SOLDIERS"
+			if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				value = 200
+			}
+		}
+		add = {
+			desc = "POP_CAPITALISTS"
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				value = 200
+			}
+		}
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 特権廃止(知識人、労組)	知識人政治力+30%、労働組合政治力+15%、技術の普及+15%、生活水準向上による体制派+30%						(なし)				(反教権主義、平等主義、無政府主義が強く賛成、前衛主義者、社会主義、独立主義が賛成、権威主義、ファシストが強く反対)
+law_nvgm_privilege_abolish = {
+	group = lawgroup_nvgm_political_privilege
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_intelligentsia_pop_attraction_mult = 0.3
+		interest_group_ig_trade_unions_pop_attraction_mult = 0.15
+		country_tech_spread_mult = 0.15
+		state_loyalists_from_sol_change_mult = 0.3
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_ACADEMICS"
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				value = 200
+			}
+		}
+		add = {
+			desc = "POP_LABORERS"
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				value = 200
+			}
+		}
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 2 外交システム(全開放)
+# 外交中立	小ブルジョア、農村民の承認+3			(スイス、米、日本)			(孤立主義、エリート主義、幕府、 紳士、神道原理主義が強く賛成、独立主義、伝統主義者が賛成、権威主義者、権威主義、愛国主義が反対、オーストリアの覇権主義者、好戦主義、好戦主義者が強く反対)
+law_nvgm_diplomacy_neutrality = {
+	group = lawgroup_nvgm_diplomatic_system
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		interest_group_ig_petty_bourgeoisie_approval_add = 3
+		interest_group_ig_rural_folk_approval_add = 3
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 覇権主義	外交戦あたりの行動力+20				(列強各国+シク、清)			(好戦主義者、好戦主義、シク教過激派が強く賛成、ユンカー、フロンティアの拡張、民族主義者、愛国主義が賛成、社会民主主義者、改革論者が反対、平和主義者、人道主義者が強く反対)
+law_nvgm_ideology_hegemony = {
+	group = lawgroup_nvgm_diplomatic_system
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		country_diplomatic_play_maneuvers_add = 20
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 友好主義	関係改善の効率+1%、悪名の減衰+20%、影響力-300	(なし)					(平和主義者、人道主義者が強く賛成、改革論者、社会民主主義者が賛成、独立主義、エリート主義、愛国主義が反対、孤立主義、幕府、好戦主義者、好戦主義が強く反対)
+law_nvgm_ideology_friendship = {
+	group = lawgroup_nvgm_diplomatic_system
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		country_improve_relations_speed_mult = 0.01
+		country_infamy_decay_mult = -0.2
+		country_influence_add = -300
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}
+
+# 機会主義	影響力+250、悪名の減衰-20%			(大半の国)				(保護主義者が強く賛成、市場自由主義者、金権主義が賛成、平和主義者、人道主義者、社会民主主義者、改革論者が反対、権威主義者、権威主義、愛国主義が強く反対)
+law_nvgm_ideology_opportunism = {
+	group = lawgroup_nvgm_diplomatic_system
+	icon = "gfx/interface/icons/law_icons/hereditary_bureaucrats.dds"
+	progressiveness = 0
+	modifier = {
+		country_influence_add = 250
+		country_infamy_decay_mult = -0.2
+	}
+	disallowing_laws = {
+		# law_atheist_state
+		# law_council_republic
+	}
+	possible_political_movements = {
+		law_appointed_bureaucrats
+		law_elected_bureaucrats
+	}
+	pop_support = {
+		value = 0
+	}
+	# ai_will_do = {
+	# 	exists = ruler
+	# 	ruler = {
+	# 		has_ideology = ideology:ideology_traditionalist
+	# 	}
+	# }
+	ai_enact_weight_modifier = {
+		#Petitions
+		value = 0
+		if = {
+			limit = {
+				has_journal_entry = je_government_petition
+				has_variable = desired_law_var
+				scope:law = var:desired_law_var
+			}
+			add = 750
+		}
+	}
+}

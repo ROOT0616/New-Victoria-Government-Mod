@@ -1,0 +1,61 @@
+﻿ngm_ngm_ = {
+	is_shown = {
+		exists = c:JAP
+		ROOT = c:JAP
+		NOT = {
+			has_modifier = modifier_ngm
+		}
+		is_ai = no
+	}
+
+	possible = {
+		exists = c:JAP
+		ROOT = c:JAP
+		NOT = {
+			has_modifier = modifier_ngm
+		}
+		is_ai = no
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = modifier_ngm
+		}
+		# remove_modifier = modifier_tangena_ordeal
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+ngm_ngm_ngm = {
+	is_shown = {
+		exists = c:JAP
+		ROOT = c:JAP
+		has_modifier = modifier_ngm
+		# NOT = {
+		# }
+		is_ai = no
+	}
+
+	possible = {
+		exists = c:JAP
+		ROOT = c:JAP
+		# NOT = {
+		# }
+		has_modifier = modifier_ngm
+		is_ai = no
+	}
+
+	when_taken = {
+		# add_modifier = {
+		# 	name = modifier_ngm
+		# }
+		remove_modifier = modifier_ngm
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

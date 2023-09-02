@@ -1,0 +1,32 @@
+﻿l_japanese:
+
+######################
+#####    Law    ######
+######################
+
+ lawgroup_nvgm_political_privilege: "政治特権"
+ lawgroup_nvgm_political_privilege_desc: "国内における政治的な特権について定めた法律です。"
+ law_nvgm_privilege_traditional: "伝統的特権"
+ law_nvgm_privilege_traditional_desc: "この国では伝統的な支配階級である聖職者や貴族に特別な権利が与えられている。"
+ law_nvgm_privilege_nobility: "貴族特権"
+ law_nvgm_privilege_nobility_desc: "この国では土地を有する貴族や地主などの土地所有者に特別な権利が与えられている。"
+ law_nvgm_privilege_wealth: "財産特権"
+ law_nvgm_privilege_wealth_desc: "この国では企業や金融資産を有する都市資産家に特別な権利が与えられている。"
+ law_nvgm_privilege_military: "軍人特権"
+ law_nvgm_privilege_military_desc: "この国では国防を担う軍人や軍需産業所有者に特別な権利が与えられている。"
+ law_nvgm_privilege_abolish: "特権廃止"
+ law_nvgm_privilege_abolish_desc: "この国では特別な権利や権力を特定階層に与えることを禁じている。"
+
+ lawgroup_nvgm_diplomatic_system: "外交システム"
+ lawgroup_nvgm_diplomatic_system_desc: "この国の一般的な外交的スタンスについて定めたものです。"
+ law_nvgm_diplomacy_neutrality: "外交中立"
+ law_nvgm_diplomacy_neutrality_desc: "この国は対外的に介入を避けることで平穏秩序を保とうとする。"
+ law_nvgm_ideology_hegemony: "覇権主義"
+ law_nvgm_ideology_hegemony_desc: "この国は地域の覇権を目指して強力な行動を行おうとする。"
+ law_nvgm_ideology_friendship: "友好主義"
+ law_nvgm_ideology_friendship_desc: "この国は地域の安定と友好を目指して外交活動を行おうとする。"
+ law_nvgm_ideology_opportunism: "機会主義"
+ law_nvgm_ideology_opportunism_desc: "この国は国家の利益を目指すためにあらゆる手段を辞さない。"
+
+# : ""
+# _desc: ""

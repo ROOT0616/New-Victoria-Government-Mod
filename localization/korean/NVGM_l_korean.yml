@@ -1,0 +1,29 @@
+﻿l_korean:
+
+######################
+#####    Law    ######
+######################
+
+ lawgroup_nvgm_political_privilege: "정치 특권"
+ lawgroup_nvgm_political_privilege_desc: "이 법은 국내 정치적 특권을 규정합니다."
+ law_nvgm_privilege_traditional: "전통적 특권"
+ law_nvgm_privilege_traditional_desc: "이 나라에서는 신직자와 귀족과 같은 전통적인 지배 계급에 특별한 권리가 부여됩니다."
+ law_nvgm_privilege_nobility: "귀족 특권"
+ law_nvgm_privilege_nobility_desc: "이 나라에서는 귀족과 지주를 포함한 토지 소유자에게 특별한 권리가 주어집니다."
+ law_nvgm_privilege_wealth: "재산 특권"
+ law_nvgm_privilege_wealth_desc: "이 나라에서는 기업과 금융 자산을 소유하는 도시 자본가에게 특별한 권리가 주어집니다."
+ law_nvgm_privilege_military: "군인 특권"
+ law_nvgm_privilege_military_desc: "이 나라에서는 국방을 담당하는 군인과 군산업 소유자에게 특별한 권리가 주어집니다."
+ law_nvgm_privilege_abolish: "특권 폐지"
+ law_nvgm_privilege_abolish_desc: "이 나라에서는 특정 계급에 특별한 권리와 권력을 부여하는 것을 금지합니다."
+
+ lawgroup_nvgm_diplomatic_system: "외교 시스템"
+ lawgroup_nvgm_diplomatic_system_desc: "이 나라의 외교적 입장을 정의합니다."
+ law_nvgm_diplomacy_neutrality: "외교 중립"
+ law_nvgm_diplomacy_neutrality_desc: "이 나라는 외부 개입을 피하면서 평화적인 질서를 유지하기 위해 노력합니다."
+ law_nvgm_ideology_hegemony: "지배주의 이념"
+ law_nvgm_ideology_hegemony_desc: "이 나라는 강력한 조치를 통해 지역적 지배를 추구합니다."
+ law_nvgm_ideology_friendship: "우호주의 이념"
+ law_nvgm_ideology_friendship_desc: "이 나라는 지역 안정과 우호를 목표로 외교 활동을 전개합니다."
+ law_nvgm_ideology_opportunism: "기회주의 이념"
+ law_nvgm_ideology_opportunism_desc: "이 나라는 국가 이익을 위해 모든 수단을 동원합니다."

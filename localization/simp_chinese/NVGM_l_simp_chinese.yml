@@ -1,0 +1,29 @@
+﻿l_simp_chinese:
+
+######################
+#####    Law    ######
+######################
+
+ lawgroup_nvgm_political_privilege: "政治特权"
+ lawgroup_nvgm_political_privilege_desc: "这项法律规定了国内的政治特权。"
+ law_nvgm_privilege_traditional: "传统特权"
+ law_nvgm_privilege_traditional_desc: "在这个国家，传统的统治阶级，如神职人员和贵族，被赋予特殊权利。"
+ law_nvgm_privilege_nobility: "贵族特权"
+ law_nvgm_privilege_nobility_desc: "在这个国家，特定的土地所有者，包括贵族和地主，被赋予特殊权利。"
+ law_nvgm_privilege_wealth: "财富特权"
+ law_nvgm_privilege_wealth_desc: "在这个国家，拥有企业和金融资产的城市资本家被赋予特殊权利。"
+ law_nvgm_privilege_military: "军事特权"
+ law_nvgm_privilege_military_desc: "在这个国家，负责国防的军事人员和军工业主被赋予特殊权利。"
+ law_nvgm_privilege_abolish: "废除特权"
+ law_nvgm_privilege_abolish_desc: "在这个国家，禁止向特定阶层授予特殊权利和权力。"
+
+ lawgroup_nvgm_diplomatic_system: "外交系统"
+ lawgroup_nvgm_diplomatic_system_desc: "这项法律定义了该国的外交立场。"
+ law_nvgm_diplomacy_neutrality: "外交中立"
+ law_nvgm_diplomacy_neutrality_desc: "该国通过避免外部干预来维护和平秩序。"
+ law_nvgm_ideology_hegemony: "霸权主义"
+ law_nvgm_ideology_hegemony_desc: "该国通过强有力的行动追求地区主导地位。"
+ law_nvgm_ideology_friendship: "友好主义"
+ law_nvgm_ideology_friendship_desc: "该国通过外交活动追求地区稳定和友好关系。"
+ law_nvgm_ideology_opportunism: "机会主义"
+ law_nvgm_ideology_opportunism_desc: "该国不惜一切手段追求国家利益。"

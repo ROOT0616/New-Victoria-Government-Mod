@@ -1,0 +1,29 @@
+﻿l_german:
+
+######################
+#####    Law    ######
+######################
+
+ lawgroup_nvgm_political_privilege: "Politische Privilegien"
+ lawgroup_nvgm_political_privilege_desc: "Dieses Gesetz definiert politische Privilegien innerhalb des Landes."
+ law_nvgm_privilege_traditional: "Traditionelle Privilegien"
+ law_nvgm_privilege_traditional_desc: "In diesem Land werden besondere Rechte den traditionellen Herrschaftsschichten wie Geistlichen und Adligen gewährt."
+ law_nvgm_privilege_nobility: "Adelsprivilegien"
+ law_nvgm_privilege_nobility_desc: "In diesem Land werden besondere Rechte den Landbesitzern, einschließlich Adligen und Grundherren, gewährt."
+ law_nvgm_privilege_wealth: "Wohlstandsprivilegien"
+ law_nvgm_privilege_wealth_desc: "In diesem Land werden besondere Rechte den städtischen Kapitalisten gewährt, die Unternehmen und Finanzanlagen besitzen."
+ law_nvgm_privilege_military: "Militärprivilegien"
+ law_nvgm_privilege_military_desc: "In diesem Land werden besondere Rechte den Militärpersonal und den Eigentümern militärisch-industrieller Komplexe gewährt, die für die nationale Verteidigung verantwortlich sind."
+ law_nvgm_privilege_abolish: "Abschaffung von Privilegien"
+ law_nvgm_privilege_abolish_desc: "In diesem Land ist die Vergabe von besonderen Rechten und Befugnissen an bestimmte Klassen verboten."
+
+ lawgroup_nvgm_diplomatic_system: "Diplomatisches System"
+ lawgroup_nvgm_diplomatic_system_desc: "Dies definiert die allgemeine diplomatische Haltung dieses Landes."
+ law_nvgm_diplomacy_neutrality: "Diplomatische Neutralität"
+ law_nvgm_diplomacy_neutrality_desc: "Dieses Land strebt durch Vermeidung ausländischer Interventionen die Aufrechterhaltung des Friedensordnungs an."
+ law_nvgm_ideology_hegemony: "Hegemonistische Ideologie"
+ law_nvgm_ideology_hegemony_desc: "Dieses Land verfolgt durch starke Maßnahmen die regionale Dominanz."
+ law_nvgm_ideology_friendship: "Freundschaftsideologie"
+ law_nvgm_ideology_friendship_desc: "Dieses Land betreibt diplomatische Aktivitäten mit dem Ziel regionaler Stabilität und Freundschaft."
+ law_nvgm_ideology_opportunism: "Opportunismus-Ideologie"
+ law_nvgm_ideology_opportunism_desc: "Dieses Land schreckt vor keinem Mittel zurück, um nationale Interessen zu verfolgen."

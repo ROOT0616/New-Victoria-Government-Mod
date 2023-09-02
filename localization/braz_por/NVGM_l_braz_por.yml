@@ -1,0 +1,29 @@
+﻿l_braz_por:
+
+######################
+#####    Law    ######
+######################
+
+ lawgroup_nvgm_political_privilege: "Political Privilege"
+ lawgroup_nvgm_political_privilege_desc: "This law defines political privileges within the country."
+ law_nvgm_privilege_traditional: "Traditional Privilege"
+ law_nvgm_privilege_traditional_desc: "In this country, special rights are granted to the traditional ruling classes, such as clergy and nobility."
+ law_nvgm_privilege_nobility: "Nobility Privilege"
+ law_nvgm_privilege_nobility_desc: "In this country, special rights are granted to landowners, including nobility and landlords."
+ law_nvgm_privilege_wealth: "Wealth Privilege"
+ law_nvgm_privilege_wealth_desc: "In this country, special rights are granted to urban capitalists who own businesses and financial assets."
+ law_nvgm_privilege_military: "Military Privilege"
+ law_nvgm_privilege_military_desc: "In this country, special rights are granted to military personnel and owners of military-industrial complexes responsible for national defense."
+ law_nvgm_privilege_abolish: "Abolishment of Privilege"
+ law_nvgm_privilege_abolish_desc: "In this country, the granting of special rights and powers to specific classes is prohibited."
+
+ lawgroup_nvgm_diplomatic_system: "Diplomatic System"
+ lawgroup_nvgm_diplomatic_system_desc: "This defines the general diplomatic stance of this country."
+ law_nvgm_diplomacy_neutrality: "Diplomatic Neutrality"
+ law_nvgm_diplomacy_neutrality_desc: "This country aims to maintain peaceful order by avoiding foreign interventions."
+ law_nvgm_ideology_hegemony: "Hegemonistic Ideology"
+ law_nvgm_ideology_hegemony_desc: "This country pursues regional dominance through strong actions."
+ law_nvgm_ideology_friendship: "Friendship Ideology"
+ law_nvgm_ideology_friendship_desc: "This country engages in diplomatic activities with the aim of regional stability and friendship."
+ law_nvgm_ideology_opportunism: "Opportunistic Ideology"
+ law_nvgm_ideology_opportunism_desc: "This country leaves no means unexplored in pursuit of national interests."
