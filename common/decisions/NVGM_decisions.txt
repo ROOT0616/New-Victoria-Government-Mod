@@ -1,7 +1,7 @@
 ﻿ngm_ngm_ = {
 	is_shown = {
-		exists = c:JAP
-		ROOT = c:JAP
+		exists = c:RUS
+		ROOT = c:RUS
 		NOT = {
 			has_modifier = modifier_ngm
 		}
@@ -9,8 +9,8 @@
 	}
 
 	possible = {
-		exists = c:JAP
-		ROOT = c:JAP
+		exists = c:RUS
+		ROOT = c:RUS
 		NOT = {
 			has_modifier = modifier_ngm
 		}
@@ -31,8 +31,8 @@
 
 ngm_ngm_ngm = {
 	is_shown = {
-		exists = c:JAP
-		ROOT = c:JAP
+		exists = c:RUS
+		ROOT = c:RUS
 		has_modifier = modifier_ngm
 		# NOT = {
 		# }
@@ -40,8 +40,8 @@ ngm_ngm_ngm = {
 	}
 
 	possible = {
-		exists = c:JAP
-		ROOT = c:JAP
+		exists = c:RUS
+		ROOT = c:RUS
 		# NOT = {
 		# }
 		has_modifier = modifier_ngm
