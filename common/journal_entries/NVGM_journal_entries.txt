@@ -1,0 +1,87 @@
+je_nvgm_establish_company = {
+	icon = "gfx/interface/icons/alert_icons/can_establish_company.dds"
+	group = je_group_foreign_affairs
+	scripted_progress_bar = nvgm_establishing_company_progress_bar
+	immediate = {
+		set_variable = {
+			name = nvgm_establish_company_var
+			value = 0
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_nvgm_establish_company_complete_tt
+			scope:journal_entry ?= {
+				"scripted_bar_progress(nvgm_establishing_company_progress_bar)" >= 600
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_nvgm_establish_company_tt
+			trigger_event = {
+				id = nvgm_establish_company_events.1
+				days = 0
+				popup = yes
+			}
+		}
+		remove_variable = nvgm_establish_company_var
+	}
+	fail = {
+	}
+	on_fail = {
+	}
+	on_monthly_pulse = {
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+# 棄民政策
+je_nvgm_abandonment_policy	 = {
+	# icon = "gfx/interface/icons/alert_icons/can_establish_company.dds"
+	icon = "gfx/interface/icons/acceptance_icons/acceptance_tier2.dds"
+	group = je_group_internal_affairs
+	scripted_progress_bar = nvgm_abandonment_policy_progress_bar
+	immediate = {
+		set_variable = {
+			name = nvgm_abandonment_policy_var
+			value = 0
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_nvgm_abandonment_policy_complete_tt
+			scope:journal_entry ?= {
+				"scripted_bar_progress(nvgm_abandonment_policy_progress_bar)" >= 200
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_nvgm_abandonment_policy_tt
+			# trigger_event = {
+			# 	id = nvgm_migration_events.1
+			# 	days = 0
+			# 	popup = yes
+			# }
+		}
+		remove_variable = nvgm_abandonment_policy_var
+		set_variable = {
+			name = nvgm_abandonment_policy_cooldown_var
+			days = 1825
+		}
+	}
+	fail = {
+	}
+	on_fail = {
+	}
+	on_monthly_pulse = {
+		random_events = {
+			75 = 0
+			25 = nvgm_migration_events.2
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}

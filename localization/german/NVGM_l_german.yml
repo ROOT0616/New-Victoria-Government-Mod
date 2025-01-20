@@ -27,3 +27,20 @@
  law_nvgm_ideology_friendship_desc: "Dieses Land betreibt diplomatische Aktivitäten mit dem Ziel regionaler Stabilität und Freundschaft."
  law_nvgm_ideology_opportunism: "Opportunismus-Ideologie"
  law_nvgm_ideology_opportunism_desc: "Dieses Land schreckt vor keinem Mittel zurück, um nationale Interessen zu verfolgen."
+
+###########################
+#####    Building    ######
+###########################
+
+ building_nvgm_traffic: "交通"
+ building_nvgm_traffic_lens_option: "交通"
+ pmg_base_building_nvgm_traffic: "$pm_base$"
+ pm_nvgm_traffic_farm_road: "農道"
+ pm_nvgm_traffic_flagstone: "石畳"
+ pm_nvgm_traffic_asphalt: "アスファルト"
+ pm_nvgm_traffic_expressway: "高速道路"
+ pmg_ownership_capital_building_nvgm_traffic: "$pmg_ownership$"
+ pm_privately_owned_building_nvgm_traffic: "$pm_privately_owned$"
+ pm_publicly_traded_building_nvgm_traffic: "$pm_publicly_traded$"
+ pm_government_run_building_nvgm_traffic: "$pm_government_run$"
+ pm_worker_cooperative_building_nvgm_traffic: "$pm_worker_cooperative$"

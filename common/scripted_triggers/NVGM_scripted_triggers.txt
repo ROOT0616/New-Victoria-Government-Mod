@@ -1,0 +1,182 @@
+can_nvgm_establish_company = {
+	num_companies < max_num_companies
+}
+
+can_nvgm_establish_company_basic_agriculture_1 = {
+	NOT = {
+		has_company = company_type:company_basic_agriculture_1
+	}
+	nvgm_free_wheat_rye_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_agriculture_2 = {
+	NOT = {
+		has_company = company_type:company_basic_agriculture_2
+	}
+	nvgm_free_rice_millet_maize_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_fabrics = {
+	NOT = {
+		has_company = company_type:company_basic_fabrics
+	}
+	nvgm_free_cotton_livestock_ranch_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_colonial_plantations_1 = {
+	NOT = {
+		has_company = company_type:company_basic_colonial_plantations_1
+	}
+	nvgm_free_opium_tea_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_colonial_plantations_2 = {
+	NOT = {
+		has_company = company_type:company_basic_colonial_plantations_2
+	}
+	nvgm_free_coffee_sugar_tobacco_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_silk_and_dye = {
+	NOT = {
+		has_company = company_type:company_basic_silk_and_dye
+	}
+	nvgm_free_silk_dye_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_wine_and_fruit = {
+	NOT = {
+		has_company = company_type:company_basic_wine_and_fruit
+	}
+	nvgm_free_vineyard_banana_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_forestry = {
+	NOT = {
+		has_company = company_type:company_basic_forestry
+	}
+	nvgm_free_logging_rubber_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_oil = {
+	NOT = {
+		has_company = company_type:company_basic_oil
+	}
+	nvgm_free_oil_rig_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_gold_mining = {
+	NOT = {
+		has_company = company_type:company_basic_gold_mining
+	}
+	nvgm_free_gold_mine_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_metal_mining = {
+	NOT = {
+		has_company = company_type:company_basic_metal_mining
+	}
+	nvgm_free_iron_lead_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_mineral_mining = {
+	NOT = {
+		has_company = company_type:company_basic_mineral_mining
+	}
+	nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_food = {
+	NOT = {
+		has_company = company_type:company_basic_food
+	}
+	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_paper = {
+	NOT = {
+		has_company = company_type:company_basic_paper
+	}
+	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_home_goods = {
+	NOT = {
+		has_company = company_type:company_basic_home_goods
+	}
+	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_textiles = {
+	NOT = {
+		has_company = company_type:company_basic_textiles
+	}
+	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_metalworks = {
+	NOT = {
+		has_company = company_type:company_basic_metalworks
+	}
+	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_shipyards = {
+	NOT = {
+		has_company = company_type:company_basic_shipyards
+	}
+	has_technology_researched = navigation
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_chemicals = {
+	NOT = {
+		has_company = company_type:company_basic_chemicals
+	}
+	has_technology_researched = intensive_agriculture
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_motors = {
+	NOT = {
+		has_company = company_type:company_basic_motors
+	}
+	has_technology_researched = atmospheric_engine
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_munitions = {
+	NOT = {
+		has_company = company_type:company_basic_munitions
+	}
+	or = {
+		has_technology_researched = intensive_agriculture
+		has_technology_researched = percussion_cap
+	}
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_electrics = {
+	NOT = {
+		has_company = company_type:company_basic_electrics
+	}
+	has_technology_researched = telephone
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_construction_power_bloc = {
+	NOT = {
+		has_company = company_type:company_basic_chemicals
+	}
+	# has_technology_researched = intensive_agriculture
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_construction_sector = {
+	nvgm_construction_sector_arable_land > 5
+}

@@ -1,8 +1,8 @@
 {
   "name" : "New Victoria  Government Mod",
-  "id" : "",
-  "version" : "1.0",
-  "supported_game_version" : "1.4.*",
+  "id" : "3029574755",
+  "version" : "1.4.0",
+  "supported_game_version" : "1.8.*",
   "short_description" : "",
   "tags" : ["Diplomacy", "Gameplay"],
   "relationships" : [],

@@ -1,0 +1,11 @@
+
+nvgm_establish_company_test_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_company_throughput_bonus_add = 2
+	country_company_construction_efficiency_bonus_add = 2
+}
+
+nvgm_migration_great_migration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_migration_pull_mult = 2
+}

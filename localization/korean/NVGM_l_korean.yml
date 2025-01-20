@@ -27,3 +27,20 @@
  law_nvgm_ideology_friendship_desc: "이 나라는 지역 안정과 우호를 목표로 외교 활동을 전개합니다."
  law_nvgm_ideology_opportunism: "기회주의 이념"
  law_nvgm_ideology_opportunism_desc: "이 나라는 국가 이익을 위해 모든 수단을 동원합니다."
+
+###########################
+#####    Building    ######
+###########################
+
+ building_nvgm_traffic: "交通"
+ building_nvgm_traffic_lens_option: "交通"
+ pmg_base_building_nvgm_traffic: "$pm_base$"
+ pm_nvgm_traffic_farm_road: "農道"
+ pm_nvgm_traffic_flagstone: "石畳"
+ pm_nvgm_traffic_asphalt: "アスファルト"
+ pm_nvgm_traffic_expressway: "高速道路"
+ pmg_ownership_capital_building_nvgm_traffic: "$pmg_ownership$"
+ pm_privately_owned_building_nvgm_traffic: "$pm_privately_owned$"
+ pm_publicly_traded_building_nvgm_traffic: "$pm_publicly_traded$"
+ pm_government_run_building_nvgm_traffic: "$pm_government_run$"
+ pm_worker_cooperative_building_nvgm_traffic: "$pm_worker_cooperative$"

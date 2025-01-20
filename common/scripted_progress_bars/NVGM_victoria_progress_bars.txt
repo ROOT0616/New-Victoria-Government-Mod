@@ -1,0 +1,77 @@
+nvgm_establishing_company_progress_bar = {
+	name = "nvgm_establishing_company_progress_bar"
+	desc = "nvgm_establishing_company_progress_bar_desc"
+	default = yes
+	monthly_progress = {
+		add = 10
+		if = {
+			limit = {
+				# Your GDP per Capita is relatively high
+				gdp_per_capita_ranking <= 20				# Lower = better
+			}
+			add = {
+				desc = "earning_recognition_progress_gdpc_tt"
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				# Your Standard of Living is relatively high
+				sol_ranking <= 20
+			}
+			add = {
+				desc = "AVG_STANDARD_OF_LIVING"
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_free_trade
+				}
+			}
+			add = {
+				desc = "nvgm_establishing_company_free_trade"
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					is_in_civil_war = yes
+				}
+			}
+			add = {
+				desc = "nvgm_establishing_company_unrest"
+				value = -5
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_modifier = declared_bankruptcy
+				}
+			}
+			add = {
+				desc = "nvgm_establishing_company_declared_bankruptcy"
+				value = -10
+			}
+		}
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 600
+}
+
+# 棄民政策
+nvgm_abandonment_policy_progress_bar = {
+	name = "nvgm_abandonment_policy_progress_bar"
+	desc = "nvgm_abandonment_policy_progress_bar_desc"
+	default = yes
+	monthly_progress = {
+		add = 0
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 200
+}

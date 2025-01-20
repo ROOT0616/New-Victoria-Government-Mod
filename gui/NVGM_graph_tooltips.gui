@@ -1,0 +1,116 @@
+
+template nvgm_money_tooltip_with_graph 
+{
+	tooltip = "CAPITAL_MONEY"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline = {
+					visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+
+					using = default_list_position
+
+					blockoverride "header" {
+						text = "BALANCE"
+					}
+					blockoverride "line_color" {
+						color = { .9 .9 .9 1.0 }
+					}
+					blockoverride "size" {
+						size = { 280 100 }
+					}
+					blockoverride "line_plotpoints" {
+						visible = "[Not(IsDynTrendEmpty(Country.GetBalanceTrend))]"
+						plotpoints = "[GetDynTrendPlotPoints(Country.GetBalanceTrend, GetDynTrendMin(Country.GetBalanceTrend), GetDynTrendMax(Country.GetBalanceTrend))]"
+					}
+					blockoverride "maxvalue" {
+						text = "[GetDynTrendMax(Country.GetBalanceTrend)|K+=]"
+					}
+					blockoverride "minvalue" {
+						text = "[GetDynTrendMin(Country.GetBalanceTrend)|K+=]"
+					}
+					blockoverride "startdate" {
+						text = "[CalcDynTrendOldestDate(Country.GetBalanceTrend)]"
+					}
+					blockoverride "enddate" {
+						text = "[CalcDynTrendLatestDate(Country.GetBalanceTrend)]"
+					}
+					blockoverride "multiitem" {}
+
+					blockoverride "extra_plotlines" {
+						plotline = {
+							visible = "[And(GreaterThan_CFixedPoint(GetDynTrendMax(Country.GetBalanceTrend), '(CFixedPoint)0'), LessThan_CFixedPoint(GetDynTrendMin(Country.GetBalanceTrend), '(CFixedPoint)0'))]"
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							color = { 0 0 0 0.5 }
+							plotpoints = "[Country.GetZeroBalancePlotPoints]"
+						}
+					}
+					blockoverride "empty_state_visibility" {
+						visible = "[IsDynTrendEmpty(Country.GetBalanceTrend)]"
+					}
+					blockoverride "everything_that_is_not_empty_state_visibility" {
+						visible = "[Not(IsDynTrendEmpty(Country.GetBalanceTrend))]"
+					}
+					blockoverride "empty_state_text" {
+						text = "GRAPH_NOT_INITIALIZED"
+					}
+				}
+
+				v3_plotline = {
+					visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+
+					using = default_list_position
+
+					blockoverride "header" {
+						text = "MONEY"
+					}
+					blockoverride "line_color" {
+						color = { .9 .9 .9 1.0 }
+					}
+					blockoverride "size" {
+						size = { 280 100 }
+					}
+					blockoverride "line_plotpoints" {
+						visible = "[Not(IsDynTrendEmpty(Country.GetGoldReservesTrend))]"
+						plotpoints = "[GetDynTrendPlotPoints(Country.GetGoldReservesTrend, Negate_CFixedPoint(Country.GetMaxCredit), GetDynTrendMax( Country.GetGoldReservesTrend ))]"
+					}
+					blockoverride "maxvalue" {
+						text = "[GetDynTrendMax(Country.GetGoldReservesTrend)|K]"
+					}
+					blockoverride "minvalue" {
+						text = "[Negate_CFixedPoint(Country.GetMaxCredit)|K]"
+					}
+					blockoverride "startdate" {
+						text = "[CalcDynTrendOldestDate(Country.GetGoldReservesTrend)]"
+					}
+					blockoverride "enddate" {
+						text = "[CalcDynTrendLatestDate(Country.GetGoldReservesTrend)]"
+					}
+					blockoverride "multiitem" {}
+
+					blockoverride "extra_plotlines" {
+						plotline = {
+							visible = "[GreaterThan_CFixedPoint(GetDynTrendMax(Country.GetGoldReservesTrend), '(CFixedPoint)0')]"
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							color = { 0 0 0 0.5 }
+							plotpoints = "[Country.GetZeroMoneyPlotPoints]"
+						}
+					}
+					blockoverride "empty_state_visibility" {
+						visible = "[IsDynTrendEmpty(Country.GetGoldReservesTrend)]"
+					}
+					blockoverride "everything_that_is_not_empty_state_visibility" {
+						visible = "[Not(IsDynTrendEmpty(Country.GetGoldReservesTrend))]"
+					}
+					blockoverride "empty_state_text" {
+						text = "GRAPH_NOT_INITIALIZED"
+					}
+				}
+			}
+		}
+	}
+}

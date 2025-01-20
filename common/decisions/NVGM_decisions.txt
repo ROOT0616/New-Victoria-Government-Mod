@@ -1,60 +1,57 @@
-﻿ngm_ngm_ = {
+# 海外企業の設立
+decisions_nvgm_establish_company = {
 	is_shown = {
-		exists = c:RUS
-		ROOT = c:RUS
-		NOT = {
-			has_modifier = modifier_ngm
+		has_technology_researched = central_banking
+		any_subject_or_below = {
+			and = {
+				is_direct_subject_of = root
+				can_nvgm_establish_company = yes
+			}
 		}
-		is_ai = no
 	}
-
 	possible = {
-		exists = c:RUS
-		ROOT = c:RUS
 		NOT = {
-			has_modifier = modifier_ngm
+			has_journal_entry = je_nvgm_establish_company
 		}
-		is_ai = no
+		has_technology_researched = central_banking
+		any_subject_or_below = {
+			and = {
+				is_direct_subject_of = root
+				can_nvgm_establish_company = yes
+			}
+		}
 	}
-
 	when_taken = {
-		add_modifier = {
-			name = modifier_ngm
+		custom_tooltip = decisions_nvgm_establish_company_tooltip
+		add_journal_entry = {
+			type = je_nvgm_establish_company
 		}
-		# remove_modifier = modifier_tangena_ordeal
 	}
-
 	ai_chance = {
 		base = 0
 	}
 }
 
-ngm_ngm_ngm = {
+# 棄民政策
+decisions_nvgm_abandonment_policy = {
 	is_shown = {
-		exists = c:RUS
-		ROOT = c:RUS
-		has_modifier = modifier_ngm
-		# NOT = {
-		# }
-		is_ai = no
+		always = yes
 	}
-
 	possible = {
-		exists = c:RUS
-		ROOT = c:RUS
-		# NOT = {
-		# }
-		has_modifier = modifier_ngm
-		is_ai = no
+		NOT = {
+			has_journal_entry = je_nvgm_abandonment_policy
+		}
+		NOT = {
+			has_variable = nvgm_abandonment_policy_cooldown_var
+		}
+		any_scope_state = {
+			state_population <= 500000
+		}
 	}
-
 	when_taken = {
-		# add_modifier = {
-		# 	name = modifier_ngm
-		# }
-		remove_modifier = modifier_ngm
+		custom_tooltip = decisions_nvgm_abandonment_policy_tooltip
+		trigger_event = nvgm_migration_events.1
 	}
-
 	ai_chance = {
 		base = 0
 	}

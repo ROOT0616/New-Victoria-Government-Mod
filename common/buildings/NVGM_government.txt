@@ -1,0 +1,101 @@
+building_nvgm_traffic = {
+	building_group = bg_private_infrastructure
+	icon = "gfx/interface/icons/building_icons/building_railway.dds"
+	ownership_type = self
+	production_method_groups = {
+		pmg_base_building_nvgm_traffic
+		# pmg_ownership_capital_building_nvgm_traffic
+	}
+	required_construction = construction_cost_low
+	ai_value = 1000	# Railways are important
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+	should_auto_expand = {
+		occupancy >= 0.8
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		OR = {
+			owner = {
+				market = {
+					mg:transportation = {
+						market_goods_pricier > 0.5
+					}
+				}
+			}
+			state.market_access < 1
+		}
+		NOT = {
+			is_under_construction = yes
+		}
+	}
+}
+
+building_nvgm_clinic = {
+	# building_group = bg_private_infrastructure
+	building_group = bg_public_infrastructure
+	city_type = city
+	levels_per_mesh = 1
+	expandable = no
+	ownership_type = self
+	lens = infrastructure
+	# potential = {
+	# 	target_is_our_or_fellow_subject = yes
+	# }
+	# unlocking_technologies = {
+	# 	urban_planning
+	# }
+	production_method_groups = {
+		pmg_base_nvgm_clinic
+	}
+	land_usage = urban
+	icon = "gfx/interface/icons/building_icons/building_university.dds"
+	required_construction = construction_cost_low
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	# lens = light_industry
+	ai_value = {
+		value = 0
+	}
+}
+
+# building_nvgm_human_ranch = {
+# 	# building_group = bg_private_infrastructure
+# 	building_group = bg_public_infrastructure
+# 	# building_group = bg_private_infrastructure
+# 	city_type = city
+# 	ownership_type = self
+# 	lens = infrastructure
+# 	# potential = {
+# 	# 	target_is_our_or_fellow_subject = yes
+# 	# }
+# 	possible = {
+# 		state_population <= 800000
+# 	}
+# 	# unlocking_technologies = {
+# 	# 	urban_planning
+# 	# }
+# 	# should_auto_expand = {
+# 	# 	occupancy >= 0.8
+# 	# 	OR = {
+# 	# 		state.tax_capacity < state.tax_capacity_usage
+# 	# 		owner = {
+# 	# 			bureaucracy < -10
+# 	# 		}
+# 	# 	}
+# 	# }
+# 	expandable = no
+# 	downsizeable = no
+# 	production_method_groups = {
+# 		pmg_base_nvgm_human_ranch
+# 	}
+# 	icon = "gfx/interface/icons/building_icons/building_university.dds"
+# 	required_construction = construction_cost_low
+# 	can_build_private = {
+# 		always = no
+# 	}	
+# 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+# 	# lens = light_industry
+# 	ai_value = {
+# 		value = 0
+# 	}
+# }

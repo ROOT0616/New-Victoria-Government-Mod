@@ -1,0 +1,178 @@
+nvgm_free_wheat_rye_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_wheat_farm
+				can_construct_building = building_rye_farm
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_rice_millet_maize_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_millet_farm
+				can_construct_building = building_rice_farm
+				can_construct_building = building_maize_farm
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_cotton_livestock_ranch_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_cotton_plantation
+				can_construct_building = building_livestock_ranch
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_opium_tea_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_opium_plantation
+				can_construct_building = building_tea_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_coffee_sugar_tobacco_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_coffee_plantation
+				can_construct_building = building_sugar_plantation
+				can_construct_building = building_tobacco_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_silk_dye_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_silk_plantation
+				can_construct_building = building_dye_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_vineyard_banana_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_vineyard_plantation
+				can_construct_building = building_banana_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_fishing_whaling_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_fishing_wharf
+				can_construct_building = building_whaling_station
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_logging_rubber_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_logging_camp
+				can_construct_building = building_rubber_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_oil_rig_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			can_construct_building = building_oil_rig
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_gold_mine_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			can_construct_building = building_gold_mine
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_iron_lead_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_iron_mine
+				can_construct_building = building_lead_mine
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_sulfur_coal_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_sulfur_mine
+				can_construct_building = building_coal_mine
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_construction_sector_arable_land = {
+	value = 0
+	# country = {
+	# 	income_greater_than
+	# }
+	every_scope_state = {
+		limit = {
+			state_population >= 250000
+			can_construct_building = building_construction_sector
+		}
+		add = this.free_arable_land
+	}
+}
