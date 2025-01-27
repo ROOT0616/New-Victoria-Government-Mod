@@ -58,14 +58,15 @@ je_nvgm_abandonment_policy	 = {
 		}
 	}
 	on_complete = {
-		custom_tooltip = {
-			text = je_nvgm_abandonment_policy_tt
-			# trigger_event = {
-			# 	id = nvgm_migration_events.1
-			# 	days = 0
-			# 	popup = yes
-			# }
-		}
+		# custom_tooltip = {
+		# 	text = je_nvgm_abandonment_policy_tt
+		# 	trigger_event = {
+		# 		id = nvgm_migration_events.8
+		# 		days = 0
+		# 		popup = yes
+		# 	}
+		# }
+		remove_variable = nvgm_migration_events_now_var
 		remove_variable = nvgm_abandonment_policy_var
 		set_variable = {
 			name = nvgm_abandonment_policy_cooldown_var

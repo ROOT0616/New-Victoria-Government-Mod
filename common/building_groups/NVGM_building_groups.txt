@@ -1,0 +1,14 @@
+
+bg_nvgm_traffic = {
+	parent_group = bg_infrastructure
+
+	lens = government
+
+	is_government_funded = yes
+	
+	can_use_slaves = yes
+	
+	urbanization = 1
+	
+	economy_of_scale_ai_factor = 5.0
+}

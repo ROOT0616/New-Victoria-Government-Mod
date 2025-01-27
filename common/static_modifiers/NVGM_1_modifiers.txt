@@ -1,11 +1,325 @@
 
 nvgm_establish_company_test_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_company_throughput_bonus_add = 2
-	country_company_construction_efficiency_bonus_add = 2
+	country_company_throughput_bonus_add = 0.5
+	country_company_construction_efficiency_bonus_add = 0.5
 }
 
 nvgm_migration_great_migration = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	state_migration_pull_mult = 2
+}
+
+nvgm_target_construction_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	# country_tax_income_add = 2500
+	country_construction_add = 15
+}
+
+nvgm_construction_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	# country_tax_income_add = 25000000
+	country_construction_add = -15
+}
+
+# 行政力移譲
+nvgm_give_bur_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_give_bur_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 15
+}
+
+nvgm_given_bur_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+nvgm_given_bur_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -15
+}
+
+# 革新移譲
+nvgm_give_innovation_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_give_innovation_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_add = 5
+}
+
+nvgm_given_innovation_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
+}
+
+nvgm_given_innovation_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_add = -5
 }

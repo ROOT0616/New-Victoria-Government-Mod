@@ -1,6 +1,5 @@
 # ステートの人口100人以下四捨五入
 nvgm_state_population = {
-	# value = scope:nvgm_abandonment_state.state_population
 	value = scope:nvgm_target_state.state_population
 	divide = 100
 	round = yes
