@@ -998,7 +998,7 @@ types diplomatic_panel
 		widget = {
 			# NVGM
 			# size = { @panel_width_minus_10 140 }
-			size = { @panel_width_minus_10 290 }
+			size = { @panel_width_minus_10 300 }
 			# NVGM
 
 			icon = {
@@ -1300,7 +1300,8 @@ types diplomatic_panel
 			### OTHER ACTIVE PACTS WITH THIS SUBJECT
 			flowcontainer = {
 				parentanchor = right|vcenter
-
+				position = { 0 -40 }
+				
 				dynamicgridbox = {
 					parentanchor = vcenter
 					# NVGM
@@ -1311,7 +1312,7 @@ types diplomatic_panel
 
 					item = {
 						widget = {
-							size = { 40 40 }
+							size = { 35 35 }
 
 							icon = {
 								parentanchor = center
@@ -1438,64 +1439,75 @@ types diplomatic_panel
 			}
 			
 			# NVGM
-			# flowcontainer = {
-			# 	parentanchor = right|bottom
-			# 	position = { -10 -68 }
-			# 	spacing = 5
+			flowcontainer = {
+				parentanchor = right|bottom
+				position = { -10 -68 }
+				spacing = 5
 
-			# 	icon = {
-			# 		name = construction_icon
-			# 		size = { 30 30 }
-			# 		texture = "gfx/interface/icons/state_status_icons/has_construction.dds"
-			# 	}		
-			# 	button_icon_round = {
-			# 		datacontext = "[GetScriptedGui('nvgm_give_bur_scriptedgui')]"
-			# 		visible = "[GetScriptedGui('nvgm_give_bur_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
-			# 		tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
-			# 		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
-			# 		size = { 30 30 }
-			# 		blockoverride "icon" {
-			# 			texture = "gfx/interface/buttons/button_icons/reset.dds"
-			# 		}
-			# 	}	
-			# 	button_icon_round = {
-			# 		datacontext = "[GetScriptedGui('nvgm_give_bur_scriptedgui')]"
-			# 		visible = "[GetScriptedGui('nvgm_give_bur_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
-			# 		tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
-			# 		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
-			# 		size = { 30 30 }
-			# 		blockoverride "icon" {
-			# 			texture = "gfx/interface/buttons/button_icons/plus.dds"
-			# 		}
-			# 	}	
-			# 	button_icon_round = {
-			# 		datacontext = "[GetScriptedGui('nvgm_give_bur_scriptedgui')]"
-			# 		visible = "[GetScriptedGui('nvgm_give_bur_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
-			# 		tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
-			# 		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
-			# 		size = { 30 30 }
-			# 		blockoverride "icon" {
-			# 			texture = "gfx/interface/buttons/button_icons/plus.dds"
-			# 		}
-			# 		# textbox = {
-			# 		# 	autoresize = yes
-			# 		# 	align = nobaseline
-			# 		# 	tooltip = ""
-			# 		# 	raw_text = "[concept_legitimacy]：[Country.GetGovernmentLegitimacy|le]"
-			# 		# }
-			# 	}	
-			# }
+				icon = {
+					name = construction_icon
+					size = { 30 30 }
+					texture = "gfx/interface/icons/state_status_icons/has_construction.dds"
+				}		
+				button_icon_round = {
+					datacontext = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui')]"
+					visible = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+					size = { 30 30 }
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/reset.dds"
+					}
+				}	
+				button_icon_round = {
+					datacontext = "[GetScriptedGui('nvgm_give_construction_plus_scriptedgui')]"
+					visible = "[GetScriptedGui('nvgm_give_construction_plus_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+					size = { 30 30 }
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/plus.dds"
+					}
+				}	
+				button_icon_round = {
+					datacontext = "[GetScriptedGui('nvgm_give_construction_check_scriptedgui')]"
+					visible = "[GetScriptedGui('nvgm_give_construction_check_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+					size = { 30 30 }
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/check.dds"
+					}
+				}	
+			}
 
 			flowcontainer = {
 				parentanchor = right|bottom
 				position = { -10 -38 }
 				spacing = 5
 
+				### ARMY ICON
+				icon = {
+					visible = "[MilitaryFormation.IsArmy]"
+					size = { 30 30 }
+					parentanchor = vcenter
+					texture = "gfx/interface/icons/generic_icons/battalions.dds"
+				}
+				button_icon_round = {
+					datacontext = "[GetScriptedGui('nvgm_army_build_up_scriptedgui')]"
+					visible = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+					size = { 30 30 }
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/plus.dds"
+					}
+				}
 				icon = {
 					name = bureaucracy_icon
 					size = { 30 30 }
 					texture = "gfx/interface/icons/topbar/bureaucracy_icon.dds"
-				}		
+				}
 				button_icon_round = {
 					datacontext = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui')]"
 					visible = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
@@ -1505,7 +1517,7 @@ types diplomatic_panel
 					blockoverride "icon" {
 						texture = "gfx/interface/buttons/button_icons/reset.dds"
 					}
-				}	
+				}
 				button_icon_round = {
 					datacontext = "[GetScriptedGui('nvgm_give_bur_plus_scriptedgui')]"
 					visible = "[GetScriptedGui('nvgm_give_bur_plus_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
@@ -1532,6 +1544,23 @@ types diplomatic_panel
 				position = { -10 -8 }
 				spacing = 5
 
+				### FLEET ICON
+				icon = {
+					visible = "[MilitaryFormation.IsFleet]"
+					size = { 30 30 }
+					parentanchor = vcenter
+					texture = "gfx/interface/icons/generic_icons/flotillas.dds"
+				}
+				button_icon_round = {
+					datacontext = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui')]"
+					visible = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+					onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+					size = { 30 30 }
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/plus.dds"
+					}
+				}	
 				icon = {
 					name = innovation_icon
 					size = { 30 30 }

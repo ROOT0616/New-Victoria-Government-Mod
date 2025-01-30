@@ -257,7 +257,6 @@ nvgm_give_bur_plus_scriptedgui = {
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
-		# adds a tooltip
 		if = {
 			limit = {
 				has_variable = nvgm_give_bur_1_var
@@ -843,6 +842,201 @@ nvgm_give_bur_plus_scriptedgui = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_variable = nvgm_give_bur_1_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_1_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_2_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_2_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_3_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_3_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_4_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_4_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_5_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_5_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_6_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_6_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_7_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_7_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_8_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_8_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_9_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_9_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_10_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_10_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_11_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_11_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_12_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_12_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_13_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_13_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_14_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_14_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_bur_15_var
+			}
+			set_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				value = var:nvgm_give_bur_15_var
+			}
+			change_variable = {
+				name = nvgm_given_bur_modifier_x15_var
+				multiply = 15
+			}
+		}
 	}
 }
 
@@ -866,6 +1060,29 @@ nvgm_give_bur_check_scriptedgui = {
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
+		if = {
+			limit = {
+				or
+				{
+					has_variable = nvgm_give_bur_1_var
+					has_variable = nvgm_give_bur_2_var
+					has_variable = nvgm_give_bur_3_var
+					has_variable = nvgm_give_bur_4_var
+					has_variable = nvgm_give_bur_5_var
+					has_variable = nvgm_give_bur_6_var
+					has_variable = nvgm_give_bur_7_var
+					has_variable = nvgm_give_bur_8_var
+					has_variable = nvgm_give_bur_9_var
+					has_variable = nvgm_give_bur_10_var
+					has_variable = nvgm_give_bur_11_var
+					has_variable = nvgm_give_bur_12_var
+					has_variable = nvgm_give_bur_13_var
+					has_variable = nvgm_give_bur_14_var
+					has_variable = nvgm_give_bur_15_var
+				}
+			}
+			custom_tooltip = "nvgm_give_check_scriptedgu_tooltip"
+		}
 		if = {
 			limit = {
 				has_variable = nvgm_give_bur_1_var
@@ -1521,7 +1738,14 @@ nvgm_give_innovation_plus_scriptedgui = {
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
-		# adds a tooltip
+		set_variable = {
+			name = nvgm_given_innovation_modifier_var
+			value = overlord.modifier:country_weekly_innovation_add
+		}
+		change_variable = {
+			name = nvgm_given_innovation_modifier_var
+			divide = 5
+		}
 		if = {
 			limit = {
 				has_variable = nvgm_give_innovation_1_var
@@ -2107,6 +2331,546 @@ nvgm_give_innovation_plus_scriptedgui = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_1_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_1_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_1_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_1_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_1_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_2_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_2_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_2_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_2_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_2_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_3_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_3_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_3_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_3_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_3_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_4_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_4_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_4_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_4_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_4_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_5_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_5_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_5_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_5_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_5_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_6_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_6_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_6_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_6_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_6_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_7_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_7_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_7_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_7_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_7_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_8_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_8_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_8_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_8_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_8_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_9_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_9_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_9_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_9_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_9_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_10_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_10_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_10_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_10_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_10_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_11_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_11_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_11_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_11_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_11_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_12_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_12_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_12_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_12_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_12_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_13_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_13_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_13_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_13_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_13_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_14_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_14_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_14_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_14_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_14_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_15_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_15_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_15_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_innovation_15_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_innovation_15_var
+					add = root.var:nvgm_given_innovation_modifier_var
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_variable = nvgm_give_innovation_1_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_1_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_2_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_2_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_3_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_3_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_4_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_4_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_5_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_5_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_6_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_6_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_7_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_7_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_8_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_8_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_9_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_9_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_10_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_10_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_11_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_11_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_12_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_12_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_13_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_13_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_14_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_14_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_innovation_15_var
+			}
+			set_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				value = var:nvgm_give_innovation_15_var
+			}
+			change_variable = {
+				name = nvgm_given_innovation_modifier_x5_var
+				multiply = 5
+			}
+		}
 	}
 }
 
@@ -2130,6 +2894,232 @@ nvgm_give_innovation_check_scriptedgui = {
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
+		if = {
+			limit = {
+				or
+				{
+					has_variable = nvgm_give_innovation_1_var
+					has_variable = nvgm_give_innovation_2_var
+					has_variable = nvgm_give_innovation_3_var
+					has_variable = nvgm_give_innovation_4_var
+					has_variable = nvgm_give_innovation_5_var
+					has_variable = nvgm_give_innovation_6_var
+					has_variable = nvgm_give_innovation_7_var
+					has_variable = nvgm_give_innovation_8_var
+					has_variable = nvgm_give_innovation_9_var
+					has_variable = nvgm_give_innovation_10_var
+					has_variable = nvgm_give_innovation_11_var
+					has_variable = nvgm_give_innovation_12_var
+					has_variable = nvgm_give_innovation_13_var
+					has_variable = nvgm_give_innovation_14_var
+					has_variable = nvgm_give_innovation_15_var
+				}
+			}
+			custom_tooltip = "nvgm_give_check_scriptedgu_tooltip"
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_var
+			value = overlord.modifier:country_weekly_innovation_add
+		}
+		change_variable = {
+			name = nvgm_given_innovation_modifier_var
+			divide = 5
+		}
+		if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_1_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_1_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_1_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_2_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_2_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_2_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_3_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_3_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_3_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_4_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_4_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_4_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_5_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_5_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_5_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_6_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_6_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_6_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_7_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_7_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_7_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_8_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_8_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_8_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_9_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_9_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_9_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_10_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_10_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_10_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_11_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_11_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_11_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_12_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_12_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_12_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_13_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_13_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_13_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_14_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_14_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_14_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_innovation_modifier_var <= var:nvgm_give_innovation_15_var
+			}
+			change_variable = {
+				name = nvgm_give_innovation_15_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_innovation_15_var
+				add = var:nvgm_given_innovation_modifier_var
+			}
+		}
 		if = {
 			limit = {
 				has_variable = nvgm_give_innovation_1_var
@@ -2522,6 +3512,2113 @@ nvgm_give_innovation_check_scriptedgui = {
 		}
 		else = {
 			custom_tooltip = "nvgm_give_innovation_check_scriptedgu_tooltip"
+		}
+	}
+}
+
+# 建設力移譲
+nvgm_give_construction_reset_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+		target_country
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = yes
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		# has_modifier = nvgm_give_construction_1_country_modifier	
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		custom_tooltip = "nvgm_give_construction_reset_scriptedgu_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_variable = nvgm_give_construction_1_var
+					overlord = {
+						has_variable = nvgm_given_construction_1_var
+					}
+				}
+				remove_variable = nvgm_give_construction_1_var
+				remove_modifier = nvgm_give_construction_1_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_1_var
+					remove_modifier = nvgm_given_construction_1_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_2_var
+					overlord = {
+						has_variable = nvgm_given_construction_2_var
+					}
+				}
+				remove_variable = nvgm_give_construction_2_var
+				remove_modifier = nvgm_give_construction_2_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_2_var
+					remove_modifier = nvgm_given_construction_2_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_3_var
+					overlord = {
+						has_variable = nvgm_given_construction_3_var
+					}
+				}
+				remove_variable = nvgm_give_construction_3_var
+				remove_modifier = nvgm_give_construction_3_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_3_var
+					remove_modifier = nvgm_given_construction_3_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_4_var
+					overlord = {
+						has_variable = nvgm_given_construction_4_var
+					}
+				}
+				remove_variable = nvgm_give_construction_4_var
+				remove_modifier = nvgm_give_construction_4_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_4_var
+					remove_modifier = nvgm_given_construction_4_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_5_var
+					overlord = {
+						has_variable = nvgm_given_construction_5_var
+					}
+				}
+				remove_variable = nvgm_give_construction_5_var
+				remove_modifier = nvgm_give_construction_5_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_5_var
+					remove_modifier = nvgm_given_construction_5_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_6_var
+					overlord = {
+						has_variable = nvgm_given_construction_6_var
+					}
+				}
+				remove_variable = nvgm_give_construction_6_var
+				remove_modifier = nvgm_give_construction_6_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_6_var
+					remove_modifier = nvgm_given_construction_6_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_7_var
+					overlord = {
+						has_variable = nvgm_given_construction_7_var
+					}
+				}
+				remove_variable = nvgm_give_construction_7_var
+				remove_modifier = nvgm_give_construction_7_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_7_var
+					remove_modifier = nvgm_given_construction_7_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_8_var
+					overlord = {
+						has_variable = nvgm_given_construction_8_var
+					}
+				}
+				remove_variable = nvgm_give_construction_8_var
+				remove_modifier = nvgm_give_construction_8_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_8_var
+					remove_modifier = nvgm_given_construction_8_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_9_var
+					overlord = {
+						has_variable = nvgm_given_construction_9_var
+					}
+				}
+				remove_variable = nvgm_give_construction_9_var
+				remove_modifier = nvgm_give_construction_9_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_9_var
+					remove_modifier = nvgm_given_construction_9_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_10_var
+					overlord = {
+						has_variable = nvgm_given_construction_10_var
+					}
+				}
+				remove_variable = nvgm_give_construction_10_var
+				remove_modifier = nvgm_give_construction_10_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_10_var
+					remove_modifier = nvgm_given_construction_10_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_11_var
+					overlord = {
+						has_variable = nvgm_given_construction_11_var
+					}
+				}
+				remove_variable = nvgm_give_construction_11_var
+				remove_modifier = nvgm_give_construction_11_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_11_var
+					remove_modifier = nvgm_given_construction_11_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_12_var
+					overlord = {
+						has_variable = nvgm_given_construction_12_var
+					}
+				}
+				remove_variable = nvgm_give_construction_12_var
+				remove_modifier = nvgm_give_construction_12_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_12_var
+					remove_modifier = nvgm_given_construction_12_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_13_var
+					overlord = {
+						has_variable = nvgm_given_construction_13_var
+					}
+				}
+				remove_variable = nvgm_give_construction_13_var
+				remove_modifier = nvgm_give_construction_13_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_13_var
+					remove_modifier = nvgm_given_construction_13_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_14_var
+					overlord = {
+						has_variable = nvgm_given_construction_14_var
+					}
+				}
+				remove_variable = nvgm_give_construction_14_var
+				remove_modifier = nvgm_give_construction_14_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_14_var
+					remove_modifier = nvgm_given_construction_14_country_modifier
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_15_var
+					overlord = {
+						has_variable = nvgm_given_construction_15_var
+					}
+				}
+				remove_variable = nvgm_give_construction_15_var
+				remove_modifier = nvgm_give_construction_15_country_modifier
+				overlord = {
+					remove_variable = nvgm_given_construction_15_var
+					remove_modifier = nvgm_given_construction_15_country_modifier
+				}
+			}
+		}
+	}
+}
+
+nvgm_give_construction_plus_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+		target_country
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = yes
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		set_variable = {
+			name = nvgm_given_construction_modifier_var
+			value = overlord.modifier:country_construction_add
+		}
+		change_variable = {
+			name = nvgm_given_construction_modifier_var
+			divide = 15
+		}
+		if = {
+			limit = {
+				has_variable = nvgm_give_construction_1_var
+				overlord = {
+					has_variable = nvgm_given_construction_1_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_1_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_1_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_1_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_2_var
+				overlord = {
+					has_variable = nvgm_given_construction_2_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_2_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_2_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_2_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_3_var
+				overlord = {
+					has_variable = nvgm_given_construction_3_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_3_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_3_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_3_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_4_var
+				overlord = {
+					has_variable = nvgm_given_construction_4_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_4_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_4_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_4_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_5_var
+				overlord = {
+					has_variable = nvgm_given_construction_5_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_5_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_5_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_5_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_6_var
+				overlord = {
+					has_variable = nvgm_given_construction_6_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_6_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_6_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_6_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_7_var
+				overlord = {
+					has_variable = nvgm_given_construction_7_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_7_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_7_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_7_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_8_var
+				overlord = {
+					has_variable = nvgm_given_construction_8_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_8_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_8_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_8_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_9_var
+				overlord = {
+					has_variable = nvgm_given_construction_9_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_9_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_9_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_9_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_10_var
+				overlord = {
+					has_variable = nvgm_given_construction_10_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_10_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_10_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_10_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_11_var
+				overlord = {
+					has_variable = nvgm_given_construction_11_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_11_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_11_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_11_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_12_var
+				overlord = {
+					has_variable = nvgm_given_construction_12_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_12_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_12_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_12_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_13_var
+				overlord = {
+					has_variable = nvgm_given_construction_13_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_13_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_13_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_13_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_14_var
+				overlord = {
+					has_variable = nvgm_given_construction_14_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_14_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_14_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_14_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_15_var
+				overlord = {
+					has_variable = nvgm_given_construction_15_var
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_15_scriptedgu_tooltip"
+			change_variable = {
+				name = nvgm_give_construction_15_var
+				add = 1
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_15_var
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_1_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_1_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_1_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_2_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_2_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_2_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_3_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_3_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_3_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_4_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_4_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_4_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_5_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_5_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_5_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_6_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_6_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_6_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_7_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_7_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_7_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_8_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_8_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_8_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_9_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_9_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_9_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_10_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_10_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_10_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_11_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_11_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_11_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_12_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_12_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_12_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_13_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_13_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_13_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_14_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_14_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_14_var
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					NOT = {
+						has_variable = nvgm_given_construction_15_var
+					}
+				}
+			}
+			custom_tooltip = "nvgm_give_construction_plus_scriptedgu_tooltip"
+			set_variable = {
+				name = nvgm_give_construction_15_var
+				value = 1
+			}
+			overlord = {
+				set_variable = {
+					name = nvgm_given_construction_15_var
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_1_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_1_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_1_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_1_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_1_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_2_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_2_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_2_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_2_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_2_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_3_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_3_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_3_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_3_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_3_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_4_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_4_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_4_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_4_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_4_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_5_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_5_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_5_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_5_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_5_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_6_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_6_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_6_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_6_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_6_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_7_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_7_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_7_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_7_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_7_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_8_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_8_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_8_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_8_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_8_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_9_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_9_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_9_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_9_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_9_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_10_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_10_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_10_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_10_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_10_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_11_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_11_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_11_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_11_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_11_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_12_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_12_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_12_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_12_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_12_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_13_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_13_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_13_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_13_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_13_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_14_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_14_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_14_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_14_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_14_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_15_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_15_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_15_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+			overlord = {
+				change_variable = {
+					name = nvgm_given_construction_15_var
+					multiply = 0
+				}
+				change_variable = {
+					name = nvgm_given_construction_15_var
+					add = root.var:nvgm_given_construction_modifier_var
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_variable = nvgm_give_construction_1_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_1_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_2_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_2_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_3_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_3_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_4_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_4_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_5_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_5_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_6_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_6_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_7_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_7_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_8_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_8_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_9_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_9_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_10_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_10_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_11_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_11_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_12_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_12_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_13_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_13_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_14_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_14_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_15_var
+			}
+			set_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				value = var:nvgm_give_construction_15_var
+			}
+			change_variable = {
+				name = nvgm_given_construction_modifier_x15_var
+				multiply = 15
+			}
+		}
+	}
+}
+
+nvgm_give_construction_check_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = yes
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				or
+				{
+					has_variable = nvgm_give_construction_1_var
+					has_variable = nvgm_give_construction_2_var
+					has_variable = nvgm_give_construction_3_var
+					has_variable = nvgm_give_construction_4_var
+					has_variable = nvgm_give_construction_5_var
+					has_variable = nvgm_give_construction_6_var
+					has_variable = nvgm_give_construction_7_var
+					has_variable = nvgm_give_construction_8_var
+					has_variable = nvgm_give_construction_9_var
+					has_variable = nvgm_give_construction_10_var
+					has_variable = nvgm_give_construction_11_var
+					has_variable = nvgm_give_construction_12_var
+					has_variable = nvgm_give_construction_13_var
+					has_variable = nvgm_give_construction_14_var
+					has_variable = nvgm_give_construction_15_var
+				}
+			}
+			custom_tooltip = "nvgm_give_check_scriptedgu_tooltip"
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_var
+			value = overlord.modifier:country_construction_add
+		}
+		change_variable = {
+			name = nvgm_given_construction_modifier_var
+			divide = 5
+		}
+		if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_1_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_1_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_1_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_2_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_2_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_2_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_3_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_3_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_3_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_4_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_4_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_4_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_5_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_5_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_5_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_6_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_6_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_6_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_7_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_7_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_7_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_8_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_8_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_8_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_9_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_9_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_9_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_10_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_10_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_10_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_11_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_11_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_11_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_12_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_12_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_12_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_13_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_13_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_13_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_14_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_14_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_14_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		else_if = {
+			limit = {
+				var:nvgm_given_construction_modifier_var <= var:nvgm_give_construction_15_var
+			}
+			change_variable = {
+				name = nvgm_give_construction_15_var
+				multiply = 0
+			}
+			change_variable = {
+				name = nvgm_give_construction_15_var
+				add = var:nvgm_given_construction_modifier_var
+			}
+		}
+		if = {
+			limit = {
+				has_variable = nvgm_give_construction_1_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_1_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_1_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_1_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_1_country_modifier
+				multiplier = var:nvgm_give_construction_1_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_1_country_modifier
+					multiplier = overlord.var:nvgm_given_construction_1_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_2_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_2_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_2_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_2_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_2_country_modifier
+				multiplier = var:nvgm_give_construction_2_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_2_country_modifier
+					multiplier = var:nvgm_given_construction_2_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_3_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_3_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_3_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_3_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_3_country_modifier
+				multiplier = var:nvgm_give_construction_3_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_3_country_modifier
+					multiplier = var:nvgm_given_construction_3_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_4_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_4_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_4_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_4_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_4_country_modifier
+				multiplier = var:nvgm_give_construction_4_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_4_country_modifier
+					multiplier = var:nvgm_given_construction_4_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_5_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_5_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_5_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_5_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_5_country_modifier
+				multiplier = var:nvgm_give_construction_5_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_5_country_modifier
+					multiplier = var:nvgm_given_construction_5_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_6_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_6_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_6_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_6_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_6_country_modifier
+				multiplier = var:nvgm_give_construction_6_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_6_country_modifier
+					multiplier = var:nvgm_given_construction_6_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_7_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_7_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_7_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_7_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_7_country_modifier
+				multiplier = var:nvgm_give_construction_7_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_7_country_modifier
+					multiplier = var:nvgm_given_construction_7_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_8_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_8_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_8_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_8_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_8_country_modifier
+				multiplier = var:nvgm_give_construction_8_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_8_country_modifier
+					multiplier = var:nvgm_given_construction_8_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_9_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_9_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_9_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_9_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_9_country_modifier
+				multiplier = var:nvgm_give_construction_9_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_9_country_modifier
+					multiplier = var:nvgm_given_construction_9_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_10_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_10_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_10_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_10_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_10_country_modifier
+				multiplier = var:nvgm_give_construction_10_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_10_country_modifier
+					multiplier = var:nvgm_given_construction_10_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_11_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_11_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_11_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_11_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_11_country_modifier
+				multiplier = var:nvgm_give_construction_11_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_11_country_modifier
+					multiplier = var:nvgm_given_construction_11_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_12_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_12_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_12_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_12_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_12_country_modifier
+				multiplier = var:nvgm_give_construction_12_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_12_country_modifier
+					multiplier = var:nvgm_given_construction_12_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_13_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_13_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_13_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_13_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_13_country_modifier
+				multiplier = var:nvgm_give_construction_13_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_13_country_modifier
+					multiplier = var:nvgm_given_construction_13_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_14_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_14_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_14_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_14_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_14_country_modifier
+				multiplier = var:nvgm_give_construction_14_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_14_country_modifier
+					multiplier = var:nvgm_given_construction_14_var
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nvgm_give_construction_15_var
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_modifier = nvgm_give_construction_15_country_modifier
+					}
+					remove_modifier = nvgm_give_construction_15_country_modifier
+					overlord = {
+						remove_modifier = nvgm_given_construction_15_country_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = nvgm_give_construction_15_country_modifier
+				multiplier = var:nvgm_give_construction_15_var
+			}
+			overlord = {
+				add_modifier = {
+					name = nvgm_given_construction_15_country_modifier
+					multiplier = var:nvgm_given_construction_15_var
+				}
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_give_construction_check_scriptedgu_tooltip"
+		}
+	}
+}
+
+# 陸軍増強
+nvgm_army_build_up_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = yes
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		or = {
+			is_subject_type = subject_type_puppet
+			is_subject_type = concept_vassal
+			is_subject_type = concept_colony_subject
+		}
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		add_liberty_desire = 1
+		random_scope_state = {
+			limit = {
+				can_construct_building = building_barracks
+			}
+			start_building_construction = building_barracks
+		}
+	}
+}
+
+# 海軍増強
+nvgm_navy_build_up_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = yes
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		or = {
+			is_subject_type = subject_type_puppet
+			is_subject_type = concept_vassal
+			is_subject_type = concept_colony_subject
+		}
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		add_liberty_desire = 2
+		random_scope_state = {
+			limit = {
+				can_construct_building = building_naval_base
+			}
+			start_building_construction = building_naval_base
 		}
 	}
 }

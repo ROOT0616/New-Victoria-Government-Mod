@@ -323,3 +323,154 @@ nvgm_given_innovation_15_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
 	country_weekly_innovation_add = -5
 }
+
+# 建設力移譲
+nvgm_give_construction_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_give_construction_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_construction_add = 15
+}
+
+nvgm_given_construction_1_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_2_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_3_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_4_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_5_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_6_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_7_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_8_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_9_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_10_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_11_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_12_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_13_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_14_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}
+
+nvgm_given_construction_15_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	country_construction_add = -15
+}

@@ -32,33 +32,33 @@ decisions_nvgm_establish_company = {
 	}
 }
 
-# 従属国への建設支援
-decisions_nvgm_construction_sector = {
-	is_shown = {
-		always = yes
-	}
-	possible = {
-		NOT = {
-			has_variable = nvgm_establish_construction_sector_events_now_var
-		}
-		any_subject_or_below = {
-			is_direct_subject_of = root
-			# any_scope_state = {
-			# 	any_scope_building = {
-			# 		is_building_type = building_construction_sector
-			# 		level = 0
-			# 	}
-			# }
-		}
-	}
-	when_taken = {
-		# custom_tooltip = decisions_nvgm_abandonment_policy_tooltip
-		trigger_event = nvgm_establish_construction_sector_events.1
-	}
-	ai_chance = {
-		base = 0
-	}
-}
+# # 従属国への建設支援
+# decisions_nvgm_construction_sector = {
+# 	is_shown = {
+# 		always = yes
+# 	}
+# 	possible = {
+# 		NOT = {
+# 			has_variable = nvgm_establish_construction_sector_events_now_var
+# 		}
+# 		any_subject_or_below = {
+# 			is_direct_subject_of = root
+# 			# any_scope_state = {
+# 			# 	any_scope_building = {
+# 			# 		is_building_type = building_construction_sector
+# 			# 		level = 0
+# 			# 	}
+# 			# }
+# 		}
+# 	}
+# 	when_taken = {
+# 		# custom_tooltip = decisions_nvgm_abandonment_policy_tooltip
+# 		trigger_event = nvgm_establish_construction_sector_events.1
+# 	}
+# 	ai_chance = {
+# 		base = 0
+# 	}
+# }
 
 # 棄民政策
 decisions_nvgm_abandonment_policy = {

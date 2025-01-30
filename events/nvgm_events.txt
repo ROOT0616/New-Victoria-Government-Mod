@@ -298,6 +298,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_agriculture_1 = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_agriculture_1_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -371,6 +372,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_agriculture_2 = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_agriculture_2_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -468,6 +470,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_fabrics = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_fabrics_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -541,6 +544,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_colonial_plantations_1 = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_colonial_plantations_1_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -614,6 +618,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_colonial_plantations_2 = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_colonial_plantations_2_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -711,6 +716,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_silk_and_dye = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_silk_and_dye_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -784,6 +790,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_wine_and_fruit = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_wine_and_fruit_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -857,6 +864,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_fishing = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_fishing_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -930,6 +938,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_forestry = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_forestry_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -1003,6 +1012,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_oil = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_oil_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -1047,9 +1057,10 @@ nvgm_establish_company_events.2 = {
 		name = nvgm_establish_company_events.2.k
 		trigger = {
 			scope:nvgm_target_country = {
-				can_nvgm_establish_company_basic_forestry = yes
+				can_nvgm_establish_company_basic_gold_mining = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_gold_mining_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -1060,7 +1071,7 @@ nvgm_establish_company_events.2 = {
 				}
 				scope:nvgm_target_country = {
 					add_company = company_type:company_basic_gold_mining
-					company:company_basic_gold_mining = {
+					company:	 = {
 						set_company_state_region = prev
 					}
 					add_modifier = {
@@ -1097,6 +1108,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_metal_mining = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_metal_mining_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -1170,6 +1182,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_mineral_mining = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_metal_mining_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				limit = {
@@ -1243,6 +1256,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_food = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_food_tooltip
 		scope:nvgm_target_country = {
 			random_scope_state = {
 				scope:nvgm_target_country = {
@@ -1284,6 +1298,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_paper = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_paper_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1325,6 +1340,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_home_goods = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_home_goods_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1380,6 +1396,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_textiles = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_textiles_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1421,6 +1438,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_steel = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_steel_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1462,6 +1480,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_metalworks = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_metalworks_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1553,6 +1572,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_shipyards = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_shipyards_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1608,6 +1628,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_chemicals = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_chemicals_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1687,6 +1708,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_motors = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_motors_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1766,6 +1788,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_munitions = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_munitions_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1873,6 +1896,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_basic_electrics = yes
 			}
 		}
+		custom_tooltip = nvgm_company_basic_electrics_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -1918,6 +1942,7 @@ nvgm_establish_company_events.2 = {
 				can_nvgm_establish_company_construction_power_bloc = yes
 			}
 		}
+		custom_tooltip = nvgm_company_construction_power_bloc_tooltip
 		scope:nvgm_target_country = {
 			capital = {
 				scope:nvgm_target_country = {
@@ -4201,3 +4226,37 @@ nvgm_migration_events.8 = {
 		}
 	}
 }
+
+# test.63 = {
+# 	type = country_event
+# 	title = "建設開始"
+# 	duration = 10
+	
+# 	immediate = {
+# 		random_state = {
+# 			limit = {
+# 				owner = ROOT
+# 			}
+# 			save_scope_as = cur_state
+# 		}
+# 	}
+
+# 	option = {
+# 		name = "Start building 兵舎"
+# 		scope:cur_state = {
+# 			start_building_construction = building_barracks
+# 		}
+# 	}
+
+# 	option = {
+# 		name = "Start building 市街地"
+# 		scope:cur_state = {
+# 			start_building_construction = building_urban_center
+# 		}
+# 	}
+
+# 	option = {
+# 		name = "CANCEL"
+# 		default_option = yes
+# 	}
+# }
