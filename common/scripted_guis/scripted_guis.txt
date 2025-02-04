@@ -1131,7 +1131,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_2_country_modifier
-					multiplier = var:nvgm_given_bur_2_var
+					multiplier = overlord.var:nvgm_given_bur_2_var
 				}
 			}
 		}
@@ -1157,7 +1157,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_3_country_modifier
-					multiplier = var:nvgm_given_bur_3_var
+					multiplier = overlord.var:nvgm_given_bur_3_var
 				}
 			}
 		}
@@ -1183,7 +1183,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_4_country_modifier
-					multiplier = var:nvgm_given_bur_4_var
+					multiplier = overlord.var:nvgm_given_bur_4_var
 				}
 			}
 		}
@@ -1209,7 +1209,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_5_country_modifier
-					multiplier = var:nvgm_given_bur_5_var
+					multiplier = overlord.var:nvgm_given_bur_5_var
 				}
 			}
 		}
@@ -1235,7 +1235,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_6_country_modifier
-					multiplier = var:nvgm_given_bur_6_var
+					multiplier = overlord.var:nvgm_given_bur_6_var
 				}
 			}
 		}
@@ -1261,7 +1261,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_7_country_modifier
-					multiplier = var:nvgm_given_bur_7_var
+					multiplier = overlord.var:nvgm_given_bur_7_var
 				}
 			}
 		}
@@ -1287,7 +1287,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_8_country_modifier
-					multiplier = var:nvgm_given_bur_8_var
+					multiplier = overlord.var:nvgm_given_bur_8_var
 				}
 			}
 		}
@@ -1313,7 +1313,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_9_country_modifier
-					multiplier = var:nvgm_given_bur_9_var
+					multiplier = overlord.var:nvgm_given_bur_9_var
 				}
 			}
 		}
@@ -1339,7 +1339,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_10_country_modifier
-					multiplier = var:nvgm_given_bur_10_var
+					multiplier = overlord.var:nvgm_given_bur_10_var
 				}
 			}
 		}
@@ -1365,7 +1365,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_11_country_modifier
-					multiplier = var:nvgm_given_bur_11_var
+					multiplier = overlord.var:nvgm_given_bur_11_var
 				}
 			}
 		}
@@ -1391,7 +1391,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_12_country_modifier
-					multiplier = var:nvgm_given_bur_12_var
+					multiplier = overlord.var:nvgm_given_bur_12_var
 				}
 			}
 		}
@@ -1417,7 +1417,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_13_country_modifier
-					multiplier = var:nvgm_given_bur_13_var
+					multiplier = overlord.var:nvgm_given_bur_13_var
 				}
 			}
 		}
@@ -1443,7 +1443,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_14_country_modifier
-					multiplier = var:nvgm_given_bur_14_var
+					multiplier = overlord.var:nvgm_given_bur_14_var
 				}
 			}
 		}
@@ -1469,7 +1469,7 @@ nvgm_give_bur_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_bur_15_country_modifier
-					multiplier = var:nvgm_given_bur_15_var
+					multiplier = overlord.var:nvgm_given_bur_15_var
 				}
 			}
 		}
@@ -2341,7 +2341,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_1_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2364,7 +2364,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_2_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2387,7 +2387,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_3_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2410,7 +2410,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_4_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2433,7 +2433,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_5_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2456,7 +2456,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_6_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2479,7 +2479,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_7_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2502,7 +2502,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_8_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2525,7 +2525,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_9_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2548,7 +2548,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_10_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2571,7 +2571,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_11_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2594,7 +2594,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_12_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2617,7 +2617,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_13_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2640,7 +2640,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_14_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2663,7 +2663,7 @@ nvgm_give_innovation_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_15_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -2935,7 +2935,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_1_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -2948,7 +2948,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_2_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -2961,7 +2961,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_3_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -2974,7 +2974,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_4_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -2987,7 +2987,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_5_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3000,7 +3000,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_6_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3013,7 +3013,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_7_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3026,7 +3026,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_8_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3039,7 +3039,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_9_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3052,7 +3052,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_10_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3065,7 +3065,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_11_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3078,7 +3078,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_12_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3091,7 +3091,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_13_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3104,7 +3104,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_14_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		else_if = {
@@ -3117,7 +3117,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_innovation_15_var
-				add = var:nvgm_given_innovation_modifier_var
+				add = overlord.var:nvgm_given_innovation_modifier_var
 			}
 		}
 		if = {
@@ -3168,7 +3168,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_2_country_modifier
-					multiplier = var:nvgm_given_innovation_2_var
+					multiplier = overlord.var:nvgm_given_innovation_2_var
 				}
 			}
 		}
@@ -3194,7 +3194,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_3_country_modifier
-					multiplier = var:nvgm_given_innovation_3_var
+					multiplier = overlord.var:nvgm_given_innovation_3_var
 				}
 			}
 		}
@@ -3220,7 +3220,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_4_country_modifier
-					multiplier = var:nvgm_given_innovation_4_var
+					multiplier = overlord.var:nvgm_given_innovation_4_var
 				}
 			}
 		}
@@ -3246,7 +3246,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_5_country_modifier
-					multiplier = var:nvgm_given_innovation_5_var
+					multiplier = overlord.var:nvgm_given_innovation_5_var
 				}
 			}
 		}
@@ -3272,7 +3272,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_6_country_modifier
-					multiplier = var:nvgm_given_innovation_6_var
+					multiplier = overlord.var:nvgm_given_innovation_6_var
 				}
 			}
 		}
@@ -3298,7 +3298,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_7_country_modifier
-					multiplier = var:nvgm_given_innovation_7_var
+					multiplier = overlord.var:nvgm_given_innovation_7_var
 				}
 			}
 		}
@@ -3324,7 +3324,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_8_country_modifier
-					multiplier = var:nvgm_given_innovation_8_var
+					multiplier = overlord.var:nvgm_given_innovation_8_var
 				}
 			}
 		}
@@ -3350,7 +3350,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_9_country_modifier
-					multiplier = var:nvgm_given_innovation_9_var
+					multiplier = overlord.var:nvgm_given_innovation_9_var
 				}
 			}
 		}
@@ -3376,7 +3376,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_10_country_modifier
-					multiplier = var:nvgm_given_innovation_10_var
+					multiplier = overlord.var:nvgm_given_innovation_10_var
 				}
 			}
 		}
@@ -3402,7 +3402,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_11_country_modifier
-					multiplier = var:nvgm_given_innovation_11_var
+					multiplier = overlord.var:nvgm_given_innovation_11_var
 				}
 			}
 		}
@@ -3428,7 +3428,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_12_country_modifier
-					multiplier = var:nvgm_given_innovation_12_var
+					multiplier = overlord.var:nvgm_given_innovation_12_var
 				}
 			}
 		}
@@ -3454,7 +3454,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_13_country_modifier
-					multiplier = var:nvgm_given_innovation_13_var
+					multiplier = overlord.var:nvgm_given_innovation_13_var
 				}
 			}
 		}
@@ -3480,7 +3480,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_14_country_modifier
-					multiplier = var:nvgm_given_innovation_14_var
+					multiplier = overlord.var:nvgm_given_innovation_14_var
 				}
 			}
 		}
@@ -3506,7 +3506,7 @@ nvgm_give_innovation_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_innovation_15_country_modifier
-					multiplier = var:nvgm_given_innovation_15_var
+					multiplier = overlord.var:nvgm_given_innovation_15_var
 				}
 			}
 		}
@@ -4378,7 +4378,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_1_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4401,7 +4401,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_2_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4424,7 +4424,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_3_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4447,7 +4447,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_4_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4470,7 +4470,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_5_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4493,7 +4493,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_6_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4516,7 +4516,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_7_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4539,7 +4539,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_8_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4562,7 +4562,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_9_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4585,7 +4585,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_10_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4608,7 +4608,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_11_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4631,7 +4631,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_12_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4654,7 +4654,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_13_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4677,7 +4677,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_14_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4700,7 +4700,7 @@ nvgm_give_construction_plus_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_15_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 			overlord = {
 				change_variable = {
@@ -4972,7 +4972,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_1_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -4985,7 +4985,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_2_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -4998,7 +4998,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_3_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5011,7 +5011,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_4_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5024,7 +5024,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_5_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5037,7 +5037,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_6_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5050,7 +5050,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_7_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5063,7 +5063,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_8_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5076,7 +5076,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_9_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5089,7 +5089,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_10_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5102,7 +5102,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_11_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5115,7 +5115,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_12_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5128,7 +5128,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_13_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5141,7 +5141,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_14_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		else_if = {
@@ -5154,7 +5154,7 @@ nvgm_give_construction_check_scriptedgui = {
 			}
 			change_variable = {
 				name = nvgm_give_construction_15_var
-				add = var:nvgm_given_construction_modifier_var
+				add = overlord.var:nvgm_given_construction_modifier_var
 			}
 		}
 		if = {
@@ -5205,7 +5205,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_2_country_modifier
-					multiplier = var:nvgm_given_construction_2_var
+					multiplier = overlord.var:nvgm_given_construction_2_var
 				}
 			}
 		}
@@ -5231,7 +5231,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_3_country_modifier
-					multiplier = var:nvgm_given_construction_3_var
+					multiplier = overlord.var:nvgm_given_construction_3_var
 				}
 			}
 		}
@@ -5257,7 +5257,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_4_country_modifier
-					multiplier = var:nvgm_given_construction_4_var
+					multiplier = overlord.var:nvgm_given_construction_4_var
 				}
 			}
 		}
@@ -5283,7 +5283,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_5_country_modifier
-					multiplier = var:nvgm_given_construction_5_var
+					multiplier = overlord.var:nvgm_given_construction_5_var
 				}
 			}
 		}
@@ -5309,7 +5309,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_6_country_modifier
-					multiplier = var:nvgm_given_construction_6_var
+					multiplier = overlord.var:nvgm_given_construction_6_var
 				}
 			}
 		}
@@ -5335,7 +5335,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_7_country_modifier
-					multiplier = var:nvgm_given_construction_7_var
+					multiplier = overlord.var:nvgm_given_construction_7_var
 				}
 			}
 		}
@@ -5361,7 +5361,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_8_country_modifier
-					multiplier = var:nvgm_given_construction_8_var
+					multiplier = overlord.var:nvgm_given_construction_8_var
 				}
 			}
 		}
@@ -5387,7 +5387,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_9_country_modifier
-					multiplier = var:nvgm_given_construction_9_var
+					multiplier = overlord.var:nvgm_given_construction_9_var
 				}
 			}
 		}
@@ -5413,7 +5413,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_10_country_modifier
-					multiplier = var:nvgm_given_construction_10_var
+					multiplier = overlord.var:nvgm_given_construction_10_var
 				}
 			}
 		}
@@ -5439,7 +5439,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_11_country_modifier
-					multiplier = var:nvgm_given_construction_11_var
+					multiplier = overlord.var:nvgm_given_construction_11_var
 				}
 			}
 		}
@@ -5465,7 +5465,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_12_country_modifier
-					multiplier = var:nvgm_given_construction_12_var
+					multiplier = overlord.var:nvgm_given_construction_12_var
 				}
 			}
 		}
@@ -5491,7 +5491,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_13_country_modifier
-					multiplier = var:nvgm_given_construction_13_var
+					multiplier = overlord.var:nvgm_given_construction_13_var
 				}
 			}
 		}
@@ -5517,7 +5517,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_14_country_modifier
-					multiplier = var:nvgm_given_construction_14_var
+					multiplier = overlord.var:nvgm_given_construction_14_var
 				}
 			}
 		}
@@ -5543,7 +5543,7 @@ nvgm_give_construction_check_scriptedgui = {
 			overlord = {
 				add_modifier = {
 					name = nvgm_given_construction_15_country_modifier
-					multiplier = var:nvgm_given_construction_15_var
+					multiplier = overlord.var:nvgm_given_construction_15_var
 				}
 			}
 		}
@@ -5569,21 +5569,28 @@ nvgm_army_build_up_scriptedgui = {
 	}
 	# is the AI allowed to use it? Disabled by default.
 	is_valid = {
-		or = {
-			is_subject_type = subject_type_puppet
-			is_subject_type = concept_vassal
-			is_subject_type = concept_colony_subject
-		}
+		always = yes
 	}
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
-		add_liberty_desire = 1
-		random_scope_state = {
+		if = {
 			limit = {
+				any_scope_staate = {
 				can_construct_building = building_barracks
+				}
+				liberty_desire < 100
 			}
-			start_building_construction = building_barracks
+			add_liberty_desire = 1
+			random_scope_state = {
+				limit = {
+					can_construct_building = building_barracks
+				}
+				start_building_construction = building_barracks
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_army_build_up_scriptedgui_tooltip"
 		}
 	}
 }
@@ -5604,21 +5611,28 @@ nvgm_navy_build_up_scriptedgui = {
 	}
 	# is the AI allowed to use it? Disabled by default.
 	is_valid = {
-		or = {
-			is_subject_type = subject_type_puppet
-			is_subject_type = concept_vassal
-			is_subject_type = concept_colony_subject
-		}
+		always = yes
 	}
 	# can the player use it?
 	# Three trigger context, you can use them as you like whatever it used for vaild or shown
 	effect = {
-		add_liberty_desire = 2
-		random_scope_state = {
+		if = {
 			limit = {
+				any_scope_staate = {
 				can_construct_building = building_naval_base
+				}
+				liberty_desire < 100
 			}
-			start_building_construction = building_naval_base
+			add_liberty_desire = 2
+			random_scope_state = {
+				limit = {
+					can_construct_building = building_naval_base
+				}
+				start_building_construction = building_naval_base
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_navy_build_up_scriptedgui_tooltip"
 		}
 	}
 }

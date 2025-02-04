@@ -14,6 +14,7 @@ nvgm_target_construction_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	# country_tax_income_add = 2500
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_construction_country_modifier = {
@@ -26,76 +27,91 @@ nvgm_construction_country_modifier = {
 nvgm_give_bur_1_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_2_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_3_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_4_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_5_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_6_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_7_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_8_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_9_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_10_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_11_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_12_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_13_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_14_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_bur_15_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_bureaucracy_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_given_bur_1_country_modifier = {
@@ -177,76 +193,91 @@ nvgm_given_bur_15_country_modifier = {
 nvgm_give_innovation_1_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_2_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_3_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_4_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_5_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_6_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_7_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_8_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_9_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_10_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_11_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_12_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_13_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_14_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_give_innovation_15_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_add = 5
+	country_liberty_desire_add = -0.01
 }
 
 nvgm_given_innovation_1_country_modifier = {
@@ -328,76 +359,91 @@ nvgm_given_innovation_15_country_modifier = {
 nvgm_give_construction_1_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_2_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_3_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_4_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_5_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_6_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_7_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_8_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_9_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_10_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_11_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_12_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_13_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_14_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_give_construction_15_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_construction_add = 15
+	country_liberty_desire_add = -0.005
 }
 
 nvgm_given_construction_1_country_modifier = {

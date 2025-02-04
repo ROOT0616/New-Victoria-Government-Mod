@@ -1071,7 +1071,7 @@ nvgm_establish_company_events.2 = {
 				}
 				scope:nvgm_target_country = {
 					add_company = company_type:company_basic_gold_mining
-					company:	 = {
+					company: = {
 						set_company_state_region = prev
 					}
 					add_modifier = {
@@ -1853,7 +1853,7 @@ nvgm_establish_company_events.2 = {
 				}
 				else = {
 					create_building = {
-						building = building_motor_industry
+						building = building_munition_plants
 						add_ownership = {
 							company = {
 								type = company_basic_munitions
@@ -1864,10 +1864,10 @@ nvgm_establish_company_events.2 = {
 						reserves = 1
 					}
 					create_building = {
-						building = building_motor_industry
+						building = building_explosives_factory
 						add_ownership = {
 							company = {
-								type = building_explosives_factory
+								type = company_basic_munitions
 								country = scope:nvgm_target_country
 								levels = 3
 							}
@@ -3135,15 +3135,15 @@ nvgm_migration_events.2 = {
 				is_incorporated = yes
 				state_population >= 1000000
 				any_scope_pop = {
-					total_size >= 10000
 					pop_acceptance < acceptance_status_4
+					total_size >= 1000
 				}
 			}
 			save_scope_as = nvgm_abandonment_state
 			random_scope_pop = {
 				limit = {
-					total_size >= 10000
 					pop_acceptance < acceptance_status_4
+					total_size >= 1000
 				}
 				save_scope_as = nvgm_target_pop
 			}
@@ -3157,7 +3157,7 @@ nvgm_migration_events.2 = {
 		trigger = {
 			scope:nvgm_abandonment_state = {
 				any_scope_pop = {
-					total_size >= 10000
+					# total_size >= 10000
 					pop_acceptance < acceptance_status_4
 				}
 			}
@@ -4231,7 +4231,6 @@ nvgm_migration_events.8 = {
 # 	type = country_event
 # 	title = "建設開始"
 # 	duration = 10
-	
 # 	immediate = {
 # 		random_state = {
 # 			limit = {
@@ -4240,21 +4239,18 @@ nvgm_migration_events.8 = {
 # 			save_scope_as = cur_state
 # 		}
 # 	}
-
 # 	option = {
 # 		name = "Start building 兵舎"
 # 		scope:cur_state = {
 # 			start_building_construction = building_barracks
 # 		}
 # 	}
-
 # 	option = {
 # 		name = "Start building 市街地"
 # 		scope:cur_state = {
 # 			start_building_construction = building_urban_center
 # 		}
 # 	}
-
 # 	option = {
 # 		name = "CANCEL"
 # 		default_option = yes
