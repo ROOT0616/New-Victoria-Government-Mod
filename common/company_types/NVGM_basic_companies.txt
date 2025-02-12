@@ -1,0 +1,68 @@
+﻿# company_key = {
+# 	icon = "texture path"
+# 	background = "texture path"
+# 	flavored_company = yes/no
+# 	uses_dynamic_naming = yes/no
+# 	dynamic_company_type_names = {
+# 	}
+# 	building_types = { 
+# 	}
+# 	replaces_company = other_company_key
+# 
+# 	次の3つのトリガーは、会社を4つの異なるカテゴリーに分割するために使用されます。hidden/potential/attainable/available
+# 	すべては、国単位で評価されます。
+# 	最初のトリガーに失敗した会社は非表示となり、最初のトリガーには合格したが2番目のトリガーに失敗した会社は潜在的な会社として表示され、
+# 	同様に、3つのトリガーすべてに合格するまで、利用可能な会社として表示されます。
+# 	potential = {
+# 								# 国レベルで評価されるトリガー。この企業タイプをプレーヤーに潜在企業として表示すべきかどうかを決定する
+# 	}
+# 	attainable = {
+# 								# 国レベルで評価されるトリガー。この企業タイプをプレーヤーに達成可能企業として表示すべきかどうかを決定する
+# 	}
+# 	possible = { 
+# 								# 国レベルで評価されるトリガー。この企業タイプをプレーヤーに利用可能企業として表示すべきかどうかを決定する
+# 	}
+# 	can_establish_in = {
+# 								# 州のスコープで評価されるトリガーで、この企業タイプがスコープ内の州に拠点を置くことができるかどうかを判断する
+# 	}
+# 	prosperity_modifier = {
+# 	}
+# 	ai_weight = {
+# 	}
+# }
+
+# 医療組合
+company_nvgm_basic_major_hospital = {
+	icon = "gfx/interface/icons/company_icons/nvgm_basic_major_hospital.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {
+		building_nvgm_clinic
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_nvgm_clinic
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		# state_lower_strata_standard_of_living_add = 0.5
+		# state_middle_strata_standard_of_living_add = 1.0
+		# state_upper_strata_standard_of_living_add = 1.5
+		building_group_bg_nvgm_clinic_standard_of_living_add = 1.0
+		state_academics_investment_pool_contribution_add = 0.30
+	}
+}

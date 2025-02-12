@@ -1,4 +1,29 @@
+﻿# parent_group = parent_group_key 			設定されている場合、このグループは指定されたグループの子とみなされます。デフォルトは親なし。
+# always_possible = yes/no 							yesの場合、このグループのビルディングタイプは、状態のリソースに関係なく常に許可されます。デフォルトはno。
+# economy_of_scale = yes/no 						yesの場合、このグループに含まれる、またはこのグループの下にある非自給自足的な建物は、各レベルが1を超えるごとに、規模の経済による処理能力の修正を受けます。デフォルトはnoです.
+# is_subsistence = yes/no 							yesの場合、このグループに含まれるタイプの建物は特別なルールに従う自給自足の建物とみなされます. デフォルトはnoです.
+# default_building = building_type_key 	状態が異なるタイプを指定しない限り、デフォルトの建物タイプを指定します。デフォルトなし.
+# lens = lens_key 											指定された場合、このグループの建物をどのレンズの下で並べ替えるか を決定する。デフォルトなし.
+# auto_place_buildings = yes/no
+# capped_by_resources = yes/no
+# 発見可能リソース = yes/no
+# 枯渇可能リソース = yes/no
+# can_use_slaves = yes/no								デフォルトはnoであり、yesに設定するとすべての建物とグループに対して奴隷制が適用される。
+# land_usage = urban/rural							都市部＝都市化、農村部＝耕地。 デフォルトでは国家資源を使用しない。
+# 																			もし未指定の場合, 親となる建物のグループツリーで最初に見つかった デフォルト以外の土地利用タイプを返します.
+# cash_reserves_max = number 						このグループ内のビルが現金準備として蓄えることができるポンド の最大額(レベルごと)。未指定または0に設定されている場合, 親グループの値が使用されます. デフォルト 0
+# inheritable_construction = yes/no 		yesの場合、この建物グループの建物は、状態が変わっても、 分割された状態が合併しても生き残る。
+# stateregion_max_level = yes/no 				yesの場合、このグループのhas_max_levelプロパティを持つ建築タイプは、州レベルではなく、州-地域レベルでのレベル制限を考慮します。
+# urbanization = number 								このグループの建物がレベルごとに提供する都市化の量
+# should_auto_expand = trigger 					自動拡張がオンに設定されている場合、このグループ内のビルはどのような条件で自動拡張を行うか(より具体的なグループまたはビルディングタイプのオーバーライドのトリガー)
+# 																			このトリガーに全く内容がない場合、ゲームはその建物が自動拡張される可能性が あると判断します。
+# min_hiring_rate = X 									建物の最大従業員数のうち、どれだけの人数を1週間に雇うことができるかの最小値 (デフォルトはNDefines::NEconomy::DEFAULT_MIN_HIRING_RATE)
+# max_hiring_rate = X 1 								週間に採用可能なスタッフの最大数 (デフォルト NDefines::NEconomy::DEFAULT_MAX_HIRING_RATE)
+# proportionality_limit = X 						ポップの種類が比例していないことに対するビルの許容範囲 (デフォルト NDefines::NEconomy::EMPLOYMENT_PROPORTIONALITY_LIMIT)
+# hires_unemployed_only = yes 					yesの場合、このグループのビルは失業者プールからのみ雇用することができます。デフォルトはno。
+# is_shown_in_outliner = yes 						もしnoなら、このグループのビルタイプはアウトライナーに表示されません。
 
+# 道路
 bg_nvgm_traffic = {
 	parent_group = bg_infrastructure
 
@@ -11,4 +36,17 @@ bg_nvgm_traffic = {
 	urbanization = 1
 	
 	economy_of_scale_ai_factor = 5.0
+}
+
+# 病院
+bg_nvgm_clinic = {
+	parent_group = bg_manufacturing
+	urbanization = 5
+	lens = urban
+	default_building = building_nvgm_clinic
+}
+
+# 自律的投資において、他の所有建物とは別に投資を追跡するために必要
+bg_nvgm_doctors_credit_union = {
+	parent_group = bg_owner_buildings
 }

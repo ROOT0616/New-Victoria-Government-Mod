@@ -1,4 +1,4 @@
-pmg_base_building_nvgm_traffic = {
+﻿pmg_base_building_nvgm_traffic = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -10,16 +10,7 @@ pmg_base_building_nvgm_traffic = {
 	}
 }
 
-# pmg_ownership_capital_building_nvgm_traffic = {
-# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-# 	production_methods = {
-# 		pm_privately_owned_building_nvgm_traffic
-# 		pm_publicly_traded_building_nvgm_traffic
-# 		pm_government_run_building_nvgm_traffic
-# 		# pm_worker_cooperative_building_nvgm_traffic
-# 	}
-# }
-
+# 病院
 pmg_base_nvgm_clinic = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
@@ -30,13 +21,24 @@ pmg_base_nvgm_clinic = {
 	}
 }
 
-pmg_base_nvgm_human_ranch = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
+# pmg_base_nvgm_human_ranch = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+# 	ai_selection = most_productive
 
-	production_methods = {
-		pm_nvgm_compulsory_human_ranch
-		pm_nvgm_volunteer_human_ranch
-	}
-}
+# 	production_methods = {
+# 		pm_nvgm_compulsory_human_ranch
+# 		pm_nvgm_volunteer_human_ranch
+# 	}
+# }
+
+# pmg_ownership_building_nvgm_doctors_credit_union = {
+# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+# 	ai_selection = most_productive
+
+# 	production_methods = {
+# 		pm_nvgm_doctors_credit_union_privately_owned
+# 		pm_nvgm_doctors_credit_union_publicly_traded
+# 		pm_nvgm_doctors_credit_union_principle_divine_economics_2
+# 	}
+# }
 

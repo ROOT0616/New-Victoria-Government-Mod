@@ -1,4 +1,4 @@
-nvgm_free_wheat_rye_arable_land = {
+﻿nvgm_free_wheat_rye_arable_land = {
 	value = 0
 	every_scope_state = {
 		limit = {
@@ -85,6 +85,19 @@ nvgm_free_vineyard_banana_arable_land = {
 			or = {
 				can_construct_building = building_vineyard_plantation
 				can_construct_building = building_banana_plantation
+			}
+		}
+		add = this.free_arable_land
+	}
+}
+
+nvgm_free_fishing_whaling_arable_land = {
+	value = 0
+	every_scope_state = {
+		limit = {
+			or = {
+				can_construct_building = building_fishing_wharf
+				can_construct_building = building_whaling_station
 			}
 		}
 		add = this.free_arable_land

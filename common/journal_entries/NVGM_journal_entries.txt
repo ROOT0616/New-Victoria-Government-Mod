@@ -1,4 +1,4 @@
-je_nvgm_establish_company = {
+﻿je_nvgm_establish_company = {
 	icon = "gfx/interface/icons/alert_icons/can_establish_company.dds"
 	group = je_group_foreign_affairs
 	scripted_progress_bar = nvgm_establishing_company_progress_bar

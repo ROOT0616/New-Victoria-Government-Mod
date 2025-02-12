@@ -1,4 +1,4 @@
-# 追加の融資
+﻿# 追加の融資
 nvgm_bankroll_1 = {
 	groups = {
 		general
@@ -2202,6 +2202,7 @@ decrease_payments = {
 # 使節派遣
 NVGM_decrease_payments = {
 	requires_approval = no
+	should_notify_third_parties = no
 	groups = {
 		overlord
 	}
@@ -2365,7 +2366,6 @@ NVGM_request_recognition = {
 		custom_tooltip = {
 			text = NVGM_request_recognition_tt
 			scope:target_country = {
-				has_journal_entry = je_earn_recognition
 				if = {
 					limit = {
 						has_journal_entry = je_earn_recognition
@@ -2421,6 +2421,7 @@ NVGM_request_recognition = {
 # 治安維持支援
 NVGM_violent_suppression = {
 	requires_approval = no
+	should_notify_third_parties = no
 	groups = {
 		overlord
 	}
@@ -2442,7 +2443,6 @@ NVGM_violent_suppression = {
 		second_modifier = {
 			state_turmoil_effects_mult = -0.5
 			state_mortality_turmoil_mult = 0.02
-			political_movement_radicalism_mult = -0.1
 			country_revolution_progress_mult = -0.2
 			country_secession_progress_mult = -0.2
 			country_liberty_desire_add = 0.1
@@ -2520,6 +2520,7 @@ NVGM_violent_suppression = {
 # 食糧支援
 NVGM_emergency_relief = {
 	requires_approval = no
+	should_notify_third_parties = no
 	groups = {
 		overlord
 	}
@@ -2534,11 +2535,28 @@ NVGM_emergency_relief = {
 	}
 	pact = {
 		cost = 100
+		income_transfer_to_pops = { # 定義された場合、送金された所得は国庫ではなく、対象国のappro popsに送られる。
+			# ターゲットの各階層に配分される資金の割合のスクリプト値
+			# upper_strata_popsが100と評価され、合計値が1000である場合、upper strata popsは10％を得ることになる。
+			upper_strata_pops = {
+				value = 10  
+			}
+			middle_strata_pops = {
+				value = 30
+			}
+			lower_strata_pops = {
+				value = 60
+			}
+		}
+		income_transfer = 0.2
+		max_paying_country_income_to_transfer = 0.1
+		second_country_gets_income_transfer = yes
+		income_transfer_based_on_second_country = yes
 		first_modifier = {
-			country_bureaucracy_mult = -0.05
+			country_bureaucracy_mult = -0.01
 		}
 		second_modifier = {
-			country_liberty_desire_add = -0.05
+			country_liberty_desire_add = -0.1
 			state_food_security_add = 0.05
 		}
 		manual_break_effect = {

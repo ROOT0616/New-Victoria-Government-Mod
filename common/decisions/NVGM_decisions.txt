@@ -1,4 +1,4 @@
-# 海外企業の設立
+﻿# 海外企業の設立
 decisions_nvgm_establish_company = {
 	is_shown = {
 		has_technology_researched = central_banking

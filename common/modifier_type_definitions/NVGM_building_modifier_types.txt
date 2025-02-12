@@ -1,0 +1,33 @@
+﻿building_group_bg_nvgm_clinic_standard_of_living_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_academics_investment_pool_contribution_add = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_academics_investment_pool_contribution_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_academics_shares_add = {
+	decimals = 0
+	color = neutral
+	game_data = {
+		ai_value = 0
+	}
+}

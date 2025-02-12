@@ -1,4 +1,4 @@
-nvgm_establishing_company_progress_bar = {
+﻿nvgm_establishing_company_progress_bar = {
 	name = "nvgm_establishing_company_progress_bar"
 	desc = "nvgm_establishing_company_progress_bar_desc"
 	default = yes

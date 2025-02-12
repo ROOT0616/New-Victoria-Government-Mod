@@ -1,0 +1,56 @@
+[h1]　　　　　　　　　　　　Attention[/h1]
+Please note that this may conflict with mods that change the UI (diplomacy tab)!
+
+[hr][/hr]
+[h1]　　　　　　　　　　　Description[/h1]
+[list]
+ [*]Additional Buildings
+ [*]Additional Company 
+ [*]Additional Diplomatic Actions
+ [*]Additional Journal
+ [*]More information in the subjects section of the Diplomacy tab.
+[/list]
+In addition to the above, various other elements are under development to be added!
+*The UI is being manipulated to add various elements and change the display.
+
+・Additional Buildings
+Transportation：Low-cost version of railroad (for small countries)
+Hospital：Reduce state pollution effects and state mortality rates
+
+・Additional Company 
+Medical Corporation：Hospital Employees Standard of Living and academics Investment Pool contribution
+
+・Additional Diplomatic Actions
+Additional bankroll, Further bankroll, Burned-out bankroll, Last bankroll：More bankroll
+Full Exemption of Payment Obligations：Complete exemption of dependent countries from payments
+Policing support：Decreased state penalties due to social unrest in dependent states, political campaign activity, rate of revolutionary progress, and rate of secession progress
+Food support：Loans to dependent countries for food security and Pop.
+
+・Additional Journal
+Establish a company in an additional dependent country of the journal (start with a decision)
+Forced immigration of people to less populated areas (start with a decision)
+
+・More information in the subjects section of the Diplomacy tab.
+[img=https://steamuserimages-a.akamaihd.net/ugc/59211109389107924/3F219325A81EECE9F2325783CA53C0D54E622534/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true]
+
+[hr][/hr]
+[h1]　　　　　　　　Language support[/h1]　
+English Contributors　:　ChatGPT　
+
+Please contact us if you can translate into Chinese or other languages!
+
+[hr][/hr]
+[h1]　　　　　　　　　　Updates[/h1]
+
+22025/02/12　Balance adjustment Bug Fixes v1.6.1
+22025/02/03　Add a company Bug Fixes v1.6.0
+22025/02/03　Bug Fixes v1.5.5
+22025/01/30　Newly re-updated v1.5.0
+
+[hr][/hr]
+　　　　　We will keep the previous version in the GitHub branch below
+　　　　　https://github.com/ROOT0616/New-Victoria--Government-Mod
+
+[hr][/hr]
+The author will be pleased if you rate it highly, favorite it, and support it!
+[img=https://i.imgur.com/1MVQSPr.gif]

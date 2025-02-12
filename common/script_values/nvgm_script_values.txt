@@ -1,8 +1,16 @@
-# ステートの人口100人以下四捨五入
+﻿# ステートの人口100人以下四捨五入
 nvgm_state_population = {
 	value = scope:nvgm_target_state.state_population
 	divide = 100
 	round = yes
 	divide = 10
+	min = 0
+}
+
+# ステートの人口の１％四捨五入
+nvgm_state_1_per_population = {
+	value = state_population
+	divide = 100
+	round = yes
 	min = 0
 }

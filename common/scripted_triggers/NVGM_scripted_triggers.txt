@@ -1,4 +1,4 @@
-can_nvgm_establish_company = {
+﻿can_nvgm_establish_company = {
 	num_companies < max_num_companies
 }
 
@@ -49,6 +49,13 @@ can_nvgm_establish_company_basic_wine_and_fruit = {
 		has_company = company_type:company_basic_wine_and_fruit
 	}
 	nvgm_free_vineyard_banana_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_fishing = {
+	NOT = {
+		has_company = company_type:company_basic_fishing
+	}
+	nvgm_free_fishing_whaling_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_forestry = {
@@ -115,6 +122,14 @@ can_nvgm_establish_company_basic_textiles = {
 		has_company = company_type:company_basic_textiles
 	}
 	has_technology_researched = manufacturies
+	# nvgm_free_sulfur_coal_arable_land > 5
+}
+
+can_nvgm_establish_company_basic_steel = {
+	NOT = {
+		has_company = company_type:company_basic_steel
+	}
+	has_technology_researched = steelworking
 	# nvgm_free_sulfur_coal_arable_land > 5
 }
 

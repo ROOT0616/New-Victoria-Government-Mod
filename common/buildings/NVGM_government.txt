@@ -1,11 +1,11 @@
+﻿# 道路
 building_nvgm_traffic = {
 	building_group = bg_nvgm_traffic
-	icon = "gfx/interface/icons/building_icons/building_railway.dds"
+	icon = "gfx/interface/icons/building_icons/building_nvgm_traffic.dds"
 	production_method_groups = {
 		pmg_base_building_nvgm_traffic
 	}
 	required_construction = construction_cost_very_low
-	ai_value = 100	# Railways are important
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
 	should_auto_expand = {
 		occupancy >= 0.8
@@ -28,7 +28,7 @@ building_nvgm_traffic = {
 		}
 	}
 	ai_value = {
-		value = 20 # Railways are important
+		value = 20
 		if = {
 			limit = {
 				infrastructure_usage < 0
@@ -46,71 +46,325 @@ building_nvgm_traffic = {
 	}
 }
 
+# 病院
 building_nvgm_clinic = {
-	building_group = bg_private_infrastructure
-	# building_group = bg_technology
+	building_group = bg_nvgm_clinic
 	city_type = city
-	levels_per_mesh = 1
-	expandable = no
-	ownership_type = self
-	lens = infrastructure
-	# potential = {
-	# 	target_is_our_or_fellow_subject = yes
-	# }
-	# unlocking_technologies = {
-	# 	urban_planning
-	# }
+	levels_per_mesh = 5
 	production_method_groups = {
 		pmg_base_nvgm_clinic
 	}
-	land_usage = urban
-	icon = "gfx/interface/icons/building_icons/building_university.dds"
-	required_construction = construction_cost_low
+	icon = "gfx/interface/icons/building_icons/building_nvgm_clinic.dds"
+	required_construction = construction_cost_medium
+	ownership_type = self
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
-	# lens = light_industry
 	ai_value = {
-		value = 0
+		value = 1000
+		if = {
+			limit = {
+				is_incorporated = yes
+				state_population >= 500000
+			}
+			add = {
+				value = state.pollution_amount
+				multiply = 20
+				max = 5000
+			}
+		}
+		if = {
+			limit = {
+				is_incorporated = yes
+				state_population >= 500000
+			}
+			add = {
+				value = state_population
+				divide = 1000
+				max = 5000
+			}
+		}
 	}
 }
 
+# # 医師信用組合
+	# building_nvgm_doctors_credit_union = {
+	# 	building_group = bg_nvgm_doctors_credit_union
+	# 	city_type = city
+	# 	levels_per_mesh = 10
+	# 	lens = infrastructure
+	# 	icon = "gfx/interface/icons/building_icons/building_nvgm_doctors_credit_union.dds"
+	# 	possible = {
+	# 		owner = {
+	# 			has_company = company_type:company_nvgm_basic_major_hospital
+	# 		}
+	# 	}
+	# 	possible = {
+	# 		owner = {
+	# 			has_company = company_type:company_nvgm_basic_major_hospital
+	# 		}
+	# 	}
+	# 	production_method_groups = {
+	# 		pmg_ownership_building_nvgm_doctors_credit_union
+	# 	}
+	# 	investment_scores = {
+	# 		bg_nvgm_clinic_score = {
+	# 			group = "bg_nvgm_clinic"
+	# 			score = {
+	# 				value = 2
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.1
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						OR = {
+	# 							has_law = law_type:law_industry_banned
+	# 							has_law = law_type:law_extraction_economy
+	# 						}
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_agrarianism
+	# 					}
+	# 					multiply = 0.75
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_manufacturing_score = {
+	# 			group = "bg_manufacturing"
+	# 			score = {
+	# 				value = 0.5
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.1
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						OR = {
+	# 							has_law = law_type:law_industry_banned
+	# 							has_law = law_type:law_extraction_economy
+	# 						}
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_agrarianism
+	# 					}
+	# 					multiply = 0.75
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_ranching_score = {
+	# 			group = "bg_ranching"
+	# 			score = {
+	# 				value = 1.25
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_commercialized_agriculture
+	# 					}
+	# 					add = 0.5
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_tobacco_score = {
+	# 			group = "bg_tobacco_plantations"
+	# 			score = {
+	# 				value = 1.25
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_commercialized_agriculture
+	# 					}
+	# 					add = 0.25
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_cotton_score = {
+	# 			group = "bg_cotton_plantations"
+	# 			score = {
+	# 				value = 1.25
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_commercialized_agriculture
+	# 					}
+	# 					add = 0.25
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_opium_score = {
+	# 			group = "bg_opium_plantations"
+	# 			score = {
+	# 				value = 1.25
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_commercialized_agriculture
+	# 					}
+	# 					add = 0.25
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_arts_score = {
+	# 			group = "bg_arts"
+	# 			score = {
+	# 				value = 1.25
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_mining_score = {
+	# 			group = "bg_mining"
+	# 			score = {
+	# 				value = 0.75
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.25
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_industry_banned
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_agrarianism
+	# 					}
+	# 					multiply = 0.75
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_power_score = {
+	# 			group = "bg_power"
+	# 			score = {
+	# 				value = 1
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.1
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						OR = {
+	# 							has_law = law_type:law_industry_banned
+	# 							has_law = law_type:law_extraction_economy
+	# 						}
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_agrarianism
+	# 					}
+	# 					multiply = 0.75
+	# 				}
+	# 			}
+	# 		}
+	# 		bg_infrastructure_score = {
+	# 			group = "bg_infrastructure"
+	# 			score = {
+	# 				value = 1
+	# 				if = {
+	# 					limit = {
+	# 						has_law = law_type:law_traditionalism
+	# 					}
+	# 					multiply = 0.1
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_industry_banned
+	# 					}
+	# 					multiply = 0.5
+	# 				}
+	# 				else_if = {
+	# 					limit = {
+	# 						has_law = law_type:law_agrarianism
+	# 					}
+	# 					multiply = 0.75
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	buildable = no
+	# 	expandable = no
+	# 	downsizeable = no
+	# 	ownership_type = other
+	# 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+# }
+
 # building_nvgm_human_ranch = {
-# 	# building_group = bg_private_infrastructure
-# 	building_group = bg_public_infrastructure
-# 	# building_group = bg_private_infrastructure
-# 	city_type = city
-# 	ownership_type = self
-# 	lens = infrastructure
-# 	# potential = {
-# 	# 	target_is_our_or_fellow_subject = yes
-# 	# }
-# 	possible = {
-# 		state_population <= 800000
-# 	}
-# 	# unlocking_technologies = {
-# 	# 	urban_planning
-# 	# }
-# 	# should_auto_expand = {
-# 	# 	occupancy >= 0.8
-# 	# 	OR = {
-# 	# 		state.tax_capacity < state.tax_capacity_usage
-# 	# 		owner = {
-# 	# 			bureaucracy < -10
-# 	# 		}
-# 	# 	}
-# 	# }
-# 	expandable = no
-# 	downsizeable = no
-# 	production_method_groups = {
-# 		pmg_base_nvgm_human_ranch
-# 	}
-# 	icon = "gfx/interface/icons/building_icons/building_university.dds"
-# 	required_construction = construction_cost_low
-# 	can_build_private = {
-# 		always = no
-# 	}	
-# 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
-# 	# lens = light_industry
-# 	ai_value = {
-# 		value = 0
-# 	}
+	# 	# building_group = bg_private_infrastructure
+	# 	building_group = bg_public_infrastructure
+	# 	# building_group = bg_private_infrastructure
+	# 	city_type = city
+	# 	ownership_type = self
+	# 	lens = infrastructure
+	# 	# potential = {
+	# 	# 	target_is_our_or_fellow_subject = yes
+	# 	# }
+	# 	possible = {
+	# 		state_population <= 800000
+	# 	}
+	# 	# unlocking_technologies = {
+	# 	# 	urban_planning
+	# 	# }
+	# 	# should_auto_expand = {
+	# 	# 	occupancy >= 0.8
+	# 	# 	OR = {
+	# 	# 		state.tax_capacity < state.tax_capacity_usage
+	# 	# 		owner = {
+	# 	# 			bureaucracy < -10
+	# 	# 		}
+	# 	# 	}
+	# 	# }
+	# 	expandable = no
+	# 	downsizeable = no
+	# 	production_method_groups = {
+	# 		pmg_base_nvgm_human_ranch
+	# 	}
+	# 	icon = "gfx/interface/icons/building_icons/building_university.dds"
+	# 	required_construction = construction_cost_low
+	# 	can_build_private = {
+	# 		always = no
+	# 	}	
+	# 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	# 	# lens = light_industry
+	# 	ai_value = {
+	# 		value = 0
+	# 	}
 # }
