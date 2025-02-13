@@ -62,7 +62,9 @@ company_nvgm_basic_major_hospital = {
 		# state_lower_strata_standard_of_living_add = 0.5
 		# state_middle_strata_standard_of_living_add = 1.0
 		# state_upper_strata_standard_of_living_add = 1.5
-		building_group_bg_nvgm_clinic_standard_of_living_add = 1.0
+		# country_academics_pol_str_mult = 0.05
+		building_group_bg_nvgm_clinic_standard_of_living_add = 1.5
+		country_institution_cost_institution_health_system_mult = -0.2
 		state_academics_investment_pool_contribution_add = 0.30
 	}
 }
