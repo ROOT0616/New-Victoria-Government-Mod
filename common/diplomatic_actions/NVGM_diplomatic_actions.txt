@@ -2080,7 +2080,6 @@ raise_payments = {
 	}
 }
 
-# 支払義務を全額免除
 decrease_payments = {
 	requires_approval = no
 	groups = {
@@ -2199,7 +2198,7 @@ decrease_payments = {
 	}
 }
 
-# 使節派遣
+# 支払義務を全額免除
 NVGM_decrease_payments = {
 	requires_approval = no
 	should_notify_third_parties = no
@@ -2319,6 +2318,7 @@ NVGM_decrease_payments = {
 	}
 }
 
+# 使節派遣
 NVGM_request_recognition = {
 	groups = {
 		overlord

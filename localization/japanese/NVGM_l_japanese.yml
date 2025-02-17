@@ -504,6 +504,14 @@
 
  NVGM_TECHNOLOGY_PROGRESS: "#header [concept_innovation]#!\n[Country.GetCurrentlyResearchedTechnology.GetName]を研究中です\n[concept_innovation]の上限は#tooltippable #tooltip:[Country.GetTooltipTag],INNOVATION_POINTS_MAX_BREAKDOWN @innovation![Country.GetWeeklyMaxInnovation|1]#!#!です。\n現在、毎週#tooltippable #tooltip:[Country.GetTooltipTag],INNOVATION_POINTS_CURRENT_BREAKDOWN #v @innovation![Country.GetWeeklyInnovation|+=1]#!#!#!を生成しています。 (@innovation![Country.GetWeeklyRawInnovation|+=1] 上限なし)\n\nさらに、現在の[concept_literacy]率によって、[concept_technology_spread]率は#P #tooltippable #tooltip:[Country.GetTooltipTag],TECHNOLOGY_SPREAD_RATE_BREAKDOWN [Country.GetMinWeeklyTechnologySpread|1]から[Country.GetMaxWeeklyTechnologySpread|1]#!#!#!となっており、これは週あたり@innovation![concept_innovation]に相当します。"
 
+ NVGM_SUBSIDIES: "[Country.GetName]に[concept_subsidies]を強要する"
+
+ NVGM_FARMING: "#bold #gold 農業 #! #!"
+ NVGM_RESOURCE: "#bold #gold 資源 #! #!"
+ NVGM_INDUSTRIES: "#bold #gold 工業 #! #!"
+
+ NVGM_COUNTRY_DETAILS: "[Country.GetName]の詳細"
+
  nvgm_give_check_scriptedgu_tooltip: "#bold #red 時間を止めずに行ってください #!"
 
  nvgm_give_bur_plus_1_scriptedgu_tooltip: "@bur!#bold #white 10  x #! [ROOT.GetCountry.MakeScope.Var('nvgm_give_bur_1_var').GetValue|+2]#! #bold #white  =  #!#![ROOT.GetCountry.MakeScope.Var('nvgm_given_bur_modifier_x10_var').GetValue|+=1][Nbsp]#yellow $concept_bureaucracy$ #!"
@@ -588,6 +596,9 @@
 
  nvgm_army_build_up_scriptedgui_tooltip: "$building_barracks$を建設できる土地がない。\nもしくは[concept_liberty_desire]が 100 である。"
  nvgm_navy_build_up_scriptedgui_tooltip: "$building_naval_base$を建設できる土地がない。\nもしくは[concept_liberty_desire]が 100 である。"
+
+ nvgm_subsidized_scriptedgui_tooltip: "[concept_bankroll]、従属国の支払の免除を行っている。もしくは[concept_liberty_desire]が 90 以下である。"
+ nvgm_not_subsidized_scriptedgui_tooltip: "[concept_subsidies]を行う建設物がない。もしくは[concept_liberty_desire]が 100 である。"
 
 #  : ""
 #  _desc: ""
