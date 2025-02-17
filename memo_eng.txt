@@ -36,12 +36,14 @@ Forced immigration of people to less populated areas (start with a decision)
 [hr][/hr]
 [h1]　　　　　　　　Language support[/h1]　
 English Contributors　:　ChatGPT　
+Chinese Contributors　:　牛奶大魔王　
 
-Please contact us if you can translate into Chinese or other languages!
+Please contact us if you can translate into other languages!
 
 [hr][/hr]
 [h1]　　　　　　　　　　Updates[/h1]
 
+22025/02/17　Adding the compulsion to subsidize dependent countries, and adding information in the dependent country column of the Diplomacy tab. v1.7.0
 22025/02/12　Balance adjustment Bug Fixes v1.6.1
 22025/02/03　Add a company Bug Fixes v1.6.0
 22025/02/03　Bug Fixes v1.5.5
