@@ -1480,7 +1480,6 @@ types diplomatic_panel
 					}
 				}	
 			}
-
 			flowcontainer = {
 				parentanchor = right|bottom
 				position = { -10 -38 }
@@ -1600,6 +1599,12 @@ types diplomatic_panel
 			# NVGM
 		}
 
+		# NVGM
+		widget = {
+			size = { 5 10 }
+		}
+		# NVGM
+
 		### IMPOSE LAWS DROPDOWN
 		section_header_button = {
 			blockoverride "layout" {
@@ -1718,6 +1723,1628 @@ types diplomatic_panel
 				}
 			}
 		}
+
+		# NVGM 助成
+		widget = {
+			size = { 5 5 }
+		}
+		section_header_button = {
+			blockoverride "layout" {
+				parentanchor = hcenter
+				size = { @panel_width_minus_10 38 }
+			}
+
+			blockoverride "left_text" {
+				raw_text = "NVGM_SUBSIDIES"
+				fontsize_min = 12
+				elide = right
+			}
+
+			blockoverride "onclick" {
+				onclick = "[GetVariableSystem.Toggle( Concatenate('show_buildings_', Country.GetIDString) )]"
+			}
+
+			blockoverride "onclick_showmore" {
+				visible = "[Not(GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) ))]"
+			}
+
+			blockoverride "onclick_showless" {
+				visible = "[GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) )]"
+			}
+		}
+		widget = {
+			size = { 5 5 }
+		}
+		flowcontainer = {
+			visible = "[GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) )]"
+			parentanchor = hcenter
+			direction = horizontal
+			spacing = 5
+			# 農業
+			flowcontainer = {
+				direction = vertical
+				spacing = 5
+				default_header = {
+					parentanchor = hcenter
+					blockoverride "size" {
+						size =  { 170 40 }
+					}
+					blockoverride "text" {
+						text = NVGM_FARMING
+					}
+				}
+				# 助成 ライ麦畑 小麦畑 稲田
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_rye_farm_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_rye_farm_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/rye_farm.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_wheat_farm_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_wheat_farm_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/wheat_farm.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						direction = vertical
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_rice_farm_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_rice_farm_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/rice_farm.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 トウモロコシ畑 キビ畑 家畜牧場
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_maize_farm_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_maize_farm_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/maize_farm.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_millet_farm_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_millet_farm_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/millet_farm.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_livestock_ranch_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_livestock_ranch_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/cattle_ranch.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 コーヒー農園 綿花農園 染料農園
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_coffee_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_coffee_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/coffee_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_cotton_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_cotton_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/cotton_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_dye_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_dye_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/dye_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 アヘン農園 茶園 タバコ農園
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_opium_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_opium_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/opium_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_tea_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_tea_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/tea_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_tobacco_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_tobacco_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/tobacco_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 砂糖農園 バナナ農園 養蚕農園
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_sugar_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_sugar_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/sugar_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_banana_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_banana_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/banana_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_silk_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_silk_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/silk_plantation.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 ブドウ園
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_vineyard_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_vineyard_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/vineyards.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+			}
+			vertical_divider_full = {}
+			# 資源
+			flowcontainer = {
+				direction = vertical
+				spacing = 5
+				default_header = {
+					parentanchor = hcenter
+					blockoverride "size" {
+						size =  { 170 40 }
+					}
+					blockoverride "text" {
+						text = NVGM_RESOURCE
+					}
+				}
+				# 助成 石炭鉱山 鉄鉱山 鉛鉱山
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_coal_mine_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_coal_mine_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/coal_mine.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_iron_mine_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_iron_mine_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/iron_mine.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_lead_mine_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_lead_mine_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/lead_mine.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 硫黄鉱山 金鉱山 採金地
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_sulfur_mine_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_sulfur_mine_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/sulfur_mine.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_gold_mine_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_gold_mine_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/gold_mine.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_gold_fields_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_gold_fields_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/gold_fields.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 伐採所 ゴム農園 漁港
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_logging_camp_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_logging_camp_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_rubber_plantation_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_rubber_plantation_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/rubber_lodge.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_fishing_wharf_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_fishing_wharf_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 捕鯨基地 石油リグ
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_whaling_station_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_whaling_station_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/whaling_station.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_oil_rig_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_oil_rig_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/oil_rig.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+			}
+			vertical_divider_full = {}
+			# 工業
+			flowcontainer = {
+				direction = vertical
+				spacing = 5
+				default_header = {
+					parentanchor = hcenter
+					blockoverride "size" {
+						size =  { 170 40 }
+					}
+					blockoverride "text" {
+						text = NVGM_INDUSTRIES
+					}
+				}
+				# 助成 食品工場 織物工場 家具工場
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_food_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_food_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/food_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_textile_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_textile_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/textile_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						direction = vertical
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_furniture_manufacturies_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_furniture_manufacturies_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/furniture_manufacturies.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 ガラス工房 工具工房 製紙工場
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_glassworks_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_glassworks_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/glassworks.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_tooling_workshops_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_tooling_workshops_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/tooling_workshops.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_paper_mills_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_paper_mills_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/paper_mills.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 肥料工場 爆薬工場 合成繊維プラント
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_chemicals_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_chemicals_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/chemicals_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_explosives_factory_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_explosives_factory_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/explosives_factory.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_synthetics_plants_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_synthetics_plants_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/synthetics_plants.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 製鉄所 発動機産業 造船所
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_steel_mills_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_steel_mills_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/steel_mills.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_motor_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_motor_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/motor_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_shipyards_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_shipyards_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/shipyards.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 軍用造船所 戦争兵器産業 電気産業
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_military_shipyards_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_military_shipyards_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/military_shipyards.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_vehicles_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_vehicles_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/vehicles_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_electrics_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_electrics_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/electrics_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 武器工場 大砲工場 弾薬工場
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_arms_industry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_arms_industry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/arms_industry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_artillery_foundry_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_artillery_foundry_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/artillery_foundry.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_munition_plants_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_munition_plants_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/munition_plants.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 市街地 芸術院 発電所
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_urban_center_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_urban_center_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/urban_center.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_arts_academy_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_arts_academy_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/building_arts_academy.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_power_plant_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_power_plant_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/power_plant.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+				# 助成 病院
+				flowcontainer = {
+					direction = horizontal
+					parentanchor = left
+					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_nvgm_clinic_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_nvgm_clinic_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/building_nvgm_clinic.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
+				}
+			}
+		}
+		# NVGM
+
+		# NVGM 国の詳細
+		widget = {
+			size = { 5 5 }
+		}
+		section_header_button = {
+			blockoverride "layout" {
+				parentanchor = hcenter
+				size = { @panel_width_minus_10 38 }
+			}
+
+			blockoverride "left_text" {
+				raw_text = "NVGM_COUNTRY_DETAILS"
+				fontsize_min = 12
+				elide = right
+			}
+
+			blockoverride "onclick" {
+				onclick = "[GetVariableSystem.Toggle( Concatenate('show_country_details_', Country.GetIDString) )]"
+			}
+
+			blockoverride "onclick_showmore" {
+				visible = "[Not(GetVariableSystem.Exists( Concatenate('show_country_details_', Country.GetIDString) ))]"
+			}
+
+			blockoverride "onclick_showless" {
+				visible = "[GetVariableSystem.Exists( Concatenate('show_country_details_', Country.GetIDString) )]"
+			}
+		}
+		widget = {
+			size = { 5 5 }
+		}
+		flowcontainer = {
+			visible = "[GetVariableSystem.Exists( Concatenate('show_country_details_', Country.GetIDString) )]"
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 5
+			# 政体
+			flowcontainer = {
+				parentanchor = hcenter
+				direction = vertical
+				minimumsize = { 520 -1 }
+				margin = { 0 10 }
+				spacing = 10	
+				
+				using = main_bg
+	
+				background = {
+					texture = "gfx/interface/illustrations/government/government_illustration.dds"
+					alpha = 0.2
+					fittype = center
+					using = frame_small_mask
+					
+					modify_texture = {
+						texture = "gfx/interface/masks/fade_horizontal_center.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = alphamultiply
+					}
+				}
+				
+				textbox = {
+					parentanchor = hcenter
+					autoresize = yes
+					size = { @panel_width 30 }
+					text = "COUNTRY_GOVERNMENT_NO_LINE_BREAK"
+					align = nobaseline
+					elide = right
+					using = fontsize_xl
+				}
+	
+				flowcontainer = {
+					spacing = 5
+					parentanchor = hcenter
+				
+					### government					
+					flowcontainer = {
+						direction = vertical
+						spacing = 5
+						
+						widget = {
+							size = { 250 30 }
+							parentanchor = hcenter
+							
+							background = {
+								using = dark_area
+								alpha = 0.35
+							}
+							
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 5
+								margin = { 10 0 }
+							
+								icon = {
+									texture = "gfx/interface/icons/generic_icons/in_government_icon.dds"
+									size = { 25 25 }
+									tooltip = "[concept_in_government]"
+								}	
+								textbox = {
+									layoutpolicy_horizontal = expanding
+									text = "GOVERNMENT"
+									align = left|nobaseline
+									elide = right
+									default_format = "#title"
+								}
+							}
+						}
+					
+						fixedgridbox = {
+							parentanchor = left
+							datamodel = "[Country.AccessInterestGroupsInGovernment]"
+							datamodel_wrap = 4
+							addcolumn = 65
+							addrow = 65
+							flipdirection = yes
+							
+							item = {
+								widget = {
+									size = { 65 65 }
+									
+									flowcontainer = {
+										parentanchor = bottom
+										margin_left = 25
+										direction = vertical
+										tooltip = "CLOUT_PIECHART"
+										
+										widget = {
+											size = { 36 36 }
+											parentanchor = hcenter
+											
+											ig_button = {
+												size = { 100% 100% }
+												blockoverride "in_government_icon"{}
+											}
+										}
+										textbox = {
+											text = "[InterestGroup.GetClout|%1]"
+											autoresize = yes
+											parentanchor = hcenter
+										}
+									}
+								}
+							}
+						}
+					}
+				
+					vertical_divider_full = {}
+				
+					### opposition
+					flowcontainer = {
+						direction = vertical
+						spacing = 5
+						
+						widget = {
+							size = { 250 30 }
+							parentanchor = hcenter
+							
+							background = {
+								using = dark_area
+								alpha = 0.35
+							}
+							
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								spacing = 5
+								margin = { 10 0 }
+							
+								icon = {
+									texture = "gfx/interface/icons/generic_icons/in_opposition_icon.dds"
+									size = { 25 25 }
+									tooltip = "[concept_in_opposition]"
+								}	
+								textbox = {
+									layoutpolicy_horizontal = expanding
+									text = "OPPOSITION"
+									align = left|nobaseline
+									elide = right
+									default_format = "#title"
+								}
+							}
+						}
+						
+						fixedgridbox = {
+							parentanchor = left
+							datamodel = "[Country.AccessInterestGroupsInOpposition]"
+							datamodel_wrap = 4
+							addcolumn = 65
+							addrow = 65
+							flipdirection = yes
+							
+							item = {
+								widget = {
+									size = { 65 65 }
+									
+									flowcontainer = {
+										parentanchor = bottom
+										margin_left = 25
+										direction = vertical
+										tooltip = "CLOUT_PIECHART"
+										
+										widget = {
+											size = { 36 36 }
+											parentanchor = hcenter
+											
+											ig_button = {
+												size = { 100% 100% }
+												blockoverride "in_government_icon"{}
+											}
+										}
+										textbox = {
+											text = "[InterestGroup.GetClout|%1]"
+											autoresize = yes
+											parentanchor = hcenter
+										}
+									}
+								}
+							}
+						}
+					}
+				}	
+			}
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[IsDataModelEmpty(Country.AccessInstitutions)]"
+				}
+				blockoverride "text" {
+					text = "NO_INSTITUTIONS"
+				}
+			}
+			widget = {
+				size = { 10 5 }
+			}
+			# 施設
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = INSTITUTIONS
+				}
+			}
+			flowcontainer = {
+				direction = vertical
+				visible = "[Not(IsDataModelEmpty(Country.AccessInstitutions))]"
+				datamodel = "[Country.AccessInstitutions]"
+				parentanchor = hcenter
+				spacing = 5
+				item = {
+					country_panel_institution_item = {
+						size = { 500 40 }
+					}
+				}
+			}
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[IsDataModelEmpty(Country.AccessInstitutions)]"
+				}
+				blockoverride "text" {
+					text = "NO_INSTITUTIONS"
+				}
+			}	
+			# 企業
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = COMPANIES
+				}
+			}
+			fixedgridbox = {
+				datamodel = "[Country.GetCompanies]"
+				parentanchor = hcenter
+				addrow = 100
+				addcolumn = 250
+				datamodel_wrap = 2
+				flipdirection = yes
+				item = {
+					flowcontainer = {
+						spacing = 10
+						minimumsize = { 250 100 }
+						maximumsize = { 250 100 }
+						margin = { 10 10 }
+						tooltipwidget = {
+							FancyTooltip_Company = {}
+						}
+						background = {
+							using = entry_bg_simple
+						}
+						icon = {
+							size = { 80 80 }
+							texture = "[Company.GetCompanyType.GetIcon]"
+	
+						}
+						textbox = {
+							text = "[Company.GetName]"
+							maximumsize = { 140 80 }
+							multiline = yes
+							parentanchor = vcenter
+							align = nobaseline
+							autoresize = yes
+							using = fontsize_large
+							fontsize_min = 12
+						}
+					}
+				}
+			}
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[IsDataModelEmpty(Country.GetCompanies)]"
+				}
+				blockoverride "text" {
+					text = "NO_COMPANIES"
+				}
+			}
+			# 挙動
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = BEHAVIOR
+				}
+			}
+			flowcontainer = {
+				parentanchor = hcenter
+				margin_top = 10
+				margin_bottom = 10
+				# ATTITUDE / INFAMY
+				flowcontainer = {
+					direction = vertical
+					minimumsize = { 250 -1 }
+					spacing = 10
+	
+					# ATTITUDE
+					flowcontainer = {
+						visible = "[And(Not(Country.IsColonizable), Not(Country.IsLocalPlayer))]"
+						spacing = 10
+						margin_left = 10
+	
+						textbox = {
+							parentanchor = vcenter
+							autoresize = yes
+							align = nobaseline
+							minimumsize = { 70 -1 }
+							maximumsize = { 70 -1 }
+							fontsize_min = 12
+							elide = right
+							text = "ATTITUDE"
+						}
+	
+						widget = {
+							size = { 45 45 }
+	
+							block "context" {
+								datacontext = "[CountryPanel.GetCountry]"
+							}
+	
+							icon = {
+								size = { 100% 100% }
+								texture = "gfx/interface/icons/ai_attitude_icons/human.dds"
+								visible = "[Country.IsPlayer]"
+								tooltip = "ai_attitude_human_tooltip"
+							}
+	
+							icon = {
+								size = { 100% 100% }
+								texture = "[Country.GetAttitudeTowards(GetPlayer).GetTexture]"
+								visible = "[Not(Country.IsPlayer)]"
+								tooltip = "[Country.GetAttitudeTowards(GetPlayer).GetTooltip]"
+							}
+						}
+	
+						textbox = {
+							visible = "[Country.IsPlayer]"
+							parentanchor = vcenter
+							align = nobaseline
+							autoresize = yes
+							max_width = 130
+							fontsize_min = 12
+							elide = right
+							text = "ai_attitude_human"
+							tooltip = "ai_attitude_human_tooltip"
+						}
+	
+						textbox = {
+							visible = "[Not(Country.IsPlayer)]"
+							parentanchor = vcenter
+							align = nobaseline
+							autoresize = yes
+							max_width = 130
+							fontsize_min = 12
+							elide = right
+							text = "[Country.GetAttitudeTowards(GetPlayer).GetName]"
+							tooltip = "[Country.GetAttitudeTowards(GetPlayer).GetTooltip]"
+						}
+					}
+	
+					divider_clean = {
+						blockoverride "size" {
+							size =  { 230 2 }
+						}
+					}
+	
+					# TENSION
+					flowcontainer = {
+						visible = "[Country.IsColonizable]"
+						spacing = 10
+						tooltip = "[GetPlayer.GetTensionTooltip( Country.Self )]"
+	
+						textbox = {
+							parentanchor = vcenter
+							minimumsize = { 70 -1 }
+							maximumsize = { 70 -1 }
+							autoresize = yes
+							align = nobaseline
+							default_format = "#title"
+							fontsize_min = 12
+							elide = right
+							text = "TENSION"
+						}
+	
+						icon = {
+							size = { 45 45 }
+							texture = "[GetPlayer.GetTensionIconTexture( Country.Self )]"
+						}
+	
+						textbox = {
+							parentanchor = vcenter
+							autoresize = yes
+							align = nobaseline
+							max_width = 130
+							fontsize_min = 12
+							elide = right
+							raw_text = "#BOLD [Country.GetTensionWithDesc( GetPlayer )]#!"
+						}
+					}
+	
+					# RELATIONS
+					flowcontainer = {
+						spacing = 10
+						margin_left = 10
+						name = "tutorial_highlight_country_diplomacy_tab_relations"
+						tooltip = "COUNTRY_RELATIONS_TOOLTIP"
+						visible = "[And(Not(Country.IsColonizable),Not(Country.IsLocalPlayer))]"
+	
+						textbox = {
+							parentanchor = vcenter
+							minimumsize = { 70 -1 }
+							maximumsize = { 70 -1 }
+							autoresize = yes
+							align = nobaseline
+							default_format = "#title"
+							fontsize_min = 12
+							elide = right
+							text = "RELATIONS"
+						}
+	
+						icon = {
+							size = { 45 45 }
+							texture = "[GetPlayer.GetRelationsIconTexture( Country.Self )]"
+						}
+	
+						textbox = {
+							parentanchor = vcenter
+							autoresize = yes
+							align = nobaseline
+							max_width = 130
+							fontsize_min = 12
+							elide = right
+							raw_text = "#BOLD [Country.GetRelationsWithDesc( GetPlayer )]#!"
+						}
+					}
+	
+					divider_clean = {
+						blockoverride "size" {
+							size =  { 230 2 }
+						}
+					}
+	
+					# INFAMY
+					flowcontainer = {
+						spacing = 10
+						margin_left = 10
+						tooltip = "[Country.GetInfamyDesc]"
+						visible = "[Not(Country.IsColonizable)]"
+						onmousehierarchyenter = "[SetTempMapModeByKey('mm_infamy')]"
+						onmousehierarchyleave = "[RemoveTempMapMode]"
+						alwaystransparent = no
+	
+						textbox = {
+							parentanchor = vcenter
+							minimumsize = { 70 -1 }
+							maximumsize = { 70 -1 }
+							autoresize = yes
+							align = nobaseline
+							default_format = "#title"
+							fontsize_min = 12
+							elide = right
+							text = "INFAMY"
+						}
+	
+						icon = {
+							size = { 45 45 }
+							texture = "[Country.GetInfamyIconTexture]"
+						}
+	
+						textbox = {
+							parentanchor = vcenter
+							autoresize = yes
+							align = nobaseline
+							max_width = 130
+							fontsize_min = 12
+							elide = right
+							raw_text = "#BOLD [Country.GetInfamyLabel|-]#!"
+						}
+					}
+	
+					divider_clean = {
+						blockoverride "size" {
+							size =  { 230 2 }
+						}
+					}
+				}
+				vertical_divider = {
+					parentanchor = vcenter
+					using = is_not_player_and_not_colonizable_country
+	
+					blockoverride "size" {
+						size = { 2 120% }
+					}
+				}
+				# AI STRATEGIES
+				flowcontainer = {
+					using = is_not_player_and_not_colonizable_country
+					datamodel = "[Country.AccessStrategies]"
+					direction = vertical
+					margin_left = 10
+					spacing = 10
+					item = {
+						flowcontainer = {
+							direction = vertical
+							minimumsize = { 250 -1 }
+							spacing = 10
+							flowcontainer = {
+								tooltip = "[AIStrategy.GetTooltip(Country.Self)]"
+								spacing = 10
+	
+								widget = {
+									parentanchor = vcenter
+									size = { 45 45 }
+	
+									icon = {
+										size = { 100% 100% }
+										texture = "gfx/interface/backgrounds/round_frame_dec.dds"
+									}
+									icon = {
+										size = { 75% 75% }
+										texture = "[AIStrategy.GetTexture]"
+										parentanchor = center
+									}
+								}
+	
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									text = "[AIStrategy.GetName]"
+									align = nobaseline
+									maximumsize = { 200 -1 }
+									elide = right
+									fontsize_min = 12
+								}
+							}
+							divider_clean = {
+								blockoverride "size" {
+									size =  { 230 2 }
+								}
+							}
+						}
+					}
+				}
+			}
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[Not(Country.HasActiveDiplomacy)]"
+				}
+				blockoverride "text" {
+					text = "NO_ACTIVE_DIPLOMACY"
+				}
+			}
+		}
+		# NVGM
 	}
 
 	type release_subject_tab_content = container {
@@ -1983,4 +3610,5 @@ types diplomatic_panel
 			}
 		}	
 	}
+	
 }

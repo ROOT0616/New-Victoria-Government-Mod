@@ -36,13 +36,15 @@ UI（外交タブ）を変更するMODとは競合の可能性がありますの
 [hr][/hr]
 [h1]　　　　　　　　Language support　言語対応[/h1]
 English Contributors　:　ChatGPT　
+Chinese Contributors　:　牛奶大魔王　
 
-中国語などの言語に翻訳していただける方はご連絡ください！
-Please contact us if you can translate into Chinese or other languages!
+他の言語に翻訳していただける方はご連絡ください！
+Please contact us if you can translate into other languages!
 
 [hr][/hr]
 [h1]　　　　　　　　　　更新内容　Updates[/h1]
 
+22025/02/17　従属国に助成の強要を追加、外交タブの従属国欄の情報の追加 v1.7.0
 22025/02/12　バランス調整とバグ修正 v1.6.1
 22025/02/03　企業を追加とバグ修正 v1.6.0
 22025/02/03　バグ修正 v1.5.5

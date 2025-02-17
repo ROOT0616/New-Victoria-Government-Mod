@@ -446,6 +446,14 @@
 
  NVGM_TECHNOLOGY_PROGRESS: "#header [concept_innovation]#!\n[Country.GetCurrentlyResearchedTechnology.GetName] is currently researching \nAn [concept_innovation] cap of #tooltippable #tooltip:[GetPlayer.GetTooltipTag],INNOVATION_POINTS_MAX_BREAKDOWN @innovation![Country.GetWeeklyMaxInnovation|1]#!#!\nWe are currently generating #tooltippable #tooltip:[GetPlayer.GetTooltipTag],INNOVATION_POINTS_CURRENT_BREAKDOWN #v @innovation![Country.GetWeeklyInnovation|+=1]#!#!#! each week (@innovation![Country.GetWeeklyRawInnovation|+=1] uncapped)\n\nAdditionally, our current [concept_literacy] rate provides us with a [concept_technology_spread] rate of #P #tooltippable #tooltip:[GetPlayer.GetTooltipTag],TECHNOLOGY_SPREAD_RATE_BREAKDOWN [Country.GetMinWeeklyTechnologySpread|1] to [Country.GetMaxWeeklyTechnologySpread|1]#!#!#! worth of @innovation![concept_innovation] each week"
 
+ NVGM_SUBSIDIES: "Impose [concept_subsidies] in [Country.GetName]"
+
+ NVGM_FARMING: "#bold #gold Agriculture #! #!"
+ NVGM_RESOURCE: "#bold #gold Resources #! #!"
+ NVGM_INDUSTRIES: "#bold #gold Industry #! #!"
+
+ NVGM_COUNTRY_DETAILS: "[Country.GetName] Details"
+
  nvgm_give_check_scriptedgu_tooltip: "#bold #red Do not stop time! #!"
 
  nvgm_give_bur_plus_1_scriptedgu_tooltip: "@bur!#bold #white 10  x #! [ROOT.GetCountry.MakeScope.Var('nvgm_give_bur_1_var').GetValue|+2]#! #bold #white  =  #!#![ROOT.GetCountry.MakeScope.Var('nvgm_given_bur_modifier_x10_var').GetValue|+=1][Nbsp]#yellow $concept_bureaucracy$ #!"
@@ -530,6 +538,9 @@
 
  nvgm_army_build_up_scriptedgui_tooltip: "There is no land available to build $building_barracks$.\n or [CONCEPT_LIBERTY_DESIRE] is 100."
  nvgm_navy_build_up_scriptedgui_tooltip: "There is no land available to build $building_naval_base$.\n or [CONCEPT_LIBERTY_DESIRE] is 100."
+
+ nvgm_subsidized_scriptedgui_tooltip: "Engaged in [concept_bankroll] or exempting subject nations from payments. Or [concept_liberty_desire] is at or below 90."
+ nvgm_not_subsidized_scriptedgui_tooltip: "No buildings eligible for [concept_subsidies]. Or [concept_liberty_desire] is at 100."
 
 # : ""
 # _desc: ""\n$TOOLTIP_DELIMITER$\n

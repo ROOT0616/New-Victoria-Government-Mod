@@ -6791,3 +6791,3411 @@ nvgm_navy_build_up_scriptedgui = {
 		}
 	}
 }
+
+# 助成 食品工場
+nvgm_subsidized_food_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_food_industry
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_food_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_food_industry
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_food_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 織物工場
+nvgm_subsidized_textile_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_textile_mills
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_textile_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_textile_mills
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_textile_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 ガラス工房
+nvgm_subsidized_furniture_manufacturies_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_furniture_manufacturies
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_furniture_manufacturies
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_furniture_manufacturies
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_furniture_manufacturies
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 工具工房
+nvgm_subsidized_tooling_workshops_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_tooling_workshops
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_tooling_workshops
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_tooling_workshops
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_tooling_workshops
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 製紙工場
+nvgm_subsidized_paper_mills_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_paper_mills
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_paper_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_paper_mills
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_paper_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 肥料工場
+nvgm_subsidized_chemicals_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_chemical_plants
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_chemical_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_chemical_plants
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_chemical_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 爆薬工場
+nvgm_subsidized_explosives_factory_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_explosives_factory
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_explosives_factory
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_explosives_factory
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_explosives_factory
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 合成繊維プラント
+nvgm_subsidized_synthetics_plants_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_synthetics_plants
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_synthetics_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_synthetics_plants
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_synthetics_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 製鉄所
+nvgm_subsidized_steel_mills_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_steel_mills
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_steel_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_steel_mills
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_steel_mills
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 発動機産業
+nvgm_subsidized_motor_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_motor_industry
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_motor_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_motor_industry
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_motor_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 造船所
+nvgm_subsidized_shipyards_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_shipyards
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_shipyards
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_shipyards
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 軍用造船所
+nvgm_subsidized_military_shipyards_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_military_shipyards
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_military_shipyards
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_military_shipyards
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_military_shipyards
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 戦争兵器産業
+nvgm_subsidized_vehicles_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_war_machine_industry
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_war_machine_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_war_machine_industry
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_war_machine_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 電気産業
+nvgm_subsidized_electrics_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_electrics_industry
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_electrics_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_electrics_industry
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_electrics_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 武器工場
+nvgm_subsidized_arms_industry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_arms_industry
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_arms_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_arms_industry
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_arms_industry
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 大砲工場
+nvgm_subsidized_artillery_foundry_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_artillery_foundries
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_artillery_foundries
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_artillery_foundries
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_artillery_foundries
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 弾薬工場
+nvgm_subsidized_munition_plants_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_munition_plants
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_munition_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_munition_plants
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_munition_plants
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 市街地
+nvgm_subsidized_urban_center_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_urban_center
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_urban_center
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_urban_center
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_urban_center
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 芸術院
+nvgm_subsidized_arts_academy_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_arts_academy
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_arts_academy
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_arts_academy
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_arts_academy
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 発電所
+nvgm_subsidized_power_plant_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_power_plant
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_power_plant
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_power_plant
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_power_plant
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 病院
+nvgm_subsidized_nvgm_clinic_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_nvgm_clinic
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_nvgm_clinic
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_nvgm_clinic
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_nvgm_clinic
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
+# 助成 ライ麦畑
+nvgm_subsidized_rye_farm_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rye_farm
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rye_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rye_farm
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rye_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 小麦畑
+nvgm_subsidized_wheat_farm_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_wheat_farm
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_wheat_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_wheat_farm
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_wheat_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 稲田
+nvgm_subsidized_rice_farm_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rice_farm
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rice_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rice_farm
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rice_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 トウモロコシ畑
+nvgm_subsidized_maize_farm_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_maize_farm
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_maize_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_maize_farm
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_maize_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 キビ畑
+nvgm_subsidized_millet_farm_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_millet_farm
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_millet_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_millet_farm
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_millet_farm
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 家畜牧場
+nvgm_subsidized_livestock_ranch_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_livestock_ranch
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_livestock_ranch
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_livestock_ranch
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_livestock_ranch
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 コーヒー農園
+nvgm_subsidized_coffee_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_coffee_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_coffee_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_coffee_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_coffee_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 綿花農園
+nvgm_subsidized_cotton_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_cotton_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_cotton_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_cotton_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_cotton_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 染料農園
+nvgm_subsidized_dye_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_dye_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_dye_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_dye_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_dye_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 アヘン農園
+nvgm_subsidized_opium_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_opium_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_opium_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_opium_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_opium_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 茶園
+nvgm_subsidized_tea_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_tea_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_tea_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_tea_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_tea_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 タバコ農園
+nvgm_subsidized_tobacco_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_tobacco_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_tobacco_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_tobacco_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_tobacco_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 砂糖農園
+nvgm_subsidized_sugar_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_sugar_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_sugar_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_sugar_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_sugar_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 バナナ農園
+nvgm_subsidized_banana_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_banana_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_banana_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_banana_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_banana_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 養蚕農園
+nvgm_subsidized_silk_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_silk_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_silk_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_silk_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_silk_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 ブドウ園
+nvgm_subsidized_vineyard_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_vineyard_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_vineyard_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_vineyard_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_vineyard_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 石炭鉱山
+nvgm_subsidized_coal_mine_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_coal_mine
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_coal_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_coal_mine
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_coal_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 鉄鉱山
+nvgm_subsidized_iron_mine_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_iron_mine
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_iron_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_iron_mine
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_iron_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 鉛鉱山
+nvgm_subsidized_lead_mine_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_lead_mine
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_lead_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_lead_mine
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_lead_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 硫黄鉱山
+nvgm_subsidized_sulfur_mine_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_sulfur_mine
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_sulfur_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_sulfur_mine
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_sulfur_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 金鉱山
+nvgm_subsidized_gold_mine_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_gold_mine
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_gold_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_gold_mine
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_gold_mine
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 採金地
+nvgm_subsidized_gold_fields_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_gold_fields
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_gold_fields
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_gold_fields
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_gold_fields
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 伐採所
+nvgm_subsidized_logging_camp_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_logging_camp
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_logging_camp
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_logging_camp
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_logging_camp
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 ゴム農園
+nvgm_subsidized_rubber_plantation_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rubber_plantation
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rubber_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_rubber_plantation
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_rubber_plantation
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 漁港
+nvgm_subsidized_fishing_wharf_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_fishing_wharf
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_fishing_wharf
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_fishing_wharf
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_fishing_wharf
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 捕鯨基地
+nvgm_subsidized_whaling_station_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_whaling_station
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_whaling_station
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_whaling_station
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_whaling_station
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
+
+# 助成 石油リグ
+nvgm_subsidized_oil_rig_scriptedgui = {
+  scope = country  # the root scope, i.e. the target of the effects
+  saved_scopes = {
+  }
+  # any additional targets
+  # These are scope, it should be added in GUI to effect.
+  is_shown = {
+    always = yes
+  }
+  # is it visible on the UI?
+  ai_is_valid = {
+    always = no
+  }
+  # is the AI allowed to use it? Disabled by default.
+  is_valid = {
+    always = yes
+  }
+  # can the player use it?
+  # Three trigger context, you can use them as you like whatever it used for valid or shown
+  effect = {
+    if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_oil_rig
+        }
+        OR = {
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = bankroll
+            }
+          }
+          overlord = {
+            has_diplomatic_pact = {
+              who = root
+              type = NVGM_decrease_payments
+            }
+          }
+        }
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      every_scope_building = {
+        limit = {
+          is_building_type = building_oil_rig
+        }
+        set_subsidized = yes
+      }
+    }
+    else_if = {
+      limit = {
+        any_scope_building = {
+          is_building_type = building_oil_rig
+        }
+        liberty_desire <= 90
+      }
+      custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+      add_liberty_desire = 10
+      every_scope_building = {
+        limit = {
+          is_building_type = building_oil_rig
+        }
+        set_subsidized = yes
+      }
+    }
+    else = {
+      custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+    }
+  }
+}
