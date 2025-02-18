@@ -250,7 +250,6 @@
  NVGM_fund_lobbies_action_notification_desc: "[INITIATOR_COUNTRY.GetName] have started to $NVGM_fund_lobbies$."
  NVGM_fund_lobbies_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] stopped $NVGM_fund_lobbies$"
  NVGM_fund_lobbies_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] have ceased to $NVGM_fund_lobbies$ in our [concept_country]."
-
 ##########################
 #####    Journal    ######
 ##########################
