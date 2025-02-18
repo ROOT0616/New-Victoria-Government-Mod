@@ -60,28 +60,6 @@ building_nvgm_clinic = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	ai_value = {
 		value = 1000
-		if = {
-			limit = {
-				is_incorporated = yes
-				state_population >= 500000
-			}
-			add = {
-				value = state.pollution_amount
-				multiply = 20
-				max = 5000
-			}
-		}
-		if = {
-			limit = {
-				is_incorporated = yes
-				state_population >= 500000
-			}
-			add = {
-				value = state_population
-				divide = 1000
-				max = 5000
-			}
-		}
 	}
 }
 
