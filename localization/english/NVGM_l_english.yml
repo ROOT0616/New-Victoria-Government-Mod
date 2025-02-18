@@ -239,6 +239,17 @@
  NVGM_emergency_relief_trigger_desc_third: "[COUNTRY.GetName]が従属国である[TARGET_COUNTRY.GetName]に食糧支援を提供しました"
  NVGM_emergency_relief_trigger_false_desc_third: "[COUNTRY.GetName]は従属国である[TARGET_COUNTRY.GetName]に食糧支援を#b 提供していません#!" 
 
+ NVGM_fund_lobbies: "Policy support"
+ NVGM_fund_lobbies_action_name: "$NVGM_fund_lobbies$"
+ NVGM_fund_lobbies_action_propose_name: "Start $NVGM_fund_lobbies$"
+ NVGM_fund_lobbies_action_break_name: "Stop $NVGM_fund_lobbies$"
+ NVGM_fund_lobbies_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] are $NVGM_fund_lobbies$ in [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ NVGM_fund_lobbies_desc: "One [concept_country] pays part of its income to the [Concept('concept_pop', '$concept_pops$')] of another, based on the weekly tax revenue of the recipient."
+ NVGM_fund_lobbies_action_notification_name: "[INITIATOR_COUNTRY.GetName] $NVGM_fund_lobbies$"
+ NVGM_fund_lobbies_action_notification_desc: "[INITIATOR_COUNTRY.GetName] have started to $NVGM_fund_lobbies$."
+ NVGM_fund_lobbies_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] stopped $NVGM_fund_lobbies$"
+ NVGM_fund_lobbies_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] have ceased to $NVGM_fund_lobbies$ in our [concept_country]."
+
 ##########################
 #####    Journal    ######
 ##########################
