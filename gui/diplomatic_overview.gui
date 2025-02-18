@@ -2723,11 +2723,28 @@ types diplomatic_panel
 						}
 					}
 				}
-				# 助成 病院
+				# 助成 鉄道 病院
 				flowcontainer = {
 					direction = horizontal
 					parentanchor = left
 					spacing = 2.5
+					flowcontainer = {
+						button = {
+							using = default_button
+							size = { 55 55 }
+							name = "host_button"
+							using = select_button_sound
+							datacontext = "[GetScriptedGui('nvgm_subsidized_railway_scriptedgui')]"
+							visible = "[GetScriptedGui('nvgm_subsidized_railway_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Country.MakeScope ).End)]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Country.MakeScope ).End )]"
+							icon = {
+								size = { 40 40 }
+								texture = "gfx/interface/icons/building_icons/building_railway.dds"
+								parentanchor = vcenter|hcenter
+							}
+						}
+					}
 					flowcontainer = {
 						button = {
 							using = default_button

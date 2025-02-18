@@ -8212,6 +8212,77 @@ nvgm_subsidized_power_plant_scriptedgui = {
 	}
 }
 
+# 助成 鉄道
+nvgm_subsidized_railway_scriptedgui = {
+	scope = country	# the root scope, i.e. the target of the effects
+	saved_scopes = {
+	}
+	# any additional targets
+	# These are scope, it should be added in GUI to effect.
+	is_shown = {
+		always = yes
+	}
+	# is it visible on the UI?
+	ai_is_valid = {
+		always = no
+	}
+	# is the AI allowed to use it? Disabled by default.
+	is_valid = {
+		always = yes
+	}
+	# can the player use it?
+	# Three trigger context, you can use them as you like whatever it used for vaild or shown
+	effect = {
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_railway
+				}
+				OR = {
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = bankroll
+						}
+					}
+					overlord = {
+						has_diplomatic_pact = {
+							who = root
+							type = NVGM_decrease_payments
+						}
+					}
+				}
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			every_scope_building = {
+				limit = {
+					is_building_type = building_railway
+				}
+				set_subsidized = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_railway
+				}
+				liberty_desire <= 90
+			}
+			custom_tooltip = "nvgm_subsidized_scriptedgui_tooltip"
+			add_liberty_desire = 10
+			every_scope_building = {
+				limit = {
+					is_building_type = building_railway
+				}
+				set_subsidized = yes
+			}
+		}
+		else = {
+			custom_tooltip = "nvgm_not_subsidized_scriptedgui_tooltip"
+		}
+	}
+}
+
 # 助成 病院
 nvgm_subsidized_nvgm_clinic_scriptedgui = {
 	scope = country	# the root scope, i.e. the target of the effects
