@@ -152,6 +152,9 @@ pm_secular_nvgm_clinic = {
 			building_employment_academics_add = 750	# x4 = 3000 laborer wages
 			building_employment_shopkeepers_add = 500	# x3 = 1500 laborer wages
 		}
+		unscaled = {
+			building_academics_shares_add = 50
+		}
 	}
 }
 
@@ -213,6 +216,10 @@ pm_religious_nvgm_clinic = {
 			building_employment_clergymen_add = 375	# x3 = 1125 laborer wages
 			building_employment_academics_add = 375	# x4 = 1500 laborer wages
 			building_employment_shopkeepers_add = 500	# x3 = 1500 laborer wages
+		}
+		unscaled = {
+			building_academics_shares_add = 40
+			building_clergymen_shares_add = 10
 		}
 	}
 }

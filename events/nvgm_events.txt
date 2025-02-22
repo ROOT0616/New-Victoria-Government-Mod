@@ -2630,6 +2630,7 @@ nvgm_establish_company_events.2 = {
 # 		remove_variable = nvgm_target_construction_country_temp_variable
 # 	}
 # }
+
 # 棄民政策
 namespace = nvgm_migration_events
 nvgm_migration_events.1 = {
@@ -4267,3 +4268,20 @@ nvgm_migration_events.3 = {
 # 		default_option = yes
 # 	}
 # }
+
+# ランキングチャート
+nvgm_ranking_chart.1 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		nvgm_gdp_ranking_effect = yes
+		nvgm_prestige_ranking_effect = yes
+		nvgm_total_population_ranking_effect = yes
+		nvgm_average_sol_ranking_effect = yes
+		nvgm_literacy_rate_ranking_effect = yes
+		nvgm_investment_pool_ranking_effect = yes
+		nvgm_gold_reserves_ranking_effect = yes
+		nvgm_income_ranking_effect = yes
+		nvgm_expenses_ranking_effect = yes
+	}
+}

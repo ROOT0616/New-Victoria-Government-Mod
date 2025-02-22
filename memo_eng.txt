@@ -43,11 +43,15 @@ Please contact us if you can translate into other languages!
 [hr][/hr]
 [h1]　　　　　　　　　　Updates[/h1]
 
-22025/02/17　Adding the compulsion to subsidize dependent countries, and adding information in the dependent country column of the Diplomacy tab. v1.7.0
-22025/02/12　Balance adjustment Bug Fixes v1.6.1
-22025/02/03　Add a company Bug Fixes v1.6.0
-22025/02/03　Bug Fixes v1.5.5
-22025/01/30　Newly re-updated v1.5.0
+2025/02/22　Adjust UI, add Global Ranking Chart, balance hospital v1.7.6
+2025/02/20　Balance adjustment Adding information in the dependent country column of the Diplomacy tab v1.7.5
+2025/02/18　bugfix v1.7.3
+2025/02/18　Improve the UI of the Dependent Country column in the Diplomacy tab v1.7.1
+2025/02/17　Adding the compulsion to subsidize dependent countries, and adding information in the dependent country column of the Diplomacy tab. v1.7.0
+2025/02/12　Balance adjustment Bug Fixes v1.6.1
+2025/02/03　Add a company Bug Fixes v1.6.0
+2025/02/03　Bug Fixes v1.5.5
+2025/01/30　Newly re-updated v1.5.0
 
 [hr][/hr]
 　　　　　We will keep the previous version in the GitHub branch below

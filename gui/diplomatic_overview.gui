@@ -102,7 +102,6 @@ types diplomatic_panel
 					blockoverride "fourth_button" {}
 				}
 			}
-
 			### TABS
 			tab_buttons = {
 				# Diplomacy overview
@@ -1141,26 +1140,22 @@ types diplomatic_panel
 				}
 			}
 
-			# NVGM
+			# NVGM 収支
 			flowcontainer = {
 				parentanchor = hcenter
-				# direction = vertical
 				position = { 35 75 }
 				spacing = 5
-
 				flowcontainer = {
 					parentanchor = vcenter
 					direction = vertical
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
 						align = nobaseline
 						tooltip = "GDP_TOOLTIP"
-						using = GDP_tooltip_with_graph
+						using = nvgm_GDP_tooltip_with_graph
 						raw_text = "#gold GDP #!：@gdp![Country.GetGDP|Dv]"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
@@ -1169,25 +1164,22 @@ types diplomatic_panel
 						using = nvgm_money_tooltip_with_graph
 						raw_text = "NVGM_BALANCE"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
 						align = nobaseline
 						tooltip = "NVGM_DIPLOMATIC_PACTS_EXPENSES_BREAKDOWN"
-						using = diplomatic_pacts_expense_tooltip_with_graph
+						using = nvgm_diplomatic_pacts_expense_tooltip_with_graph
 						raw_text = "NVGM_DIPLOMATIC_PACTS_EXPENSES"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
 						align = nobaseline
 						tooltip = "NVGM_DIPLOMATIC_PACTS_INCOME_BREAKDOWN"
-						using = diplomatic_pacts_income_tooltip_with_graph
+						using = nvgm_diplomatic_pacts_income_tooltip_with_graph
 						raw_text = "NVGM_DIPLOMATIC_PACTS_INCOME"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
@@ -1195,7 +1187,6 @@ types diplomatic_panel
 						tooltip = "NVGM_BUREAUCRACY_TOOLTIP"
 						raw_text = "[concept_bureaucracy]：#bold @bur![Country.GetPowerDelta('bureaucracy')|D=+]#!"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
@@ -1203,7 +1194,6 @@ types diplomatic_panel
 						tooltip = "NVGM_TECHNOLOGY_PROGRESS"
 						raw_text = "[concept_innovation]：@innovation![Country.GetWeeklyInnovation|1v]"
 					}
-
 					textbox = {
 						parentanchor = vcenter
 						autoresize = yes
@@ -1212,15 +1202,12 @@ types diplomatic_panel
 					}
 				}
 			}
-
 			flowcontainer = {	
 				position = { 10 90 }
 				spacing = 5
-
 				flowcontainer = {
 					parentanchor = vcenter
 					direction = vertical
-
 					textbox = {
 						autoresize = yes
 						align = nobaseline
@@ -1231,12 +1218,14 @@ types diplomatic_panel
 						autoresize = yes
 						align = nobaseline
 						tooltip = "POP_TOOLTIP"
-						using = population_tooltip_with_graph
+						using = nvgm_population_tooltip_with_graph
 						raw_text = "[concept_pop]：[Country.GetTotalPopulation|*2v]"
 					}
 					textbox = {
 						autoresize = yes
 						align = nobaseline
+						# using = average_standard_of_living_tooltip_with_graph
+						using = nvgm_population_sol_tooltip_with_graph
 						tooltip = "COUNTRY_SOL_ALL"
 						raw_text = "NVGM_SOL"
 					}
@@ -1252,7 +1241,6 @@ types diplomatic_panel
 						align = nobaseline
 						tooltip = "PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_TOOLTIP"
 						raw_text = "[concept_flotilla]：@flotillas! #variable [Country.GetWarships|0]#!"
-						# raw_text = "[concept_flotilla]：#variable [Country.GetWarships|0]#![Country.GetFlotillasRanking]"
 					}
 					textbox = {
 						tooltip = "NVGM_NUM_CONSTRUCTION_TOOLTIP"
@@ -1438,12 +1426,11 @@ types diplomatic_panel
 				}
 			}
 			
-			# NVGM
+			# NVGM 従属国への移譲
 			flowcontainer = {
 				parentanchor = right|bottom
 				position = { -10 -68 }
 				spacing = 5
-
 				icon = {
 					name = construction_icon
 					size = { 30 30 }
@@ -1484,7 +1471,6 @@ types diplomatic_panel
 				parentanchor = right|bottom
 				position = { -10 -38 }
 				spacing = 5
-
 				### ARMY ICON
 				icon = {
 					visible = "[MilitaryFormation.IsArmy]"
@@ -1542,7 +1528,6 @@ types diplomatic_panel
 				parentanchor = right|bottom
 				position = { -10 -8 }
 				spacing = 5
-
 				### FLEET ICON
 				icon = {
 					visible = "[MilitaryFormation.IsFleet]"
@@ -1559,12 +1544,12 @@ types diplomatic_panel
 					blockoverride "icon" {
 						texture = "gfx/interface/buttons/button_icons/plus.dds"
 					}
-				}	
+				}
 				icon = {
 					name = innovation_icon
 					size = { 30 30 }
 					texture = "gfx/interface/icons/generic_icons/innovation.dds"
-				}		
+				}
 				button_icon_round = {
 					datacontext = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui')]"
 					visible = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
@@ -1574,7 +1559,7 @@ types diplomatic_panel
 					blockoverride "icon" {
 						texture = "gfx/interface/buttons/button_icons/reset.dds"
 					}
-				}	
+				}
 				button_icon_round = {
 					datacontext = "[GetScriptedGui('nvgm_give_innovation_plus_scriptedgui')]"
 					visible = "[GetScriptedGui('nvgm_give_innovation_plus_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
@@ -1584,7 +1569,7 @@ types diplomatic_panel
 					blockoverride "icon" {
 						texture = "gfx/interface/buttons/button_icons/plus.dds"
 					}
-				}	
+				}
 				button_icon_round = {
 					datacontext = "[GetScriptedGui('nvgm_give_innovation_check_scriptedgui')]"
 					visible = "[GetScriptedGui('nvgm_give_innovation_check_scriptedgui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
@@ -1599,7 +1584,63 @@ types diplomatic_panel
 			# NVGM
 		}
 
-		# NVGM
+		# NVGM 建設キュー
+		widget = {
+			size = { 5 10 }
+		}
+		flowcontainer = {
+			parentanchor = top
+			mini_construction_queue = {
+				visible = "[Country.HasConstructionQueued]"
+				blockoverride "alpha" {
+					#alpha = "[TransparentIfZero_int32(Country.GetNumInactiveAndNonShownGovernmentConstructionQueueElements)]"
+				}
+				blockoverride "tooltip" {
+					tooltip = "NUM_GOVERNMENT_CONSTRUCTION_TOOLTIP"
+				}
+				blockoverride "icon" {
+					texture = "gfx/interface/icons/generic_icons/government_building_icon.dds"
+				}
+				blockoverride "text" {
+					raw_text = "[Country.GetNumInactiveAndNonShownGovernmentConstructionQueueElements|v=]"
+				}
+				blockoverride "text_visible" {
+					#visible = "[GreaterThan_int32(Country.GetNumInactiveAndNonShownGovernmentConstructionQueueElements, '(int32)15')]"
+				}
+				blockoverride "buildings_datamodel" {
+					datamodel = "[Country.AccessShownCurrentlyConstructingGovernmentQueue]"
+				}
+				blockoverride "ownership_color"
+				{
+					color = "[GetDefine('NGUI','BUILDING_OWNERSHIP_COLOR_PLAYER_GOVERNMENT')]"
+				}
+			}
+			mini_construction_queue = {
+				visible = "[Country.HasConstructionQueued]"
+				blockoverride "alpha" {
+					#alpha = "[TransparentIfZero_int32(Country.GetNumInactiveAndNonShownPrivateConstructionQueueElements)]"
+				}
+				blockoverride "tooltip" {
+					tooltip = "NUM_PRIVATE_CONSTRUCTION_TOOLTIP"
+				}
+				blockoverride "icon" {
+					texture = "gfx/interface/icons/generic_icons/privately_owned_building_icon.dds"
+				}
+				blockoverride "text" {
+					raw_text = "[Country.GetNumInactiveAndNonShownPrivateConstructionQueueElements|v=]"
+				}
+				blockoverride "text_visible" {
+					#visible = "[GreaterThan_int32(Country.GetNumInactiveAndNonShownPrivateConstructionQueueElements, '(int32)15')]"
+				}
+				blockoverride "buildings_datamodel" {
+					datamodel = "[Country.AccessShownCurrentlyConstructingPrivateQueue]"
+				}
+				blockoverride "ownership_color"
+				{
+					color = "[GetDefine('NGUI','BUILDING_OWNERSHIP_COLOR_PLAYER_POPS')]"
+				}
+			}
+		}
 		widget = {
 			size = { 5 10 }
 		}
@@ -1733,21 +1774,17 @@ types diplomatic_panel
 				parentanchor = hcenter
 				size = { @panel_width_minus_10 38 }
 			}
-
 			blockoverride "left_text" {
 				raw_text = "NVGM_SUBSIDIES"
 				fontsize_min = 12
 				elide = right
 			}
-
 			blockoverride "onclick" {
 				onclick = "[GetVariableSystem.Toggle( Concatenate('show_buildings_', Country.GetIDString) )]"
 			}
-
 			blockoverride "onclick_showmore" {
 				visible = "[Not(GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) ))]"
 			}
-
 			blockoverride "onclick_showless" {
 				visible = "[GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) )]"
 			}
@@ -2996,8 +3033,67 @@ types diplomatic_panel
 					text = "NO_INSTITUTIONS"
 				}
 			}
-			widget = {
-				size = { 10 5 }
+			# 政治運動
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = POLITICAL_MOVEMENTS
+				}
+			}	
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[IsDataModelEmpty(Country.AccessPoliticalMovements)]"
+				}
+				blockoverride "text" {
+					text = "NO_POLITICAL_MOVEMENTS"
+				}
+			}	
+			flowcontainer = {
+				direction = vertical
+				visible = "[Not(IsDataModelEmpty(Country.AccessPoliticalMovements))]"
+				datamodel = "[Country.AccessPoliticalMovements]"
+				parentanchor = hcenter
+				spacing = 5		
+
+				item = {
+					politics_panel_political_movement_item = {
+						size = { 500 40 }
+					}
+				}
+			}
+			# 政治的ロビー
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = POLITICAL_LOBBIES
+				}
+			}	
+			empty_state = {
+				blockoverride "visible" {
+					visible = "[IsDataModelEmpty(Country.GetPoliticalLobbies)]"
+				}
+				blockoverride "text" {
+					text = "NO_POLITICAL_LOBBIES"
+				}
+			}
+			flowcontainer = {
+				direction = vertical
+				visible = "[Not(IsDataModelEmpty(Country.GetPoliticalLobbies))]"
+				datamodel = "[Country.GetPoliticalLobbies]"
+				parentanchor = hcenter
+				spacing = 5		
+
+				item = {
+					political_lobby_list_item = {
+						min_width = 500
+					}
+				}
 			}
 			# 施設
 			default_header = {
@@ -3360,6 +3456,247 @@ types diplomatic_panel
 					text = "NO_ACTIVE_DIPLOMACY"
 				}
 			}
+			# # 外交ステータス
+			# default_header = {
+			# 	parentanchor = hcenter
+			# 	blockoverride "size" {
+			# 		size =  { 500 40 }
+			# 	}
+			# 	blockoverride "text" {
+			# 		text = DIPLOMATIC_STATUS_HEADER
+			# 	}
+			# }
+			# empty_state = {
+			# 	blockoverride "visible" {
+			# 		visible = "[Not(Country.HasActiveDiplomacy)]"
+			# 	}
+			# 	blockoverride "text" {
+			# 		text = "NO_ACTIVE_DIPLOMACY"
+			# 	}
+			# }
+			# diplomatic_pact_container = {
+			# 	min_width = 500
+			# }
+			# obligations_owed_from_container = {
+			# 	min_width = 500
+			# }
+			# obligations_owed_to_container = {
+			# 	min_width = 500
+			# }
+			# truce_container = {
+			# 	min_width = 500
+			# }
+			# # 補正
+			# default_header = {
+			# 	visible = "[Not(IsDataModelEmpty(Country.GetTimedModifiers))]"
+			# 	blockoverride "size" {
+			# 		size =  { 500 40 }
+			# 	}
+			# 	blockoverride "text" {
+			# 		text = "MODIFIERS"
+			# 	}
+			# }
+			# flowcontainer = {
+			# 	visible = "[Not(IsDataModelEmpty(Country.GetTimedModifiers))]"
+			# 	datamodel = "[Country.GetTimedModifiers]"
+			# 	# margin_top = 10
+			# 	# spacing = 5
+			# 	minimumsize = { 500 -1 }
+			# 	parentanchor = hcenter
+			# 	direction = vertical
+			# 	item = {
+			# 		container = {
+			# 			minimumsize = { 480 -1 }
+			# 			tooltip = "[TimedModifier.GetTooltip]"
+			# 			flowcontainer = {
+			# 				spacing = 10
+			# 				icon = {
+			# 					texture = "[TimedModifier.GetIcon]"
+			# 					size = { 25 25 }
+			# 				}
+			# 				textbox = {
+			# 					text = "[TimedModifier.GetName]"
+			# 					autoresize = yes
+			# 					align = nobaseline
+			# 					parentanchor = vcenter
+			# 				}
+			# 			}
+			# 			textbox = {
+			# 				text = "[TimedModifier.GetRemainingDuration]"
+			# 				autoresize = yes
+			# 				align = nobaseline
+			# 				parentanchor = right|vcenter
+			# 			}
+			# 		}
+			# 	}
+			# }
+			# 人口
+			default_header = {
+				parentanchor = hcenter
+				blockoverride "size" {
+					size =  { 500 40 }
+				}
+				blockoverride "text" {
+					text = "POPULATION"
+				}
+			}		
+			flowcontainer = {
+				parentanchor = hcenter
+				direction = vertical
+				margin_top = 10
+				margin_bottom = 10
+				spacing = 10
+				flowcontainer = {
+						# parentanchor = vcenter
+					direction = horizontal
+					spacing = 10
+					
+					container = {
+						minimumsize = { 240 -1 }
+						maximumsize = { 240 -1 }
+						parentanchor = vcenter
+					
+						background = {
+							using = entry_bg
+						}
+						
+						flowcontainer = {
+							margin = { 5 10 }
+							spacing = 5
+							parentanchor = center
+							using = population_tooltip_with_graph
+
+							icon = {
+								texture = "gfx/interface/icons/generic_icons/population.dds"
+								size = { 25 25 }
+							}
+							
+							textbox = {
+								text = "concept_population"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+								max_width = 150
+								fontsize_min = 14
+								elide = right
+							}
+
+							textbox = {
+								raw_text = " #variable [Country.GetTotalPopulation|D]#!"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+							}
+						}
+
+					}
+
+					textbox = {
+						minimumsize = { 240 -1 }
+						maximumsize = { 240 -1 }
+						margin = { 20 9 }
+						background = {
+							using = entry_bg
+						}
+						using = average_standard_of_living_tooltip_with_graph
+						text = "COUNTRY_SOL_ALL_LABEL"
+						autoresize = yes
+						using = fontsize_large
+						parentanchor = vcenter
+						align = hcenter|nobaseline
+						fontsize_min = 14
+						elide = right
+					}
+
+				}
+				flowcontainer = {
+					direction = horizontal
+					spacing = 10
+					
+					container = {
+						minimumsize = { 240 -1 }
+						maximumsize = { 240 -1 }
+						parentanchor = vcenter
+					
+						background = {
+							using = entry_bg
+						}
+						
+						flowcontainer = {
+							margin = { 5 10 }
+							spacing = 5
+							parentanchor = center
+							tooltip = "POLITICALLY_INVOLVED_POPULATION_TOOLTIP"
+						
+							textbox = {
+								text = "concept_politically_involved"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+								max_width = 170
+								fontsize_min = 14
+								elide = right
+							}
+
+							textbox = {
+								raw_text = " #variable [Country.GetPoliticallyInvolvedPopulation|D]#!"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+							}
+						}
+					}
+
+					container = {
+						minimumsize = { 240 -1 }
+						maximumsize = { 240 -1 }
+						parentanchor = vcenter
+					
+						background = {
+							using = entry_bg
+						}
+						
+						flowcontainer = {
+							margin = { 5 10 }
+							spacing = 5
+							parentanchor = center
+							tooltip = "POLITICALLY_UNALIGNED_POPULATION_TOOLTIP"
+							
+							textbox = {
+								text = "concept_politically_unaligned"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+								max_width = 170
+								fontsize_min = 14
+								elide = right
+							}
+
+							textbox = {
+								raw_text = " #variable [Country.GetInactivePopulation|D]#!"
+								autoresize = yes
+								using = fontsize_large
+								align = nobaseline
+								parentanchor = vcenter
+							}
+						}
+					}
+				}
+			}
+			button = {
+				parentanchor = hcenter
+				using = default_button
+				text = "POP_BROWSER"
+				align = hcenter|nobaseline
+				size = { 500 50 }
+				using = fontsize_large
+				onclick = "[InformationPanelBar.OpenPopBrowserPanel( Country.Self )]"
+			}	
 		}
 		# NVGM
 	}

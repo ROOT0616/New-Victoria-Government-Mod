@@ -1,0 +1,3689 @@
+﻿types NVGM_default_popup_types {
+	type nvgm_ranking_chart_popup = default_popup
+	{
+		layer = top
+		visible = "[GetVariableSystem.Exists('show_nvgm_ranking_chart_popup')]"
+		blockoverride "window_header_name" {
+			text = "NVGM_RANKING_CHART"
+		}
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_ranking_chart_popup')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_4_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_5_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_6_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_7_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_8_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_9_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_10_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_my_ranking')]"
+		}
+		blockoverride "scrollarea_content" {
+			flowcontainer = {
+				resizeparent = yes
+				direction = vertical
+				maximumsize = { 700 -1 }
+				minimumsize = { 700 -1 }
+				nvgm_plotline_gdp = {}
+				nvgm_plotline_prestige = {}
+				nvgm_plotline_population = {}
+				nvgm_plotline_average_sol = {}
+				nvgm_plotline_literacy_rate = {}
+				# nvgm_plotline_investment_pool = { visible = no }
+				# nvgm_plotline_gold_reserves = { visible = no }
+				# nvgm_plotline_income = { visible = no }
+				# nvgm_plotline_expenses = { visible = no }
+			}
+		}
+		blockoverride "fixed_bottom" {
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				flowcontainer = {
+					direction = horizontal
+					using = default_list_position
+					flowcontainer = {
+						textbox = {
+							raw_text = "1st"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_1_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "2nd"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_2_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "3rd"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_3_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "4th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_4_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_4_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "5th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_5_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_5_ranking')]"
+							}
+						}
+					}
+				}
+				flowcontainer = {
+					using = default_list_position
+					direction = horizontal
+					flowcontainer = {
+						textbox = {
+							raw_text = "6th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_6_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_6_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "7th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_7_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_7_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "8th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_8_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_8_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "9th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_9_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_9_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "10th"
+							parentanchor = vcenter|left
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_10_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_10_ranking')]"
+							}
+						}
+					}
+				}
+				flowcontainer = {
+					direction = horizontal
+					using = default_list_position
+					flowcontainer = {
+						textbox = {
+							raw_text = "[GetPlayer.GetName]"
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_my_ranking')]"
+								checked = "[GetVariableSystem.Exists('show_not_nvgm_my_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "GRC Reset"
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						button_icon_reset = {
+							parentanchor = vcenter|left
+							tooltip = "TOOLTIP_RESET"
+							onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
+							size = { 24 24 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+types NVGM_ranking_chart_types {
+	# Top 10 GDP
+	type nvgm_plotline_gdp = flowcontainer
+	{
+		using = default_list_position
+		margin = { 5 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_GDP"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetGDPTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetGDPTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Prestige
+	type nvgm_plotline_prestige = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_PRESTIGE"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetPrestigeTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetPrestigeTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Population
+	type nvgm_plotline_population = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_POPULATION"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetPopulationTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetPopulationTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Average Sol
+	type nvgm_plotline_average_sol = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_SOL"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "5.0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)|1]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetAverageSoLByPopulationTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetAverageSoLByPopulationTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Literacy Rate
+	type nvgm_plotline_literacy_rate = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_LITERACY_RATE"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "20.0%"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)|1%]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetIncorporatedLiteracyTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetIncorporatedLiteracyTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Investment Pool
+	type nvgm_plotline_investment_pool = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_INVESTMENT_POOL"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# # 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetInvestmentFundTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetInvestmentFundTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Gold Reserves
+	type nvgm_plotline_gold_reserves = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_GOLD_RESERVES"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetGoldReservesTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetGoldReservesTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Income
+	type nvgm_plotline_income = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_INCOME"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend)|D]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetTotalIncomeTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetTotalIncomeTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Top 10 Expenses
+	type nvgm_plotline_expenses = flowcontainer
+	{
+		using = default_list_position
+		margin = { 10 10 }
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+			background = {
+				using = paper_bg
+			}
+			# header
+			textbox = {
+				using = default_list_position
+				block "header" {
+					raw_text = "NVGM_RATE_EXPENSES"
+				}
+				autoresize = yes
+				align = hcenter|nobaseline
+				margin_top = 10
+				margin_bottom = 10
+				default_format = "#title"
+				multiline = yes
+				maximumsize = { 700 -1 }
+			}
+			# graph
+			widget = {
+				block "size" {
+					size = { 560 200 }
+				}
+				block "empty_state" {
+					textbox = {
+						block "empty_state_visibility" {
+							visible = no
+						}
+						block "empty_state_text" {
+							raw_text = "#todo nothing to see here#!"
+						}
+						parentanchor = center
+						align = hcenter|nobaseline
+					}
+				}
+				background = {
+					texture = "gfx/interface/graph/graph_frame.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 2 2 }
+					texture_density = 2
+					margin = { 4 4 }
+					alpha = 0.85
+					modify_texture = {
+						texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+						spriteType = Corneredstretched
+						spriteborder = { 0 0 }
+						blend_mode = overlay
+						alpha = 0.7
+					}
+				}
+				# 1位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.4 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 2位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 0.7 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 3位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 4位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 5位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.4 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 6位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 0.7 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 7位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_7_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_7_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_7_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 8位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.7 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_8_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_8_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_8_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 9位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.4 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_9_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_9_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_9_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 10位
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 0.7 0.4 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_10_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_10_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_10_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				# 自国
+				widget = {
+					size = { 100% 100% }
+					block "datamodel" {}
+					block "everything_that_is_not_empty_state_visibility" {}
+					block "singleitem" {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+							block "line_color" {
+								color = { 1.0 1.0 1.0 1.0 }
+							}
+							block "tooltip" {}
+							block "line_plotpoints" {
+								visible = "[And(Not(IsEmpty(GetPlayer.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_my_ranking'))]"
+								plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
+							}
+						}
+					}
+					block "extra_plotlines" {}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = vertical
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_bottom = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "minvalue" {
+								raw_text = "0"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							widgetanchor = vcenter|right
+							parentanchor = left
+							margin_right = 8
+							margin_top = 10
+							align = left|nobaseline
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "maxvalue" {
+								text = "[GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)|K]"
+							}
+						}
+					}
+				}
+				axis = {
+					size = { 100% 100% }
+					direction = horizontal
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = left|top
+							align = left
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "startdate" {
+								text = "[GetOldestDate(GetPlayer.GetTotalExpensesTrend)]"
+							}
+						}
+					}
+					axis_label = {
+						textbox = {
+							autoresize = yes
+							parentanchor = bottom
+							widgetanchor = right|top
+							align = right
+							margin_top = 8
+							using = fontsize_small
+							block "everything_that_is_not_empty_state_visibility" {
+								visible = yes
+							}
+							block "enddate" {
+								text = "[GetLatestDate(GetPlayer.GetTotalExpensesTrend)]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

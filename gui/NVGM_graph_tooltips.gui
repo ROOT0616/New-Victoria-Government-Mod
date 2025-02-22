@@ -1,4 +1,3 @@
-
 template nvgm_money_tooltip_with_graph 
 {
 	tooltip = "CAPITAL_MONEY"
@@ -7,9 +6,7 @@ template nvgm_money_tooltip_with_graph
 			blockoverride "tooltip_content_after" {
 				v3_plotline = {
 					visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-
 					using = default_list_position
-
 					blockoverride "header" {
 						text = "BALANCE"
 					}
@@ -57,7 +54,6 @@ template nvgm_money_tooltip_with_graph
 						text = "GRAPH_NOT_INITIALIZED"
 					}
 				}
-
 				v3_plotline = {
 					visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 
@@ -105,6 +101,604 @@ template nvgm_money_tooltip_with_graph
 					}
 					blockoverride "everything_that_is_not_empty_state_visibility" {
 						visible = "[Not(IsDynTrendEmpty(Country.GetGoldReservesTrend))]"
+					}
+					blockoverride "empty_state_text" {
+						text = "GRAPH_NOT_INITIALIZED"
+					}
+				}
+			}
+		}
+	}
+}
+
+template nvgm_population_tooltip_with_graph
+{
+	tooltip = "nvgm_population_TOOLTIP"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline_population = {}
+				flowcontainer = {
+					margin_top = 10
+					flowcontainer = {
+						parentanchor = hcenter|top
+						widgetanchor = hcenter|top
+						direction = vertical
+						margin_bottom = 40
+						margin_left = 60
+						margin_right = 30
+						background = {
+							using = paper_bg
+						}
+						# header
+						textbox = {
+							using = default_list_position
+				
+							block "header" {
+								raw_text = "NVGM_POPULATION"
+							}
+							autoresize = yes
+							align = hcenter|nobaseline
+							margin_top = 10
+							margin_bottom = 10
+							default_format = "#title"
+							multiline = yes
+							maximumsize = { 300 -1 }
+						}
+						# graph
+						widget = {
+							block "size" {
+								size = { 280 100 }
+							}
+							block "empty_state" {
+								textbox = {
+									block "empty_state_visibility" {
+										visible = no
+									}
+									block "empty_state_text" {
+										raw_text = "#todo nothing to see here#!"
+									}
+									parentanchor = center
+									align = hcenter|nobaseline
+								}
+							}
+							background = {
+								texture = "gfx/interface/graph/graph_frame.dds"
+								spriteType = Corneredtiled
+								spriteborder = { 2 2 }
+								texture_density = 2
+								margin = { 4 4 }
+								alpha = 0.85
+								modify_texture = {
+									texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = overlay
+									alpha = 0.7
+								}
+							}
+							widget = {
+								size = { 100% 100% }
+								block "datamodel" {}
+								block "everything_that_is_not_empty_state_visibility" {}
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+										block "line_color" {
+											color = { 1.0 0.67 0.45 1.0 }
+										}
+										block "tooltip" {}
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetLowerStrataPopulationTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetLowerStrataPopulationTrend, '(CFixedPoint)0', GetMax(Country.GetLowerStrataPopulationTrend) )]"
+										}
+									}
+								}
+								block "extra_plotlines" {}
+							}
+							widget = {
+								size = { 100% 100% }
+								block "datamodel" {}
+								block "everything_that_is_not_empty_state_visibility" {}
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+										block "line_color" {
+											color = { 0.41 0.67 0.74 1.0 }
+										}
+										block "tooltip" {}
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetMiddleStrataPopulationTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetMiddleStrataPopulationTrend, '(CFixedPoint)0', GetMax(Country.GetLowerStrataPopulationTrend) )]"
+										}
+									}
+								}
+								block "extra_plotlines" {}
+							}
+							widget = {
+								size = { 100% 100% }
+				
+								block "datamodel" {}
+				
+								block "everything_that_is_not_empty_state_visibility" {}
+				
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+				
+										block "line_color" {
+											color = { 0.39 0.67 0.45 1.0 }
+										}
+				
+										block "tooltip" {}
+				
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetUpperStrataPopulationTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetUpperStrataPopulationTrend, '(CFixedPoint)0', GetMax(Country.GetLowerStrataPopulationTrend) )]"
+										}
+									}
+								}
+				
+								block "extra_plotlines" {}
+							}
+							axis = {
+								size = { 100% 100% }
+								direction = vertical
+				
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										widgetanchor = vcenter|right
+										parentanchor = left
+										margin_right = 8
+										margin_bottom = 10
+										align = left|nobaseline
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "minvalue" {
+											raw_text = "0"
+										}
+									}
+								}
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										widgetanchor = vcenter|right
+										parentanchor = left
+										margin_right = 8
+										margin_top = 10
+										align = left|nobaseline
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "maxvalue" {
+											raw_text = "[GetMax(Country.GetLowerStrataPopulationTrend)|K]"
+										}
+									}
+								}
+							}
+							axis = {
+								size = { 100% 100% }
+								direction = horizontal
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										parentanchor = bottom
+										widgetanchor = left|top
+										align = left
+										margin_top = 8
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "startdate" {
+											text = "[GetOldestDate(Country.GetLowerStrataPopulationTrend)]"
+										}
+									}
+								}
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										parentanchor = bottom
+										widgetanchor = right|top
+										align = right
+										margin_top = 8
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "enddate" {
+											text = "[GetLatestDate(Country.GetLowerStrataPopulationTrend)]"
+										}
+									}
+								}
+							}
+						}
+						# axis label
+						textbox = {
+							text = "NVGM_BOTTOM_POPULATION"
+							minimumsize = { 250 24 }
+							maximumsize = { 250 24 }
+							fontsize = 12
+							autoresize = yes
+							parentanchor = hcenter|bottom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+template nvgm_population_sol_tooltip_with_graph
+{
+	tooltip = "nvgm_population_sol_TOOLTIP"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline_sol = {}
+				flowcontainer = {
+					using = default_list_position
+					margin_top = 10
+					flowcontainer = {
+						parentanchor = hcenter|top
+						widgetanchor = hcenter|top
+						direction = vertical
+						margin_bottom = 40
+						margin_left = 60
+						margin_right = 30
+						background = {
+							using = paper_bg
+						}
+						# header
+						textbox = {
+							using = default_list_position
+							block "header" {
+								raw_text = "NVGM_POPULATION_SOL"
+							}
+							autoresize = yes
+							align = hcenter|nobaseline
+							margin_top = 10
+							margin_bottom = 10
+							default_format = "#title"
+							multiline = yes
+							maximumsize = { 300 -1 }
+						}
+						# graph
+						widget = {
+							block "size" {
+								size = { 280 100 }
+							}
+							block "empty_state" {
+								textbox = {
+									block "empty_state_visibility" {
+										visible = no
+									}
+									block "empty_state_text" {
+										raw_text = "#todo nothing to see here#!"
+									}
+									parentanchor = center
+									align = hcenter|nobaseline
+								}
+							}
+							background = {
+								texture = "gfx/interface/graph/graph_frame.dds"
+								spriteType = Corneredtiled
+								spriteborder = { 2 2 }
+								texture_density = 2
+								margin = { 4 4 }
+								alpha = 0.85
+								modify_texture = {
+									texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+									spriteType = Corneredstretched
+									spriteborder = { 0 0 }
+									blend_mode = overlay
+									alpha = 0.7
+								}
+							}
+							widget = {
+								size = { 100% 100% }
+								block "datamodel" {}
+								block "everything_that_is_not_empty_state_visibility" {}
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+										block "line_color" {
+											color = { 1.0 0.67 0.45 1.0 }
+										}
+										block "tooltip" {}
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetAverageSoLLowerTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLLowerTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLUpperTrend) )]"
+										}
+									}
+								}
+								block "extra_plotlines" {}
+							}
+							widget = {
+								size = { 100% 100% }
+								block "datamodel" {}
+								block "everything_that_is_not_empty_state_visibility" {}
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+										block "line_color" {
+											color = { 0.41 0.67 0.74 1.0 }
+										}
+										block "tooltip" {}
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetAverageSoLMiddleTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLMiddleTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLUpperTrend) )]"
+										}
+									}
+								}
+								block "extra_plotlines" {}
+							}
+							widget = {
+								size = { 100% 100% }
+								block "datamodel" {}
+								block "everything_that_is_not_empty_state_visibility" {}
+								block "singleitem" {
+									plotline = {
+										size = { 100% 100% }
+										using = plot_line
+										width = 3.5
+										block "line_color" {
+											color = { 0.39 0.67 0.45 1.0 }
+										}
+										block "tooltip" {}
+										block "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetAverageSoLUpperTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLUpperTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLUpperTrend) )]"
+										}
+									}
+								}
+								block "extra_plotlines" {}
+							}
+							axis = {
+								size = { 100% 100% }
+								direction = vertical
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										widgetanchor = vcenter|right
+										parentanchor = left
+										margin_right = 8
+										margin_bottom = 10
+										align = left|nobaseline
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "minvalue" {
+											raw_text = "0"
+										}
+									}
+								}
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										widgetanchor = vcenter|right
+										parentanchor = left
+										margin_right = 8
+										margin_top = 10
+										align = left|nobaseline
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "maxvalue" {
+											text = "[GetMax(Country.GetAverageSoLUpperTrend)|1]"
+										}
+									}
+								}
+							}
+							axis = {
+								size = { 100% 100% }
+								direction = horizontal
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										parentanchor = bottom
+										widgetanchor = left|top
+										align = left
+										margin_top = 8
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "startdate" {
+											text = "[GetOldestDate(Country.GetAverageSoLLowerTrend)]"
+										}
+									}
+								}
+								axis_label = {
+									textbox = {
+										autoresize = yes
+										parentanchor = bottom
+										widgetanchor = right|top
+										align = right
+										margin_top = 8
+										using = fontsize_small
+										block "everything_that_is_not_empty_state_visibility" {
+											visible = yes
+										}
+										block "enddate" {
+											text = "[GetLatestDate(Country.GetAverageSoLLowerTrend)]"
+										}
+									}
+								}
+							}
+						}
+						# axis label
+						textbox = {
+							text = "NVGM_BOTTOM_POPULATION_SOL"
+							minimumsize = { 250 24 }
+							maximumsize = { 250 24 }
+							fontsize = 13
+							autoresize = yes
+							parentanchor = hcenter|bottom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+template nvgm_GDP_tooltip_with_graph
+{
+	tooltip = "GDP_TOOLTIP"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline_gdp = {}
+				v3_plotline = {
+					using = default_list_position
+	
+					blockoverride "header" {
+						text = "[concept_investment_pool]"
+					}
+					blockoverride "line_color" {
+						color = { .9 .9 .9 1.0 }
+					}
+					blockoverride "size" {
+						size = { 280 100 }
+					}
+					blockoverride "line_plotpoints" {
+						visible = "[Not(IsEmpty(Country.GetInvestmentFundTrend))]"
+						plotpoints = "[GetTrendPlotPointsNormalized(Country.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(Country.GetInvestmentFundTrend) )]"
+					}
+					blockoverride "maxvalue" {
+						text = "[GetMax(Country.GetInvestmentFundTrend)|D]"
+					}
+					blockoverride "minvalue" {
+						raw_text = "0"
+					}
+					blockoverride "startdate" {
+						text = "[GetOldestDate(Country.GetInvestmentFundTrend)]"
+					}
+					blockoverride "enddate" {
+						text = "[GetLatestDate(Country.GetInvestmentFundTrend)]"
+					}
+					blockoverride "multiitem" {}
+	
+					blockoverride "empty_state_visibility" {
+						visible = "[IsEmpty(Country.GetInvestmentFundTrend)]"
+					}
+					blockoverride "everything_that_is_not_empty_state_visibility" {
+						visible = "[Not(IsEmpty(Country.GetInvestmentFundTrend))]"
+					}
+					blockoverride "empty_state_text" {
+						text = "GRAPH_NOT_INITIALIZED"
+					}
+				}
+			}
+		}
+	}
+}
+
+template nvgm_diplomatic_pacts_expense_tooltip_with_graph
+{
+	tooltip = "DIPLOMATIC_PACTS_INCOME_BREAKDOWN"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline = {
+					using = default_list_position
+					blockoverride "header" {
+						text = "[concept_budget_diplomatic_pacts]"
+					}
+					blockoverride "line_color" {
+						color = { .9 .9 .9 1.0 }
+					}
+					blockoverride "size" {
+						size = { 280 100 }
+					}
+					blockoverride "line_plotpoints" {
+						visible = "[Not(IsEmpty(Country.GetDiplomaticPactsExpenseTrend))]"
+						plotpoints = "[GetTrendPlotPointsNormalized(Country.GetDiplomaticPactsExpenseTrend, '(CFixedPoint)0', GetMax(Country.GetDiplomaticPactsExpenseTrend) )]"
+					}
+					blockoverride "maxvalue" {
+						text = "[GetMax(Country.GetDiplomaticPactsExpenseTrend)|D]"
+					}
+					blockoverride "minvalue" {
+						raw_text = "0"
+					}
+					blockoverride "startdate" {
+						text = "[GetOldestDate(Country.GetDiplomaticPactsExpenseTrend)]"
+					}
+					blockoverride "enddate" {
+						text = "[GetLatestDate(Country.GetDiplomaticPactsExpenseTrend)]"
+					}
+					blockoverride "multiitem" {}
+					blockoverride "empty_state_visibility" {
+						visible = "[IsEmpty(Country.GetDiplomaticPactsExpenseTrend)]"
+					}
+					blockoverride "everything_that_is_not_empty_state_visibility" {
+						visible = "[Not(IsEmpty(Country.GetDiplomaticPactsExpenseTrend))]"
+					}
+					blockoverride "empty_state_text" {
+						text = "GRAPH_NOT_INITIALIZED"
+					}
+				}
+			}
+		}
+	}
+}
+
+template nvgm_diplomatic_pacts_income_tooltip_with_graph
+{
+	tooltip = "DIPLOMATIC_PACTS_INCOME_BREAKDOWN"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				v3_plotline = {
+					using = default_list_position
+					blockoverride "header" {
+						text = "[concept_budget_diplomatic_pacts]"
+					}
+					blockoverride "line_color" {
+						color = { .9 .9 .9 1.0 }
+					}
+					blockoverride "size" {
+						size = { 280 100 }
+					}
+					blockoverride "line_plotpoints" {
+						visible = "[Not(IsEmpty(Country.GetDiplomaticPactsIncomeTrend))]"
+						plotpoints = "[GetTrendPlotPointsNormalized(Country.GetDiplomaticPactsIncomeTrend, '(CFixedPoint)0', GetMax(Country.GetDiplomaticPactsIncomeTrend) )]"
+					}
+					blockoverride "maxvalue" {
+						text = "[GetMax(Country.GetDiplomaticPactsIncomeTrend)|D]"
+					}
+					blockoverride "minvalue" {
+						raw_text = "0"
+					}
+					blockoverride "startdate" {
+						text = "[GetOldestDate(Country.GetDiplomaticPactsIncomeTrend)]"
+					}
+					blockoverride "enddate" {
+						text = "[GetLatestDate(Country.GetDiplomaticPactsIncomeTrend)]"
+					}
+					blockoverride "multiitem" {}
+					blockoverride "empty_state_visibility" {
+						visible = "[IsEmpty(Country.GetDiplomaticPactsIncomeTrend)]"
+					}
+					blockoverride "everything_that_is_not_empty_state_visibility" {
+						visible = "[Not(IsEmpty(Country.GetDiplomaticPactsIncomeTrend))]"
 					}
 					blockoverride "empty_state_text" {
 						text = "GRAPH_NOT_INITIALIZED"
