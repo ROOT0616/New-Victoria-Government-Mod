@@ -1,6 +1,13 @@
 ﻿# GDPの順位
 nvgm_gdp_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = gdp
 		set_global_variable = {
@@ -9,6 +16,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = gdp
 		set_global_variable = {
@@ -17,6 +31,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = gdp
 		set_global_variable = {
@@ -25,6 +46,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = gdp
 		set_global_variable = {
@@ -33,6 +61,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = gdp
 		set_global_variable = {
@@ -41,6 +76,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = gdp
 		set_global_variable = {
@@ -49,6 +91,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = gdp
 		set_global_variable = {
@@ -57,6 +106,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = gdp
 		set_global_variable = {
@@ -65,6 +121,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = gdp
 		set_global_variable = {
@@ -73,6 +136,13 @@ nvgm_gdp_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = gdp
 		set_global_variable = {
@@ -85,6 +155,13 @@ nvgm_gdp_ranking_effect = {
 # 威信の順位
 nvgm_prestige_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = prestige
 		set_global_variable = {
@@ -93,6 +170,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = prestige
 		set_global_variable = {
@@ -101,6 +185,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = prestige
 		set_global_variable = {
@@ -109,6 +200,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = prestige
 		set_global_variable = {
@@ -117,6 +215,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = prestige
 		set_global_variable = {
@@ -125,6 +230,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = prestige
 		set_global_variable = {
@@ -133,6 +245,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = prestige
 		set_global_variable = {
@@ -141,6 +260,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = prestige
 		set_global_variable = {
@@ -149,6 +275,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = prestige
 		set_global_variable = {
@@ -157,6 +290,13 @@ nvgm_prestige_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = prestige
 		set_global_variable = {
@@ -169,6 +309,13 @@ nvgm_prestige_ranking_effect = {
 # 人口の順位
 nvgm_total_population_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = total_population
 		set_global_variable = {
@@ -177,6 +324,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = total_population
 		set_global_variable = {
@@ -185,6 +339,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = total_population
 		set_global_variable = {
@@ -193,6 +354,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = total_population
 		set_global_variable = {
@@ -201,6 +369,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = total_population
 		set_global_variable = {
@@ -209,6 +384,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = total_population
 		set_global_variable = {
@@ -217,6 +399,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = total_population
 		set_global_variable = {
@@ -225,6 +414,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = total_population
 		set_global_variable = {
@@ -233,6 +429,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = total_population
 		set_global_variable = {
@@ -241,6 +444,13 @@ nvgm_total_population_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = total_population
 		set_global_variable = {
@@ -253,6 +463,13 @@ nvgm_total_population_ranking_effect = {
 # 平均生活水準の順位
 nvgm_average_sol_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = average_sol
 		set_global_variable = {
@@ -261,6 +478,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = average_sol
 		set_global_variable = {
@@ -269,6 +493,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = average_sol
 		set_global_variable = {
@@ -277,6 +508,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = average_sol
 		set_global_variable = {
@@ -285,6 +523,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = average_sol
 		set_global_variable = {
@@ -293,6 +538,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = average_sol
 		set_global_variable = {
@@ -301,6 +553,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = average_sol
 		set_global_variable = {
@@ -309,6 +568,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = average_sol
 		set_global_variable = {
@@ -317,6 +583,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = average_sol
 		set_global_variable = {
@@ -325,6 +598,13 @@ nvgm_average_sol_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = average_sol
 		set_global_variable = {
@@ -337,6 +617,13 @@ nvgm_average_sol_ranking_effect = {
 # 識字率の順位
 nvgm_literacy_rate_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = literacy_rate
 		set_global_variable = {
@@ -345,6 +632,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = literacy_rate
 		set_global_variable = {
@@ -353,6 +647,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = literacy_rate
 		set_global_variable = {
@@ -361,6 +662,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = literacy_rate
 		set_global_variable = {
@@ -369,6 +677,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = literacy_rate
 		set_global_variable = {
@@ -377,6 +692,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = literacy_rate
 		set_global_variable = {
@@ -385,6 +707,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = literacy_rate
 		set_global_variable = {
@@ -393,6 +722,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = literacy_rate
 		set_global_variable = {
@@ -401,6 +737,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = literacy_rate
 		set_global_variable = {
@@ -409,6 +752,13 @@ nvgm_literacy_rate_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = literacy_rate
 		set_global_variable = {
@@ -421,6 +771,13 @@ nvgm_literacy_rate_ranking_effect = {
 # 投資プールの順位
 nvgm_investment_pool_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 0
 		order_by = investment_pool
 		set_global_variable = {
@@ -429,6 +786,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = investment_pool
 		set_global_variable = {
@@ -437,6 +801,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = investment_pool
 		set_global_variable = {
@@ -445,6 +816,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = investment_pool
 		set_global_variable = {
@@ -453,6 +831,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = investment_pool
 		set_global_variable = {
@@ -461,6 +846,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = investment_pool
 		set_global_variable = {
@@ -469,6 +861,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = investment_pool
 		set_global_variable = {
@@ -477,6 +876,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = investment_pool
 		set_global_variable = {
@@ -485,6 +891,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = investment_pool
 		set_global_variable = {
@@ -493,6 +906,13 @@ nvgm_investment_pool_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = investment_pool
 		set_global_variable = {
@@ -505,6 +925,13 @@ nvgm_investment_pool_ranking_effect = {
 # 金準備の順位
 nvgm_gold_reserves_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = gold_reserves
 		set_global_variable = {
@@ -513,6 +940,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = gold_reserves
 		set_global_variable = {
@@ -521,6 +955,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = gold_reserves
 		set_global_variable = {
@@ -529,6 +970,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = gold_reserves
 		set_global_variable = {
@@ -537,6 +985,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = gold_reserves
 		set_global_variable = {
@@ -545,6 +1000,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = gold_reserves
 		set_global_variable = {
@@ -553,6 +1015,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = gold_reserves
 		set_global_variable = {
@@ -561,6 +1030,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = gold_reserves
 		set_global_variable = {
@@ -569,6 +1045,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = gold_reserves
 		set_global_variable = {
@@ -577,6 +1060,13 @@ nvgm_gold_reserves_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 10
 		order_by = gold_reserves
 		set_global_variable = {
@@ -589,6 +1079,13 @@ nvgm_gold_reserves_ranking_effect = {
 # 収入の順位
 nvgm_income_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = income
 		set_global_variable = {
@@ -597,6 +1094,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = income
 		set_global_variable = {
@@ -605,6 +1109,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = income
 		set_global_variable = {
@@ -613,6 +1124,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = income
 		set_global_variable = {
@@ -621,6 +1139,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = income
 		set_global_variable = {
@@ -629,6 +1154,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = income
 		set_global_variable = {
@@ -637,6 +1169,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = income
 		set_global_variable = {
@@ -645,6 +1184,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = income
 		set_global_variable = {
@@ -653,6 +1199,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = income
 		set_global_variable = {
@@ -661,6 +1214,13 @@ nvgm_income_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 10
 		order_by = income
 		set_global_variable = {
@@ -673,6 +1233,13 @@ nvgm_income_ranking_effect = {
 # 支出の順位
 nvgm_expenses_ranking_effect = {
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 1
 		order_by = expenses
 		set_global_variable = {
@@ -681,6 +1248,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 2
 		order_by = expenses
 		set_global_variable = {
@@ -689,6 +1263,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 3
 		order_by = expenses
 		set_global_variable = {
@@ -697,6 +1278,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 4
 		order_by = expenses
 		set_global_variable = {
@@ -705,6 +1293,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 5
 		order_by = expenses
 		set_global_variable = {
@@ -713,6 +1308,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 6
 		order_by = expenses
 		set_global_variable = {
@@ -721,6 +1323,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 7
 		order_by = expenses
 		set_global_variable = {
@@ -729,6 +1338,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 8
 		order_by = expenses
 		set_global_variable = {
@@ -737,6 +1353,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 9
 		order_by = expenses
 		set_global_variable = {
@@ -745,6 +1368,13 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
 		position = 10
 		order_by = expenses
 		set_global_variable = {
