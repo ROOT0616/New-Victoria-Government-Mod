@@ -2037,600 +2037,6 @@ nvgm_establish_company_events.2 = {
 	}
 }
 
-# # 従属国への建設支援
-# namespace = nvgm_establish_construction_sector_events
-# nvgm_establish_construction_sector_events.1 = {
-# 	type = country_event
-# 	placement = root
-# 	title = nvgm_establish_construction_sector_events.1.title
-# 	desc = nvgm_establish_construction_sector_events.1.desc
-# 	flavor = nvgm_establish_construction_sector_events.1.flavor
-# 	event_image = {
-# 		video = "unspecific_signed_contract"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_default.dds"
-# 	duration = 3
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		set_variable = nvgm_establish_construction_sector_events_now_var
-# 		set_variable = {
-# 			name = nvgm_establish_construction_sector_events_var
-# 			value = 1
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				is_direct_subject_of = root
-# 				# any_scope_state = {
-# 				# 	any_scope_building = {
-# 				# 		is_building_type = building_construction_sector
-# 				# 		level = 0
-# 				# 	}
-# 				# }
-# 				NOR = {
-# 					# this = scope:nvgm_target_construction_country_1
-# 					this = scope:nvgm_target_construction_country_2
-# 					this = scope:nvgm_target_construction_country_3
-# 					this = scope:nvgm_target_construction_country_4
-# 					this = scope:nvgm_target_construction_country_5
-# 					this = scope:nvgm_target_construction_country_6
-# 				}
-# 			}
-# 			save_scope_as = nvgm_target_construction_country_1
-# 			random_country = {
-# 				limit = {
-# 					is_direct_subject_of = root
-# 					# any_scope_state = {
-# 					# 	any_scope_building = {
-# 					# 		is_building_type = building_construction_sector
-# 					# 		level = 0
-# 					# 	}
-# 					# }
-# 					NOR = {
-# 						this = scope:nvgm_target_construction_country_1
-# 						# this = scope:nvgm_target_construction_country_2
-# 						this = scope:nvgm_target_construction_country_3
-# 						this = scope:nvgm_target_construction_country_4
-# 						this = scope:nvgm_target_construction_country_5
-# 						this = scope:nvgm_target_construction_country_6
-# 					}
-# 				}
-# 				save_scope_as = nvgm_target_construction_country_2
-# 				random_country = {
-# 					limit = {
-# 						is_direct_subject_of = root
-# 						# any_scope_state = {
-# 						# 	any_scope_building = {
-# 						# 		is_building_type = building_construction_sector
-# 						# 		level = 0
-# 						# 	}
-# 						# }
-# 						NOR = {
-# 							this = scope:nvgm_target_construction_country_1
-# 							this = scope:nvgm_target_construction_country_2
-# 							# this = scope:nvgm_target_construction_country_3
-# 							this = scope:nvgm_target_construction_country_4
-# 							this = scope:nvgm_target_construction_country_5
-# 							this = scope:nvgm_target_construction_country_6
-# 						}
-# 					}
-# 					save_scope_as = nvgm_target_construction_country_3
-# 					random_country = {
-# 						limit = {
-# 							is_direct_subject_of = root
-# 							# any_scope_state = {
-# 							# 	any_scope_building = {
-# 							# 		is_building_type = building_construction_sector
-# 							# 		level = 0
-# 							# 	}
-# 							# }
-# 							NOR = {
-# 								this = scope:nvgm_target_construction_country_1
-# 								this = scope:nvgm_target_construction_country_2
-# 								this = scope:nvgm_target_construction_country_3
-# 								# this = scope:nvgm_target_construction_country_4
-# 								this = scope:nvgm_target_construction_country_5
-# 								this = scope:nvgm_target_construction_country_6
-# 							}
-# 						}
-# 						save_scope_as = nvgm_target_construction_country_4
-# 						random_country = {
-# 							limit = {
-# 								is_direct_subject_of = root
-# 								# any_scope_state = {
-# 								# 	any_scope_building = {
-# 								# 		is_building_type = building_construction_sector
-# 								# 		level = 0
-# 								# 	}
-# 								# }
-# 								NOR = {
-# 									this = scope:nvgm_target_construction_country_1
-# 									this = scope:nvgm_target_construction_country_2
-# 									this = scope:nvgm_target_construction_country_3
-# 									this = scope:nvgm_target_construction_country_4
-# 									# this = scope:nvgm_target_construction_country_5
-# 									this = scope:nvgm_target_construction_country_6
-# 								}
-# 							}
-# 							save_scope_as = nvgm_target_construction_country_5
-# 							random_country = {
-# 								limit = {
-# 									is_direct_subject_of = root
-# 									# any_scope_state = {
-# 									# 	any_scope_building = {
-# 									# 		is_building_type = building_construction_sector
-# 									# 		level = 0
-# 									# 	}
-# 									# }
-# 									NOR = {
-# 										this = scope:nvgm_target_construction_country_1
-# 										this = scope:nvgm_target_construction_country_2
-# 										this = scope:nvgm_target_construction_country_3
-# 										this = scope:nvgm_target_construction_country_4
-# 										this = scope:nvgm_target_construction_country_5
-# 										# this = scope:nvgm_target_construction_country_6
-# 									}
-# 								}
-# 								save_scope_as = nvgm_target_construction_country_6
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.a
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_1
-# 		}
-# 		scope:nvgm_target_construction_country_1 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		# clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.b
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_2
-# 		}
-# 		scope:nvgm_target_construction_country_2 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		# clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.c
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_3
-# 		}
-# 		scope:nvgm_target_construction_country_3 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		# clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.d
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_4
-# 		}
-# 		scope:nvgm_target_construction_country_4 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		# clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.e
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_5
-# 		}
-# 		scope:nvgm_target_construction_country_5 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		# clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.1.f
-# 		trigger = {
-# 			exists = scope:nvgm_target_construction_country_6
-# 		}
-# 		scope:nvgm_target_construction_country_6 = {
-# 			set_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		# clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 				popup = yes
-# 			}
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			value = 15
-# 		}
-# 	}
-# 	# 戻る
-# 	option = {
-# 		name = nvgm_establish_company_events.1.reset
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.1
-# 			}
-# 		}
-# 	}
-# 	# 閉じる
-# 	option = {
-# 		name = nvgm_establish_company_events.1.close
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 		remove_variable = nvgm_establish_construction_sector_events_now_var
-# 	}
-# 	after = {
-# 		# clear_saved_scope = nvgm_target_construction_country
-# 		clear_saved_scope = nvgm_target_construction_country_1
-# 		clear_saved_scope = nvgm_target_construction_country_2
-# 		clear_saved_scope = nvgm_target_construction_country_3
-# 		clear_saved_scope = nvgm_target_construction_country_4
-# 		clear_saved_scope = nvgm_target_construction_country_5
-# 		clear_saved_scope = nvgm_target_construction_country_6
-# 	}
-# }
-# nvgm_establish_construction_sector_events.2 = {
-# 	type = country_event
-# 	placement = root
-# 	title = nvgm_establish_construction_sector_events.2.title
-# 	desc = nvgm_establish_construction_sector_events.2.desc
-# 	flavor = nvgm_establish_construction_sector_events.2.flavor
-# 	event_image = {
-# 		video = "votp_gunboat_diplomacy"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-# 	duration = 3
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			value = modifier:country_construction_add
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			divide = 15
-# 		}
-# 		if = {
-# 			limit = {
-# 				var:nvgm_target_construction_country_modifier_variable <= var:nvgm_establish_construction_sector_events_var
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 		}
-# 		remove_variable = nvgm_target_construction_country_modifier_variable
-# 		random_country = {
-# 			limit = {
-# 				has_variable = nvgm_target_construction_country_variable
-# 			}
-# 			save_scope_as = nvgm_target_construction_country
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.2.a
-# 		scope:nvgm_target_construction_country = {
-# 			add_modifier = {
-# 				name = nvgm_target_construction_country_modifier
-# 				multiplier = root.var:nvgm_establish_construction_sector_events_var
-# 				years = 1
-# 			}
-# 		}
-# 		add_modifier = {
-# 			name = nvgm_construction_country_modifier
-# 			multiplier = var:nvgm_establish_construction_sector_events_var
-# 			years = 1
-# 		}
-# 		remove_variable = nvgm_establish_construction_sector_events_now_var
-# 		remove_variable = nvgm_target_construction_country_temp_variable
-# 		scope:nvgm_target_construction_country = {
-# 			remove_variable = nvgm_target_construction_country_variable
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.2.b
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 			}
-# 		}
-# 		change_variable = {
-# 			name = nvgm_establish_construction_sector_events_var
-# 			add = 1
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			value = modifier:country_construction_add
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			divide = 15
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			add = 15
-# 		}
-# 		if = {
-# 			limit = {
-# 				var:nvgm_target_construction_country_modifier_variable <= var:nvgm_establish_construction_sector_events_var
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = 0.1
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 15
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = 0.1
-# 			}
-# 		}
-# 		remove_variable = nvgm_target_construction_country_modifier_variable
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.2.c
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 			}
-# 		}
-# 		change_variable = {
-# 			name = nvgm_establish_construction_sector_events_var
-# 			multiply = 2
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			value = modifier:country_construction_add
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			divide = 15
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			multiply = 2
-# 		}
-# 		if = {
-# 			limit = {
-# 				var:nvgm_target_construction_country_modifier_variable <= var:nvgm_establish_construction_sector_events_var
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = 0.1
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 15
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = 0.1
-# 			}
-# 		}
-# 		remove_variable = nvgm_target_construction_country_modifier_variable
-# 	}
-# 	option = {
-# 		name = nvgm_establish_construction_sector_events.2.d
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.2
-# 			}
-# 		}
-# 		change_variable = {
-# 			name = nvgm_establish_construction_sector_events_var
-# 			multiply = 10
-# 		}
-# 		set_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			value = modifier:country_construction_add
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_modifier_variable
-# 			divide = 15
-# 		}
-# 		change_variable = {
-# 			name = nvgm_target_construction_country_temp_variable
-# 			multiply = 10
-# 		}
-# 		if = {
-# 			limit = {
-# 				var:nvgm_target_construction_country_modifier_variable <= var:nvgm_establish_construction_sector_events_var
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_establish_construction_sector_events_var
-# 				add = 0.005
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 0
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = var:nvgm_target_construction_country_modifier_variable
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				multiply = 15
-# 			}
-# 			change_variable = {
-# 				name = nvgm_target_construction_country_temp_variable
-# 				add = 0.1
-# 			}
-# 		}
-# 		remove_variable = nvgm_target_construction_country_modifier_variable
-# 	}
-# 	# 戻る
-# 	option = {
-# 		name = nvgm_establish_company_events.1.reset
-# 		scope:nvgm_target_construction_country = {
-# 			remove_variable = nvgm_target_construction_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_construction_country
-# 		remove_variable = nvgm_target_construction_country_temp_variable
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_establish_construction_sector_events.1
-# 			}
-# 		}
-# 	}
-# 	# やめる
-# 	option = {
-# 		name = nvgm_establish_company_events.1.close
-# 		scope:nvgm_target_construction_country = {
-# 			remove_variable = nvgm_target_construction_country_variable
-# 		}
-# 		remove_variable = nvgm_establish_construction_sector_events_now_var
-# 		remove_variable = nvgm_target_construction_country_temp_variable
-# 	}
-# }
-
 # 棄民政策
 namespace = nvgm_migration_events
 nvgm_migration_events.1 = {
@@ -3259,1017 +2665,1018 @@ nvgm_migration_events.3 = {
 
 # 従属国に棄民	うまくいかずいったん放置
 # nvgm_migration_events.4 = {
-# 	type = country_event
-# 	placement = root
-# 	title = nvgm_migration_events.4.title
-# 	desc = nvgm_migration_events.4.desc
-# 	flavor = nvgm_migration_events.4.flavor
-# 	event_image = {
-# 		video = "votp_gunboat_diplomacy"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-# 	duration = 1
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		random_country = {
-# 			limit = {
-# 				is_direct_subject_of = root
-# 				NOR = {
-# 					# this = scope:nvgm_target_migration_country_1
-# 					this = scope:nvgm_target_migration_country_2
-# 					this = scope:nvgm_target_migration_country_3
-# 					this = scope:nvgm_target_migration_country_4
-# 					this = scope:nvgm_target_migration_country_5
-# 					this = scope:nvgm_target_migration_country_6
-# 				}
-# 			}
-# 			save_scope_as = nvgm_target_migration_country_1
-# 			random_country = {
-# 				limit = {
-# 					is_direct_subject_of = root
-# 					NOR = {
-# 						this = scope:nvgm_target_migration_country_1
-# 						# this = scope:nvgm_target_migration_country_2
-# 						this = scope:nvgm_target_migration_country_3
-# 						this = scope:nvgm_target_migration_country_4
-# 						this = scope:nvgm_target_migration_country_5
-# 						this = scope:nvgm_target_migration_country_6
-# 					}
-# 				}
-# 				save_scope_as = nvgm_target_migration_country_2
-# 				random_country = {
-# 					limit = {
-# 						is_direct_subject_of = root
-# 						NOR = {
-# 							this = scope:nvgm_target_migration_country_1
-# 							this = scope:nvgm_target_migration_country_2
-# 							# this = scope:nvgm_target_migration_country_3
-# 							this = scope:nvgm_target_migration_country_4
-# 							this = scope:nvgm_target_migration_country_5
-# 							this = scope:nvgm_target_migration_country_6
-# 						}
-# 					}
-# 					save_scope_as = nvgm_target_migration_country_3
-# 					random_country = {
-# 						limit = {
-# 							is_direct_subject_of = root
-# 							NOR = {
-# 								this = scope:nvgm_target_migration_country_1
-# 								this = scope:nvgm_target_migration_country_2
-# 								this = scope:nvgm_target_migration_country_3
-# 								# this = scope:nvgm_target_migration_country_4
-# 								this = scope:nvgm_target_migration_country_5
-# 								this = scope:nvgm_target_migration_country_6
-# 							}
-# 						}
-# 						save_scope_as = nvgm_target_migration_country_4
-# 						random_country = {
-# 							limit = {
-# 								is_direct_subject_of = root
-# 								NOR = {
-# 									this = scope:nvgm_target_migration_country_1
-# 									this = scope:nvgm_target_migration_country_2
-# 									this = scope:nvgm_target_migration_country_3
-# 									this = scope:nvgm_target_migration_country_4
-# 									# this = scope:nvgm_target_migration_country_5
-# 									this = scope:nvgm_target_migration_country_6
-# 								}
-# 							}
-# 							save_scope_as = nvgm_target_migration_country_5
-# 							random_country = {
-# 								limit = {
-# 									is_direct_subject_of = root
-# 									NOR = {
-# 										this = scope:nvgm_target_migration_country_1
-# 										this = scope:nvgm_target_migration_country_2
-# 										this = scope:nvgm_target_migration_country_3
-# 										this = scope:nvgm_target_migration_country_4
-# 										this = scope:nvgm_target_migration_country_5
-# 										# this = scope:nvgm_target_migration_country_6
-# 									}
-# 								}
-# 								save_scope_as = nvgm_target_migration_country_6
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.a
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_1
-# 		}
-# 		scope:nvgm_target_migration_country_1 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		# clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.b
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_2
-# 		}
-# 		scope:nvgm_target_migration_country_2 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		# clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.c
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_3
-# 		}
-# 		scope:nvgm_target_migration_country_3 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		# clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.d
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_4
-# 		}
-# 		scope:nvgm_target_migration_country_4 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		# clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.e
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_5
-# 		}
-# 		scope:nvgm_target_migration_country_5 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		# clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.4.f
-# 		trigger = {
-# 			exists = scope:nvgm_target_migration_country_6
-# 		}
-# 		scope:nvgm_target_migration_country_6 = {
-# 			set_variable = nvgm_target_migration_country_variable
-# 		}
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		# clear_saved_scope = nvgm_target_migration_country_6
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.5
-# 				popup = yes
-# 			}
-# 		}
-# 	}
-# 	after = {
-# 		clear_saved_scope = nvgm_target_migration_country_1
-# 		clear_saved_scope = nvgm_target_migration_country_2
-# 		clear_saved_scope = nvgm_target_migration_country_3
-# 		clear_saved_scope = nvgm_target_migration_country_4
-# 		clear_saved_scope = nvgm_target_migration_country_5
-# 		clear_saved_scope = nvgm_target_migration_country_6
-# 		remove_variable = nvgm_migration_events_now_var
-# 	}
-# 	# 戻る
-# 	option = {
-# 		name = nvgm_establish_company_events.1.reset
-# 		clear_saved_scope = nvgm_target_construction_country
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.1
-# 			}
-# 		}
-# 	}
-# 	# 閉じる
-# 	option = {
-# 		name = nvgm_establish_company_events.1.close
-# 	}
-# }
-# nvgm_migration_events.5 = {
-# 	type = country_event
-# 	placement = root
-# 	title = nvgm_migration_events.1.title
-# 	desc = nvgm_migration_events.1.desc
-# 	flavor = nvgm_migration_events.1.flavor
-# 	event_image = {
-# 		video = "votp_gunboat_diplomacy"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-# 	duration = 3
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_1
-# 			}
-# 			scope:nvgm_target_state_1 = {
-# 				clear_saved_scope = nvgm_target_state_1
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_2
-# 			}
-# 			scope:nvgm_target_state_2 = {
-# 				clear_saved_scope = nvgm_target_state_2
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_3
-# 			}
-# 			scope:nvgm_target_state_3 = {
-# 				clear_saved_scope = nvgm_target_state_3
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_4
-# 			}
-# 			scope:nvgm_target_state_4 = {
-# 				clear_saved_scope = nvgm_target_state_4
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_5
-# 			}
-# 			scope:nvgm_target_state_5 = {
-# 				clear_saved_scope = nvgm_target_state_5
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_6
-# 			}
-# 			scope:nvgm_target_state_6 = {
-# 				clear_saved_scope = nvgm_target_state_6
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_7
-# 			}
-# 			scope:nvgm_target_state_7 = {
-# 				clear_saved_scope = nvgm_target_state_7
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_8
-# 			}
-# 			scope:nvgm_target_state_8 = {
-# 				clear_saved_scope = nvgm_target_state_8
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_9
-# 			}
-# 			scope:nvgm_target_state_9 = {
-# 				clear_saved_scope = nvgm_target_state_9
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_10
-# 			}
-# 			scope:nvgm_target_state_10 = {
-# 				clear_saved_scope = nvgm_target_state_10
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_1
-# 			}
-# 			scope:nvgm_target_state_11 = {
-# 				clear_saved_scope = nvgm_target_state_11
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				exists = scope:nvgm_target_state_12
-# 			}
-# 			scope:nvgm_target_state_12 = {
-# 				clear_saved_scope = nvgm_target_state_12
-# 			}
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				has_variable = nvgm_target_migration_country_variable
-# 			}
-# 			save_scope_as = nvgm_target_migration_country
-# 		}
-# 		scope:nvgm_target_migration_country = {
-# 			random_scope_state = {
-# 				limit = {
-# 					owner = scope:nvgm_target_migration_country
-# 					state_population <= 500000
-# 					NOR = {
-# 						# this = scope:nvgm_target_state_1
-# 						this = scope:nvgm_target_state_2
-# 						this = scope:nvgm_target_state_3
-# 						this = scope:nvgm_target_state_4
-# 						this = scope:nvgm_target_state_5
-# 						this = scope:nvgm_target_state_6
-# 						this = scope:nvgm_target_state_7
-# 						this = scope:nvgm_target_state_8
-# 						this = scope:nvgm_target_state_9
-# 						this = scope:nvgm_target_state_10
-# 						this = scope:nvgm_target_state_11
-# 						this = scope:nvgm_target_state_12
-# 					}
-# 				}
-# 				save_scope_as = nvgm_target_state_1
-# 				scope:nvgm_target_migration_country = {
-# 					random_scope_state = {
-# 						limit = {
-# 							owner = scope:nvgm_target_migration_country
-# 							state_population <= 500000
-# 							NOR = {
-# 								this = scope:nvgm_target_state_1
-# 								# this = scope:nvgm_target_state_2
-# 								this = scope:nvgm_target_state_3
-# 								this = scope:nvgm_target_state_4
-# 								this = scope:nvgm_target_state_5
-# 								this = scope:nvgm_target_state_6
-# 								this = scope:nvgm_target_state_7
-# 								this = scope:nvgm_target_state_8
-# 								this = scope:nvgm_target_state_9
-# 								this = scope:nvgm_target_state_10
-# 								this = scope:nvgm_target_state_11
-# 								this = scope:nvgm_target_state_12
-# 							}
-# 						}
-# 						save_scope_as = nvgm_target_state_2
-# 						scope:nvgm_target_migration_country = {
-# 							random_scope_state = {
-# 								limit = {
-# 									owner = scope:nvgm_target_migration_country
-# 									state_population <= 500000
-# 									NOR = {
-# 										this = scope:nvgm_target_state_1
-# 										this = scope:nvgm_target_state_2
-# 										# this = scope:nvgm_target_state_3
-# 										this = scope:nvgm_target_state_4
-# 										this = scope:nvgm_target_state_5
-# 										this = scope:nvgm_target_state_6
-# 										this = scope:nvgm_target_state_7
-# 										this = scope:nvgm_target_state_8
-# 										this = scope:nvgm_target_state_9
-# 										this = scope:nvgm_target_state_10
-# 										this = scope:nvgm_target_state_11
-# 										this = scope:nvgm_target_state_12
-# 									}
-# 								}
-# 								save_scope_as = nvgm_target_state_3
-# 								scope:nvgm_target_migration_country = {
-# 									random_scope_state = {
-# 										limit = {
-# 											owner = scope:nvgm_target_migration_country
-# 											state_population <= 500000
-# 											NOR = {
-# 												this = scope:nvgm_target_state_1
-# 												this = scope:nvgm_target_state_2
-# 												this = scope:nvgm_target_state_3
-# 												# this = scope:nvgm_target_state_4
-# 												this = scope:nvgm_target_state_5
-# 												this = scope:nvgm_target_state_6
-# 												this = scope:nvgm_target_state_7
-# 												this = scope:nvgm_target_state_8
-# 												this = scope:nvgm_target_state_9
-# 												this = scope:nvgm_target_state_10
-# 												this = scope:nvgm_target_state_11
-# 												this = scope:nvgm_target_state_12
-# 											}
-# 										}
-# 										save_scope_as = nvgm_target_state_4
-# 										scope:nvgm_target_migration_country = {
-# 											random_scope_state = {
-# 												limit = {
-# 													owner = scope:nvgm_target_migration_country
-# 													state_population <= 500000
-# 													NOR = {
-# 														this = scope:nvgm_target_state_1
-# 														this = scope:nvgm_target_state_2
-# 														this = scope:nvgm_target_state_3
-# 														this = scope:nvgm_target_state_4
-# 														# this = scope:nvgm_target_state_5
-# 														this = scope:nvgm_target_state_6
-# 														this = scope:nvgm_target_state_7
-# 														this = scope:nvgm_target_state_8
-# 														this = scope:nvgm_target_state_9
-# 														this = scope:nvgm_target_state_10
-# 														this = scope:nvgm_target_state_11
-# 														this = scope:nvgm_target_state_12
-# 													}
-# 												}
-# 												save_scope_as = nvgm_target_state_5
-# 												scope:nvgm_target_migration_country = {
-# 													random_scope_state = {
-# 														limit = {
-# 															owner = scope:nvgm_target_migration_country
-# 															state_population <= 500000
-# 															NOR = {
-# 																this = scope:nvgm_target_state_1
-# 																this = scope:nvgm_target_state_2
-# 																this = scope:nvgm_target_state_3
-# 																this = scope:nvgm_target_state_4
-# 																this = scope:nvgm_target_state_5
-# 																# this = scope:nvgm_target_state_6
-# 																this = scope:nvgm_target_state_7
-# 																this = scope:nvgm_target_state_8
-# 																this = scope:nvgm_target_state_9
-# 																this = scope:nvgm_target_state_10
-# 																this = scope:nvgm_target_state_11
-# 																this = scope:nvgm_target_state_12
-# 															}
-# 														}
-# 														save_scope_as = nvgm_target_state_6
-# 													}
-# 													scope:nvgm_target_migration_country = {
-# 														random_scope_state = {
-# 															limit = {
-# 																owner = scope:nvgm_target_migration_country
-# 																state_population <= 500000
-# 																NOR = {
-# 																	this = scope:nvgm_target_state_1
-# 																	this = scope:nvgm_target_state_2
-# 																	this = scope:nvgm_target_state_3
-# 																	this = scope:nvgm_target_state_4
-# 																	this = scope:nvgm_target_state_5
-# 																	this = scope:nvgm_target_state_6
-# 																	# this = scope:nvgm_target_state_7
-# 																	this = scope:nvgm_target_state_8
-# 																	this = scope:nvgm_target_state_9
-# 																	this = scope:nvgm_target_state_10
-# 																	this = scope:nvgm_target_state_11
-# 																	this = scope:nvgm_target_state_12
-# 																}
-# 															}
-# 															save_scope_as = nvgm_target_state_7
-# 														}
-# 														scope:nvgm_target_migration_country = {
-# 															random_scope_state = {
-# 																limit = {
-# 																	owner = scope:nvgm_target_migration_country
-# 																	state_population <= 500000
-# 																	NOR = {
-# 																		this = scope:nvgm_target_state_1
-# 																		this = scope:nvgm_target_state_2
-# 																		this = scope:nvgm_target_state_3
-# 																		this = scope:nvgm_target_state_4
-# 																		this = scope:nvgm_target_state_5
-# 																		this = scope:nvgm_target_state_6
-# 																		this = scope:nvgm_target_state_7
-# 																		# this = scope:nvgm_target_state_8
-# 																		this = scope:nvgm_target_state_9
-# 																		this = scope:nvgm_target_state_10
-# 																		this = scope:nvgm_target_state_11
-# 																		this = scope:nvgm_target_state_12
-# 																	}
-# 																}
-# 																save_scope_as = nvgm_target_state_8
-# 															}
-# 															scope:nvgm_target_migration_country = {
-# 																random_scope_state = {
-# 																	owner = scope:nvgm_target_migration_country
-# 																	limit = {
-# 																		state_population <= 500000
-# 																		NOR = {
-# 																			this = scope:nvgm_target_state_1
-# 																			this = scope:nvgm_target_state_2
-# 																			this = scope:nvgm_target_state_3
-# 																			this = scope:nvgm_target_state_4
-# 																			this = scope:nvgm_target_state_5
-# 																			this = scope:nvgm_target_state_6
-# 																			this = scope:nvgm_target_state_7
-# 																			this = scope:nvgm_target_state_8
-# 																			# this = scope:nvgm_target_state_9
-# 																			this = scope:nvgm_target_state_10
-# 																			this = scope:nvgm_target_state_11
-# 																			this = scope:nvgm_target_state_12
-# 																		}
-# 																	}
-# 																	save_scope_as = nvgm_target_state_9
-# 																}
-# 																scope:nvgm_target_migration_country = {
-# 																	random_scope_state = {
-# 																		limit = {
-# 																			owner = scope:nvgm_target_migration_country
-# 																			state_population <= 500000
-# 																			NOR = {
-# 																				this = scope:nvgm_target_state_1
-# 																				this = scope:nvgm_target_state_2
-# 																				this = scope:nvgm_target_state_3
-# 																				this = scope:nvgm_target_state_4
-# 																				this = scope:nvgm_target_state_5
-# 																				this = scope:nvgm_target_state_6
-# 																				this = scope:nvgm_target_state_7
-# 																				this = scope:nvgm_target_state_8
-# 																				this = scope:nvgm_target_state_9
-# 																				# this = scope:nvgm_target_state_10
-# 																				this = scope:nvgm_target_state_11
-# 																				this = scope:nvgm_target_state_12
-# 																			}
-# 																		}
-# 																		save_scope_as = nvgm_target_state_10
-# 																	}
-# 																	scope:nvgm_target_migration_country = {
-# 																		random_scope_state = {
-# 																			limit = {
-# 																				owner = scope:nvgm_target_migration_country
-# 																				state_population <= 500000
-# 																				NOR = {
-# 																					this = scope:nvgm_target_state_1
-# 																					this = scope:nvgm_target_state_2
-# 																					this = scope:nvgm_target_state_3
-# 																					this = scope:nvgm_target_state_4
-# 																					this = scope:nvgm_target_state_5
-# 																					this = scope:nvgm_target_state_6
-# 																					this = scope:nvgm_target_state_7
-# 																					this = scope:nvgm_target_state_8
-# 																					this = scope:nvgm_target_state_9
-# 																					this = scope:nvgm_target_state_10
-# 																					# this = scope:nvgm_target_state_11
-# 																					this = scope:nvgm_target_state_12
-# 																				}
-# 																			}
-# 																			save_scope_as = nvgm_target_state_11
-# 																		}
-# 																		scope:nvgm_target_migration_country = {
-# 																			random_scope_state = {
-# 																				limit = {
-# 																					owner = scope:nvgm_target_migration_country
-# 																					state_population <= 500000
-# 																					NOR = {
-# 																						this = scope:nvgm_target_state_1
-# 																						this = scope:nvgm_target_state_2
-# 																						this = scope:nvgm_target_state_3
-# 																						this = scope:nvgm_target_state_4
-# 																						this = scope:nvgm_target_state_5
-# 																						this = scope:nvgm_target_state_6
-# 																						this = scope:nvgm_target_state_7
-# 																						this = scope:nvgm_target_state_8
-# 																						this = scope:nvgm_target_state_9
-# 																						this = scope:nvgm_target_state_10
-# 																						this = scope:nvgm_target_state_11
-# 																						# this = scope:nvgm_target_state_12
-# 																					}
-# 																				}
-# 																				save_scope_as = nvgm_target_state_12
-# 																			}
-# 																		}
-# 																	}
-# 																}
-# 															}
-# 														}
-# 													}
-# 												}
-# 											}
-# 										}
-# 									}
-# 								}
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.a
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_1
-# 		}
-# 		scope:nvgm_target_state_1 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.b
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_2
-# 		}
-# 		scope:nvgm_target_state_2 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.c
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_3
-# 		}
-# 		scope:nvgm_target_state_3 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.d
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_4
-# 		}
-# 		scope:nvgm_target_state_4 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.e
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_5
-# 		}
-# 		scope:nvgm_target_state_5 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.f
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_6
-# 		}
-# 		scope:nvgm_target_state_6 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.g
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_7
-# 		}
-# 		scope:nvgm_target_state_7 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.h
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_8
-# 		}
-# 		scope:nvgm_target_state_8 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.i
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_9
-# 		}
-# 		scope:nvgm_target_state_9 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.j
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_10
-# 		}
-# 		scope:nvgm_target_state_10 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.k
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_11
-# 		}
-# 		scope:nvgm_target_state_11 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.l
-# 		trigger = {
-# 			exists = scope:nvgm_target_state_12
-# 		}
-# 		scope:nvgm_target_state_12 = {
-# 			set_variable = nvgm_target_state_variable
-# 		}
-# 		add_journal_entry = {
-# 			type = je_nvgm_abandonment_policy
-# 		}
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.1.l
-# 		trigger = {
-# 			any_subject_or_below = {
-# 				is_direct_subject_of = root
-# 				any_scope_state = {
-# 					state_population <= 500000
-# 				}
-# 			}
-# 		}
-# 		trigger_event = nvgm_migration_events.4
-# 	}
-# 	# リセット
-# 	option = {
-# 		name = nvgm_establish_company_events.1.reset
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.1
-# 			}
-# 		}
-# 	}
-# 	# やめる
-# 	option = {
-# 		name = nvgm_establish_company_events.1.close
-# 	}
-# }
-# nvgm_migration_events.6 = {
-# 	type = country_event
-# 	placement = root.capital
-# 	title = nvgm_migration_events.2.title
-# 	desc = nvgm_migration_events.2.desc
-# 	flavor = nvgm_migration_events.2.flavor
-# 	event_image = {
-# 		video = "votp_gunboat_diplomacy"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-# 	duration = 1
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			multiply = 0
-# 		}
-# 		random_scope_state = {
-# 			limit = {
-# 				has_variable = nvgm_target_state_variable
-# 			}
-# 			save_scope_as = nvgm_target_state
-# 		}
-# 		random_scope_state = {
-# 			limit = {
-# 				is_incorporated = yes
-# 				state_population >= 1000000
-# 				any_scope_pop = {
-# 					total_size >= 10000
-# 					pop_acceptance < acceptance_status_4
-# 				}
-# 			}
-# 			save_scope_as = nvgm_abandonment_state
-# 			random_scope_pop = {
-# 				limit = {
-# 					total_size >= 10000
-# 					pop_acceptance < acceptance_status_4
-# 				}
-# 				save_scope_as = nvgm_target_pop
-# 			}
-# 		}
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			add = nvgm_state_population
-# 		}
-# 	}
-# 	option = {
-# 		trigger = {
-# 			scope:nvgm_abandonment_state = {
-# 				any_scope_pop = {
-# 					total_size >= 10000
-# 					pop_acceptance < acceptance_status_4
-# 				}
-# 			}
-# 		}
-# 		name = nvgm_migration_events.2.a
-# 		default_option = yes
-# 		scope:nvgm_target_pop = {
-# 			move_pop = scope:nvgm_target_state
-# 		}
-# 		scope:nvgm_abandonment_state = {
-# 			add_loyalists_in_state = {
-# 				value = small_radicals
-# 				strata >= middle
-# 			}
-# 			# add_radicals_in_state = {
-# 			# 	value = small_radicals
-# 			# 	strata = poor
-# 			# }
-# 		}
-# 		hidden_effect = {
-# 			trigger_event = {
-# 				id = nvgm_migration_events.3
-# 				days = 1
-# 			}
-# 		}
-# 	}
-# 	# リセット
-# 	# option = {
-# 	# 	name = nvgm_establish_company_events.1.reset
-# 	# 	hidden_effect = {
-# 	# 		trigger_event = {
-# 	# 			id = nvgm_migration_events.2
-# 	# 		}
-# 	# 	}
-# 	# 	change_variable = {
-# 	# 		name = nvgm_abandonment_policy_var
-# 	# 		multiply = 0
-# 	# 	}
-# 	# }
-# 	# やめる
-# 	option = {
-# 		name = nvgm_migration_events.2.close
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			multiply = 0
-# 		}
-# 	}
-# }
-# nvgm_migration_events.7 = {
-# 	type = country_event
-# 	hidden = yes
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 		random_scope_state = {
-# 			limit = {
-# 				has_variable = nvgm_target_state_variable
-# 			}
-# 			save_scope_as = nvgm_target_state
-# 		}
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			subtract = nvgm_state_population
-# 		}
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			multiply = -1
-# 		}
-# 		je:je_nvgm_abandonment_policy = {
-# 			add_progress = {
-# 				value = root.var:nvgm_abandonment_policy_var
-# 				name = nvgm_abandonment_policy_progress_bar
-# 			}
-# 		}
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			multiply = 0
-# 		}
-# 	}
-# }
-# nvgm_migration_events.8 = {
-# 	type = country_event
-# 	placement = root
-# 	title = nvgm_migration_events.7.title
-# 	desc = nvgm_migration_events.7.desc
-# 	flavor = nvgm_migration_events.7.flavor
-# 	event_image = {
-# 		video = "votp_gunboat_diplomacy"
-# 	}
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-# 	duration = 3
-# 	trigger = {
-# 		# Triggered by JE
-# 	}
-# 	immediate = {
-# 	}
-# 	option = {
-# 		name = nvgm_migration_events.6.a
-# 		default_option = yes
-# 	}
-# 	# やめる
-# 	option = {
-# 		name = nvgm_migration_events.2.close
-# 		change_variable = {
-# 			name = nvgm_abandonment_policy_var
-# 			multiply = 0
-# 		}
-# 	}
-# }
-# test.63 = {
-# 	type = country_event
-# 	title = "建設開始"
-# 	duration = 10
-# 	immediate = {
-# 		random_state = {
-# 			limit = {
-# 				owner = ROOT
-# 			}
-# 			save_scope_as = cur_state
-# 		}
-# 	}
-# 	option = {
-# 		name = "Start building 兵舎"
-# 		scope:cur_state = {
-# 			start_building_construction = building_barracks
-# 		}
-# 	}
-# 	option = {
-# 		name = "Start building 市街地"
-# 		scope:cur_state = {
-# 			start_building_construction = building_urban_center
-# 		}
-# 	}
-# 	option = {
-# 		name = "CANCEL"
-# 		default_option = yes
-# 	}
+	# 	type = country_event
+	# 	placement = root
+	# 	title = nvgm_migration_events.4.title
+	# 	desc = nvgm_migration_events.4.desc
+	# 	flavor = nvgm_migration_events.4.flavor
+	# 	event_image = {
+	# 		video = "votp_gunboat_diplomacy"
+	# 	}
+	# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	# 	duration = 1
+	# 	trigger = {
+	# 		# Triggered by JE
+	# 	}
+	# 	immediate = {
+	# 		random_country = {
+	# 			limit = {
+	# 				is_direct_subject_of = root
+	# 				NOR = {
+	# 					# this = scope:nvgm_target_migration_country_1
+	# 					this = scope:nvgm_target_migration_country_2
+	# 					this = scope:nvgm_target_migration_country_3
+	# 					this = scope:nvgm_target_migration_country_4
+	# 					this = scope:nvgm_target_migration_country_5
+	# 					this = scope:nvgm_target_migration_country_6
+	# 				}
+	# 			}
+	# 			save_scope_as = nvgm_target_migration_country_1
+	# 			random_country = {
+	# 				limit = {
+	# 					is_direct_subject_of = root
+	# 					NOR = {
+	# 						this = scope:nvgm_target_migration_country_1
+	# 						# this = scope:nvgm_target_migration_country_2
+	# 						this = scope:nvgm_target_migration_country_3
+	# 						this = scope:nvgm_target_migration_country_4
+	# 						this = scope:nvgm_target_migration_country_5
+	# 						this = scope:nvgm_target_migration_country_6
+	# 					}
+	# 				}
+	# 				save_scope_as = nvgm_target_migration_country_2
+	# 				random_country = {
+	# 					limit = {
+	# 						is_direct_subject_of = root
+	# 						NOR = {
+	# 							this = scope:nvgm_target_migration_country_1
+	# 							this = scope:nvgm_target_migration_country_2
+	# 							# this = scope:nvgm_target_migration_country_3
+	# 							this = scope:nvgm_target_migration_country_4
+	# 							this = scope:nvgm_target_migration_country_5
+	# 							this = scope:nvgm_target_migration_country_6
+	# 						}
+	# 					}
+	# 					save_scope_as = nvgm_target_migration_country_3
+	# 					random_country = {
+	# 						limit = {
+	# 							is_direct_subject_of = root
+	# 							NOR = {
+	# 								this = scope:nvgm_target_migration_country_1
+	# 								this = scope:nvgm_target_migration_country_2
+	# 								this = scope:nvgm_target_migration_country_3
+	# 								# this = scope:nvgm_target_migration_country_4
+	# 								this = scope:nvgm_target_migration_country_5
+	# 								this = scope:nvgm_target_migration_country_6
+	# 							}
+	# 						}
+	# 						save_scope_as = nvgm_target_migration_country_4
+	# 						random_country = {
+	# 							limit = {
+	# 								is_direct_subject_of = root
+	# 								NOR = {
+	# 									this = scope:nvgm_target_migration_country_1
+	# 									this = scope:nvgm_target_migration_country_2
+	# 									this = scope:nvgm_target_migration_country_3
+	# 									this = scope:nvgm_target_migration_country_4
+	# 									# this = scope:nvgm_target_migration_country_5
+	# 									this = scope:nvgm_target_migration_country_6
+	# 								}
+	# 							}
+	# 							save_scope_as = nvgm_target_migration_country_5
+	# 							random_country = {
+	# 								limit = {
+	# 									is_direct_subject_of = root
+	# 									NOR = {
+	# 										this = scope:nvgm_target_migration_country_1
+	# 										this = scope:nvgm_target_migration_country_2
+	# 										this = scope:nvgm_target_migration_country_3
+	# 										this = scope:nvgm_target_migration_country_4
+	# 										this = scope:nvgm_target_migration_country_5
+	# 										# this = scope:nvgm_target_migration_country_6
+	# 									}
+	# 								}
+	# 								save_scope_as = nvgm_target_migration_country_6
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.a
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_1
+	# 		}
+	# 		scope:nvgm_target_migration_country_1 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		# clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.b
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_2
+	# 		}
+	# 		scope:nvgm_target_migration_country_2 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		# clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.c
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_3
+	# 		}
+	# 		scope:nvgm_target_migration_country_3 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		# clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.d
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_4
+	# 		}
+	# 		scope:nvgm_target_migration_country_4 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		# clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.e
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_5
+	# 		}
+	# 		scope:nvgm_target_migration_country_5 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		# clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.4.f
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_migration_country_6
+	# 		}
+	# 		scope:nvgm_target_migration_country_6 = {
+	# 			set_variable = nvgm_target_migration_country_variable
+	# 		}
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		# clear_saved_scope = nvgm_target_migration_country_6
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.5
+	# 				popup = yes
+	# 			}
+	# 		}
+	# 	}
+	# 	after = {
+	# 		clear_saved_scope = nvgm_target_migration_country_1
+	# 		clear_saved_scope = nvgm_target_migration_country_2
+	# 		clear_saved_scope = nvgm_target_migration_country_3
+	# 		clear_saved_scope = nvgm_target_migration_country_4
+	# 		clear_saved_scope = nvgm_target_migration_country_5
+	# 		clear_saved_scope = nvgm_target_migration_country_6
+	# 		remove_variable = nvgm_migration_events_now_var
+	# 	}
+	# 	# 戻る
+	# 	option = {
+	# 		name = nvgm_establish_company_events.1.reset
+	# 		clear_saved_scope = nvgm_target_construction_country
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.1
+	# 			}
+	# 		}
+	# 	}
+	# 	# 閉じる
+	# 	option = {
+	# 		name = nvgm_establish_company_events.1.close
+	# 	}
+	# }
+	# nvgm_migration_events.5 = {
+	# 	type = country_event
+	# 	placement = root
+	# 	title = nvgm_migration_events.1.title
+	# 	desc = nvgm_migration_events.1.desc
+	# 	flavor = nvgm_migration_events.1.flavor
+	# 	event_image = {
+	# 		video = "votp_gunboat_diplomacy"
+	# 	}
+	# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	# 	duration = 3
+	# 	trigger = {
+	# 		# Triggered by JE
+	# 	}
+	# 	immediate = {
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_1
+	# 			}
+	# 			scope:nvgm_target_state_1 = {
+	# 				clear_saved_scope = nvgm_target_state_1
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_2
+	# 			}
+	# 			scope:nvgm_target_state_2 = {
+	# 				clear_saved_scope = nvgm_target_state_2
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_3
+	# 			}
+	# 			scope:nvgm_target_state_3 = {
+	# 				clear_saved_scope = nvgm_target_state_3
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_4
+	# 			}
+	# 			scope:nvgm_target_state_4 = {
+	# 				clear_saved_scope = nvgm_target_state_4
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_5
+	# 			}
+	# 			scope:nvgm_target_state_5 = {
+	# 				clear_saved_scope = nvgm_target_state_5
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_6
+	# 			}
+	# 			scope:nvgm_target_state_6 = {
+	# 				clear_saved_scope = nvgm_target_state_6
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_7
+	# 			}
+	# 			scope:nvgm_target_state_7 = {
+	# 				clear_saved_scope = nvgm_target_state_7
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_8
+	# 			}
+	# 			scope:nvgm_target_state_8 = {
+	# 				clear_saved_scope = nvgm_target_state_8
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_9
+	# 			}
+	# 			scope:nvgm_target_state_9 = {
+	# 				clear_saved_scope = nvgm_target_state_9
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_10
+	# 			}
+	# 			scope:nvgm_target_state_10 = {
+	# 				clear_saved_scope = nvgm_target_state_10
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_1
+	# 			}
+	# 			scope:nvgm_target_state_11 = {
+	# 				clear_saved_scope = nvgm_target_state_11
+	# 			}
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				exists = scope:nvgm_target_state_12
+	# 			}
+	# 			scope:nvgm_target_state_12 = {
+	# 				clear_saved_scope = nvgm_target_state_12
+	# 			}
+	# 		}
+	# 		random_country = {
+	# 			limit = {
+	# 				has_variable = nvgm_target_migration_country_variable
+	# 			}
+	# 			save_scope_as = nvgm_target_migration_country
+	# 		}
+	# 		scope:nvgm_target_migration_country = {
+	# 			random_scope_state = {
+	# 				limit = {
+	# 					owner = scope:nvgm_target_migration_country
+	# 					state_population <= 500000
+	# 					NOR = {
+	# 						# this = scope:nvgm_target_state_1
+	# 						this = scope:nvgm_target_state_2
+	# 						this = scope:nvgm_target_state_3
+	# 						this = scope:nvgm_target_state_4
+	# 						this = scope:nvgm_target_state_5
+	# 						this = scope:nvgm_target_state_6
+	# 						this = scope:nvgm_target_state_7
+	# 						this = scope:nvgm_target_state_8
+	# 						this = scope:nvgm_target_state_9
+	# 						this = scope:nvgm_target_state_10
+	# 						this = scope:nvgm_target_state_11
+	# 						this = scope:nvgm_target_state_12
+	# 					}
+	# 				}
+	# 				save_scope_as = nvgm_target_state_1
+	# 				scope:nvgm_target_migration_country = {
+	# 					random_scope_state = {
+	# 						limit = {
+	# 							owner = scope:nvgm_target_migration_country
+	# 							state_population <= 500000
+	# 							NOR = {
+	# 								this = scope:nvgm_target_state_1
+	# 								# this = scope:nvgm_target_state_2
+	# 								this = scope:nvgm_target_state_3
+	# 								this = scope:nvgm_target_state_4
+	# 								this = scope:nvgm_target_state_5
+	# 								this = scope:nvgm_target_state_6
+	# 								this = scope:nvgm_target_state_7
+	# 								this = scope:nvgm_target_state_8
+	# 								this = scope:nvgm_target_state_9
+	# 								this = scope:nvgm_target_state_10
+	# 								this = scope:nvgm_target_state_11
+	# 								this = scope:nvgm_target_state_12
+	# 							}
+	# 						}
+	# 						save_scope_as = nvgm_target_state_2
+	# 						scope:nvgm_target_migration_country = {
+	# 							random_scope_state = {
+	# 								limit = {
+	# 									owner = scope:nvgm_target_migration_country
+	# 									state_population <= 500000
+	# 									NOR = {
+	# 										this = scope:nvgm_target_state_1
+	# 										this = scope:nvgm_target_state_2
+	# 										# this = scope:nvgm_target_state_3
+	# 										this = scope:nvgm_target_state_4
+	# 										this = scope:nvgm_target_state_5
+	# 										this = scope:nvgm_target_state_6
+	# 										this = scope:nvgm_target_state_7
+	# 										this = scope:nvgm_target_state_8
+	# 										this = scope:nvgm_target_state_9
+	# 										this = scope:nvgm_target_state_10
+	# 										this = scope:nvgm_target_state_11
+	# 										this = scope:nvgm_target_state_12
+	# 									}
+	# 								}
+	# 								save_scope_as = nvgm_target_state_3
+	# 								scope:nvgm_target_migration_country = {
+	# 									random_scope_state = {
+	# 										limit = {
+	# 											owner = scope:nvgm_target_migration_country
+	# 											state_population <= 500000
+	# 											NOR = {
+	# 												this = scope:nvgm_target_state_1
+	# 												this = scope:nvgm_target_state_2
+	# 												this = scope:nvgm_target_state_3
+	# 												# this = scope:nvgm_target_state_4
+	# 												this = scope:nvgm_target_state_5
+	# 												this = scope:nvgm_target_state_6
+	# 												this = scope:nvgm_target_state_7
+	# 												this = scope:nvgm_target_state_8
+	# 												this = scope:nvgm_target_state_9
+	# 												this = scope:nvgm_target_state_10
+	# 												this = scope:nvgm_target_state_11
+	# 												this = scope:nvgm_target_state_12
+	# 											}
+	# 										}
+	# 										save_scope_as = nvgm_target_state_4
+	# 										scope:nvgm_target_migration_country = {
+	# 											random_scope_state = {
+	# 												limit = {
+	# 													owner = scope:nvgm_target_migration_country
+	# 													state_population <= 500000
+	# 													NOR = {
+	# 														this = scope:nvgm_target_state_1
+	# 														this = scope:nvgm_target_state_2
+	# 														this = scope:nvgm_target_state_3
+	# 														this = scope:nvgm_target_state_4
+	# 														# this = scope:nvgm_target_state_5
+	# 														this = scope:nvgm_target_state_6
+	# 														this = scope:nvgm_target_state_7
+	# 														this = scope:nvgm_target_state_8
+	# 														this = scope:nvgm_target_state_9
+	# 														this = scope:nvgm_target_state_10
+	# 														this = scope:nvgm_target_state_11
+	# 														this = scope:nvgm_target_state_12
+	# 													}
+	# 												}
+	# 												save_scope_as = nvgm_target_state_5
+	# 												scope:nvgm_target_migration_country = {
+	# 													random_scope_state = {
+	# 														limit = {
+	# 															owner = scope:nvgm_target_migration_country
+	# 															state_population <= 500000
+	# 															NOR = {
+	# 																this = scope:nvgm_target_state_1
+	# 																this = scope:nvgm_target_state_2
+	# 																this = scope:nvgm_target_state_3
+	# 																this = scope:nvgm_target_state_4
+	# 																this = scope:nvgm_target_state_5
+	# 																# this = scope:nvgm_target_state_6
+	# 																this = scope:nvgm_target_state_7
+	# 																this = scope:nvgm_target_state_8
+	# 																this = scope:nvgm_target_state_9
+	# 																this = scope:nvgm_target_state_10
+	# 																this = scope:nvgm_target_state_11
+	# 																this = scope:nvgm_target_state_12
+	# 															}
+	# 														}
+	# 														save_scope_as = nvgm_target_state_6
+	# 													}
+	# 													scope:nvgm_target_migration_country = {
+	# 														random_scope_state = {
+	# 															limit = {
+	# 																owner = scope:nvgm_target_migration_country
+	# 																state_population <= 500000
+	# 																NOR = {
+	# 																	this = scope:nvgm_target_state_1
+	# 																	this = scope:nvgm_target_state_2
+	# 																	this = scope:nvgm_target_state_3
+	# 																	this = scope:nvgm_target_state_4
+	# 																	this = scope:nvgm_target_state_5
+	# 																	this = scope:nvgm_target_state_6
+	# 																	# this = scope:nvgm_target_state_7
+	# 																	this = scope:nvgm_target_state_8
+	# 																	this = scope:nvgm_target_state_9
+	# 																	this = scope:nvgm_target_state_10
+	# 																	this = scope:nvgm_target_state_11
+	# 																	this = scope:nvgm_target_state_12
+	# 																}
+	# 															}
+	# 															save_scope_as = nvgm_target_state_7
+	# 														}
+	# 														scope:nvgm_target_migration_country = {
+	# 															random_scope_state = {
+	# 																limit = {
+	# 																	owner = scope:nvgm_target_migration_country
+	# 																	state_population <= 500000
+	# 																	NOR = {
+	# 																		this = scope:nvgm_target_state_1
+	# 																		this = scope:nvgm_target_state_2
+	# 																		this = scope:nvgm_target_state_3
+	# 																		this = scope:nvgm_target_state_4
+	# 																		this = scope:nvgm_target_state_5
+	# 																		this = scope:nvgm_target_state_6
+	# 																		this = scope:nvgm_target_state_7
+	# 																		# this = scope:nvgm_target_state_8
+	# 																		this = scope:nvgm_target_state_9
+	# 																		this = scope:nvgm_target_state_10
+	# 																		this = scope:nvgm_target_state_11
+	# 																		this = scope:nvgm_target_state_12
+	# 																	}
+	# 																}
+	# 																save_scope_as = nvgm_target_state_8
+	# 															}
+	# 															scope:nvgm_target_migration_country = {
+	# 																random_scope_state = {
+	# 																	owner = scope:nvgm_target_migration_country
+	# 																	limit = {
+	# 																		state_population <= 500000
+	# 																		NOR = {
+	# 																			this = scope:nvgm_target_state_1
+	# 																			this = scope:nvgm_target_state_2
+	# 																			this = scope:nvgm_target_state_3
+	# 																			this = scope:nvgm_target_state_4
+	# 																			this = scope:nvgm_target_state_5
+	# 																			this = scope:nvgm_target_state_6
+	# 																			this = scope:nvgm_target_state_7
+	# 																			this = scope:nvgm_target_state_8
+	# 																			# this = scope:nvgm_target_state_9
+	# 																			this = scope:nvgm_target_state_10
+	# 																			this = scope:nvgm_target_state_11
+	# 																			this = scope:nvgm_target_state_12
+	# 																		}
+	# 																	}
+	# 																	save_scope_as = nvgm_target_state_9
+	# 																}
+	# 																scope:nvgm_target_migration_country = {
+	# 																	random_scope_state = {
+	# 																		limit = {
+	# 																			owner = scope:nvgm_target_migration_country
+	# 																			state_population <= 500000
+	# 																			NOR = {
+	# 																				this = scope:nvgm_target_state_1
+	# 																				this = scope:nvgm_target_state_2
+	# 																				this = scope:nvgm_target_state_3
+	# 																				this = scope:nvgm_target_state_4
+	# 																				this = scope:nvgm_target_state_5
+	# 																				this = scope:nvgm_target_state_6
+	# 																				this = scope:nvgm_target_state_7
+	# 																				this = scope:nvgm_target_state_8
+	# 																				this = scope:nvgm_target_state_9
+	# 																				# this = scope:nvgm_target_state_10
+	# 																				this = scope:nvgm_target_state_11
+	# 																				this = scope:nvgm_target_state_12
+	# 																			}
+	# 																		}
+	# 																		save_scope_as = nvgm_target_state_10
+	# 																	}
+	# 																	scope:nvgm_target_migration_country = {
+	# 																		random_scope_state = {
+	# 																			limit = {
+	# 																				owner = scope:nvgm_target_migration_country
+	# 																				state_population <= 500000
+	# 																				NOR = {
+	# 																					this = scope:nvgm_target_state_1
+	# 																					this = scope:nvgm_target_state_2
+	# 																					this = scope:nvgm_target_state_3
+	# 																					this = scope:nvgm_target_state_4
+	# 																					this = scope:nvgm_target_state_5
+	# 																					this = scope:nvgm_target_state_6
+	# 																					this = scope:nvgm_target_state_7
+	# 																					this = scope:nvgm_target_state_8
+	# 																					this = scope:nvgm_target_state_9
+	# 																					this = scope:nvgm_target_state_10
+	# 																					# this = scope:nvgm_target_state_11
+	# 																					this = scope:nvgm_target_state_12
+	# 																				}
+	# 																			}
+	# 																			save_scope_as = nvgm_target_state_11
+	# 																		}
+	# 																		scope:nvgm_target_migration_country = {
+	# 																			random_scope_state = {
+	# 																				limit = {
+	# 																					owner = scope:nvgm_target_migration_country
+	# 																					state_population <= 500000
+	# 																					NOR = {
+	# 																						this = scope:nvgm_target_state_1
+	# 																						this = scope:nvgm_target_state_2
+	# 																						this = scope:nvgm_target_state_3
+	# 																						this = scope:nvgm_target_state_4
+	# 																						this = scope:nvgm_target_state_5
+	# 																						this = scope:nvgm_target_state_6
+	# 																						this = scope:nvgm_target_state_7
+	# 																						this = scope:nvgm_target_state_8
+	# 																						this = scope:nvgm_target_state_9
+	# 																						this = scope:nvgm_target_state_10
+	# 																						this = scope:nvgm_target_state_11
+	# 																						# this = scope:nvgm_target_state_12
+	# 																					}
+	# 																				}
+	# 																				save_scope_as = nvgm_target_state_12
+	# 																			}
+	# 																		}
+	# 																	}
+	# 																}
+	# 															}
+	# 														}
+	# 													}
+	# 												}
+	# 											}
+	# 										}
+	# 									}
+	# 								}
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.a
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_1
+	# 		}
+	# 		scope:nvgm_target_state_1 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.b
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_2
+	# 		}
+	# 		scope:nvgm_target_state_2 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.c
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_3
+	# 		}
+	# 		scope:nvgm_target_state_3 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.d
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_4
+	# 		}
+	# 		scope:nvgm_target_state_4 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.e
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_5
+	# 		}
+	# 		scope:nvgm_target_state_5 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.f
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_6
+	# 		}
+	# 		scope:nvgm_target_state_6 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.g
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_7
+	# 		}
+	# 		scope:nvgm_target_state_7 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.h
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_8
+	# 		}
+	# 		scope:nvgm_target_state_8 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.i
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_9
+	# 		}
+	# 		scope:nvgm_target_state_9 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.j
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_10
+	# 		}
+	# 		scope:nvgm_target_state_10 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.k
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_11
+	# 		}
+	# 		scope:nvgm_target_state_11 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.l
+	# 		trigger = {
+	# 			exists = scope:nvgm_target_state_12
+	# 		}
+	# 		scope:nvgm_target_state_12 = {
+	# 			set_variable = nvgm_target_state_variable
+	# 		}
+	# 		add_journal_entry = {
+	# 			type = je_nvgm_abandonment_policy
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.1.l
+	# 		trigger = {
+	# 			any_subject_or_below = {
+	# 				is_direct_subject_of = root
+	# 				any_scope_state = {
+	# 					state_population <= 500000
+	# 				}
+	# 			}
+	# 		}
+	# 		trigger_event = nvgm_migration_events.4
+	# 	}
+	# 	# リセット
+	# 	option = {
+	# 		name = nvgm_establish_company_events.1.reset
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.1
+	# 			}
+	# 		}
+	# 	}
+	# 	# やめる
+	# 	option = {
+	# 		name = nvgm_establish_company_events.1.close
+	# 	}
+	# }
+	# nvgm_migration_events.6 = {
+	# 	type = country_event
+	# 	placement = root.capital
+	# 	title = nvgm_migration_events.2.title
+	# 	desc = nvgm_migration_events.2.desc
+	# 	flavor = nvgm_migration_events.2.flavor
+	# 	event_image = {
+	# 		video = "votp_gunboat_diplomacy"
+	# 	}
+	# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	# 	duration = 1
+	# 	trigger = {
+	# 		# Triggered by JE
+	# 	}
+	# 	immediate = {
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			multiply = 0
+	# 		}
+	# 		random_scope_state = {
+	# 			limit = {
+	# 				has_variable = nvgm_target_state_variable
+	# 			}
+	# 			save_scope_as = nvgm_target_state
+	# 		}
+	# 		random_scope_state = {
+	# 			limit = {
+	# 				is_incorporated = yes
+	# 				state_population >= 1000000
+	# 				any_scope_pop = {
+	# 					total_size >= 10000
+	# 					pop_acceptance < acceptance_status_4
+	# 				}
+	# 			}
+	# 			save_scope_as = nvgm_abandonment_state
+	# 			random_scope_pop = {
+	# 				limit = {
+	# 					total_size >= 10000
+	# 					pop_acceptance < acceptance_status_4
+	# 				}
+	# 				save_scope_as = nvgm_target_pop
+	# 			}
+	# 		}
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			add = nvgm_state_population
+	# 		}
+	# 	}
+	# 	option = {
+	# 		trigger = {
+	# 			scope:nvgm_abandonment_state = {
+	# 				any_scope_pop = {
+	# 					total_size >= 10000
+	# 					pop_acceptance < acceptance_status_4
+	# 				}
+	# 			}
+	# 		}
+	# 		name = nvgm_migration_events.2.a
+	# 		default_option = yes
+	# 		scope:nvgm_target_pop = {
+	# 			move_pop = scope:nvgm_target_state
+	# 		}
+	# 		scope:nvgm_abandonment_state = {
+	# 			add_loyalists_in_state = {
+	# 				value = small_radicals
+	# 				strata >= middle
+	# 			}
+	# 			# add_radicals_in_state = {
+	# 			# 	value = small_radicals
+	# 			# 	strata = poor
+	# 			# }
+	# 		}
+	# 		hidden_effect = {
+	# 			trigger_event = {
+	# 				id = nvgm_migration_events.3
+	# 				days = 1
+	# 			}
+	# 		}
+	# 	}
+	# 	# リセット
+	# 	# option = {
+	# 	# 	name = nvgm_establish_company_events.1.reset
+	# 	# 	hidden_effect = {
+	# 	# 		trigger_event = {
+	# 	# 			id = nvgm_migration_events.2
+	# 	# 		}
+	# 	# 	}
+	# 	# 	change_variable = {
+	# 	# 		name = nvgm_abandonment_policy_var
+	# 	# 		multiply = 0
+	# 	# 	}
+	# 	# }
+	# 	# やめる
+	# 	option = {
+	# 		name = nvgm_migration_events.2.close
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			multiply = 0
+	# 		}
+	# 	}
+	# }
+	# nvgm_migration_events.7 = {
+	# 	type = country_event
+	# 	hidden = yes
+	# 	trigger = {
+	# 		# Triggered by JE
+	# 	}
+	# 	immediate = {
+	# 		random_scope_state = {
+	# 			limit = {
+	# 				has_variable = nvgm_target_state_variable
+	# 			}
+	# 			save_scope_as = nvgm_target_state
+	# 		}
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			subtract = nvgm_state_population
+	# 		}
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			multiply = -1
+	# 		}
+	# 		je:je_nvgm_abandonment_policy = {
+	# 			add_progress = {
+	# 				value = root.var:nvgm_abandonment_policy_var
+	# 				name = nvgm_abandonment_policy_progress_bar
+	# 			}
+	# 		}
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			multiply = 0
+	# 		}
+	# 	}
+	# }
+	# nvgm_migration_events.8 = {
+	# 	type = country_event
+	# 	placement = root
+	# 	title = nvgm_migration_events.7.title
+	# 	desc = nvgm_migration_events.7.desc
+	# 	flavor = nvgm_migration_events.7.flavor
+	# 	event_image = {
+	# 		video = "votp_gunboat_diplomacy"
+	# 	}
+	# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	# 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	# 	duration = 3
+	# 	trigger = {
+	# 		# Triggered by JE
+	# 	}
+	# 	immediate = {
+	# 	}
+	# 	option = {
+	# 		name = nvgm_migration_events.6.a
+	# 		default_option = yes
+	# 	}
+	# 	# やめる
+	# 	option = {
+	# 		name = nvgm_migration_events.2.close
+	# 		change_variable = {
+	# 			name = nvgm_abandonment_policy_var
+	# 			multiply = 0
+	# 		}
+	# 	}
+	# }
+	# test.63 = {
+	# 	type = country_event
+	# 	title = "建設開始"
+	# 	duration = 10
+	# 	immediate = {
+	# 		random_state = {
+	# 			limit = {
+	# 				owner = ROOT
+	# 			}
+	# 			save_scope_as = cur_state
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = "Start building 兵舎"
+	# 		scope:cur_state = {
+	# 			start_building_construction = building_barracks
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = "Start building 市街地"
+	# 		scope:cur_state = {
+	# 			start_building_construction = building_urban_center
+	# 		}
+	# 	}
+	# 	option = {
+	# 		name = "CANCEL"
+	# 		default_option = yes
+	# 	}
 # }
 
 # ランキングチャート
+namespace = nvgm_ranking_chart
 nvgm_ranking_chart.1 = {
 	type = country_event
 	hidden = yes
@@ -4279,9 +3686,29 @@ nvgm_ranking_chart.1 = {
 		nvgm_total_population_ranking_effect = yes
 		nvgm_average_sol_ranking_effect = yes
 		nvgm_literacy_rate_ranking_effect = yes
-		nvgm_investment_pool_ranking_effect = yes
-		nvgm_gold_reserves_ranking_effect = yes
-		nvgm_income_ranking_effect = yes
-		nvgm_expenses_ranking_effect = yes
+		# nvgm_investment_pool_ranking_effect = yes
+		# nvgm_gold_reserves_ranking_effect = yes
+		# nvgm_income_ranking_effect = yes
+		# nvgm_expenses_ranking_effect = yes
+	}
+}
+
+# 従属国
+nvgm_ranking_chart.2 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		nvgm_subject_investment_pool_ranking_effect = yes
+		nvgm_subject_techs_researched_effect = yes
+	}
+}
+
+# 国際投資プールデータ
+nvgm_ranking_chart.3 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		nvgm_global_investment_pool_ranking_effect = yes
+		nvgm_investment_rights_pool_ranking_effect = yes
 	}
 }

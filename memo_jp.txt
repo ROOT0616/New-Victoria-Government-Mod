@@ -33,6 +33,10 @@ UI（外交タブ）を変更するMODとは競合の可能性がありますの
 ・外交タブの従属国欄の情報を充実
 [img=https://steamuserimages-a.akamaihd.net/ugc/59211109389107924/3F219325A81EECE9F2325783CA53C0D54E622534/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true]
 
+・UI　NVGM Menu
+全国の投資プール、投資権を持つ国の投資プール、Top10 GDPのチャート、従属国の投資プール、従属国の技術研究数を表示するUI
+一部[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3429587193]Statistics[/url]のインスパイアを受けて作成されております
+
 [hr][/hr]
 [h1]　　　　　　　　Language support　言語対応[/h1]
 English Contributors　:　ChatGPT　
@@ -44,6 +48,7 @@ Please contact us if you can translate into other languages!
 [hr][/hr]
 [h1]　　　　　　　　　　更新内容　Updates[/h1]
 
+2025/02/24　Global Ranking Chartを新たに作成したUI　NVGM Menuに移動し強化 v1.7.7
 2025/02/22　UIの調整、Global Ranking Chartの追加、病院のバランス調整 v1.7.6
 2025/02/20　バランス調整、外交タブの従属国欄の情報の追加 v1.7.5
 2025/02/18　バグフィックス v1.7.3

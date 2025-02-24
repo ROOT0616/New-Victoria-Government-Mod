@@ -1,4 +1,461 @@
-﻿types NVGM_default_popup_types {
+﻿types NVGM_default_popup_types {	
+	type nvgm_default_popup = default_popup
+	{
+		layer = top
+		visible = "[GetVariableSystem.Exists('show_nvgm_default_popup')]"
+		blockoverride "window_header_name" {
+			text = "NVGM Menu"
+		}
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
+		}
+		blockoverride "scrollarea_content" {
+			flowcontainer = {
+				resizeparent = yes
+				direction = vertical
+				maximumsize = { 700 -1 }
+				minimumsize = { 700 -1 }
+			}
+		}
+		blockoverride "fixed_bottom" {
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				flowcontainer = {
+					direction = horizontal
+					using = default_list_position
+					flowcontainer = {
+						textbox = {
+							raw_text = "Global Data"
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								checked = "[GetVariableSystem.Exists('show_nvgm_data_popup')]"
+								onclick = "[GetVariableSystem.Toggle('show_nvgm_data_popup')]"
+								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.3')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "NVGM_RANKING_CHART"
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								checked = "[GetVariableSystem.Exists('show_nvgm_ranking_chart_popup')]"
+								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
+								onclick = "[GetVariableSystem.Toggle('show_nvgm_ranking_chart_popup')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_4_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_5_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_6_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_7_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_8_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_9_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_10_ranking')]"
+								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_my_ranking')]"
+							}
+						}
+					}
+					flowcontainer = {
+						textbox = {
+							raw_text = "Subject Menu"
+							autoresize = yes
+							margin = { 10 10 }
+							multiline = yes
+						}
+						widget = {
+							size = { 60 44 }
+							checkbutton = {
+								using = check_button
+								size = { 24 24 }
+								parentanchor = vcenter|left
+								checked = "[GetVariableSystem.Exists('show_nvgm_subject_popup')]"
+								onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup')]"
+								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	type nvgm_data_popup = default_popup
+	{
+		layer = top
+		visible = "[GetVariableSystem.Exists('show_nvgm_data_popup')]"
+		blockoverride "window_header_name" {
+			text = "Global Data Menu"
+		}
+		blockoverride "header_back_button_visibility" {
+			visible = yes
+		}
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+    blockoverride "header_back_button" {
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_data_popup'))]"
+    }
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Clear('show_nvgm_data_popup')]"
+		}
+		blockoverride "scrollarea_content" {
+			flowcontainer = {
+				resizeparent = yes
+				direction = horizontal
+				maximumsize = { 1400 -1 }
+				minimumsize = { 1400 -1 }
+				flowcontainer = {
+					direction = vertical
+					datamodel = "[GetPlayer.MakeScope.GetList('nvgm_investment_pool_list')]"
+					maximumsize = { 700 -1 }
+					minimumsize = { 700 -1 }
+					widget = {
+						size = { 20 20 }
+					}
+					textbox = {
+						parentanchor = hcenter|center
+						align = center
+						fontsize = 25
+						raw_text = "#O Global #! [concept_investment_pool]"
+					}
+					widget = {
+						size = { 25 25 }
+					}
+					item = {
+						flowcontainer = {
+							spacing = 5
+							datacontext = "[Scope.GetCountry]"
+							widget = {
+								textbox = {
+									position = { 80 20 }
+									size = { 700 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|left
+									raw_text = "[Country.GetInvestmentPool|vD]"
+								}
+							}
+							widget = {
+								textbox = {
+									position = { 120 20 }
+									size = { 550 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|right
+									max_width = "[FixedPointToFloat(Country.MakeScope.Var('nvgm_investment_pool_var').GetValue)]"
+									background = {
+										texture = "gfx/interface/backgrounds/fancy_pattern_2.dds"
+										color = "[Country.GetMapColor]"
+										mirror = horizontal 
+										using = frame_small_mask
+										alpha = 1.0
+										modify_texture = {
+											blend_mode = add
+										}
+									}
+								}
+							}
+							flowcontainer = {
+								textbox = {
+									raw_text = "[Country.GetFlagTextIcon]"
+									autoresize = yes
+									parentanchor = vcenter
+									align = nobaseline
+									fontsize = 30
+									tooltip = "[Country.GetNameNoFlag]"	
+								}
+							}
+						}
+					}
+				}
+				flowcontainer = {
+					direction = vertical
+					datamodel = "[GetPlayer.MakeScope.GetList('nvgm_investment_rights_pool_list')]"
+					maximumsize = { 700 -1 }
+					minimumsize = { 700 -1 }
+					widget = {
+						size = { 20 20 }
+					}
+					textbox = {
+						parentanchor = hcenter|center
+						align = center
+						fontsize = 25
+						raw_text = "[concept_foreign_investment_rights] [concept_investment_pool]"
+					}
+					widget = {
+						size = { 25 25 }
+					}
+					item = {
+						flowcontainer = {
+							spacing = 5
+							datacontext = "[Scope.GetCountry]"
+							widget = {
+								textbox = {
+									position = { 80 20 }
+									size = { 700 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|left
+									raw_text = "[Country.GetInvestmentPool|vD]"
+								}
+							}
+							widget = {
+								textbox = {
+									position = { 120 20 }
+									size = { 550 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|right
+									max_width = "[FixedPointToFloat(Country.MakeScope.Var('nvgm_investment_rights_pool_var').GetValue)]"
+									background = {
+										texture = "gfx/interface/backgrounds/fancy_pattern_2.dds"
+										color = "[Country.GetMapColor]"
+										mirror = horizontal 
+										using = frame_small_mask
+										alpha = 1.0
+										modify_texture = {
+											blend_mode = add
+										}
+									}
+								}
+							}
+							flowcontainer = {
+								textbox = {
+									raw_text = "[Country.GetFlagTextIcon]"
+									autoresize = yes
+									parentanchor = vcenter
+									align = nobaseline
+									fontsize = 30
+									tooltip = "[Country.GetNameNoFlag]"	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		blockoverride "fixed_bottom" {
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				flowcontainer = {
+					textbox = {
+						raw_text = "Reset"
+						autoresize = yes
+						margin = { 10 10 }
+						multiline = yes
+					}
+					button_icon_reset = {
+						parentanchor = vcenter|left
+						tooltip = "TOOLTIP_RESET"
+						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.3')]"
+						size = { 24 24 }
+					}
+				}
+			}
+		}
+	}
+	type nvgm_subject_popup = default_popup
+	{
+		layer = top
+		visible = "[GetVariableSystem.Exists('show_nvgm_subject_popup')]"
+		blockoverride "window_header_name" {
+			text = "Subject Data"
+		}
+		blockoverride "header_back_button_visibility" {
+			visible = yes
+		}
+		blockoverride "header_close_button_visibility" {
+			visible = yes
+		}
+    blockoverride "header_back_button" {
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup'))]"
+    }
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
+		}
+		blockoverride "scrollarea_content" {
+			flowcontainer = {
+				resizeparent = yes
+				direction = horizontal
+				maximumsize = { 1400 -1 }
+				minimumsize = { 1400 -1 }
+				flowcontainer = {
+					direction = vertical
+					datamodel = "[GetPlayer.MakeScope.GetList('nvgm_subject_investment_pool_list')]"
+					maximumsize = { 700 -1 }
+					minimumsize = { 700 -1 }
+					widget = {
+						size = { 20 20 }
+					}
+					textbox = {
+						parentanchor = hcenter|center
+						align = center
+						fontsize = 25
+						raw_text = "[concept_investment_pool]"
+					}
+					widget = {
+						size = { 25 25 }
+					}
+					item = {
+						flowcontainer = {
+							spacing = 5
+							datacontext = "[Scope.GetCountry]"
+							widget = {
+								textbox = {
+									position = { 80 20 }
+									size = { 700 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|left
+									raw_text = "[Country.GetInvestmentPool|vD]"
+								}
+							}
+							widget = {
+								textbox = {
+									position = { 120 20 }
+									size = { 550 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|right
+									max_width = "[FixedPointToFloat(Country.MakeScope.Var('nvgm_subject_investment_pool_var').GetValue)]"
+									background = {
+										texture = "gfx/interface/backgrounds/fancy_pattern_2.dds"
+										color = "[Country.GetMapColor]"
+										mirror = horizontal 
+										using = frame_small_mask
+										alpha = 1.0
+										modify_texture = {
+											blend_mode = add
+										}
+									}
+								}
+							}
+							flowcontainer = {
+								textbox = {
+									raw_text = "[Country.GetFlagTextIcon]"
+									autoresize = yes
+									parentanchor = vcenter
+									align = nobaseline
+									fontsize = 30
+									tooltip = "[Country.GetNameNoFlag]"	
+								}
+							}
+						}
+					}
+				}
+				flowcontainer = {
+					resizeparent = yes
+					direction = vertical
+					maximumsize = { 700 -1 }
+					minimumsize = { 700 -1 }
+					datamodel = "[GetPlayer.MakeScope.GetList('nvgm_subject_techs_researched_list')]"
+					widget = {
+						size = { 20 20 }
+					}
+					textbox = {
+						parentanchor = hcenter|center
+						align = center
+						fontsize = 25
+						raw_text = "[concept_technology]"
+					}
+					widget = {
+						size = { 25 25 }
+					}
+					item = {
+						flowcontainer = {
+							spacing = 5
+							datacontext = "[Scope.GetCountry]"
+							widget = {
+								textbox = {
+									position = { 80 20 }
+									size = { 700 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|left
+									raw_text = "[Country.MakeScope.Var('nvgm_subject_techs_researched_value').GetValue)|v0]"
+								}
+							}
+							widget = {
+								textbox = {
+									position = { 120 20 }
+									size = { 550 14 }
+									fontsize = 17
+									parentanchor = vcenter
+									align = nobaseline|right
+									max_width = "[FixedPointToFloat(Country.MakeScope.Var('nvgm_subject_techs_researched_var').GetValue)]"
+									background = {
+										texture = "gfx/interface/backgrounds/fancy_pattern_2.dds"
+										color = "[Country.GetMapColor]"
+										mirror = horizontal 
+										using = frame_small_mask
+										alpha = 1.0
+										modify_texture = {
+											blend_mode = add
+										}
+									}
+								}
+							}
+							flowcontainer = {
+								textbox = {
+									raw_text = "[Country.GetFlagTextIcon]"
+									autoresize = yes
+									parentanchor = vcenter
+									align = nobaseline
+									fontsize = 30
+									tooltip = "[Country.GetNameNoFlag]"	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		blockoverride "fixed_bottom" {
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				flowcontainer = {
+					textbox = {
+						raw_text = "Reset"
+						autoresize = yes
+						margin = { 10 10 }
+						multiline = yes
+					}
+					button_icon_reset = {
+						parentanchor = vcenter|left
+						tooltip = "TOOLTIP_RESET"
+						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+						size = { 24 24 }
+					}
+				}
+			}
+		}
+	}
 	type nvgm_ranking_chart_popup = default_popup
 	{
 		layer = top
@@ -6,11 +463,30 @@
 		blockoverride "window_header_name" {
 			text = "NVGM_RANKING_CHART"
 		}
+		blockoverride "header_back_button_visibility" {
+			visible = yes
+		}
 		blockoverride "header_close_button_visibility" {
 			visible = yes
 		}
+    blockoverride "header_back_button" {
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_ranking_chart_popup')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_4_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_5_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_6_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_7_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_8_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_9_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_10_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_my_ranking')]"
+    }
 		blockoverride "header_close_button" {
-			onclick = "[GetVariableSystem.Toggle('show_nvgm_ranking_chart_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_ranking_chart_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
 			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
 			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
@@ -34,10 +510,10 @@
 				nvgm_plotline_population = {}
 				nvgm_plotline_average_sol = {}
 				nvgm_plotline_literacy_rate = {}
-				# nvgm_plotline_investment_pool = { visible = no }
-				# nvgm_plotline_gold_reserves = { visible = no }
-				# nvgm_plotline_income = { visible = no }
-				# nvgm_plotline_expenses = { visible = no }
+				# nvgm_plotline_investment_pool = {}
+				# nvgm_plotline_gold_reserves = {}
+				# nvgm_plotline_income = {}
+				# nvgm_plotline_expenses = {}
 			}
 		}
 		blockoverride "fixed_bottom" {
@@ -48,11 +524,13 @@
 					direction = horizontal
 					using = default_list_position
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "1st"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontcolor = { 1.0 0.4 0.4 1.0 }
+							fontsize = 17
 							multiline = yes
 						}
 						widget = {
@@ -67,11 +545,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "2nd"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 1.0 0.7 0.4 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -86,11 +566,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "3rd"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 1.0 1.0 0.4 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -105,11 +587,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "4th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.7 1.0 0.4 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -124,11 +608,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "5th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.4 1.0 0.4 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -147,11 +633,13 @@
 					using = default_list_position
 					direction = horizontal
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "6th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.4 1.0 0.7 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -166,11 +654,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "7th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.4 1.0 1.0 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -185,11 +675,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "8th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.4 0.7 1.0 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -204,11 +696,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "9th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.4 0.4 1.0 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -223,11 +717,13 @@
 						}
 					}
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "10th"
 							parentanchor = vcenter|left
 							autoresize = yes
 							margin = { 10 10 }
+							fontsize = 17
+							fontcolor = { 0.7 0.4 1.0 1.0 }
 							multiline = yes
 						}
 						widget = {
@@ -246,7 +742,7 @@
 					direction = horizontal
 					using = default_list_position
 					flowcontainer = {
-						textbox = {
+						editor_textbox = {
 							raw_text = "[GetPlayer.GetName]"
 							autoresize = yes
 							margin = { 10 10 }
@@ -274,6 +770,28 @@
 							parentanchor = vcenter|left
 							tooltip = "TOOLTIP_RESET"
 							onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_my_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_1_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_2_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_3_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_4_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_5_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_6_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_7_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_8_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_9_ranking' )]"
+							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_10_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_my_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_1_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_2_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_3_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_4_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_5_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_6_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_7_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_8_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_9_ranking' )]"
+							onclick = "[GetVariableSystem.Toggle( 'show_not_nvgm_10_ranking' )]"
 							size = { 24 24 }
 						}
 					}
