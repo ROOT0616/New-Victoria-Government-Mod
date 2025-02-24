@@ -33,6 +33,10 @@ Forced immigration of people to less populated areas (start with a decision)
 ・More information in the subjects section of the Diplomacy tab.
 [img=https://steamuserimages-a.akamaihd.net/ugc/59211109389107924/3F219325A81EECE9F2325783CA53C0D54E622534/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true]
 
+・UI　NVGM Menu
+UI showing national investment pools, investment pools of countries with investment rights, Top 10 GDP chart, investment pools of dependent countries, and number of technology studies in dependent countries
+Partially inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3429587193]Statistics[/url]
+
 [hr][/hr]
 [h1]　　　　　　　　Language support[/h1]　
 English Contributors　:　ChatGPT　
@@ -43,6 +47,7 @@ Please contact us if you can translate into other languages!
 [hr][/hr]
 [h1]　　　　　　　　　　Updates[/h1]
 
+2025/02/24　Moved Global Ranking Chart to the newly created UI NVGM Menu and enhanced it v1.7.7
 2025/02/22　Adjust UI, add Global Ranking Chart, balance hospital v1.7.6
 2025/02/20　Balance adjustment Adding information in the dependent country column of the Diplomacy tab v1.7.5
 2025/02/18　bugfix v1.7.3

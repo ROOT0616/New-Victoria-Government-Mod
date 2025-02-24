@@ -1383,3 +1383,241 @@ nvgm_expenses_ranking_effect = {
 		}
 	}
 }
+
+# 従属国の投資プールの順位
+nvgm_subject_investment_pool_ranking_effect = {
+	clear_variable_list = nvgm_subject_investment_pool_list
+	ordered_country = {
+		limit = {
+			OR = {
+				this = root
+				is_subject_of = root
+			}
+		}
+		position = 0
+		max = 1
+		check_range_bounds = no
+		order_by = investment_pool
+		set_global_variable = {
+			name = nvgm_1_subject_investment_pool_country_var
+			value = investment_pool
+		}
+	}
+	ordered_country = {
+		limit = {
+			OR = {
+				this = root
+				is_subject_of = root
+			}
+		}
+		set_local_variable = {
+			name = nvgm_subject_investment_pool_local_var
+			value = investment_pool
+		}
+		overlord = {
+			add_to_variable_list = {
+				name = nvgm_subject_investment_pool_list
+				target = prev
+			}
+		}
+		order_by = investment_pool
+		max = 15
+		check_range_bounds = no
+		change_local_variable = { 
+			name = nvgm_subject_investment_pool_local_var
+			divide = global_var:nvgm_1_subject_investment_pool_country_var
+		}
+		change_local_variable = { 
+			name = nvgm_subject_investment_pool_local_var
+			multiply = 550
+		}
+		set_variable = {
+			name = nvgm_subject_investment_pool_var
+			value = local_var:nvgm_subject_investment_pool_local_var
+		}
+	}
+}
+
+# 従属国の技術研究の順位
+nvgm_subject_techs_researched_effect = {
+	clear_variable_list = nvgm_subject_techs_researched_list
+	ordered_country = {
+		limit = {
+			OR = {
+				this = root
+				is_subject_of = root
+			}
+		}
+		order_by = techs_researched
+		position = 0
+		max = 1
+		check_range_bounds = no
+		set_global_variable = {
+			name = nvgm_1_subject_techs_researched_country_var
+			value = techs_researched
+		}
+	}
+	ordered_country = {
+		limit = {
+			OR = {
+				this = root
+				is_subject_of = root
+			}
+		}
+		set_local_variable = {
+			name = nvgm_subject_techs_researched_local_var
+			value = techs_researched
+		}
+		order_by = techs_researched
+		max = 15
+		check_range_bounds = no
+		overlord = {
+			add_to_variable_list = {
+				name = nvgm_subject_techs_researched_list
+				target = prev
+			}
+		}
+		set_variable = { 
+			name = nvgm_subject_techs_researched_value
+			value = techs_researched
+		}
+		change_local_variable = { 
+			name = nvgm_subject_techs_researched_local_var
+			divide = global_var:top_techs_researched_country_gvar
+		}
+		change_local_variable = { 
+			name = nvgm_subject_techs_researched_local_var
+			multiply = 550
+		}
+		set_variable = {
+			name = nvgm_subject_techs_researched_var
+			value = local_var:nvgm_subject_techs_researched_local_var
+		}
+	}
+}
+
+# 国際投資プールの順位
+nvgm_global_investment_pool_ranking_effect = {
+	clear_variable_list = nvgm_investment_pool_list
+	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
+		position = 0
+		max = 1
+		check_range_bounds = no
+		order_by = investment_pool
+		set_global_variable = {
+			name = nvgm_1_investment_pool_country_var
+			value = investment_pool
+		}
+	}
+	ordered_country = {
+		limit = {
+			is_revolutionary = no
+			NOR = {
+				c:PRC ?= this
+				is_country_type = decentralized
+			}
+		}
+		set_local_variable = {
+			name = nvgm_investment_pool_local_var
+			value = investment_pool
+		}
+		root = {
+			add_to_variable_list = {
+				name = nvgm_investment_pool_list
+				target = prev
+			}
+		}
+		order_by = investment_pool
+		max = 50
+		check_range_bounds = no
+		change_local_variable = { 
+			name = nvgm_investment_pool_local_var
+			divide = global_var:nvgm_1_investment_pool_country_var
+		}
+		change_local_variable = { 
+			name = nvgm_investment_pool_local_var
+			multiply = 550
+		}
+		set_variable = {
+			name = nvgm_investment_pool_var
+			value = local_var:nvgm_investment_pool_local_var
+		}
+	}
+}
+
+# 投資プールの順位
+nvgm_investment_rights_pool_ranking_effect = {
+	clear_variable_list = nvgm_investment_rights_pool_list
+	ordered_country = {
+		limit = {
+			OR = {
+				has_diplomatic_pact = {
+					who = root
+					type = foreign_investment_rights
+				}	
+				has_diplomatic_pact = {
+					who = root
+					type = foreign_investment_agreement
+				}	
+				this = root
+				is_subject_of = root
+			}
+		}
+		position = 0
+		max = 1
+		check_range_bounds = no
+		order_by = investment_pool
+		set_global_variable = {
+			name = nvgm_1_investment_rights_pool_country_var
+			value = investment_pool
+		}
+	}
+	ordered_country = {
+		limit = {
+			OR = {
+				has_diplomatic_pact = {
+					who = root
+					type = foreign_investment_rights
+				}	
+				has_diplomatic_pact = {
+					who = root
+					type = foreign_investment_agreement
+				}	
+				this = root
+				is_subject_of = root
+			}
+		}
+		set_local_variable = {
+			name = nvgm_investment_rights_pool_local_var
+			value = investment_pool
+		}
+		root = {
+			add_to_variable_list = {
+				name = nvgm_investment_rights_pool_list
+				target = prev
+			}
+		}
+		order_by = investment_pool
+		max = 15
+		check_range_bounds = no
+		change_local_variable = { 
+			name = nvgm_investment_rights_pool_local_var
+			divide = global_var:nvgm_1_investment_rights_pool_country_var
+		}
+		change_local_variable = { 
+			name = nvgm_investment_rights_pool_local_var
+			multiply = 550
+		}
+		set_variable = {
+			name = nvgm_investment_rights_pool_var
+			value = local_var:nvgm_investment_rights_pool_local_var
+		}
+	}
+}

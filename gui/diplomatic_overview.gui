@@ -1792,7 +1792,7 @@ types diplomatic_panel
 		widget = {
 			size = { 5 5 }
 		}
-		flowcontainer = {
+		flowcontainer = {	
 			visible = "[GetVariableSystem.Exists( Concatenate('show_buildings_', Country.GetIDString) )]"
 			parentanchor = hcenter
 			direction = horizontal

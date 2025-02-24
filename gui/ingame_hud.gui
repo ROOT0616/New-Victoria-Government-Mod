@@ -265,19 +265,7 @@ widget = {
 		margin_left = 10
 		margin_bottom = 15
 		button_icon_round = {
-			onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
-			onclick = "[GetVariableSystem.Toggle('show_nvgm_ranking_chart_popup')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_3_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_4_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_5_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_6_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_7_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_8_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_9_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_10_ranking')]"
-			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_my_ranking')]"
+			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
 			size = { 50 50 }
 			blockoverride "icon" {
 				texture = "gfx/interface/icons/invention_icons/mutual_funds.dds"
@@ -287,6 +275,9 @@ widget = {
 			}	
 		}
 	}
+	nvgm_default_popup = {}
+	nvgm_data_popup = {}
+	nvgm_subject_popup = {}
 	nvgm_ranking_chart_popup = {}
 	# NVGM
 
