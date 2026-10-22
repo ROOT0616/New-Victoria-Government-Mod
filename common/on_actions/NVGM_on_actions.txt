@@ -1,23 +1,34 @@
 ﻿on_become_independent = {
 	on_actions = {
-		nvgm_transfer_cleanup
+		nvgm_support_cleanup
+		nvgm_support_delayed_cleanup
 	}
 }
 
 on_become_subject = {
 	on_actions = {
-		nvgm_transfer_cleanup
+		nvgm_support_cleanup
+		nvgm_support_delayed_cleanup
 	}
 }
 
 on_monthly_pulse_country = {
 	on_actions = {
-		nvgm_transfer_cleanup
+		nvgm_support_cleanup
 	}
 }
 
-nvgm_transfer_cleanup = {
+nvgm_support_cleanup = {
 	effect = {
-		nvgm_transfer_cleanup_effect = yes
+		nvgm_support_cleanup_effect = yes
+	}
+}
+
+nvgm_support_delayed_cleanup = {
+	effect = {
+		trigger_event = {
+			on_action = nvgm_support_cleanup
+			days = 1
+		}
 	}
 }

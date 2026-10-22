@@ -39,7 +39,6 @@
 	}
 	pact = {
 		cost = 0
-		forced_duration = 12
 		maintenance_paid_by = first_country
 		income_transfer = -0.1
 		second_country_gets_income_transfer = no
@@ -70,6 +69,13 @@
 						"diplomatic_pact_other_country(root)" = scope:target_country
 						income_transfer > 0
 					}
+				}
+			}
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
 				}
 			}
 		}

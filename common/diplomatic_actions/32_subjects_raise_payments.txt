@@ -85,6 +85,13 @@
 				}
 			}
 		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
 	}
 	ai = {
 		max_influence_spending_fraction = 0.1

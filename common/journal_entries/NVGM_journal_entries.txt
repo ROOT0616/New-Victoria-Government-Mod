@@ -62,10 +62,15 @@ je_nvgm_abandonment_policy = {
 			name = nvgm_abandonment_policy_cooldown_var
 			days = 1825
 		}
+		nvgm_end_migration_effect = yes
 	}
 	fail = {
+		NOT = {
+			nvgm_migration_target_valid = yes
+		}
 	}
 	on_fail = {
+		nvgm_end_migration_effect = yes
 	}
 	on_monthly_pulse = {
 		random_events = {

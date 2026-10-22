@@ -182,6 +182,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_1_country_modifier
 			multiplier = var:nvgm_give_bur_1_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_1_country_modifier
@@ -192,6 +193,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_1_country_modifier
 				multiplier = var:nvgm_given_bur_1_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -215,6 +217,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_2_country_modifier
 			multiplier = var:nvgm_give_bur_2_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_2_country_modifier
@@ -225,6 +228,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_2_country_modifier
 				multiplier = var:nvgm_given_bur_2_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -248,6 +252,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_3_country_modifier
 			multiplier = var:nvgm_give_bur_3_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_3_country_modifier
@@ -258,6 +263,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_3_country_modifier
 				multiplier = var:nvgm_given_bur_3_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -281,6 +287,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_4_country_modifier
 			multiplier = var:nvgm_give_bur_4_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_4_country_modifier
@@ -291,6 +298,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_4_country_modifier
 				multiplier = var:nvgm_given_bur_4_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -314,6 +322,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_5_country_modifier
 			multiplier = var:nvgm_give_bur_5_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_5_country_modifier
@@ -324,6 +333,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_5_country_modifier
 				multiplier = var:nvgm_given_bur_5_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -347,6 +357,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_6_country_modifier
 			multiplier = var:nvgm_give_bur_6_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_6_country_modifier
@@ -357,6 +368,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_6_country_modifier
 				multiplier = var:nvgm_given_bur_6_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -380,6 +392,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_7_country_modifier
 			multiplier = var:nvgm_give_bur_7_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_7_country_modifier
@@ -390,6 +403,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_7_country_modifier
 				multiplier = var:nvgm_given_bur_7_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -413,6 +427,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_8_country_modifier
 			multiplier = var:nvgm_give_bur_8_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_8_country_modifier
@@ -423,6 +438,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_8_country_modifier
 				multiplier = var:nvgm_given_bur_8_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -446,6 +462,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_9_country_modifier
 			multiplier = var:nvgm_give_bur_9_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_9_country_modifier
@@ -456,6 +473,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_9_country_modifier
 				multiplier = var:nvgm_given_bur_9_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -479,6 +497,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_10_country_modifier
 			multiplier = var:nvgm_give_bur_10_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_10_country_modifier
@@ -489,6 +508,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_10_country_modifier
 				multiplier = var:nvgm_given_bur_10_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -512,6 +532,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_11_country_modifier
 			multiplier = var:nvgm_give_bur_11_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_11_country_modifier
@@ -522,6 +543,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_11_country_modifier
 				multiplier = var:nvgm_given_bur_11_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -545,6 +567,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_12_country_modifier
 			multiplier = var:nvgm_give_bur_12_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_12_country_modifier
@@ -555,6 +578,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_12_country_modifier
 				multiplier = var:nvgm_given_bur_12_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -578,6 +602,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_13_country_modifier
 			multiplier = var:nvgm_give_bur_13_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_13_country_modifier
@@ -588,6 +613,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_13_country_modifier
 				multiplier = var:nvgm_given_bur_13_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -611,6 +637,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_14_country_modifier
 			multiplier = var:nvgm_give_bur_14_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_14_country_modifier
@@ -621,6 +648,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_14_country_modifier
 				multiplier = var:nvgm_given_bur_14_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -644,6 +672,7 @@ nvgm_bur_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_bur_15_country_modifier
 			multiplier = var:nvgm_give_bur_15_var
+			days = 45
 		}
 		var:nvgm_bur_donor = {
 			remove_modifier = nvgm_given_bur_15_country_modifier
@@ -654,6 +683,7 @@ nvgm_bur_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_bur_15_country_modifier
 				multiplier = var:nvgm_given_bur_15_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -854,6 +884,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_1_country_modifier
 			multiplier = var:nvgm_give_innovation_1_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_1_country_modifier
@@ -864,6 +895,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_1_country_modifier
 				multiplier = var:nvgm_given_innovation_1_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -887,6 +919,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_2_country_modifier
 			multiplier = var:nvgm_give_innovation_2_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_2_country_modifier
@@ -897,6 +930,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_2_country_modifier
 				multiplier = var:nvgm_given_innovation_2_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -920,6 +954,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_3_country_modifier
 			multiplier = var:nvgm_give_innovation_3_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_3_country_modifier
@@ -930,6 +965,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_3_country_modifier
 				multiplier = var:nvgm_given_innovation_3_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -953,6 +989,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_4_country_modifier
 			multiplier = var:nvgm_give_innovation_4_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_4_country_modifier
@@ -963,6 +1000,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_4_country_modifier
 				multiplier = var:nvgm_given_innovation_4_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -986,6 +1024,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_5_country_modifier
 			multiplier = var:nvgm_give_innovation_5_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_5_country_modifier
@@ -996,6 +1035,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_5_country_modifier
 				multiplier = var:nvgm_given_innovation_5_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1019,6 +1059,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_6_country_modifier
 			multiplier = var:nvgm_give_innovation_6_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_6_country_modifier
@@ -1029,6 +1070,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_6_country_modifier
 				multiplier = var:nvgm_given_innovation_6_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1052,6 +1094,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_7_country_modifier
 			multiplier = var:nvgm_give_innovation_7_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_7_country_modifier
@@ -1062,6 +1105,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_7_country_modifier
 				multiplier = var:nvgm_given_innovation_7_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1085,6 +1129,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_8_country_modifier
 			multiplier = var:nvgm_give_innovation_8_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_8_country_modifier
@@ -1095,6 +1140,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_8_country_modifier
 				multiplier = var:nvgm_given_innovation_8_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1118,6 +1164,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_9_country_modifier
 			multiplier = var:nvgm_give_innovation_9_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_9_country_modifier
@@ -1128,6 +1175,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_9_country_modifier
 				multiplier = var:nvgm_given_innovation_9_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1151,6 +1199,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_10_country_modifier
 			multiplier = var:nvgm_give_innovation_10_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_10_country_modifier
@@ -1161,6 +1210,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_10_country_modifier
 				multiplier = var:nvgm_given_innovation_10_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1184,6 +1234,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_11_country_modifier
 			multiplier = var:nvgm_give_innovation_11_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_11_country_modifier
@@ -1194,6 +1245,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_11_country_modifier
 				multiplier = var:nvgm_given_innovation_11_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1217,6 +1269,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_12_country_modifier
 			multiplier = var:nvgm_give_innovation_12_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_12_country_modifier
@@ -1227,6 +1280,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_12_country_modifier
 				multiplier = var:nvgm_given_innovation_12_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1250,6 +1304,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_13_country_modifier
 			multiplier = var:nvgm_give_innovation_13_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_13_country_modifier
@@ -1260,6 +1315,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_13_country_modifier
 				multiplier = var:nvgm_given_innovation_13_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1283,6 +1339,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_14_country_modifier
 			multiplier = var:nvgm_give_innovation_14_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_14_country_modifier
@@ -1293,6 +1350,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_14_country_modifier
 				multiplier = var:nvgm_given_innovation_14_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1316,6 +1374,7 @@ nvgm_innovation_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_innovation_15_country_modifier
 			multiplier = var:nvgm_give_innovation_15_var
+			days = 45
 		}
 		var:nvgm_innovation_donor = {
 			remove_modifier = nvgm_given_innovation_15_country_modifier
@@ -1326,6 +1385,7 @@ nvgm_innovation_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_innovation_15_country_modifier
 				multiplier = var:nvgm_given_innovation_15_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1526,6 +1586,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_1_country_modifier
 			multiplier = var:nvgm_give_construction_1_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_1_country_modifier
@@ -1536,6 +1597,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_1_country_modifier
 				multiplier = var:nvgm_given_construction_1_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1559,6 +1621,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_2_country_modifier
 			multiplier = var:nvgm_give_construction_2_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_2_country_modifier
@@ -1569,6 +1632,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_2_country_modifier
 				multiplier = var:nvgm_given_construction_2_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1592,6 +1656,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_3_country_modifier
 			multiplier = var:nvgm_give_construction_3_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_3_country_modifier
@@ -1602,6 +1667,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_3_country_modifier
 				multiplier = var:nvgm_given_construction_3_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1625,6 +1691,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_4_country_modifier
 			multiplier = var:nvgm_give_construction_4_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_4_country_modifier
@@ -1635,6 +1702,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_4_country_modifier
 				multiplier = var:nvgm_given_construction_4_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1658,6 +1726,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_5_country_modifier
 			multiplier = var:nvgm_give_construction_5_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_5_country_modifier
@@ -1668,6 +1737,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_5_country_modifier
 				multiplier = var:nvgm_given_construction_5_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1691,6 +1761,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_6_country_modifier
 			multiplier = var:nvgm_give_construction_6_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_6_country_modifier
@@ -1701,6 +1772,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_6_country_modifier
 				multiplier = var:nvgm_given_construction_6_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1724,6 +1796,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_7_country_modifier
 			multiplier = var:nvgm_give_construction_7_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_7_country_modifier
@@ -1734,6 +1807,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_7_country_modifier
 				multiplier = var:nvgm_given_construction_7_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1757,6 +1831,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_8_country_modifier
 			multiplier = var:nvgm_give_construction_8_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_8_country_modifier
@@ -1767,6 +1842,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_8_country_modifier
 				multiplier = var:nvgm_given_construction_8_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1790,6 +1866,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_9_country_modifier
 			multiplier = var:nvgm_give_construction_9_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_9_country_modifier
@@ -1800,6 +1877,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_9_country_modifier
 				multiplier = var:nvgm_given_construction_9_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1823,6 +1901,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_10_country_modifier
 			multiplier = var:nvgm_give_construction_10_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_10_country_modifier
@@ -1833,6 +1912,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_10_country_modifier
 				multiplier = var:nvgm_given_construction_10_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1856,6 +1936,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_11_country_modifier
 			multiplier = var:nvgm_give_construction_11_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_11_country_modifier
@@ -1866,6 +1947,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_11_country_modifier
 				multiplier = var:nvgm_given_construction_11_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1889,6 +1971,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_12_country_modifier
 			multiplier = var:nvgm_give_construction_12_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_12_country_modifier
@@ -1899,6 +1982,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_12_country_modifier
 				multiplier = var:nvgm_given_construction_12_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1922,6 +2006,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_13_country_modifier
 			multiplier = var:nvgm_give_construction_13_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_13_country_modifier
@@ -1932,6 +2017,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_13_country_modifier
 				multiplier = var:nvgm_given_construction_13_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1955,6 +2041,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_14_country_modifier
 			multiplier = var:nvgm_give_construction_14_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_14_country_modifier
@@ -1965,6 +2052,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_14_country_modifier
 				multiplier = var:nvgm_given_construction_14_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -1988,6 +2076,7 @@ nvgm_construction_refresh_effect = {
 		add_modifier = {
 			name = nvgm_give_construction_15_country_modifier
 			multiplier = var:nvgm_give_construction_15_var
+			days = 45
 		}
 		var:nvgm_construction_donor = {
 			remove_modifier = nvgm_given_construction_15_country_modifier
@@ -1998,6 +2087,7 @@ nvgm_construction_refresh_effect = {
 			add_modifier = {
 				name = nvgm_given_construction_15_country_modifier
 				multiplier = var:nvgm_given_construction_15_var
+				days = 45
 			}
 		}
 		set_variable = {
@@ -2017,9 +2107,8 @@ nvgm_construction_refresh_effect = {
 nvgm_transfer_cleanup_effect = {
 	if = {
 		limit = {
-			has_variable = nvgm_bur_donor
 			NOT = {
-				is_subject_of = var:nvgm_bur_donor
+				nvgm_bur_recipient_valid = yes
 			}
 		}
 		nvgm_bur_reset_effect = yes
@@ -2027,51 +2116,16 @@ nvgm_transfer_cleanup_effect = {
 	if = {
 		limit = {
 			NOT = {
-				has_variable = nvgm_bur_donor
+				nvgm_bur_slot_1_valid = yes
 			}
 		}
-		remove_modifier = nvgm_give_bur_1_country_modifier
-		remove_variable = nvgm_give_bur_1_var
-		remove_modifier = nvgm_give_bur_2_country_modifier
-		remove_variable = nvgm_give_bur_2_var
-		remove_modifier = nvgm_give_bur_3_country_modifier
-		remove_variable = nvgm_give_bur_3_var
-		remove_modifier = nvgm_give_bur_4_country_modifier
-		remove_variable = nvgm_give_bur_4_var
-		remove_modifier = nvgm_give_bur_5_country_modifier
-		remove_variable = nvgm_give_bur_5_var
-		remove_modifier = nvgm_give_bur_6_country_modifier
-		remove_variable = nvgm_give_bur_6_var
-		remove_modifier = nvgm_give_bur_7_country_modifier
-		remove_variable = nvgm_give_bur_7_var
-		remove_modifier = nvgm_give_bur_8_country_modifier
-		remove_variable = nvgm_give_bur_8_var
-		remove_modifier = nvgm_give_bur_9_country_modifier
-		remove_variable = nvgm_give_bur_9_var
-		remove_modifier = nvgm_give_bur_10_country_modifier
-		remove_variable = nvgm_give_bur_10_var
-		remove_modifier = nvgm_give_bur_11_country_modifier
-		remove_variable = nvgm_give_bur_11_var
-		remove_modifier = nvgm_give_bur_12_country_modifier
-		remove_variable = nvgm_give_bur_12_var
-		remove_modifier = nvgm_give_bur_13_country_modifier
-		remove_variable = nvgm_give_bur_13_var
-		remove_modifier = nvgm_give_bur_14_country_modifier
-		remove_variable = nvgm_give_bur_14_var
-		remove_modifier = nvgm_give_bur_15_country_modifier
-		remove_variable = nvgm_give_bur_15_var
-	}
-	if = {
-		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_1_target
+		var:nvgm_bur_slot_1_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_1_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_1_country_modifier
@@ -2080,15 +2134,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_2_target
+			NOT = {
+				nvgm_bur_slot_2_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_2_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_2_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_2_country_modifier
@@ -2097,15 +2153,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_3_target
+			NOT = {
+				nvgm_bur_slot_3_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_3_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_3_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_3_country_modifier
@@ -2114,15 +2172,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_4_target
+			NOT = {
+				nvgm_bur_slot_4_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_4_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_4_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_4_country_modifier
@@ -2131,15 +2191,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_5_target
+			NOT = {
+				nvgm_bur_slot_5_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_5_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_5_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_5_country_modifier
@@ -2148,15 +2210,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_6_target
+			NOT = {
+				nvgm_bur_slot_6_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_6_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_6_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_6_country_modifier
@@ -2165,15 +2229,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_7_target
+			NOT = {
+				nvgm_bur_slot_7_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_7_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_7_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_7_country_modifier
@@ -2182,15 +2248,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_8_target
+			NOT = {
+				nvgm_bur_slot_8_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_8_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_8_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_8_country_modifier
@@ -2199,15 +2267,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_9_target
+			NOT = {
+				nvgm_bur_slot_9_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_9_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_9_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_9_country_modifier
@@ -2216,15 +2286,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_10_target
+			NOT = {
+				nvgm_bur_slot_10_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_10_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_10_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_10_country_modifier
@@ -2233,15 +2305,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_11_target
+			NOT = {
+				nvgm_bur_slot_11_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_11_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_11_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_11_country_modifier
@@ -2250,15 +2324,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_12_target
+			NOT = {
+				nvgm_bur_slot_12_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_12_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_12_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_12_country_modifier
@@ -2267,15 +2343,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_13_target
+			NOT = {
+				nvgm_bur_slot_13_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_13_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_13_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_13_country_modifier
@@ -2284,15 +2362,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_14_target
+			NOT = {
+				nvgm_bur_slot_14_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_14_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_14_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_14_country_modifier
@@ -2301,15 +2381,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_bur_slot_15_target
+			NOT = {
+				nvgm_bur_slot_15_valid = yes
+			}
+		}
+		var:nvgm_bur_slot_15_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_bur_donor
+					var:nvgm_bur_donor = prev
 				}
-				var:nvgm_bur_slot_15_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_bur_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_bur_15_country_modifier
@@ -2318,9 +2400,134 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			has_variable = nvgm_innovation_donor
+			nvgm_bur_recipient_valid = yes
+		}
+		nvgm_bur_refresh_effect = yes
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_1_valid = yes
+		}
+		var:nvgm_bur_slot_1_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_2_valid = yes
+		}
+		var:nvgm_bur_slot_2_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_3_valid = yes
+		}
+		var:nvgm_bur_slot_3_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_4_valid = yes
+		}
+		var:nvgm_bur_slot_4_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_5_valid = yes
+		}
+		var:nvgm_bur_slot_5_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_6_valid = yes
+		}
+		var:nvgm_bur_slot_6_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_7_valid = yes
+		}
+		var:nvgm_bur_slot_7_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_8_valid = yes
+		}
+		var:nvgm_bur_slot_8_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_9_valid = yes
+		}
+		var:nvgm_bur_slot_9_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_10_valid = yes
+		}
+		var:nvgm_bur_slot_10_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_11_valid = yes
+		}
+		var:nvgm_bur_slot_11_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_12_valid = yes
+		}
+		var:nvgm_bur_slot_12_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_13_valid = yes
+		}
+		var:nvgm_bur_slot_13_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_14_valid = yes
+		}
+		var:nvgm_bur_slot_14_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_bur_slot_15_valid = yes
+		}
+		var:nvgm_bur_slot_15_target = {
+			nvgm_bur_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
 			NOT = {
-				is_subject_of = var:nvgm_innovation_donor
+				nvgm_innovation_recipient_valid = yes
 			}
 		}
 		nvgm_innovation_reset_effect = yes
@@ -2328,51 +2535,16 @@ nvgm_transfer_cleanup_effect = {
 	if = {
 		limit = {
 			NOT = {
-				has_variable = nvgm_innovation_donor
+				nvgm_innovation_slot_1_valid = yes
 			}
 		}
-		remove_modifier = nvgm_give_innovation_1_country_modifier
-		remove_variable = nvgm_give_innovation_1_var
-		remove_modifier = nvgm_give_innovation_2_country_modifier
-		remove_variable = nvgm_give_innovation_2_var
-		remove_modifier = nvgm_give_innovation_3_country_modifier
-		remove_variable = nvgm_give_innovation_3_var
-		remove_modifier = nvgm_give_innovation_4_country_modifier
-		remove_variable = nvgm_give_innovation_4_var
-		remove_modifier = nvgm_give_innovation_5_country_modifier
-		remove_variable = nvgm_give_innovation_5_var
-		remove_modifier = nvgm_give_innovation_6_country_modifier
-		remove_variable = nvgm_give_innovation_6_var
-		remove_modifier = nvgm_give_innovation_7_country_modifier
-		remove_variable = nvgm_give_innovation_7_var
-		remove_modifier = nvgm_give_innovation_8_country_modifier
-		remove_variable = nvgm_give_innovation_8_var
-		remove_modifier = nvgm_give_innovation_9_country_modifier
-		remove_variable = nvgm_give_innovation_9_var
-		remove_modifier = nvgm_give_innovation_10_country_modifier
-		remove_variable = nvgm_give_innovation_10_var
-		remove_modifier = nvgm_give_innovation_11_country_modifier
-		remove_variable = nvgm_give_innovation_11_var
-		remove_modifier = nvgm_give_innovation_12_country_modifier
-		remove_variable = nvgm_give_innovation_12_var
-		remove_modifier = nvgm_give_innovation_13_country_modifier
-		remove_variable = nvgm_give_innovation_13_var
-		remove_modifier = nvgm_give_innovation_14_country_modifier
-		remove_variable = nvgm_give_innovation_14_var
-		remove_modifier = nvgm_give_innovation_15_country_modifier
-		remove_variable = nvgm_give_innovation_15_var
-	}
-	if = {
-		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_1_target
+		var:nvgm_innovation_slot_1_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_1_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_1_country_modifier
@@ -2381,15 +2553,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_2_target
+			NOT = {
+				nvgm_innovation_slot_2_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_2_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_2_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_2_country_modifier
@@ -2398,15 +2572,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_3_target
+			NOT = {
+				nvgm_innovation_slot_3_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_3_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_3_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_3_country_modifier
@@ -2415,15 +2591,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_4_target
+			NOT = {
+				nvgm_innovation_slot_4_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_4_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_4_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_4_country_modifier
@@ -2432,15 +2610,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_5_target
+			NOT = {
+				nvgm_innovation_slot_5_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_5_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_5_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_5_country_modifier
@@ -2449,15 +2629,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_6_target
+			NOT = {
+				nvgm_innovation_slot_6_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_6_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_6_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_6_country_modifier
@@ -2466,15 +2648,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_7_target
+			NOT = {
+				nvgm_innovation_slot_7_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_7_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_7_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_7_country_modifier
@@ -2483,15 +2667,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_8_target
+			NOT = {
+				nvgm_innovation_slot_8_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_8_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_8_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_8_country_modifier
@@ -2500,15 +2686,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_9_target
+			NOT = {
+				nvgm_innovation_slot_9_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_9_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_9_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_9_country_modifier
@@ -2517,15 +2705,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_10_target
+			NOT = {
+				nvgm_innovation_slot_10_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_10_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_10_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_10_country_modifier
@@ -2534,15 +2724,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_11_target
+			NOT = {
+				nvgm_innovation_slot_11_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_11_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_11_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_11_country_modifier
@@ -2551,15 +2743,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_12_target
+			NOT = {
+				nvgm_innovation_slot_12_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_12_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_12_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_12_country_modifier
@@ -2568,15 +2762,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_13_target
+			NOT = {
+				nvgm_innovation_slot_13_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_13_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_13_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_13_country_modifier
@@ -2585,15 +2781,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_14_target
+			NOT = {
+				nvgm_innovation_slot_14_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_14_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_14_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_14_country_modifier
@@ -2602,15 +2800,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_innovation_slot_15_target
+			NOT = {
+				nvgm_innovation_slot_15_valid = yes
+			}
+		}
+		var:nvgm_innovation_slot_15_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_innovation_donor
+					var:nvgm_innovation_donor = prev
 				}
-				var:nvgm_innovation_slot_15_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_innovation_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_innovation_15_country_modifier
@@ -2619,9 +2819,134 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			has_variable = nvgm_construction_donor
+			nvgm_innovation_recipient_valid = yes
+		}
+		nvgm_innovation_refresh_effect = yes
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_1_valid = yes
+		}
+		var:nvgm_innovation_slot_1_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_2_valid = yes
+		}
+		var:nvgm_innovation_slot_2_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_3_valid = yes
+		}
+		var:nvgm_innovation_slot_3_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_4_valid = yes
+		}
+		var:nvgm_innovation_slot_4_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_5_valid = yes
+		}
+		var:nvgm_innovation_slot_5_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_6_valid = yes
+		}
+		var:nvgm_innovation_slot_6_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_7_valid = yes
+		}
+		var:nvgm_innovation_slot_7_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_8_valid = yes
+		}
+		var:nvgm_innovation_slot_8_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_9_valid = yes
+		}
+		var:nvgm_innovation_slot_9_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_10_valid = yes
+		}
+		var:nvgm_innovation_slot_10_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_11_valid = yes
+		}
+		var:nvgm_innovation_slot_11_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_12_valid = yes
+		}
+		var:nvgm_innovation_slot_12_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_13_valid = yes
+		}
+		var:nvgm_innovation_slot_13_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_14_valid = yes
+		}
+		var:nvgm_innovation_slot_14_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_innovation_slot_15_valid = yes
+		}
+		var:nvgm_innovation_slot_15_target = {
+			nvgm_innovation_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
 			NOT = {
-				is_subject_of = var:nvgm_construction_donor
+				nvgm_construction_recipient_valid = yes
 			}
 		}
 		nvgm_construction_reset_effect = yes
@@ -2629,51 +2954,16 @@ nvgm_transfer_cleanup_effect = {
 	if = {
 		limit = {
 			NOT = {
-				has_variable = nvgm_construction_donor
+				nvgm_construction_slot_1_valid = yes
 			}
 		}
-		remove_modifier = nvgm_give_construction_1_country_modifier
-		remove_variable = nvgm_give_construction_1_var
-		remove_modifier = nvgm_give_construction_2_country_modifier
-		remove_variable = nvgm_give_construction_2_var
-		remove_modifier = nvgm_give_construction_3_country_modifier
-		remove_variable = nvgm_give_construction_3_var
-		remove_modifier = nvgm_give_construction_4_country_modifier
-		remove_variable = nvgm_give_construction_4_var
-		remove_modifier = nvgm_give_construction_5_country_modifier
-		remove_variable = nvgm_give_construction_5_var
-		remove_modifier = nvgm_give_construction_6_country_modifier
-		remove_variable = nvgm_give_construction_6_var
-		remove_modifier = nvgm_give_construction_7_country_modifier
-		remove_variable = nvgm_give_construction_7_var
-		remove_modifier = nvgm_give_construction_8_country_modifier
-		remove_variable = nvgm_give_construction_8_var
-		remove_modifier = nvgm_give_construction_9_country_modifier
-		remove_variable = nvgm_give_construction_9_var
-		remove_modifier = nvgm_give_construction_10_country_modifier
-		remove_variable = nvgm_give_construction_10_var
-		remove_modifier = nvgm_give_construction_11_country_modifier
-		remove_variable = nvgm_give_construction_11_var
-		remove_modifier = nvgm_give_construction_12_country_modifier
-		remove_variable = nvgm_give_construction_12_var
-		remove_modifier = nvgm_give_construction_13_country_modifier
-		remove_variable = nvgm_give_construction_13_var
-		remove_modifier = nvgm_give_construction_14_country_modifier
-		remove_variable = nvgm_give_construction_14_var
-		remove_modifier = nvgm_give_construction_15_country_modifier
-		remove_variable = nvgm_give_construction_15_var
-	}
-	if = {
-		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_1_target
+		var:nvgm_construction_slot_1_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_1_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_1_country_modifier
@@ -2682,15 +2972,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_2_target
+			NOT = {
+				nvgm_construction_slot_2_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_2_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_2_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_2_country_modifier
@@ -2699,15 +2991,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_3_target
+			NOT = {
+				nvgm_construction_slot_3_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_3_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_3_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_3_country_modifier
@@ -2716,15 +3010,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_4_target
+			NOT = {
+				nvgm_construction_slot_4_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_4_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_4_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_4_country_modifier
@@ -2733,15 +3029,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_5_target
+			NOT = {
+				nvgm_construction_slot_5_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_5_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_5_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_5_country_modifier
@@ -2750,15 +3048,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_6_target
+			NOT = {
+				nvgm_construction_slot_6_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_6_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_6_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_6_country_modifier
@@ -2767,15 +3067,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_7_target
+			NOT = {
+				nvgm_construction_slot_7_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_7_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_7_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_7_country_modifier
@@ -2784,15 +3086,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_8_target
+			NOT = {
+				nvgm_construction_slot_8_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_8_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_8_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_8_country_modifier
@@ -2801,15 +3105,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_9_target
+			NOT = {
+				nvgm_construction_slot_9_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_9_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_9_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_9_country_modifier
@@ -2818,15 +3124,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_10_target
+			NOT = {
+				nvgm_construction_slot_10_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_10_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_10_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_10_country_modifier
@@ -2835,15 +3143,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_11_target
+			NOT = {
+				nvgm_construction_slot_11_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_11_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_11_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_11_country_modifier
@@ -2852,15 +3162,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_12_target
+			NOT = {
+				nvgm_construction_slot_12_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_12_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_12_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_12_country_modifier
@@ -2869,15 +3181,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_13_target
+			NOT = {
+				nvgm_construction_slot_13_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_13_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_13_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_13_country_modifier
@@ -2886,15 +3200,17 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_14_target
+			NOT = {
+				nvgm_construction_slot_14_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_14_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_14_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_14_country_modifier
@@ -2903,19 +3219,147 @@ nvgm_transfer_cleanup_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				NOT = {
-					exists = var:nvgm_construction_slot_15_target
+			NOT = {
+				nvgm_construction_slot_15_valid = yes
+			}
+		}
+		var:nvgm_construction_slot_15_target ?= {
+			if = {
+				limit = {
+					exists = var:nvgm_construction_donor
+					var:nvgm_construction_donor = prev
 				}
-				var:nvgm_construction_slot_15_target ?= {
-					NOT = {
-						is_subject_of = prev
-					}
-				}
+				nvgm_construction_reset_effect = yes
 			}
 		}
 		remove_modifier = nvgm_given_construction_15_country_modifier
 		remove_variable = nvgm_given_construction_15_var
 		remove_variable = nvgm_construction_slot_15_target
+	}
+	if = {
+		limit = {
+			nvgm_construction_recipient_valid = yes
+		}
+		nvgm_construction_refresh_effect = yes
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_1_valid = yes
+		}
+		var:nvgm_construction_slot_1_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_2_valid = yes
+		}
+		var:nvgm_construction_slot_2_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_3_valid = yes
+		}
+		var:nvgm_construction_slot_3_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_4_valid = yes
+		}
+		var:nvgm_construction_slot_4_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_5_valid = yes
+		}
+		var:nvgm_construction_slot_5_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_6_valid = yes
+		}
+		var:nvgm_construction_slot_6_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_7_valid = yes
+		}
+		var:nvgm_construction_slot_7_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_8_valid = yes
+		}
+		var:nvgm_construction_slot_8_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_9_valid = yes
+		}
+		var:nvgm_construction_slot_9_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_10_valid = yes
+		}
+		var:nvgm_construction_slot_10_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_11_valid = yes
+		}
+		var:nvgm_construction_slot_11_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_12_valid = yes
+		}
+		var:nvgm_construction_slot_12_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_13_valid = yes
+		}
+		var:nvgm_construction_slot_13_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_14_valid = yes
+		}
+		var:nvgm_construction_slot_14_target = {
+			nvgm_construction_refresh_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			nvgm_construction_slot_15_valid = yes
+		}
+		var:nvgm_construction_slot_15_target = {
+			nvgm_construction_refresh_effect = yes
+		}
 	}
 }

@@ -57,6 +57,35 @@
 				}
 			}
 		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_1
+						var:nvgm_sponsor_nvgm_bankroll_1 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_1
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_1
+						var:nvgm_sponsor_nvgm_bankroll_1 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_1
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -73,6 +102,16 @@
 		}
 		will_break = {
 			in_default = yes
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_bankroll_1
+				value = root
+			}
 		}
 	}
 }
@@ -144,6 +183,35 @@ nvgm_bankroll_2 = {
 				}
 			}
 		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_2
+						var:nvgm_sponsor_nvgm_bankroll_2 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_2
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_2
+						var:nvgm_sponsor_nvgm_bankroll_2 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_2
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -160,6 +228,16 @@ nvgm_bankroll_2 = {
 		}
 		will_break = {
 			in_default = yes
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_bankroll_2
+				value = root
+			}
 		}
 	}
 }
@@ -231,6 +309,35 @@ nvgm_bankroll_3 = {
 				}
 			}
 		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_3
+						var:nvgm_sponsor_nvgm_bankroll_3 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_3
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_3
+						var:nvgm_sponsor_nvgm_bankroll_3 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_3
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -247,6 +354,16 @@ nvgm_bankroll_3 = {
 		}
 		will_break = {
 			in_default = yes
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_bankroll_3
+				value = root
+			}
 		}
 	}
 }
@@ -318,6 +435,35 @@ nvgm_bankroll_4 = {
 				}
 			}
 		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_4
+						var:nvgm_sponsor_nvgm_bankroll_4 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_4
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_bankroll_4
+						var:nvgm_sponsor_nvgm_bankroll_4 = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_bankroll_4
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -334,6 +480,16 @@ nvgm_bankroll_4 = {
 		}
 		will_break = {
 			in_default = yes
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_bankroll_4
+				value = root
+			}
 		}
 	}
 }
@@ -381,7 +537,6 @@ NVGM_decrease_payments = {
 	}
 	pact = {
 		cost = 0
-		forced_duration = 12
 		second_modifier = {
 			country_liberty_desire_add = -0.15
 			country_overlord_income_transfer_mult = -1
@@ -389,6 +544,15 @@ NVGM_decrease_payments = {
 		manual_break_effect = {
 			scope:target_country = {
 				add_liberty_desire = 10
+			}
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_decrease_payments
+						var:nvgm_sponsor_nvgm_decrease_payments = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_decrease_payments
+				}
 			}
 		}
 		requirement_to_maintain = {
@@ -413,6 +577,24 @@ NVGM_decrease_payments = {
 			}
 		}
 		maintenance_paid_by = first_country
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_decrease_payments
+						var:nvgm_sponsor_nvgm_decrease_payments = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_decrease_payments
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -457,6 +639,16 @@ NVGM_decrease_payments = {
 						}
 					}
 				}
+			}
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_decrease_payments
+				value = root
 			}
 		}
 	}
@@ -624,7 +816,6 @@ NVGM_violent_suppression = {
 			}
 		}
 		maintenance_paid_by = first_country
-		forced_duration = 12
 		actor_can_break = {
 			always = yes
 		}
@@ -635,6 +826,35 @@ NVGM_violent_suppression = {
 				}
 				NOT = {
 					has_war_with = scope:target_country
+				}
+			}
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_violent_suppression
+						var:nvgm_sponsor_nvgm_violent_suppression = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_violent_suppression
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_violent_suppression
+						var:nvgm_sponsor_nvgm_violent_suppression = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_violent_suppression
 				}
 			}
 		}
@@ -685,6 +905,16 @@ NVGM_violent_suppression = {
 			}
 		}
 	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_violent_suppression
+				value = root
+			}
+		}
+	}
 }
 
 NVGM_emergency_relief = {
@@ -714,6 +944,14 @@ NVGM_emergency_relief = {
 		}
 		custom_tooltip = {
 			text = fund_lobbies_decrease_hostile_join_weight_effect
+		}
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_emergency_relief
+				value = root
+			}
 		}
 	}
 	pact = {
@@ -774,6 +1012,15 @@ NVGM_emergency_relief = {
 			scope:target_country = {
 				add_liberty_desire = 10
 			}
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_emergency_relief
+						var:nvgm_sponsor_nvgm_emergency_relief = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_emergency_relief
+				}
+			}
 		}
 		requirement_to_maintain = {
 			trigger = {
@@ -797,7 +1044,6 @@ NVGM_emergency_relief = {
 			}
 		}
 		maintenance_paid_by = first_country
-		forced_duration = 12
 		actor_can_break = {
 			always = yes
 		}
@@ -808,6 +1054,24 @@ NVGM_emergency_relief = {
 				}
 				NOT = {
 					has_war_with = scope:target_country
+				}
+			}
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_emergency_relief
+						var:nvgm_sponsor_nvgm_emergency_relief = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_emergency_relief
 				}
 			}
 		}
@@ -1014,7 +1278,6 @@ NVGM_fund_lobbies = {
 			}
 		}
 		maintenance_paid_by = first_country
-		forced_duration = 12
 		actor_can_break = {
 			always = yes
 		}
@@ -1025,6 +1288,35 @@ NVGM_fund_lobbies = {
 				}
 				NOT = {
 					has_war_with = scope:target_country
+				}
+			}
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+			}
+		}
+		manual_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_fund_lobbies
+						var:nvgm_sponsor_nvgm_fund_lobbies = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_fund_lobbies
+				}
+			}
+		}
+		auto_break_effect = {
+			scope:target_country = {
+				if = {
+					limit = {
+						exists = var:nvgm_sponsor_nvgm_fund_lobbies
+						var:nvgm_sponsor_nvgm_fund_lobbies = root
+					}
+					remove_variable = nvgm_sponsor_nvgm_fund_lobbies
 				}
 			}
 		}
@@ -1222,6 +1514,16 @@ NVGM_fund_lobbies = {
 		}
 		NOT = {
 			has_war_with = scope:target_country
+		}
+	}
+	accept_effect = {
+		set_variable = nvgm_pact_participant
+		scope:target_country = {
+			set_variable = nvgm_pact_participant
+			set_variable = {
+				name = nvgm_sponsor_nvgm_fund_lobbies
+				value = root
+			}
 		}
 	}
 }

@@ -104,19 +104,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.a
 		trigger = {
 			exists = scope:nvgm_target_country_1
+			exists = scope:nvgm_target_country_1
+			scope:nvgm_target_country_1 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_1 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_2
-		clear_saved_scope = nvgm_target_country_3
-		clear_saved_scope = nvgm_target_country_4
-		clear_saved_scope = nvgm_target_country_5
-		clear_saved_scope = nvgm_target_country_6
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_1
+				exists = scope:nvgm_target_country_1
+				scope:nvgm_target_country_1 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_1 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_2
+			clear_saved_scope = nvgm_target_country_3
+			clear_saved_scope = nvgm_target_country_4
+			clear_saved_scope = nvgm_target_country_5
+			clear_saved_scope = nvgm_target_country_6
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -124,19 +145,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.b
 		trigger = {
 			exists = scope:nvgm_target_country_2
+			exists = scope:nvgm_target_country_2
+			scope:nvgm_target_country_2 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_2 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_1
-		clear_saved_scope = nvgm_target_country_3
-		clear_saved_scope = nvgm_target_country_4
-		clear_saved_scope = nvgm_target_country_5
-		clear_saved_scope = nvgm_target_country_6
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_2
+				exists = scope:nvgm_target_country_2
+				scope:nvgm_target_country_2 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_2 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_1
+			clear_saved_scope = nvgm_target_country_3
+			clear_saved_scope = nvgm_target_country_4
+			clear_saved_scope = nvgm_target_country_5
+			clear_saved_scope = nvgm_target_country_6
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -144,19 +186,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.c
 		trigger = {
 			exists = scope:nvgm_target_country_3
+			exists = scope:nvgm_target_country_3
+			scope:nvgm_target_country_3 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_3 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_1
-		clear_saved_scope = nvgm_target_country_2
-		clear_saved_scope = nvgm_target_country_4
-		clear_saved_scope = nvgm_target_country_5
-		clear_saved_scope = nvgm_target_country_6
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_3
+				exists = scope:nvgm_target_country_3
+				scope:nvgm_target_country_3 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_3 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_1
+			clear_saved_scope = nvgm_target_country_2
+			clear_saved_scope = nvgm_target_country_4
+			clear_saved_scope = nvgm_target_country_5
+			clear_saved_scope = nvgm_target_country_6
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -164,19 +227,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.d
 		trigger = {
 			exists = scope:nvgm_target_country_4
+			exists = scope:nvgm_target_country_4
+			scope:nvgm_target_country_4 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_4 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_1
-		clear_saved_scope = nvgm_target_country_2
-		clear_saved_scope = nvgm_target_country_3
-		clear_saved_scope = nvgm_target_country_5
-		clear_saved_scope = nvgm_target_country_6
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_4
+				exists = scope:nvgm_target_country_4
+				scope:nvgm_target_country_4 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_4 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_1
+			clear_saved_scope = nvgm_target_country_2
+			clear_saved_scope = nvgm_target_country_3
+			clear_saved_scope = nvgm_target_country_5
+			clear_saved_scope = nvgm_target_country_6
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -184,19 +268,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.e
 		trigger = {
 			exists = scope:nvgm_target_country_5
+			exists = scope:nvgm_target_country_5
+			scope:nvgm_target_country_5 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_5 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_1
-		clear_saved_scope = nvgm_target_country_2
-		clear_saved_scope = nvgm_target_country_3
-		clear_saved_scope = nvgm_target_country_4
-		clear_saved_scope = nvgm_target_country_6
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_5
+				exists = scope:nvgm_target_country_5
+				scope:nvgm_target_country_5 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_5 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_1
+			clear_saved_scope = nvgm_target_country_2
+			clear_saved_scope = nvgm_target_country_3
+			clear_saved_scope = nvgm_target_country_4
+			clear_saved_scope = nvgm_target_country_6
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -204,19 +309,40 @@ nvgm_establish_company_events.1 = {
 		name = nvgm_establish_company_events.1.f
 		trigger = {
 			exists = scope:nvgm_target_country_6
+			exists = scope:nvgm_target_country_6
+			scope:nvgm_target_country_6 = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		scope:nvgm_target_country_6 = {
-			save_scope_as = nvgm_target_country
-		}
-		clear_saved_scope = nvgm_target_country_1
-		clear_saved_scope = nvgm_target_country_2
-		clear_saved_scope = nvgm_target_country_3
-		clear_saved_scope = nvgm_target_country_4
-		clear_saved_scope = nvgm_target_country_5
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_establish_company_events.2
-				popup = yes
+		if = {
+			limit = {
+				exists = scope:nvgm_target_country_6
+				exists = scope:nvgm_target_country_6
+				scope:nvgm_target_country_6 = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			scope:nvgm_target_country_6 = {
+				save_scope_as = nvgm_target_country
+			}
+			clear_saved_scope = nvgm_target_country_1
+			clear_saved_scope = nvgm_target_country_2
+			clear_saved_scope = nvgm_target_country_3
+			clear_saved_scope = nvgm_target_country_4
+			clear_saved_scope = nvgm_target_country_5
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_establish_company_events.2
+					popup = yes
+				}
 			}
 		}
 	}
@@ -280,72 +406,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_agriculture_1 = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_agriculture_1_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_wheat_farm
-						has_building = building_rye_farm
-						can_construct_building = building_wheat_farm
-						can_construct_building = building_rye_farm
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_agriculture_1
-					company:company_basic_agriculture_1 = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_agriculture_1 = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_agriculture_1_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_wheat_farm
+						or = {
+							has_building = building_wheat_farm
+							has_building = building_rye_farm
+							can_construct_building = building_wheat_farm
+							can_construct_building = building_rye_farm
+						}
 					}
-					create_building = {
-						building = building_wheat_farm
-						add_ownership = {
-							company = {
-								type = company_basic_agriculture_1
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_agriculture_1
+						company:company_basic_agriculture_1 = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_wheat_farm
+						}
+						create_building = {
+							building = building_wheat_farm
+							add_ownership = {
+								company = {
+									type = company_basic_agriculture_1
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_wheat_farm
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_wheat_farm
+					else = {
+						create_building = {
+							building = building_rye_farm
+							add_ownership = {
+								company = {
+									type = company_basic_agriculture_1
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_rye_farm
-						add_ownership = {
-							company = {
-								type = company_basic_agriculture_1
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_rye_farm
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_rye_farm
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.b
@@ -353,96 +508,128 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_agriculture_2 = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_agriculture_2_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_millet_farm
-						has_building = building_rice_farm
-						has_building = building_maize_farm
-						can_construct_building = building_millet_farm
-						can_construct_building = building_rice_farm
-						can_construct_building = building_maize_farm
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_agriculture_2
-					company:company_basic_agriculture_2 = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_agriculture_2 = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_agriculture_2_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_millet_farm
+						or = {
+							has_building = building_millet_farm
+							has_building = building_rice_farm
+							has_building = building_maize_farm
+							can_construct_building = building_millet_farm
+							can_construct_building = building_rice_farm
+							can_construct_building = building_maize_farm
+						}
 					}
-					create_building = {
-						building = building_millet_farm
-						add_ownership = {
-							company = {
-								type = company_basic_agriculture_2
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_agriculture_2
+						company:company_basic_agriculture_2 = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_millet_farm
+						}
+						create_building = {
+							building = building_millet_farm
+							add_ownership = {
+								company = {
+									type = company_basic_agriculture_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_millet_farm
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
+					else_if = {
 						limit = {
-							is_building_type = building_millet_farm
+							can_construct_building = building_rice_farm
 						}
-						set_subsidized = yes
-					}
-				}
-				else_if = {
-					limit = {
-						can_construct_building = building_rice_farm
-					}
-					create_building = {
-						building = building_rice_farm
-						add_ownership = {
-							company = {
-								type = company_basic_agriculture_2
-								country = scope:nvgm_target_country
-								levels = 5
+						create_building = {
+							building = building_rice_farm
+							add_ownership = {
+								company = {
+									type = company_basic_agriculture_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_rice_farm
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_rice_farm
+					else = {
+						create_building = {
+							building = building_maize_farm
+							add_ownership = {
+								company = {
+									type = company_basic_agriculture_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_maize_farm
-						add_ownership = {
-							company = {
-								type = company_basic_agriculture_2
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_maize_farm
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_maize_farm
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.c
@@ -450,72 +637,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_fabrics = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_fabrics_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_cotton_plantation
-						has_building = building_livestock_ranch
-						can_construct_building = building_cotton_plantation
-						can_construct_building = building_livestock_ranch
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_fabrics
-					company:company_basic_fabrics = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_fabrics = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_fabrics_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_cotton_plantation
+						or = {
+							has_building = building_cotton_plantation
+							has_building = building_livestock_ranch
+							can_construct_building = building_cotton_plantation
+							can_construct_building = building_livestock_ranch
+						}
 					}
-					create_building = {
-						building = building_cotton_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_fabrics
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_fabrics
+						company:company_basic_fabrics = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_cotton_plantation
+						}
+						create_building = {
+							building = building_cotton_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_fabrics
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_cotton_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_cotton_plantation
+					else = {
+						create_building = {
+							building = building_livestock_ranch
+							add_ownership = {
+								company = {
+									type = company_basic_fabrics
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_livestock_ranch
-						add_ownership = {
-							company = {
-								type = company_basic_fabrics
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_livestock_ranch
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_livestock_ranch
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.d
@@ -523,72 +739,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_colonial_plantations_1 = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_colonial_plantations_1_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_opium_plantation
-						has_building = building_tea_plantation
-						can_construct_building = building_opium_plantation
-						can_construct_building = building_tea_plantation
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_colonial_plantations_1
-					company:company_basic_colonial_plantations_1 = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_colonial_plantations_1 = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_colonial_plantations_1_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_opium_plantation
+						or = {
+							has_building = building_opium_plantation
+							has_building = building_tea_plantation
+							can_construct_building = building_opium_plantation
+							can_construct_building = building_tea_plantation
+						}
 					}
-					create_building = {
-						building = building_opium_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_colonial_plantations_1
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_colonial_plantations_1
+						company:company_basic_colonial_plantations_1 = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_opium_plantation
+						}
+						create_building = {
+							building = building_opium_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_colonial_plantations_1
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_opium_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_opium_plantation
+					else = {
+						create_building = {
+							building = building_tea_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_colonial_plantations_1
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_tea_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_colonial_plantations_1
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_tea_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_tea_plantation
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.e
@@ -596,96 +841,128 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_colonial_plantations_2 = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_colonial_plantations_2_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_coffee_plantation
-						has_building = building_sugar_plantation
-						has_building = building_tobacco_plantation
-						can_construct_building = building_coffee_plantation
-						can_construct_building = building_sugar_plantation
-						can_construct_building = building_tobacco_plantation
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_colonial_plantations_2
-					company:company_basic_colonial_plantations_2 = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_colonial_plantations_2 = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_colonial_plantations_2_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_coffee_plantation
+						or = {
+							has_building = building_coffee_plantation
+							has_building = building_sugar_plantation
+							has_building = building_tobacco_plantation
+							can_construct_building = building_coffee_plantation
+							can_construct_building = building_sugar_plantation
+							can_construct_building = building_tobacco_plantation
+						}
 					}
-					create_building = {
-						building = building_coffee_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_colonial_plantations_2
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_colonial_plantations_2
+						company:company_basic_colonial_plantations_2 = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_coffee_plantation
+						}
+						create_building = {
+							building = building_coffee_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_colonial_plantations_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_coffee_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
+					else_if = {
 						limit = {
-							is_building_type = building_coffee_plantation
+							can_construct_building = building_sugar_plantation
 						}
-						set_subsidized = yes
-					}
-				}
-				else_if = {
-					limit = {
-						can_construct_building = building_sugar_plantation
-					}
-					create_building = {
-						building = building_sugar_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_colonial_plantations_2
-								country = scope:nvgm_target_country
-								levels = 5
+						create_building = {
+							building = building_sugar_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_colonial_plantations_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_sugar_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_sugar_plantation
+					else = {
+						create_building = {
+							building = building_tobacco_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_colonial_plantations_2
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_tobacco_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_colonial_plantations_2
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_tobacco_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_tobacco_plantation
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.f
@@ -693,72 +970,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_silk_and_dye = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_silk_and_dye_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_silk_plantation
-						has_building = building_dye_plantation
-						can_construct_building = building_silk_plantation
-						can_construct_building = building_dye_plantation
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_silk_and_dye
-					company:company_basic_silk_and_dye = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_silk_and_dye = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_silk_and_dye_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_silk_plantation
+						or = {
+							has_building = building_silk_plantation
+							has_building = building_dye_plantation
+							can_construct_building = building_silk_plantation
+							can_construct_building = building_dye_plantation
+						}
 					}
-					create_building = {
-						building = building_silk_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_silk_and_dye
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_silk_and_dye
+						company:company_basic_silk_and_dye = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_silk_plantation
+						}
+						create_building = {
+							building = building_silk_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_silk_and_dye
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_silk_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_silk_plantation
+					else = {
+						create_building = {
+							building = building_dye_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_silk_and_dye
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_dye_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_silk_and_dye
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_dye_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_dye_plantation
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.g
@@ -766,72 +1072,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_wine_and_fruit = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_wine_and_fruit_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_vineyard
-						has_building = building_banana_plantation
-						can_construct_building = building_vineyard
-						can_construct_building = building_banana_plantation
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_wine_and_fruit
-					company:company_basic_wine_and_fruit = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_wine_and_fruit = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_wine_and_fruit_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_vineyard
+						or = {
+							has_building = building_vineyard
+							has_building = building_banana_plantation
+							can_construct_building = building_vineyard
+							can_construct_building = building_banana_plantation
+						}
 					}
-					create_building = {
-						building = building_vineyard
-						add_ownership = {
-							company = {
-								type = company_basic_wine_and_fruit
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_wine_and_fruit
+						company:company_basic_wine_and_fruit = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_vineyard
+						}
+						create_building = {
+							building = building_vineyard
+							add_ownership = {
+								company = {
+									type = company_basic_wine_and_fruit
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_vineyard
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_vineyard
+					else = {
+						create_building = {
+							building = building_banana_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_wine_and_fruit
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_banana_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_wine_and_fruit
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_banana_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_banana_plantation
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.h
@@ -839,72 +1174,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_fishing = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_fishing_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_fishing_wharf
-						has_building = building_whaling_station
-						can_construct_building = building_fishing_wharf
-						can_construct_building = building_whaling_station
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_fishing
-					company:company_basic_fishing = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_fishing = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_fishing_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_fishing_wharf
+						or = {
+							has_building = building_fishing_wharf
+							has_building = building_whaling_station
+							can_construct_building = building_fishing_wharf
+							can_construct_building = building_whaling_station
+						}
 					}
-					create_building = {
-						building = building_fishing_wharf
-						add_ownership = {
-							company = {
-								type = company_basic_fishing
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_fishing
+						company:company_basic_fishing = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_fishing_wharf
+						}
+						create_building = {
+							building = building_fishing_wharf
+							add_ownership = {
+								company = {
+									type = company_basic_fishing
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_fishing_wharf
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_fishing_wharf
+					else = {
+						create_building = {
+							building = building_whaling_station
+							add_ownership = {
+								company = {
+									type = company_basic_fishing
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_whaling_station
-						add_ownership = {
-							company = {
-								type = company_basic_fishing
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_whaling_station
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_whaling_station
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.i
@@ -912,72 +1276,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_forestry = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_forestry_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_logging_camp
-						has_building = building_rubber_plantation
-						can_construct_building = building_logging_camp
-						can_construct_building = building_rubber_plantation
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_forestry
-					company:company_basic_forestry = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_forestry = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_forestry_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_logging_camp
+						or = {
+							has_building = building_logging_camp
+							has_building = building_rubber_plantation
+							can_construct_building = building_logging_camp
+							can_construct_building = building_rubber_plantation
+						}
 					}
-					create_building = {
-						building = building_logging_camp
-						add_ownership = {
-							company = {
-								type = company_basic_forestry
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_forestry
+						company:company_basic_forestry = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_logging_camp
+						}
+						create_building = {
+							building = building_logging_camp
+							add_ownership = {
+								company = {
+									type = company_basic_forestry
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_logging_camp
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_logging_camp
+					else = {
+						create_building = {
+							building = building_rubber_plantation
+							add_ownership = {
+								company = {
+									type = company_basic_forestry
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_rubber_plantation
-						add_ownership = {
-							company = {
-								type = company_basic_forestry
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_rubber_plantation
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_rubber_plantation
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.j
@@ -985,46 +1378,72 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_oil = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_oil_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_oil_rig
-						can_construct_building = building_oil_rig
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_oil
-					company:company_basic_oil = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
-				}
-				create_building = {
-					building = building_oil_rig
-					add_ownership = {
-						company = {
-							type = company_basic_oil
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_oil_rig
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_oil = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_oil_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
+					limit = {
+						or = {
+							has_building = building_oil_rig
+							can_construct_building = building_oil_rig
+						}
+					}
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_oil
+						company:company_basic_oil = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_oil_rig
+						add_ownership = {
+							company = {
+								type = company_basic_oil
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_oil_rig
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.k
@@ -1032,46 +1451,72 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_gold_mining = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_gold_mining_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_gold_mine
-						can_construct_building = building_gold_mine
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_gold_mining
-					company:company_basic_gold_mining = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
-				}
-				create_building = {
-					building = building_gold_mine
-					add_ownership = {
-						company = {
-							type = company_basic_gold_mining
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_gold_mine
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_gold_mining = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_gold_mining_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
+					limit = {
+						or = {
+							has_building = building_gold_mine
+							can_construct_building = building_gold_mine
+						}
+					}
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_gold_mining
+						company:company_basic_gold_mining = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_gold_mine
+						add_ownership = {
+							company = {
+								type = company_basic_gold_mining
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_gold_mine
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.l
@@ -1079,72 +1524,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_metal_mining = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_metal_mining_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_iron_mine
-						has_building = building_lead_mine
-						can_construct_building = building_iron_mine
-						can_construct_building = building_lead_mine
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_metal_mining
-					company:company_basic_metal_mining = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_metal_mining = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_metal_mining_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_iron_mine
+						or = {
+							has_building = building_iron_mine
+							has_building = building_lead_mine
+							can_construct_building = building_iron_mine
+							can_construct_building = building_lead_mine
+						}
 					}
-					create_building = {
-						building = building_iron_mine
-						add_ownership = {
-							company = {
-								type = company_basic_metal_mining
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_metal_mining
+						company:company_basic_metal_mining = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_iron_mine
+						}
+						create_building = {
+							building = building_iron_mine
+							add_ownership = {
+								company = {
+									type = company_basic_metal_mining
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_iron_mine
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_iron_mine
+					else = {
+						create_building = {
+							building = building_lead_mine
+							add_ownership = {
+								company = {
+									type = company_basic_metal_mining
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_lead_mine
-						add_ownership = {
-							company = {
-								type = company_basic_metal_mining
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_lead_mine
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_lead_mine
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.n
@@ -1152,72 +1626,101 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_mineral_mining = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_metal_mining_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				limit = {
-					or = {
-						has_building = building_sulfur_mine
-						has_building = building_coal_mine
-						can_construct_building = building_sulfur_mine
-						can_construct_building = building_coal_mine
-					}
-				}
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_mineral_mining
-					company:company_basic_mineral_mining = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_mineral_mining = yes
 				}
-				if = {
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_metal_mining_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
 					limit = {
-						can_construct_building = building_sulfur_mine
+						or = {
+							has_building = building_sulfur_mine
+							has_building = building_coal_mine
+							can_construct_building = building_sulfur_mine
+							can_construct_building = building_coal_mine
+						}
 					}
-					create_building = {
-						building = building_sulfur_mine
-						add_ownership = {
-							company = {
-								type = company_basic_mineral_mining
-								country = scope:nvgm_target_country
-								levels = 5
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_mineral_mining
+						company:company_basic_mineral_mining = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					if = {
+						limit = {
+							can_construct_building = building_sulfur_mine
+						}
+						create_building = {
+							building = building_sulfur_mine
+							add_ownership = {
+								company = {
+									type = company_basic_mineral_mining
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_sulfur_mine
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_sulfur_mine
+					else = {
+						create_building = {
+							building = building_coal_mine
+							add_ownership = {
+								company = {
+									type = company_basic_mineral_mining
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_coal_mine
-						add_ownership = {
-							company = {
-								type = company_basic_mineral_mining
-								country = scope:nvgm_target_country
-								levels = 5
+						every_scope_building = {
+							limit = {
+								is_building_type = building_coal_mine
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_coal_mine
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.m
@@ -1225,40 +1728,66 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_food = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_food_tooltip
-		scope:nvgm_target_country ?= {
-			random_scope_state = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_food
-					company:company_basic_food = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_food_industry
-					add_ownership = {
-						company = {
-							type = company_basic_food
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_food_industry
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_food = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_food_tooltip
+			scope:nvgm_target_country ?= {
+				random_scope_state = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_food
+						company:company_basic_food = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_food_industry
+						add_ownership = {
+							company = {
+								type = company_basic_food
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_food_industry
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.o
@@ -1266,40 +1795,66 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_paper = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_paper_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_paper
-					company:company_basic_paper = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_paper_mill
-					add_ownership = {
-						company = {
-							type = company_basic_paper
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_paper_mill
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_paper = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_paper_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_paper
+						company:company_basic_paper = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_paper_mill
+						add_ownership = {
+							company = {
+								type = company_basic_paper
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_paper_mill
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.p
@@ -1307,54 +1862,80 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_home_goods = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_home_goods_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_home_goods
-					company:company_basic_home_goods = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_glassworks
-					add_ownership = {
-						company = {
-							type = company_basic_home_goods
-							country = scope:nvgm_target_country
-							levels = 3
-						}
-					}
-					reserves = 1
-				}
-				create_building = {
-					building = building_furniture_manufactory
-					add_ownership = {
-						company = {
-							type = company_basic_home_goods
-							country = scope:nvgm_target_country
-							levels = 3
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						or = {
-							is_building_type = building_glassworks
-							is_building_type = building_furniture_manufactory
-						}
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_home_goods = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_home_goods_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_home_goods
+						company:company_basic_home_goods = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_glassworks
+						add_ownership = {
+							company = {
+								type = company_basic_home_goods
+								country = scope:nvgm_target_country
+								levels = 3
+							}
+						}
+						reserves = 1
+					}
+					create_building = {
+						building = building_furniture_manufactory
+						add_ownership = {
+							company = {
+								type = company_basic_home_goods
+								country = scope:nvgm_target_country
+								levels = 3
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							or = {
+								is_building_type = building_glassworks
+								is_building_type = building_furniture_manufactory
+							}
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.q
@@ -1362,40 +1943,66 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_textiles = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_textiles_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_textiles
-					company:company_basic_textiles = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_textile_mill
-					add_ownership = {
-						company = {
-							type = company_basic_textiles
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_textile_mill
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_textiles = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_textiles_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_textiles
+						company:company_basic_textiles = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_textile_mill
+						add_ownership = {
+							company = {
+								type = company_basic_textiles
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_textile_mill
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.r
@@ -1403,40 +2010,66 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_steel = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_steel_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_steel
-					company:company_basic_steel = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_steel_mill
-					add_ownership = {
-						company = {
-							type = company_basic_steel
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_steel_mill
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_steel = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_steel_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_steel
+						company:company_basic_steel = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_steel_mill
+						add_ownership = {
+							company = {
+								type = company_basic_steel
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_steel_mill
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.s
@@ -1444,92 +2077,121 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_metalworks = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_metalworks_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_metalworks
-					company:company_basic_metalworks = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_metalworks = yes
 				}
-				if = {
-					limit = {
-						prev = {
-							has_technology_researched = gunsmithing
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_metalworks_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_metalworks
+						company:company_basic_metalworks = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
 						}
 					}
-					create_building = {
-						building = building_tooling_workshop
-						add_ownership = {
-							company = {
-								type = company_basic_metalworks
-								country = scope:nvgm_target_country
-								levels = 2
-							}
-						}
-						reserves = 1
-					}
-					create_building = {
-						building = building_arms_industry
-						add_ownership = {
-							company = {
-								type = company_basic_metalworks
-								country = scope:nvgm_target_country
-								levels = 2
-							}
-						}
-						reserves = 1
-					}
-					create_building = {
-						building = building_artillery_foundry
-						add_ownership = {
-							company = {
-								type = company_basic_metalworks
-								country = scope:nvgm_target_country
-								levels = 2
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
+					if = {
 						limit = {
-							or = {
+							prev = {
+								has_technology_researched = gunsmithing
+							}
+						}
+						create_building = {
+							building = building_tooling_workshop
+							add_ownership = {
+								company = {
+									type = company_basic_metalworks
+									country = scope:nvgm_target_country
+									levels = 2
+								}
+							}
+							reserves = 1
+						}
+						create_building = {
+							building = building_arms_industry
+							add_ownership = {
+								company = {
+									type = company_basic_metalworks
+									country = scope:nvgm_target_country
+									levels = 2
+								}
+							}
+							reserves = 1
+						}
+						create_building = {
+							building = building_artillery_foundry
+							add_ownership = {
+								company = {
+									type = company_basic_metalworks
+									country = scope:nvgm_target_country
+									levels = 2
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								or = {
+									is_building_type = building_tooling_workshop
+									is_building_type = building_arms_industry
+									is_building_type = building_artillery_foundry
+								}
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
+							}
+						}
+					}
+					else = {
+						create_building = {
+							building = building_tooling_workshop
+							add_ownership = {
+								company = {
+									type = company_basic_metalworks
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
 								is_building_type = building_tooling_workshop
-								is_building_type = building_arms_industry
-								is_building_type = building_artillery_foundry
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_tooling_workshop
-						add_ownership = {
-							company = {
-								type = company_basic_metalworks
-								country = scope:nvgm_target_country
-								levels = 5
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_tooling_workshop
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.t
@@ -1537,54 +2199,80 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_shipyards = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_shipyards_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_shipyards
-					company:company_basic_shipyards = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_shipyard
-					add_ownership = {
-						company = {
-							type = company_basic_shipyards
-							country = scope:nvgm_target_country
-							levels = 3
-						}
-					}
-					reserves = 1
-				}
-				create_building = {
-					building = building_shipyard
-					add_ownership = {
-						company = {
-							type = company_basic_shipyards
-							country = scope:nvgm_target_country
-							levels = 3
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						or = {
-							is_building_type = building_shipyard
-							is_building_type = building_shipyard
-						}
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_shipyards = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_shipyards_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_shipyards
+						company:company_basic_shipyards = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_shipyard
+						add_ownership = {
+							company = {
+								type = company_basic_shipyards
+								country = scope:nvgm_target_country
+								levels = 3
+							}
+						}
+						reserves = 1
+					}
+					create_building = {
+						building = building_shipyard
+						add_ownership = {
+							company = {
+								type = company_basic_shipyards
+								country = scope:nvgm_target_country
+								levels = 3
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							or = {
+								is_building_type = building_shipyard
+								is_building_type = building_shipyard
+							}
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.u
@@ -1592,80 +2280,109 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_chemicals = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_chemicals_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_chemicals
-					company:company_basic_chemicals = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_chemicals = yes
 				}
-				if = {
-					limit = {
-						prev = {
-							has_technology_researched = aniline
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_chemicals_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_chemicals
+						company:company_basic_chemicals = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
 						}
 					}
-					create_building = {
-						building = building_chemical_plant
-						add_ownership = {
-							company = {
-								type = company_basic_chemicals
-								country = scope:nvgm_target_country
-								levels = 3
-							}
-						}
-						reserves = 1
-					}
-					create_building = {
-						building = building_synthetics_plant
-						add_ownership = {
-							company = {
-								type = company_basic_chemicals
-								country = scope:nvgm_target_country
-								levels = 3
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
+					if = {
 						limit = {
-							or = {
+							prev = {
+								has_technology_researched = aniline
+							}
+						}
+						create_building = {
+							building = building_chemical_plant
+							add_ownership = {
+								company = {
+									type = company_basic_chemicals
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						create_building = {
+							building = building_synthetics_plant
+							add_ownership = {
+								company = {
+									type = company_basic_chemicals
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								or = {
+									is_building_type = building_chemical_plant
+									is_building_type = building_synthetics_plant
+								}
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
+							}
+						}
+					}
+					else = {
+						create_building = {
+							building = building_chemical_plant
+							add_ownership = {
+								company = {
+									type = company_basic_chemicals
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
 								is_building_type = building_chemical_plant
-								is_building_type = building_synthetics_plant
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_chemical_plant
-						add_ownership = {
-							company = {
-								type = company_basic_chemicals
-								country = scope:nvgm_target_country
-								levels = 5
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_chemical_plant
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.v
@@ -1673,80 +2390,109 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_motors = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_motors_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_motors
-					company:company_basic_motors = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_motors = yes
 				}
-				if = {
-					limit = {
-						prev = {
-							has_technology_researched = military_aviation
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_motors_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_motors
+						company:company_basic_motors = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
 						}
 					}
-					create_building = {
-						building = building_motor_industry
-						add_ownership = {
-							company = {
-								type = company_basic_motors
-								country = scope:nvgm_target_country
-								levels = 3
-							}
-						}
-						reserves = 1
-					}
-					create_building = {
-						building = building_automotive_industry
-						add_ownership = {
-							company = {
-								type = company_basic_motors
-								country = scope:nvgm_target_country
-								levels = 3
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
+					if = {
 						limit = {
-							or = {
+							prev = {
+								has_technology_researched = military_aviation
+							}
+						}
+						create_building = {
+							building = building_motor_industry
+							add_ownership = {
+								company = {
+									type = company_basic_motors
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						create_building = {
+							building = building_automotive_industry
+							add_ownership = {
+								company = {
+									type = company_basic_motors
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								or = {
+									is_building_type = building_motor_industry
+									is_building_type = building_automotive_industry
+								}
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
+							}
+						}
+					}
+					else = {
+						create_building = {
+							building = building_motor_industry
+							add_ownership = {
+								company = {
+									type = company_basic_motors
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
 								is_building_type = building_motor_industry
-								is_building_type = building_automotive_industry
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_motor_industry
-						add_ownership = {
-							company = {
-								type = company_basic_motors
-								country = scope:nvgm_target_country
-								levels = 5
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							is_building_type = building_motor_industry
-						}
-						set_subsidized = yes
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.w
@@ -1754,114 +2500,146 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_munitions = yes
 			}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
+				}
+				can_nvgm_establish_company = yes
+			}
 		}
-		custom_tooltip = nvgm_company_basic_munitions_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
+		if = {
+			limit = {
 				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_munitions
-					company:company_basic_munitions = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+					can_nvgm_establish_company_basic_munitions = yes
 				}
-				if = {
-					limit = {
-						not = {
-							prev = {
-								has_technology_researched = intensive_agriculture
-							}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_munitions_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_munitions
+						company:company_basic_munitions = {
+							set_company_state_region = prev
 						}
-						prev = {
-							has_technology_researched = percussion_cap
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
 						}
 					}
-					create_building = {
-						building = building_munition_plant
-						add_ownership = {
-							company = {
-								type = company_basic_munitions
-								country = scope:nvgm_target_country
-								levels = 5
-							}
-						}
-						reserves = 1
-					}
-					every_scope_building = {
+					if = {
 						limit = {
-							is_building_type = building_munition_plant
-						}
-						set_subsidized = yes
-					}
-				}
-				else_if = {
-					limit = {
-						prev = {
-							has_technology_researched = intensive_agriculture
-						}
-						not = {
+							not = {
+								prev = {
+									has_technology_researched = intensive_agriculture
+								}
+							}
 							prev = {
 								has_technology_researched = percussion_cap
 							}
 						}
-					}
-					create_building = {
-						building = building_explosives_factory
-						add_ownership = {
-							company = {
-								type = company_basic_munitions
-								country = scope:nvgm_target_country
-								levels = 5
+						create_building = {
+							building = building_munition_plant
+							add_ownership = {
+								company = {
+									type = company_basic_munitions
+									country = scope:nvgm_target_country
+									levels = 5
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								is_building_type = building_munition_plant
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
 							}
 						}
-						reserves = 1
 					}
-					every_scope_building = {
+					else_if = {
 						limit = {
-							is_building_type = building_explosives_factory
-						}
-						set_subsidized = yes
-					}
-				}
-				else = {
-					create_building = {
-						building = building_munition_plant
-						add_ownership = {
-							company = {
-								type = company_basic_munitions
-								country = scope:nvgm_target_country
-								levels = 3
+							prev = {
+								has_technology_researched = intensive_agriculture
+							}
+							not = {
+								prev = {
+									has_technology_researched = percussion_cap
+								}
 							}
 						}
-						reserves = 1
-					}
-					create_building = {
-						building = building_explosives_factory
-						add_ownership = {
-							company = {
-								type = company_basic_munitions
-								country = scope:nvgm_target_country
-								levels = 3
+						create_building = {
+							building = building_explosives_factory
+							add_ownership = {
+								company = {
+									type = company_basic_munitions
+									country = scope:nvgm_target_country
+									levels = 5
+								}
 							}
+							reserves = 1
 						}
-						reserves = 1
-					}
-					every_scope_building = {
-						limit = {
-							or = {
-								is_building_type = building_motor_industry
+						every_scope_building = {
+							limit = {
 								is_building_type = building_explosives_factory
 							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
+							}
 						}
-						set_subsidized = yes
+					}
+					else = {
+						create_building = {
+							building = building_munition_plant
+							add_ownership = {
+								company = {
+									type = company_basic_munitions
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						create_building = {
+							building = building_explosives_factory
+							add_ownership = {
+								company = {
+									type = company_basic_munitions
+									country = scope:nvgm_target_country
+									levels = 3
+								}
+							}
+							reserves = 1
+						}
+						every_scope_building = {
+							limit = {
+								or = {
+									is_building_type = building_motor_industry
+									is_building_type = building_explosives_factory
+								}
+							}
+							nvgm_start_managed_subsidy_effect = {
+								SOURCE = root
+								FUNDED = no
+							}
+						}
 					}
 				}
 			}
+			clear_saved_scope = nvgm_target_country
 		}
-		clear_saved_scope = nvgm_target_country
 	}
 	option = {
 		name = nvgm_establish_company_events.2.x
@@ -1869,40 +2647,66 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_basic_electrics = yes
 			}
-		}
-		custom_tooltip = nvgm_company_basic_electrics_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_basic_electrics
-					company:company_basic_electrics = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_electrics_industry
-					add_ownership = {
-						company = {
-							type = company_basic_electrics
-							country = scope:nvgm_target_country
-							levels = 5
-						}
-					}
-					reserves = 1
-				}
-				every_scope_building = {
-					limit = {
-						is_building_type = building_electrics_industry
-					}
-					set_subsidized = yes
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_basic_electrics = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_basic_electrics_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_basic_electrics
+						company:company_basic_electrics = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_electrics_industry
+						add_ownership = {
+							company = {
+								type = company_basic_electrics
+								country = scope:nvgm_target_country
+								levels = 5
+							}
+						}
+						reserves = 1
+					}
+					every_scope_building = {
+						limit = {
+							is_building_type = building_electrics_industry
+						}
+						nvgm_start_managed_subsidy_effect = {
+							SOURCE = root
+							FUNDED = no
+						}
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.2.y
@@ -1914,56 +2718,83 @@ nvgm_establish_company_events.2 = {
 			scope:nvgm_target_country ?= {
 				can_nvgm_establish_company_construction_power_bloc = yes
 			}
-		}
-		custom_tooltip = nvgm_company_construction_power_bloc_tooltip
-		scope:nvgm_target_country ?= {
-			capital = {
-				scope:nvgm_target_country ?= {
-					add_company = company_type:company_construction_power_bloc
-					company:company_construction_power_bloc = {
-						set_company_state_region = prev
-					}
-					add_modifier = {
-						name = nvgm_establish_company_test_modifier
-						months = short_modifier_time
-					}
+			exists = scope:nvgm_target_country
+			scope:nvgm_target_country = {
+				is_subject_of = root
+				NOT = {
+					has_war_with = root
 				}
-				create_building = {
-					building = building_steel_mill
-					add_ownership = {
-						company = {
-							type = company_construction_power_bloc
-							country = scope:nvgm_target_country
-							levels = 2
-						}
-					}
-					reserves = 1
-				}
-				create_building = {
-					building = building_tooling_workshop
-					add_ownership = {
-						company = {
-							type = company_construction_power_bloc
-							country = scope:nvgm_target_country
-							levels = 2
-						}
-					}
-					reserves = 1
-				}
-				create_building = {
-					building = building_glassworks
-					add_ownership = {
-						company = {
-							type = company_construction_power_bloc
-							country = scope:nvgm_target_country
-							levels = 2
-						}
-					}
-					reserves = 1
-				}
+				can_nvgm_establish_company = yes
 			}
 		}
-		clear_saved_scope = nvgm_target_country
+		if = {
+			limit = {
+				is_in_power_bloc = yes
+				power_bloc = {
+					has_principle = principle:principle_construction_3
+				}
+				scope:nvgm_target_country ?= {
+					can_nvgm_establish_company_construction_power_bloc = yes
+				}
+				exists = scope:nvgm_target_country
+				scope:nvgm_target_country = {
+					is_subject_of = root
+					NOT = {
+						has_war_with = root
+					}
+					can_nvgm_establish_company = yes
+				}
+			}
+			custom_tooltip = nvgm_company_construction_power_bloc_tooltip
+			scope:nvgm_target_country ?= {
+				capital = {
+					scope:nvgm_target_country ?= {
+						add_company = company_type:company_construction_power_bloc
+						company:company_construction_power_bloc = {
+							set_company_state_region = prev
+						}
+						add_modifier = {
+							name = nvgm_establish_company_test_modifier
+							months = short_modifier_time
+						}
+					}
+					create_building = {
+						building = building_steel_mill
+						add_ownership = {
+							company = {
+								type = company_construction_power_bloc
+								country = scope:nvgm_target_country
+								levels = 2
+							}
+						}
+						reserves = 1
+					}
+					create_building = {
+						building = building_tooling_workshop
+						add_ownership = {
+							company = {
+								type = company_construction_power_bloc
+								country = scope:nvgm_target_country
+								levels = 2
+							}
+						}
+						reserves = 1
+					}
+					create_building = {
+						building = building_glassworks
+						add_ownership = {
+							company = {
+								type = company_construction_power_bloc
+								country = scope:nvgm_target_country
+								levels = 2
+							}
+						}
+						reserves = 1
+					}
+				}
+			}
+			clear_saved_scope = nvgm_target_country
+		}
 	}
 	option = {
 		name = nvgm_establish_company_events.1.reset
@@ -2267,162 +3098,444 @@ nvgm_migration_events.1 = {
 			clear_saved_scope = nvgm_target_state
 		}
 		set_variable = nvgm_migration_events_now_var
+		every_scope_state = {
+			limit = {
+				has_variable = nvgm_target_state_variable
+			}
+			remove_variable = nvgm_target_state_variable
+		}
 	}
 	option = {
 		name = nvgm_migration_events.1.a
 		trigger = {
 			exists = scope:nvgm_target_state_1
+			scope:nvgm_target_state_1 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_1 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_1
+				scope:nvgm_target_state_1 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_1
+			}
+			scope:nvgm_target_state_1 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.b
 		trigger = {
 			exists = scope:nvgm_target_state_2
+			scope:nvgm_target_state_2 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_2 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_2
+				scope:nvgm_target_state_2 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_2
+			}
+			scope:nvgm_target_state_2 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.c
 		trigger = {
 			exists = scope:nvgm_target_state_3
+			scope:nvgm_target_state_3 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_3 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_3
+				scope:nvgm_target_state_3 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_3
+			}
+			scope:nvgm_target_state_3 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.d
 		trigger = {
 			exists = scope:nvgm_target_state_4
+			scope:nvgm_target_state_4 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_4 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_4
+				scope:nvgm_target_state_4 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_4
+			}
+			scope:nvgm_target_state_4 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.e
 		trigger = {
 			exists = scope:nvgm_target_state_5
+			scope:nvgm_target_state_5 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_5 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_5
+				scope:nvgm_target_state_5 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_5
+			}
+			scope:nvgm_target_state_5 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.f
 		trigger = {
 			exists = scope:nvgm_target_state_6
+			scope:nvgm_target_state_6 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_6 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_6
+				scope:nvgm_target_state_6 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_6
+			}
+			scope:nvgm_target_state_6 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.g
 		trigger = {
 			exists = scope:nvgm_target_state_7
+			scope:nvgm_target_state_7 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_7 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_7
+				scope:nvgm_target_state_7 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_7
+			}
+			scope:nvgm_target_state_7 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.h
 		trigger = {
 			exists = scope:nvgm_target_state_8
+			scope:nvgm_target_state_8 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_8 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_8
+				scope:nvgm_target_state_8 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_8
+			}
+			scope:nvgm_target_state_8 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.i
 		trigger = {
 			exists = scope:nvgm_target_state_9
+			scope:nvgm_target_state_9 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_9 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_9
+				scope:nvgm_target_state_9 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_9
+			}
+			scope:nvgm_target_state_9 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.j
 		trigger = {
 			exists = scope:nvgm_target_state_10
+			scope:nvgm_target_state_10 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_10 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_10
+				scope:nvgm_target_state_10 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_10
+			}
+			scope:nvgm_target_state_10 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.k
 		trigger = {
 			exists = scope:nvgm_target_state_11
+			scope:nvgm_target_state_11 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_11 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_11
+				scope:nvgm_target_state_11 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_11
+			}
+			scope:nvgm_target_state_11 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_migration_events.1.l
 		trigger = {
 			exists = scope:nvgm_target_state_12
+			scope:nvgm_target_state_12 = {
+				owner = root
+				state_population <= 500000
+			}
+			NOT = {
+				has_journal_entry = je_nvgm_abandonment_policy
+			}
 		}
-		scope:nvgm_target_state_12 = {
-			set_variable = nvgm_target_state_variable
+		if = {
+			limit = {
+				exists = scope:nvgm_target_state_12
+				scope:nvgm_target_state_12 = {
+					owner = root
+					state_population <= 500000
+				}
+				NOT = {
+					has_journal_entry = je_nvgm_abandonment_policy
+				}
+			}
+			set_variable = {
+				name = nvgm_migration_destination
+				value = scope:nvgm_target_state_12
+			}
+			scope:nvgm_target_state_12 = {
+				set_variable = nvgm_target_state_variable
+			}
+			add_journal_entry = {
+				type = je_nvgm_abandonment_policy
+			}
+			remove_variable = nvgm_migration_events_now_var
 		}
-		add_journal_entry = {
-			type = je_nvgm_abandonment_policy
-		}
-		remove_variable = nvgm_migration_events_now_var
 	}
 	option = {
 		name = nvgm_establish_company_events.1.reset
@@ -2467,6 +3580,11 @@ nvgm_migration_events.2 = {
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 1
 	trigger = {
+		has_journal_entry = je_nvgm_abandonment_policy
+		nvgm_migration_target_valid = yes
+		NOT = {
+			has_variable = nvgm_migration_pending
+		}
 	}
 	immediate = {
 		clear_saved_scope = nvgm_target_pop
@@ -2476,10 +3594,7 @@ nvgm_migration_events.2 = {
 			name = nvgm_abandonment_policy_var
 			multiply = 0
 		}
-		random_scope_state = {
-			limit = {
-				has_variable = nvgm_target_state_variable
-			}
+		var:nvgm_migration_destination = {
 			save_scope_as = nvgm_target_state
 		}
 		random_scope_state = {
@@ -2515,22 +3630,69 @@ nvgm_migration_events.2 = {
 					pop_acceptance < acceptance_status_4
 				}
 			}
+			has_journal_entry = je_nvgm_abandonment_policy
+			nvgm_migration_target_valid = yes
+			NOT = {
+				has_variable = nvgm_migration_pending
+			}
+			var:nvgm_migration_destination = scope:nvgm_target_state
+			scope:nvgm_target_state = {
+				owner = root
+			}
+			scope:nvgm_abandonment_state = {
+				owner = root
+			}
+			scope:nvgm_target_pop = {
+				state = scope:nvgm_abandonment_state
+			}
 		}
 		name = nvgm_migration_events.2.a
 		default_option = yes
-		scope:nvgm_target_pop ?= {
-			move_pop = scope:nvgm_target_state
-		}
-		scope:nvgm_abandonment_state ?= {
-			add_loyalists_in_state = {
-				value = small_radicals
-				strata >= middle
+		if = {
+			limit = {
+				exists = scope:nvgm_target_pop
+				exists = scope:nvgm_target_state
+				exists = scope:nvgm_abandonment_state
+				scope:nvgm_abandonment_state ?= {
+					any_scope_pop = {
+						pop_acceptance < acceptance_status_4
+					}
+				}
+				has_journal_entry = je_nvgm_abandonment_policy
+				nvgm_migration_target_valid = yes
+				NOT = {
+					has_variable = nvgm_migration_pending
+				}
+				var:nvgm_migration_destination = scope:nvgm_target_state
+				scope:nvgm_target_state = {
+					owner = root
+				}
+				scope:nvgm_abandonment_state = {
+					owner = root
+				}
+				scope:nvgm_target_pop = {
+					state = scope:nvgm_abandonment_state
+				}
 			}
-		}
-		hidden_effect = {
-			trigger_event = {
-				id = nvgm_migration_events.3
-				days = 1
+			set_variable = {
+				name = nvgm_migration_pending
+				value = scope:nvgm_target_state
+				days = 3
+			}
+			scope:nvgm_target_pop ?= {
+				move_pop = scope:nvgm_target_state
+			}
+			scope:nvgm_abandonment_state ?= {
+				add_loyalists_in_state = {
+					value = small_radicals
+					strata >= middle
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = nvgm_migration_events.3
+					days = 1
+				}
 			}
 		}
 	}
@@ -2547,14 +3709,14 @@ nvgm_migration_events.3 = {
 	type = country_event
 	hidden = yes
 	trigger = {
+		has_journal_entry = je_nvgm_abandonment_policy
+		nvgm_migration_target_valid = yes
+		exists = scope:nvgm_target_state
+		exists = var:nvgm_migration_pending
+		var:nvgm_migration_pending = scope:nvgm_target_state
+		var:nvgm_migration_destination = scope:nvgm_target_state
 	}
 	immediate = {
-		random_scope_state = {
-			limit = {
-				has_variable = nvgm_target_state_variable
-			}
-			save_scope_as = nvgm_target_state
-		}
 		change_variable = {
 			name = nvgm_abandonment_policy_var
 			subtract = nvgm_state_population
@@ -2573,5 +3735,6 @@ nvgm_migration_events.3 = {
 			name = nvgm_abandonment_policy_var
 			multiply = 0
 		}
+		remove_variable = nvgm_migration_pending
 	}
 }

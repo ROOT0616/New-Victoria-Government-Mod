@@ -1305,7 +1305,7 @@ types diplomatic_panel
 
 						### OVERLORD ACTIONS
 						diplo_actions_button = {
-							visible = "[Country.IsSubjectOf(GetPlayer.Self)]"
+							visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
 							widgetid = "[Concatenate('tutorial_highlight_overlord_actions_button_', Country.GetIDString)]"
 
 							blockoverride "onclick" {
@@ -1386,7 +1386,7 @@ types diplomatic_panel
 		}
 
 		flowcontainer = {
- visible = "[Country.IsSubjectOf(GetPlayer.Self)]"
+ visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
  direction = vertical spacing = 3 margin_top = 4 margin_bottom = 6
  textbox = { text = "nvgm_subject_management_header" autoresize = yes }
  flowcontainer = { spacing = 10
