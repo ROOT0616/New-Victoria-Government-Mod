@@ -1,4 +1,4 @@
-﻿# COPY-PASTED FOR NOW
+# COPY-PASTED FOR NOW
 @panel_width_minus_10 = 530			# used to be 450
 @panel_width = 540  				# used to be 460
 @panel_width_half = 270				# used to be 230
@@ -1389,6 +1389,22 @@ types diplomatic_panel
  visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
  direction = vertical spacing = 3 margin_top = 4 margin_bottom = 6
  textbox = { text = "nvgm_subject_management_header" autoresize = yes }
+textbox = { text = "nvgm_contract_core_notice" autoresize = yes }
+flowcontainer = { spacing = 4
+button_standard = { size = { 160 28 } text = "nvgm_subsidy_contract_stop"
+enabled = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+tooltip = "nvgm_subsidy_contract_stop_tt"
+onclick = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
+button_standard = { size = { 160 28 } text = "nvgm_subsidy_contract_resume"
+enabled = "[GetScriptedGui('nvgm_subsidy_contract_resume_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+tooltip = "nvgm_subsidy_contract_resume_tt"
+onclick = "[GetScriptedGui('nvgm_subsidy_contract_resume_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
+button_standard = { size = { 160 28 } text = "nvgm_subsidy_full_cost"
+enabled = "[GetScriptedGui('nvgm_subsidy_full_cost_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+tooltip = "nvgm_subsidy_full_cost_unavailable_tt"
+onclick = "[GetScriptedGui('nvgm_subsidy_full_cost_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
+}
+
  flowcontainer = { spacing = 10
   textbox = { raw_text = "NVGM_BALANCE" autoresize = yes }
   textbox = { raw_text = "#gold GDP#!: [Country.GetGDP|Dv]" autoresize = yes }

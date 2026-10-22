@@ -558,3 +558,11 @@
  decisions_nvgm_stop_all_support_desc:0 "Ends incoming and outgoing NVGM transfers, NVGM diplomatic support, and subsidies newly enabled by NVGM. Also works after independence. Other countries' unrelated support and general treaty articles are retained."
 
  decisions_nvgm_stop_all_support_tt:0 "Ends all NVGM support involving this country. This also disables subsidies newly enabled and tracked by NVGM, including company-establishment subsidies. Re-establish desired support afterwards."
+ nvgm_contract_core_notice:0 "Support contracts: tracked aid. Actual subsidy reimbursement is not enabled."
+ nvgm_subsidy_contract_stop:0 "End managed subsidies"
+ nvgm_subsidy_contract_stop_tt:0 "End this country’s managed subsidy contract. Only subsidies enabled by NVGM are disabled. The recipient or original sponsor can end the contract even after independence."
+ nvgm_subsidy_contract_resume:0 "Resume managed subsidies"
+ nvgm_subsidy_contract_resume_tt:0 "Explicitly resume a paused contract after checking the current overlord, targets and general aid requirements."
+ nvgm_subsidy_full_cost:0 "Full-cost reimbursement"
+ nvgm_subsidy_full_cost_unavailable_tt:0 "Unavailable: the server-side API for exact building subsidy expenditure has not been verified. General aid does not prove reimbursement."
+ nvgm_transfer_contract_tt:0 "Transfer one unit under a tracked contract. The recipient amount is authoritative; the donor burden is rebuilt from valid contracts."

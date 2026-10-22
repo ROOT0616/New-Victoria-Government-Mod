@@ -32,3 +32,6 @@ nvgm_support_delayed_cleanup = {
 		}
 	}
 }
+
+
+nvgm_subsidy_watchdog = { effect = { nvgm_subsidy_watchdog_effect = yes } }

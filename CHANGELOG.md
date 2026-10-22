@@ -1,3 +1,14 @@
+# v2.2.0 — 2026-10-23
+
+- Add schema-3 contract generations and recorded recipient/issuer identity.
+- Rebuild donor resource burdens from authoritative recipient amounts; retain 15 recipients per resource.
+- Import valid v2.1.1 records without inferring financial consent.
+- Add subsidy batch membership, close/resume controls and a daily relation/lease watchdog.
+- Preserve per-building general-aid conditions and spontaneous preexisting subsidies.
+- Prevent stale donor indices from closing a new generation.
+- Keep exact full-cost reimbursement disabled pending a verified server expenditure API.
+- Add Japanese/English strings; other six locales use the new English fallback strings.
+
 # v2.1.1
 
 独立・宗主国変更後の支援残留に対策。移譲の双方向検査・45日期限・翌日再検査、外交支援の固定期間撤去、元契約からの停止、常設の修復/停止決断を追加。新規助成の追跡、人口移動先の消し忘れ、企業イベントの実行前検査・建設企業の誤参照を修正。旧NVGM外交支援は移行時に終了し、再設定が必要。

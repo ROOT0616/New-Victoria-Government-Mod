@@ -558,3 +558,11 @@
  decisions_nvgm_stop_all_support_desc:0 "自国が受ける・与えるNVGM移譲、NVGM外交支援、このMODが新たに有効にした助成を終了します。独立後も利用できます。他国間の支援や一般の条約条項は維持します。"
 
  decisions_nvgm_stop_all_support_tt:0 "自国に関わるNVGM支援をすべて終了します。企業設立時を含め、NVGMが新たに有効にし記録した助成も停止します。継続したい支援は再設定してください。"
+ nvgm_contract_core_notice:0 "支援契約：一般援助と助成を追跡します。助成実費の自動補填は未搭載です。"
+ nvgm_subsidy_contract_stop:0 "管理中の助成を終了"
+ nvgm_subsidy_contract_stop_tt:0 "この国の管理中の助成契約を終了します。NVGMが有効化した助成だけを解除します。独立後も、受益国または元の実行国から終了できます。"
+ nvgm_subsidy_contract_resume:0 "停止した助成を再開"
+ nvgm_subsidy_contract_resume_tt:0 "現在の宗主国、対象建物、一般援助の必要条件を再検査し、一時停止中の助成を明示的に再開します。"
+ nvgm_subsidy_full_cost:0 "助成実費を全額補填"
+ nvgm_subsidy_full_cost_unavailable_tt:0 "現在は利用できません。建物別の助成実支出を取得するサーバー側APIが未確認のためです。一般援助の存在は、実費を支払った証拠にはなりません。"
+ nvgm_transfer_contract_tt:0 "契約に基づき1単位を移譲します。受取国の契約量を正本とし、供与国の負担は有効な契約から再集計します。"

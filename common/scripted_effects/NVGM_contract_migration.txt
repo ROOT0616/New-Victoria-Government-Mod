@@ -1,0 +1,1097 @@
+﻿nvgm_contract_migrate_effect = {
+	if = {
+		limit = {
+			nvgm_contract_schema_supported = yes
+			NOT = {
+				has_variable = nvgm_contract_schema
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = nvgm_v3_bur_generation
+				}
+			}
+			set_variable = {
+				name = nvgm_v3_bur_generation
+				value = 0
+			}
+		}
+		set_variable = {
+			name = nvgm_v3_bur_state
+			value = 0
+		}
+		set_variable = {
+			name = nvgm_v3_bur_amount
+			value = 0
+		}
+		if = {
+			limit = {
+				nvgm_legacy_bur_recipient_valid = yes
+				var:nvgm_bur_donor = {
+					nvgm_contract_schema_supported = yes
+				}
+			}
+			change_variable = {
+				name = nvgm_v3_bur_generation
+				add = 1
+			}
+			set_variable = {
+				name = nvgm_v3_bur_state
+				value = 1
+			}
+			set_variable = {
+				name = nvgm_v3_bur_issuer
+				value = var:nvgm_bur_donor
+			}
+			set_variable = {
+				name = nvgm_v3_bur_payer
+				value = var:nvgm_bur_donor
+			}
+			set_variable = {
+				name = nvgm_v3_bur_lease
+				days = 45
+			}
+			if = {
+				limit = {
+					has_variable = nvgm_give_bur_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 1
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_1_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 2
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_2_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 3
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_3_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 4
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_4_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 5
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_5_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 6
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_6_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 7
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_7_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 8
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_8_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 9
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_9_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 10
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_10_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 11
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_11_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 12
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_12_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 13
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_13_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 14
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_14_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_bur_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_amount
+					value = var:nvgm_give_bur_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_bur_slot
+					value = 15
+				}
+				var:nvgm_bur_donor = {
+					set_variable = {
+						name = nvgm_v3_bur_slot_15_generation
+						value = prev.var:nvgm_v3_bur_generation
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = nvgm_v3_innovation_generation
+				}
+			}
+			set_variable = {
+				name = nvgm_v3_innovation_generation
+				value = 0
+			}
+		}
+		set_variable = {
+			name = nvgm_v3_innovation_state
+			value = 0
+		}
+		set_variable = {
+			name = nvgm_v3_innovation_amount
+			value = 0
+		}
+		if = {
+			limit = {
+				nvgm_legacy_innovation_recipient_valid = yes
+				var:nvgm_innovation_donor = {
+					nvgm_contract_schema_supported = yes
+				}
+			}
+			change_variable = {
+				name = nvgm_v3_innovation_generation
+				add = 1
+			}
+			set_variable = {
+				name = nvgm_v3_innovation_state
+				value = 1
+			}
+			set_variable = {
+				name = nvgm_v3_innovation_issuer
+				value = var:nvgm_innovation_donor
+			}
+			set_variable = {
+				name = nvgm_v3_innovation_payer
+				value = var:nvgm_innovation_donor
+			}
+			set_variable = {
+				name = nvgm_v3_innovation_lease
+				days = 45
+			}
+			if = {
+				limit = {
+					has_variable = nvgm_give_innovation_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 1
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_1_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 2
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_2_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 3
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_3_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 4
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_4_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 5
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_5_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 6
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_6_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 7
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_7_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 8
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_8_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 9
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_9_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 10
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_10_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 11
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_11_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 12
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_12_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 13
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_13_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 14
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_14_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_innovation_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_amount
+					value = var:nvgm_give_innovation_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_innovation_slot
+					value = 15
+				}
+				var:nvgm_innovation_donor = {
+					set_variable = {
+						name = nvgm_v3_innovation_slot_15_generation
+						value = prev.var:nvgm_v3_innovation_generation
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = nvgm_v3_construction_generation
+				}
+			}
+			set_variable = {
+				name = nvgm_v3_construction_generation
+				value = 0
+			}
+		}
+		set_variable = {
+			name = nvgm_v3_construction_state
+			value = 0
+		}
+		set_variable = {
+			name = nvgm_v3_construction_amount
+			value = 0
+		}
+		if = {
+			limit = {
+				nvgm_legacy_construction_recipient_valid = yes
+				var:nvgm_construction_donor = {
+					nvgm_contract_schema_supported = yes
+				}
+			}
+			change_variable = {
+				name = nvgm_v3_construction_generation
+				add = 1
+			}
+			set_variable = {
+				name = nvgm_v3_construction_state
+				value = 1
+			}
+			set_variable = {
+				name = nvgm_v3_construction_issuer
+				value = var:nvgm_construction_donor
+			}
+			set_variable = {
+				name = nvgm_v3_construction_payer
+				value = var:nvgm_construction_donor
+			}
+			set_variable = {
+				name = nvgm_v3_construction_lease
+				days = 45
+			}
+			if = {
+				limit = {
+					has_variable = nvgm_give_construction_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_1_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 1
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_1_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_2_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 2
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_2_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_3_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 3
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_3_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_4_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 4
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_4_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_5_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 5
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_5_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_6_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 6
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_6_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_7_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 7
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_7_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_8_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 8
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_8_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_9_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 9
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_9_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_10_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 10
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_10_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_11_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 11
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_11_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_12_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 12
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_12_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_13_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 13
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_13_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_14_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 14
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_14_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = nvgm_give_construction_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_amount
+					value = var:nvgm_give_construction_15_var
+				}
+				set_variable = {
+					name = nvgm_v3_construction_slot
+					value = 15
+				}
+				var:nvgm_construction_donor = {
+					set_variable = {
+						name = nvgm_v3_construction_slot_15_generation
+						value = prev.var:nvgm_v3_construction_generation
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = nvgm_v3_subsidy_generation
+				}
+			}
+			set_variable = {
+				name = nvgm_v3_subsidy_generation
+				value = 0
+			}
+		}
+		set_variable = {
+			name = nvgm_v3_subsidy_state
+			value = 0
+		}
+		set_variable = {
+			name = nvgm_v3_subsidy_target_count
+			value = 0
+		}
+		every_scope_building = {
+			limit = {
+				has_variable = nvgm_subsidy_sponsor
+				NOT = {
+					has_variable = nvgm_v3_subsidy_recipient
+				}
+			}
+			if = {
+				limit = {
+					is_subsidized = yes
+					exists = var:nvgm_subsidy_sponsor
+					owner = {
+						is_direct_subject_of = prev.var:nvgm_subsidy_sponsor
+						NOT = {
+							has_war_with = prev.var:nvgm_subsidy_sponsor
+						}
+					}
+					var:nvgm_subsidy_sponsor = {
+						nvgm_contract_schema_supported = yes
+					}
+				}
+				owner = {
+					set_variable = {
+						name = nvgm_v3_subsidy_generation
+						value = 1
+					}
+					set_variable = {
+						name = nvgm_v3_subsidy_state
+						value = 1
+					}
+					set_variable = {
+						name = nvgm_v3_subsidy_funding
+						value = 0
+					}
+					set_variable = {
+						name = nvgm_v3_subsidy_issuer
+						value = prev.var:nvgm_subsidy_sponsor
+					}
+					set_variable = {
+						name = nvgm_v3_subsidy_payer
+						value = prev.var:nvgm_subsidy_sponsor
+					}
+					set_variable = {
+						name = nvgm_v3_subsidy_lease
+						days = 45
+					}
+					change_variable = {
+						name = nvgm_v3_subsidy_target_count
+						add = 1
+					}
+				}
+				set_variable = {
+					name = nvgm_v3_subsidy_recipient
+					value = owner
+				}
+				set_variable = {
+					name = nvgm_v3_subsidy_generation
+					value = owner.var:nvgm_v3_subsidy_generation
+				}
+				set_variable = nvgm_v3_subsidy_changed
+			}
+			else = {
+				set_subsidized = no
+				remove_variable = nvgm_subsidy_sponsor
+				remove_variable = nvgm_subsidy_requires_funding
+			}
+		}
+		set_variable = {
+			name = nvgm_contract_schema
+			value = 3
+		}
+		nvgm_subsidy_watchdog_start_effect = yes
+	}
+}
