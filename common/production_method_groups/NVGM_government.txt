@@ -1,7 +1,6 @@
 ﻿pmg_base_building_nvgm_traffic = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
-
 	production_methods = {
 		pm_nvgm_traffic_farm_road
 		pm_nvgm_traffic_flagstone
@@ -10,35 +9,11 @@
 	}
 }
 
-# 病院
 pmg_base_nvgm_clinic = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
-
 	production_methods = {
 		pm_secular_nvgm_clinic
 		pm_religious_nvgm_clinic
 	}
 }
-
-# pmg_base_nvgm_human_ranch = {
-# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-# 	ai_selection = most_productive
-
-# 	production_methods = {
-# 		pm_nvgm_compulsory_human_ranch
-# 		pm_nvgm_volunteer_human_ranch
-# 	}
-# }
-
-# pmg_ownership_building_nvgm_doctors_credit_union = {
-# 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
-# 	ai_selection = most_productive
-
-# 	production_methods = {
-# 		pm_nvgm_doctors_credit_union_privately_owned
-# 		pm_nvgm_doctors_credit_union_publicly_traded
-# 		pm_nvgm_doctors_credit_union_principle_divine_economics_2
-# 	}
-# }
-

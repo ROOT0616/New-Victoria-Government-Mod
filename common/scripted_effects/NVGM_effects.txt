@@ -1,5 +1,14 @@
-﻿# GDPの順位
-nvgm_gdp_ranking_effect = {
+﻿nvgm_gdp_ranking_effect = {
+	remove_global_variable = nvgm_1_gdp_country_gvar
+	remove_global_variable = nvgm_2_gdp_country_gvar
+	remove_global_variable = nvgm_3_gdp_country_gvar
+	remove_global_variable = nvgm_4_gdp_country_gvar
+	remove_global_variable = nvgm_5_gdp_country_gvar
+	remove_global_variable = nvgm_6_gdp_country_gvar
+	remove_global_variable = nvgm_7_gdp_country_gvar
+	remove_global_variable = nvgm_8_gdp_country_gvar
+	remove_global_variable = nvgm_9_gdp_country_gvar
+	remove_global_variable = nvgm_10_gdp_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -152,8 +161,17 @@ nvgm_gdp_ranking_effect = {
 	}
 }
 
-# 威信の順位
 nvgm_prestige_ranking_effect = {
+	remove_global_variable = nvgm_1_prestige_country_gvar
+	remove_global_variable = nvgm_2_prestige_country_gvar
+	remove_global_variable = nvgm_3_prestige_country_gvar
+	remove_global_variable = nvgm_4_prestige_country_gvar
+	remove_global_variable = nvgm_5_prestige_country_gvar
+	remove_global_variable = nvgm_6_prestige_country_gvar
+	remove_global_variable = nvgm_7_prestige_country_gvar
+	remove_global_variable = nvgm_8_prestige_country_gvar
+	remove_global_variable = nvgm_9_prestige_country_gvar
+	remove_global_variable = nvgm_10_prestige_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -306,8 +324,17 @@ nvgm_prestige_ranking_effect = {
 	}
 }
 
-# 人口の順位
 nvgm_total_population_ranking_effect = {
+	remove_global_variable = nvgm_1_total_population_country_gvar
+	remove_global_variable = nvgm_2_total_population_country_gvar
+	remove_global_variable = nvgm_3_total_population_country_gvar
+	remove_global_variable = nvgm_4_total_population_country_gvar
+	remove_global_variable = nvgm_5_total_population_country_gvar
+	remove_global_variable = nvgm_6_total_population_country_gvar
+	remove_global_variable = nvgm_7_total_population_country_gvar
+	remove_global_variable = nvgm_8_total_population_country_gvar
+	remove_global_variable = nvgm_9_total_population_country_gvar
+	remove_global_variable = nvgm_10_total_population_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -460,8 +487,17 @@ nvgm_total_population_ranking_effect = {
 	}
 }
 
-# 平均生活水準の順位
 nvgm_average_sol_ranking_effect = {
+	remove_global_variable = nvgm_1_average_sol_country_gvar
+	remove_global_variable = nvgm_2_average_sol_country_gvar
+	remove_global_variable = nvgm_3_average_sol_country_gvar
+	remove_global_variable = nvgm_4_average_sol_country_gvar
+	remove_global_variable = nvgm_5_average_sol_country_gvar
+	remove_global_variable = nvgm_6_average_sol_country_gvar
+	remove_global_variable = nvgm_7_average_sol_country_gvar
+	remove_global_variable = nvgm_8_average_sol_country_gvar
+	remove_global_variable = nvgm_9_average_sol_country_gvar
+	remove_global_variable = nvgm_10_average_sol_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -614,8 +650,17 @@ nvgm_average_sol_ranking_effect = {
 	}
 }
 
-# 識字率の順位
 nvgm_literacy_rate_ranking_effect = {
+	remove_global_variable = nvgm_1_literacy_rate_country_gvar
+	remove_global_variable = nvgm_2_literacy_rate_country_gvar
+	remove_global_variable = nvgm_3_literacy_rate_country_gvar
+	remove_global_variable = nvgm_4_literacy_rate_country_gvar
+	remove_global_variable = nvgm_5_literacy_rate_country_gvar
+	remove_global_variable = nvgm_6_literacy_rate_country_gvar
+	remove_global_variable = nvgm_7_literacy_rate_country_gvar
+	remove_global_variable = nvgm_8_literacy_rate_country_gvar
+	remove_global_variable = nvgm_9_literacy_rate_country_gvar
+	remove_global_variable = nvgm_10_literacy_rate_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -768,8 +813,17 @@ nvgm_literacy_rate_ranking_effect = {
 	}
 }
 
-# 投資プールの順位
 nvgm_investment_pool_ranking_effect = {
+	remove_global_variable = nvgm_1_investment_pool_country_gvar
+	remove_global_variable = nvgm_2_investment_pool_country_gvar
+	remove_global_variable = nvgm_3_investment_pool_country_gvar
+	remove_global_variable = nvgm_4_investment_pool_country_gvar
+	remove_global_variable = nvgm_5_investment_pool_country_gvar
+	remove_global_variable = nvgm_6_investment_pool_country_gvar
+	remove_global_variable = nvgm_7_investment_pool_country_gvar
+	remove_global_variable = nvgm_8_investment_pool_country_gvar
+	remove_global_variable = nvgm_9_investment_pool_country_gvar
+	remove_global_variable = nvgm_10_investment_pool_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -922,8 +976,17 @@ nvgm_investment_pool_ranking_effect = {
 	}
 }
 
-# 金準備の順位
 nvgm_gold_reserves_ranking_effect = {
+	remove_global_variable = nvgm_1_gold_reserves_country_gvar
+	remove_global_variable = nvgm_2_gold_reserves_country_gvar
+	remove_global_variable = nvgm_3_gold_reserves_country_gvar
+	remove_global_variable = nvgm_4_gold_reserves_country_gvar
+	remove_global_variable = nvgm_5_gold_reserves_country_gvar
+	remove_global_variable = nvgm_6_gold_reserves_country_gvar
+	remove_global_variable = nvgm_7_gold_reserves_country_gvar
+	remove_global_variable = nvgm_8_gold_reserves_country_gvar
+	remove_global_variable = nvgm_9_gold_reserves_country_gvar
+	remove_global_variable = nvgm_10_gold_reserves_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -1076,8 +1139,17 @@ nvgm_gold_reserves_ranking_effect = {
 	}
 }
 
-# 収入の順位
 nvgm_income_ranking_effect = {
+	remove_global_variable = nvgm_1_income_country_gvar
+	remove_global_variable = nvgm_2_income_country_gvar
+	remove_global_variable = nvgm_3_income_country_gvar
+	remove_global_variable = nvgm_4_income_country_gvar
+	remove_global_variable = nvgm_5_income_country_gvar
+	remove_global_variable = nvgm_6_income_country_gvar
+	remove_global_variable = nvgm_7_income_country_gvar
+	remove_global_variable = nvgm_8_income_country_gvar
+	remove_global_variable = nvgm_9_income_country_gvar
+	remove_global_variable = nvgm_10_income_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -1087,7 +1159,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 1
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_1_income_country_gvar
 			value = this
@@ -1102,7 +1174,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 2
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_2_income_country_gvar
 			value = this
@@ -1117,7 +1189,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 3
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_3_income_country_gvar
 			value = this
@@ -1132,7 +1204,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 4
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_4_income_country_gvar
 			value = this
@@ -1147,7 +1219,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 5
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_5_income_country_gvar
 			value = this
@@ -1162,7 +1234,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 6
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_6_income_country_gvar
 			value = this
@@ -1177,7 +1249,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 7
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_7_income_country_gvar
 			value = this
@@ -1192,7 +1264,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 8
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_8_income_country_gvar
 			value = this
@@ -1207,7 +1279,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 9
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_9_income_country_gvar
 			value = this
@@ -1222,7 +1294,7 @@ nvgm_income_ranking_effect = {
 			}
 		}
 		position = 10
-		order_by = income
+		order_by = total_income
 		set_global_variable = {
 			name = nvgm_10_income_country_gvar
 			value = this
@@ -1230,8 +1302,17 @@ nvgm_income_ranking_effect = {
 	}
 }
 
-# 支出の順位
 nvgm_expenses_ranking_effect = {
+	remove_global_variable = nvgm_1_expenses_country_gvar
+	remove_global_variable = nvgm_2_expenses_country_gvar
+	remove_global_variable = nvgm_3_expenses_country_gvar
+	remove_global_variable = nvgm_4_expenses_country_gvar
+	remove_global_variable = nvgm_5_expenses_country_gvar
+	remove_global_variable = nvgm_6_expenses_country_gvar
+	remove_global_variable = nvgm_7_expenses_country_gvar
+	remove_global_variable = nvgm_8_expenses_country_gvar
+	remove_global_variable = nvgm_9_expenses_country_gvar
+	remove_global_variable = nvgm_10_expenses_country_gvar
 	ordered_country = {
 		limit = {
 			is_revolutionary = no
@@ -1241,7 +1322,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 1
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_1_expenses_country_gvar
 			value = this
@@ -1256,7 +1337,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 2
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_2_expenses_country_gvar
 			value = this
@@ -1271,7 +1352,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 3
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_3_expenses_country_gvar
 			value = this
@@ -1286,7 +1367,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 4
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_4_expenses_country_gvar
 			value = this
@@ -1301,7 +1382,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 5
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_5_expenses_country_gvar
 			value = this
@@ -1316,7 +1397,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 6
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_6_expenses_country_gvar
 			value = this
@@ -1331,7 +1412,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 7
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_7_expenses_country_gvar
 			value = this
@@ -1346,7 +1427,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 8
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_8_expenses_country_gvar
 			value = this
@@ -1361,7 +1442,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 9
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_9_expenses_country_gvar
 			value = this
@@ -1376,7 +1457,7 @@ nvgm_expenses_ranking_effect = {
 			}
 		}
 		position = 10
-		order_by = expenses
+		order_by = total_expenses
 		set_global_variable = {
 			name = nvgm_10_expenses_country_gvar
 			value = this
@@ -1384,8 +1465,11 @@ nvgm_expenses_ranking_effect = {
 	}
 }
 
-# 国際投資プールの順位
 nvgm_global_investment_pool_ranking_effect = {
+	set_global_variable = {
+		name = nvgm_1_investment_pool_country_var
+		value = 1
+	}
 	clear_variable_list = nvgm_investment_pool_list
 	ordered_country = {
 		limit = {
@@ -1396,7 +1480,6 @@ nvgm_global_investment_pool_ranking_effect = {
 			}
 		}
 		position = 0
-		max = 1
 		check_range_bounds = no
 		order_by = investment_pool
 		set_global_variable = {
@@ -1425,11 +1508,14 @@ nvgm_global_investment_pool_ranking_effect = {
 		order_by = investment_pool
 		max = 50
 		check_range_bounds = no
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_investment_pool_local_var
-			divide = global_var:nvgm_1_investment_pool_country_var
+			divide = {
+				value = global_var:nvgm_1_investment_pool_country_var
+				min = 1
+			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_investment_pool_local_var
 			multiply = 550
 		}
@@ -1440,26 +1526,17 @@ nvgm_global_investment_pool_ranking_effect = {
 	}
 }
 
-# 投資プールの順位
 nvgm_investment_rights_pool_ranking_effect = {
+	set_global_variable = {
+		name = nvgm_1_investment_rights_pool_country_var
+		value = 1
+	}
 	clear_variable_list = nvgm_investment_rights_pool_list
 	ordered_country = {
 		limit = {
-			OR = {
-				has_diplomatic_pact = {
-					who = root
-					type = foreign_investment_rights
-				}	
-				has_diplomatic_pact = {
-					who = root
-					type = foreign_investment_agreement
-				}	
-				this = root
-				is_subject_of = root
-			}
+			nvgm_investment_ranking_eligible = yes
 		}
 		position = 0
-		max = 1
 		check_range_bounds = no
 		order_by = investment_pool
 		set_global_variable = {
@@ -1469,18 +1546,7 @@ nvgm_investment_rights_pool_ranking_effect = {
 	}
 	ordered_country = {
 		limit = {
-			OR = {
-				has_diplomatic_pact = {
-					who = root
-					type = foreign_investment_rights
-				}	
-				has_diplomatic_pact = {
-					who = root
-					type = foreign_investment_agreement
-				}	
-				this = root
-				is_subject_of = root
-			}
+			nvgm_investment_ranking_eligible = yes
 		}
 		set_local_variable = {
 			name = nvgm_investment_rights_pool_local_var
@@ -1495,11 +1561,14 @@ nvgm_investment_rights_pool_ranking_effect = {
 		order_by = investment_pool
 		max = 15
 		check_range_bounds = no
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_investment_rights_pool_local_var
-			divide = global_var:nvgm_1_investment_rights_pool_country_var
+			divide = {
+				value = global_var:nvgm_1_investment_rights_pool_country_var
+				min = 1
+			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_investment_rights_pool_local_var
 			multiply = 550
 		}
@@ -1510,8 +1579,11 @@ nvgm_investment_rights_pool_ranking_effect = {
 	}
 }
 
-# 従属国の投資プールの順位
 nvgm_subject_investment_pool_ranking_effect = {
+	set_global_variable = {
+		name = nvgm_1_subject_investment_pool_country_var
+		value = 1
+	}
 	clear_variable_list = nvgm_subject_investment_pool_list
 	ordered_country = {
 		limit = {
@@ -1521,7 +1593,6 @@ nvgm_subject_investment_pool_ranking_effect = {
 			}
 		}
 		position = 0
-		max = 1
 		check_range_bounds = no
 		order_by = investment_pool
 		set_global_variable = {
@@ -1549,11 +1620,14 @@ nvgm_subject_investment_pool_ranking_effect = {
 		order_by = investment_pool
 		max = 15
 		check_range_bounds = no
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_investment_pool_local_var
-			divide = global_var:nvgm_1_subject_investment_pool_country_var
+			divide = {
+				value = global_var:nvgm_1_subject_investment_pool_country_var
+				min = 1
+			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_investment_pool_local_var
 			multiply = 550
 		}
@@ -1564,7 +1638,6 @@ nvgm_subject_investment_pool_ranking_effect = {
 	}
 }
 
-# 従属国の階級割合
 nvgm_subject_pop_strata_effect = {
 	clear_variable_list = nvgm_subject_pop_strata_list
 	ordered_country = {
@@ -1634,8 +1707,11 @@ nvgm_subject_pop_strata_effect = {
 	}
 }
 
-# 従属国の技術研究の順位
 nvgm_subject_techs_researched_effect = {
+	set_global_variable = {
+		name = nvgm_1_subject_techs_researched_country_var
+		value = 1
+	}
 	clear_variable_list = nvgm_subject_techs_researched_list
 	ordered_country = {
 		limit = {
@@ -1646,7 +1722,6 @@ nvgm_subject_techs_researched_effect = {
 		}
 		order_by = techs_researched
 		position = 0
-		max = 1
 		check_range_bounds = no
 		set_global_variable = {
 			name = nvgm_1_subject_techs_researched_country_var
@@ -1673,15 +1748,18 @@ nvgm_subject_techs_researched_effect = {
 				target = prev
 			}
 		}
-		set_variable = { 
+		set_variable = {
 			name = nvgm_subject_techs_researched_value
 			value = techs_researched
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_techs_researched_local_var
-			divide = global_var:nvgm_1_subject_techs_researched_country_var
+			divide = {
+				value = global_var:nvgm_1_subject_techs_researched_country_var
+				min = 1
+			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_techs_researched_local_var
 			multiply = 550
 		}
@@ -1692,8 +1770,11 @@ nvgm_subject_techs_researched_effect = {
 	}
 }
 
-# 従属国の企業週間利益
 nvgm_subject_company_effect = {
+	set_global_variable = {
+		name = nvgm_1_subject_company_country_var
+		value = 1
+	}
 	clear_variable_list = nvgm_subject_company_list
 	ordered_company = {
 		limit = {
@@ -1706,7 +1787,6 @@ nvgm_subject_company_effect = {
 		}
 		order_by = weekly_profit
 		position = 0
-		max = 1
 		check_range_bounds = no
 		set_global_variable = {
 			name = nvgm_1_subject_company_country_var
@@ -1735,11 +1815,14 @@ nvgm_subject_company_effect = {
 				target = prev
 			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_company_local_var
-			divide = global_var:nvgm_1_subject_company_country_var
+			divide = {
+				value = global_var:nvgm_1_subject_company_country_var
+				min = 1
+			}
 		}
-		change_local_variable = { 
+		change_local_variable = {
 			name = nvgm_subject_company_local_var
 			multiply = 550
 		}

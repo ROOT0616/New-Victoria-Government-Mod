@@ -1,2152 +1,320 @@
-﻿# 追加の融資
-nvgm_bankroll_1 = {
+﻿nvgm_bankroll_1 = {
 	groups = {
 		general
 	}
 	requires_approval = no
 	should_notify_third_parties = no
+	texture = "gfx/interface/icons/lens_toolbar_icons/nvgm_bankroll_1.dds"
 	unlocking_technologies = {
 		central_banking
 	}
 	selectable = {
+		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
-		is_revolutionary = no
 	}
 	potential = {
 		scope:target_country = {
+			is_revolutionary = no
 			NOT = {
 				is_country_type = decentralized
 			}
 		}
 	}
 	possible = {
-		has_diplomatic_pact = {
-			who = scope:target_country
-			type = bankroll
+		in_default = no
+		NOT = {
+			has_war_with = scope:target_country
+		}
+		nvgm_money_transfer_from_to = {
+			SOURCE = root
+			TARGET = scope:target_country
 		}
 	}
 	pact = {
+		cost = 0
 		is_two_sided_pact = no
-		show_in_outliner = yes
-		can_be_used_in_sway_offers = yes
-		sway_maneuvers_cost = 10
-		relations_progress_per_day = 3		# At 100, +1 relations
-		relations_improvement_max = 80
+		maintenance_paid_by = first_country
 		income_transfer = 0.2
 		max_paying_country_income_to_transfer = 0.1
 		second_country_gets_income_transfer = yes
 		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_pact_leverage_generation_add = 50
-		}
-		weekly_effect = {
-			if = {
-				limit = {
-					NOT = {
-						scope:diplomatic_pact ?= {
-							is_forced_pact = yes
-						}
-					}
-				}
-				custom_tooltip = {
-					text = bankroll_weekly_obligation_effect
-					if = {
-						limit = {
-							root = {
-								owes_obligation_to = scope:target_country
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								root = {
-									set_owes_obligation_to = {
-										country = scope:target_country
-										setting = no
-									}
-								}
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							NOT = {
-								scope:target_country = {
-									owes_obligation_to = root
-								}
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								scope:target_country = {
-									set_owes_obligation_to = {
-										country = root
-										setting = yes
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				has_diplomatic_relevance = scope:target_country
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
-					scope:target_country.relations:root > relations_threshold:poor
-				}
-			}
-			show_about_to_break_warning = {
-				scope:target_country.relations:root <= -17				# this is: poor + 3
-				scope:target_country.relations_change_rate:root < 0
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
-					NOT = {
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						NOT = {
-							is_country_type = decentralized
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				country_rank >= scope:target_country.country_rank
-			}
+		relations_progress_per_day = 3
+		relations_improvement_max = 80
+		actor_can_break = {
+			always = yes
 		}
 		requirement_to_maintain = {
 			trigger = {
 				in_default = no
+				NOT = {
+					has_war_with = scope:target_country
+				}
+				nvgm_money_transfer_from_to = {
+					SOURCE = root
+					TARGET = scope:target_country
+				}
 			}
 		}
 	}
 	ai = {
-		max_influence_spending_fraction = 0.2
 		evaluation_chance = {
-			value = 0
-			if = {
-				limit = {
-					country_rank >= rank_value:major_power
-				}
-				add = {
-					value = country_rank
-					multiply = 0.05
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking if root wants a bankroll
-		accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = 5
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				max = 20
-				min = -20
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 30
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 20
-					min = 1
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking for a bankroll from root
-		junior_accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -10
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			subtract = {
-				value = 10
-				multiply = scope:actor.num_income_transfer_pacts
-			}
-			subtract = {
-				value = 10
-				multiply = num_income_transfer_pacts
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				add = 2
-				multiply = -10
-				min = -100
-				max = 0
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 100
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 25
-					min = 1
-				}
-			}
+			value = 0.25
 		}
 		propose_score = {
 			value = 10
-			if = {
-				limit = {
-					exists = c:CIR
-					has_journal_entry = je_great_game_control
-					country_has_primary_culture = cu:british
-					scope:target_country = {
-						c:CIR ?= this
-					}
-				}
-				add = {
-					value = 50
-				}
-			}
 		}
 		will_propose = {
-			scaled_debt <= 0
-			is_at_war = no
-			weekly_net_fixed_income > 0
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
+			scope:target_country = {
+				is_subject_of = root
 			}
-			OR = {
-				num_income_transfer_pacts < 1
-				AND = {
-					num_income_transfer_pacts < 2
-					income >= 200000
-				}
-				AND = {
-					num_income_transfer_pacts < 3
-					income >= 400000
-				}
-			}
-			OR = {
-				root = {
-					owes_obligation_to = scope:target_country
-				}
-				NOT = {
-					scope:target_country = {
-						owes_obligation_to = root
-					}
-				}
-				AND = {
-					is_at_war = no
-					scope:target_country = {
-						is_at_war = yes
-					}
-				}
-			}
-			# We want to have at least five times their income, and at least 50k income in general
-			OR = {
-				AND = {
-					income >= 50000
-					weekly_net_fixed_income >= 4000
-					scope:target_country.income <= 10000
-				}
-				AND = {
-					income >= 75000
-					weekly_net_fixed_income >= 6000
-					scope:target_country.income <= 15000
-				}
-				AND = {
-					income >= 100000
-					weekly_net_fixed_income >= 8000
-					scope:target_country.income <= 20000
-				}
-				AND = {
-					income >= 125000
-					weekly_net_fixed_income >= 10000
-					scope:target_country.income <= 25000
-				}
-				AND = {
-					income >= 150000
-					weekly_net_fixed_income >= 12000
-					scope:target_country.income <= 30000
-				}
-				AND = {
-					income >= 175000
-					weekly_net_fixed_income >= 14000
-					scope:target_country.income <= 35000
-				}
-				AND = {
-					income >= 200000
-					weekly_net_fixed_income >= 16000
-					scope:target_country.income <= 40000
-				}
-				AND = {
-					income >= 225000
-					weekly_net_fixed_income >= 18000
-					scope:target_country.income <= 45000
-				}
-				AND = {
-					income >= 250000
-					weekly_net_fixed_income >= 20000
-					scope:target_country.income <= 50000
-				}
-			}
+			fixed_income > 1000
 		}
 		will_break = {
-			NOT = {
-				AND = {
-					has_variable = forced_bankroll_time
-					var:forced_bankroll_time ?= scope:target_country
-				}
-			}
-			OR = {
-				scaled_debt > 0.25
-				AND = {
-					scaled_debt > 0
-					OR = {
-						weekly_net_fixed_income < 0
-						is_at_war = yes
-					}
-				}
-				NOT = {
-					has_attitude = {
-						who = scope:target_country
-						attitude = protective
-					}
-				}
-				num_income_transfer_pacts > 3
-				AND = {
-					num_income_transfer_pacts > 1
-					OR = {
-						weekly_net_fixed_income < -10000
-						income < 300000
-					}
-				}
-				AND = {
-					num_income_transfer_pacts > 2
-					OR = {
-						weekly_net_fixed_income < -5000
-						income < 500000
-					}
-				}
-				NOR = {
-					root = {
-						owes_obligation_to = scope:target_country
-					}
-					NOT = {
-						scope:target_country = {
-							owes_obligation_to = root
-						}
-					}
-					AND = {
-						is_at_war = no
-						scope:target_country = {
-							is_at_war = yes
-						}
-					}
-				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at weekly_net_fixed_income here since starting a bankroll changes it
-				NOR = {
-					AND = {
-						income >= 40000
-						scope:target_country.income <= 12500
-					}
-					AND = {
-						income >= 50000
-						scope:target_country.income <= 15000
-					}
-					AND = {
-						income >= 75000
-						scope:target_country.income <= 20000
-					}
-					AND = {
-						income >= 100000
-						scope:target_country.income <= 25000
-					}
-					AND = {
-						income >= 125000
-						scope:target_country.income <= 30000
-					}
-					AND = {
-						income >= 150000
-						scope:target_country.income <= 35000
-					}
-					AND = {
-						income >= 175000
-						scope:target_country.income <= 40000
-					}
-					AND = {
-						income >= 200000
-						scope:target_country.income <= 45000
-					}
-					AND = {
-						income >= 225000
-						scope:target_country.income <= 50000
-					}
-					AND = {
-						income >= 250000
-						scope:target_country.income <= 55000
-					}
-				}
-			}
+			in_default = yes
 		}
 	}
 }
 
-# さらに融資
 nvgm_bankroll_2 = {
 	groups = {
 		general
 	}
 	requires_approval = no
 	should_notify_third_parties = no
+	texture = "gfx/interface/icons/lens_toolbar_icons/nvgm_bankroll_2.dds"
 	unlocking_technologies = {
 		central_banking
 	}
 	selectable = {
+		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
-		is_revolutionary = no
 	}
 	potential = {
 		scope:target_country = {
+			is_revolutionary = no
 			NOT = {
 				is_country_type = decentralized
 			}
 		}
 	}
 	possible = {
+		in_default = no
+		NOT = {
+			has_war_with = scope:target_country
+		}
+		nvgm_money_transfer_from_to = {
+			SOURCE = root
+			TARGET = scope:target_country
+		}
 		has_diplomatic_pact = {
 			who = scope:target_country
 			type = nvgm_bankroll_1
 		}
 	}
 	pact = {
+		cost = 0
 		is_two_sided_pact = no
-		show_in_outliner = yes
-		can_be_used_in_sway_offers = yes
-		sway_maneuvers_cost = 10
-		relations_progress_per_day = 3		# At 100, +1 relations
-		relations_improvement_max = 80
+		maintenance_paid_by = first_country
 		income_transfer = 0.25
 		max_paying_country_income_to_transfer = 0.1
 		second_country_gets_income_transfer = yes
 		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_pact_leverage_generation_add = 50
-		}
-		weekly_effect = {
-			if = {
-				limit = {
-					NOT = {
-						scope:diplomatic_pact ?= {
-							is_forced_pact = yes
-						}
-					}
-				}
-				custom_tooltip = {
-					text = bankroll_weekly_obligation_effect
-					if = {
-						limit = {
-							root = {
-								owes_obligation_to = scope:target_country
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								root = {
-									set_owes_obligation_to = {
-										country = scope:target_country
-										setting = no
-									}
-								}
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							NOT = {
-								scope:target_country = {
-									owes_obligation_to = root
-								}
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								scope:target_country = {
-									set_owes_obligation_to = {
-										country = root
-										setting = yes
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				has_diplomatic_relevance = scope:target_country
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
-					scope:target_country.relations:root > relations_threshold:poor
-				}
-			}
-			show_about_to_break_warning = {
-				scope:target_country.relations:root <= -17				# this is: poor + 3
-				scope:target_country.relations_change_rate:root < 0
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
-					NOT = {
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						NOT = {
-							is_country_type = decentralized
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				country_rank >= scope:target_country.country_rank
-			}
+		relations_progress_per_day = 3
+		relations_improvement_max = 80
+		actor_can_break = {
+			always = yes
 		}
 		requirement_to_maintain = {
 			trigger = {
 				in_default = no
+				NOT = {
+					has_war_with = scope:target_country
+				}
+				nvgm_money_transfer_from_to = {
+					SOURCE = root
+					TARGET = scope:target_country
+				}
+				has_diplomatic_pact = {
+					who = scope:target_country
+					type = nvgm_bankroll_1
+				}
 			}
 		}
 	}
 	ai = {
-		max_influence_spending_fraction = 0.2
 		evaluation_chance = {
-			value = 0
-			if = {
-				limit = {
-					country_rank >= rank_value:major_power
-				}
-				add = {
-					value = country_rank
-					multiply = 0.05
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking if root wants a bankroll
-		accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = 5
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				max = 20
-				min = -20
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 30
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 20
-					min = 1
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking for a bankroll from root
-		junior_accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -10
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			subtract = {
-				value = 10
-				multiply = scope:actor.num_income_transfer_pacts
-			}
-			subtract = {
-				value = 10
-				multiply = num_income_transfer_pacts
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				add = 2
-				multiply = -10
-				min = -100
-				max = 0
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 100
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 25
-					min = 1
-				}
-			}
+			value = 0.25
 		}
 		propose_score = {
 			value = 10
-			if = {
-				limit = {
-					exists = c:CIR
-					has_journal_entry = je_great_game_control
-					country_has_primary_culture = cu:british
-					scope:target_country = {
-						c:CIR ?= this
-					}
-				}
-				add = {
-					value = 50
-				}
-			}
 		}
 		will_propose = {
-			scaled_debt <= 0
-			is_at_war = no
-			weekly_net_fixed_income > 0
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
+			scope:target_country = {
+				is_subject_of = root
 			}
-			OR = {
-				num_income_transfer_pacts < 1
-				AND = {
-					num_income_transfer_pacts < 2
-					income >= 200000
-				}
-				AND = {
-					num_income_transfer_pacts < 3
-					income >= 400000
-				}
-			}
-			OR = {
-				root = {
-					owes_obligation_to = scope:target_country
-				}
-				NOT = {
-					scope:target_country = {
-						owes_obligation_to = root
-					}
-				}
-				AND = {
-					is_at_war = no
-					scope:target_country = {
-						is_at_war = yes
-					}
-				}
-			}
-			# We want to have at least five times their income, and at least 50k income in general
-			OR = {
-				AND = {
-					income >= 50000
-					weekly_net_fixed_income >= 4000
-					scope:target_country.income <= 10000
-				}
-				AND = {
-					income >= 75000
-					weekly_net_fixed_income >= 6000
-					scope:target_country.income <= 15000
-				}
-				AND = {
-					income >= 100000
-					weekly_net_fixed_income >= 8000
-					scope:target_country.income <= 20000
-				}
-				AND = {
-					income >= 125000
-					weekly_net_fixed_income >= 10000
-					scope:target_country.income <= 25000
-				}
-				AND = {
-					income >= 150000
-					weekly_net_fixed_income >= 12000
-					scope:target_country.income <= 30000
-				}
-				AND = {
-					income >= 175000
-					weekly_net_fixed_income >= 14000
-					scope:target_country.income <= 35000
-				}
-				AND = {
-					income >= 200000
-					weekly_net_fixed_income >= 16000
-					scope:target_country.income <= 40000
-				}
-				AND = {
-					income >= 225000
-					weekly_net_fixed_income >= 18000
-					scope:target_country.income <= 45000
-				}
-				AND = {
-					income >= 250000
-					weekly_net_fixed_income >= 20000
-					scope:target_country.income <= 50000
-				}
-			}
+			fixed_income > 1000
 		}
 		will_break = {
-			NOT = {
-				AND = {
-					has_variable = forced_bankroll_time
-					var:forced_bankroll_time ?= scope:target_country
-				}
-			}
-			OR = {
-				scaled_debt > 0.25
-				AND = {
-					scaled_debt > 0
-					OR = {
-						weekly_net_fixed_income < 0
-						is_at_war = yes
-					}
-				}
-				NOT = {
-					has_attitude = {
-						who = scope:target_country
-						attitude = protective
-					}
-				}
-				num_income_transfer_pacts > 3
-				AND = {
-					num_income_transfer_pacts > 1
-					OR = {
-						weekly_net_fixed_income < -10000
-						income < 300000
-					}
-				}
-				AND = {
-					num_income_transfer_pacts > 2
-					OR = {
-						weekly_net_fixed_income < -5000
-						income < 500000
-					}
-				}
-				NOR = {
-					root = {
-						owes_obligation_to = scope:target_country
-					}
-					NOT = {
-						scope:target_country = {
-							owes_obligation_to = root
-						}
-					}
-					AND = {
-						is_at_war = no
-						scope:target_country = {
-							is_at_war = yes
-						}
-					}
-				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at weekly_net_fixed_income here since starting a bankroll changes it
-				NOR = {
-					AND = {
-						income >= 40000
-						scope:target_country.income <= 12500
-					}
-					AND = {
-						income >= 50000
-						scope:target_country.income <= 15000
-					}
-					AND = {
-						income >= 75000
-						scope:target_country.income <= 20000
-					}
-					AND = {
-						income >= 100000
-						scope:target_country.income <= 25000
-					}
-					AND = {
-						income >= 125000
-						scope:target_country.income <= 30000
-					}
-					AND = {
-						income >= 150000
-						scope:target_country.income <= 35000
-					}
-					AND = {
-						income >= 175000
-						scope:target_country.income <= 40000
-					}
-					AND = {
-						income >= 200000
-						scope:target_country.income <= 45000
-					}
-					AND = {
-						income >= 225000
-						scope:target_country.income <= 50000
-					}
-					AND = {
-						income >= 250000
-						scope:target_country.income <= 55000
-					}
-				}
-			}
+			in_default = yes
 		}
 	}
 }
 
-# やけくその融資
 nvgm_bankroll_3 = {
 	groups = {
 		general
 	}
 	requires_approval = no
 	should_notify_third_parties = no
+	texture = "gfx/interface/icons/lens_toolbar_icons/nvgm_bankroll_3.dds"
 	unlocking_technologies = {
 		central_banking
 	}
 	selectable = {
+		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
-		is_revolutionary = no
 	}
 	potential = {
 		scope:target_country = {
+			is_revolutionary = no
 			NOT = {
 				is_country_type = decentralized
 			}
 		}
 	}
 	possible = {
+		in_default = no
+		NOT = {
+			has_war_with = scope:target_country
+		}
+		nvgm_money_transfer_from_to = {
+			SOURCE = root
+			TARGET = scope:target_country
+		}
 		has_diplomatic_pact = {
 			who = scope:target_country
 			type = nvgm_bankroll_2
 		}
 	}
 	pact = {
+		cost = 0
 		is_two_sided_pact = no
-		show_in_outliner = yes
-		can_be_used_in_sway_offers = yes
-		sway_maneuvers_cost = 10
-		relations_progress_per_day = 3		# At 100, +1 relations
-		relations_improvement_max = 80
+		maintenance_paid_by = first_country
 		income_transfer = 0.3
 		max_paying_country_income_to_transfer = 0.1
 		second_country_gets_income_transfer = yes
 		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_pact_leverage_generation_add = 50
-		}
-		weekly_effect = {
-			if = {
-				limit = {
-					NOT = {
-						scope:diplomatic_pact ?= {
-							is_forced_pact = yes
-						}
-					}
-				}
-				custom_tooltip = {
-					text = bankroll_weekly_obligation_effect
-					if = {
-						limit = {
-							root = {
-								owes_obligation_to = scope:target_country
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								root = {
-									set_owes_obligation_to = {
-										country = scope:target_country
-										setting = no
-									}
-								}
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							NOT = {
-								scope:target_country = {
-									owes_obligation_to = root
-								}
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								scope:target_country = {
-									set_owes_obligation_to = {
-										country = root
-										setting = yes
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				has_diplomatic_relevance = scope:target_country
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
-					scope:target_country.relations:root > relations_threshold:poor
-				}
-			}
-			show_about_to_break_warning = {
-				scope:target_country.relations:root <= -17				# this is: poor + 3
-				scope:target_country.relations_change_rate:root < 0
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
-					NOT = {
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						NOT = {
-							is_country_type = decentralized
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				country_rank >= scope:target_country.country_rank
-			}
+		relations_progress_per_day = 3
+		relations_improvement_max = 80
+		actor_can_break = {
+			always = yes
 		}
 		requirement_to_maintain = {
 			trigger = {
 				in_default = no
+				NOT = {
+					has_war_with = scope:target_country
+				}
+				nvgm_money_transfer_from_to = {
+					SOURCE = root
+					TARGET = scope:target_country
+				}
+				has_diplomatic_pact = {
+					who = scope:target_country
+					type = nvgm_bankroll_2
+				}
 			}
 		}
 	}
 	ai = {
-		max_influence_spending_fraction = 0.2
 		evaluation_chance = {
-			value = 0
-			if = {
-				limit = {
-					country_rank >= rank_value:major_power
-				}
-				add = {
-					value = country_rank
-					multiply = 0.05
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking if root wants a bankroll
-		accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = 5
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				max = 20
-				min = -20
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 30
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 20
-					min = 1
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking for a bankroll from root
-		junior_accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -10
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			subtract = {
-				value = 10
-				multiply = scope:actor.num_income_transfer_pacts
-			}
-			subtract = {
-				value = 10
-				multiply = num_income_transfer_pacts
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				add = 2
-				multiply = -10
-				min = -100
-				max = 0
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 100
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 25
-					min = 1
-				}
-			}
+			value = 0.25
 		}
 		propose_score = {
 			value = 10
-			if = {
-				limit = {
-					exists = c:CIR
-					has_journal_entry = je_great_game_control
-					country_has_primary_culture = cu:british
-					scope:target_country = {
-						c:CIR ?= this
-					}
-				}
-				add = {
-					value = 50
-				}
-			}
 		}
 		will_propose = {
-			scaled_debt <= 0
-			is_at_war = no
-			weekly_net_fixed_income > 0
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
+			scope:target_country = {
+				is_subject_of = root
 			}
-			OR = {
-				num_income_transfer_pacts < 1
-				AND = {
-					num_income_transfer_pacts < 2
-					income >= 200000
-				}
-				AND = {
-					num_income_transfer_pacts < 3
-					income >= 400000
-				}
-			}
-			OR = {
-				root = {
-					owes_obligation_to = scope:target_country
-				}
-				NOT = {
-					scope:target_country = {
-						owes_obligation_to = root
-					}
-				}
-				AND = {
-					is_at_war = no
-					scope:target_country = {
-						is_at_war = yes
-					}
-				}
-			}
-			# We want to have at least five times their income, and at least 50k income in general
-			OR = {
-				AND = {
-					income >= 50000
-					weekly_net_fixed_income >= 4000
-					scope:target_country.income <= 10000
-				}
-				AND = {
-					income >= 75000
-					weekly_net_fixed_income >= 6000
-					scope:target_country.income <= 15000
-				}
-				AND = {
-					income >= 100000
-					weekly_net_fixed_income >= 8000
-					scope:target_country.income <= 20000
-				}
-				AND = {
-					income >= 125000
-					weekly_net_fixed_income >= 10000
-					scope:target_country.income <= 25000
-				}
-				AND = {
-					income >= 150000
-					weekly_net_fixed_income >= 12000
-					scope:target_country.income <= 30000
-				}
-				AND = {
-					income >= 175000
-					weekly_net_fixed_income >= 14000
-					scope:target_country.income <= 35000
-				}
-				AND = {
-					income >= 200000
-					weekly_net_fixed_income >= 16000
-					scope:target_country.income <= 40000
-				}
-				AND = {
-					income >= 225000
-					weekly_net_fixed_income >= 18000
-					scope:target_country.income <= 45000
-				}
-				AND = {
-					income >= 250000
-					weekly_net_fixed_income >= 20000
-					scope:target_country.income <= 50000
-				}
-			}
+			fixed_income > 1000
 		}
 		will_break = {
-			NOT = {
-				AND = {
-					has_variable = forced_bankroll_time
-					var:forced_bankroll_time ?= scope:target_country
-				}
-			}
-			OR = {
-				scaled_debt > 0.25
-				AND = {
-					scaled_debt > 0
-					OR = {
-						weekly_net_fixed_income < 0
-						is_at_war = yes
-					}
-				}
-				NOT = {
-					has_attitude = {
-						who = scope:target_country
-						attitude = protective
-					}
-				}
-				num_income_transfer_pacts > 3
-				AND = {
-					num_income_transfer_pacts > 1
-					OR = {
-						weekly_net_fixed_income < -10000
-						income < 300000
-					}
-				}
-				AND = {
-					num_income_transfer_pacts > 2
-					OR = {
-						weekly_net_fixed_income < -5000
-						income < 500000
-					}
-				}
-				NOR = {
-					root = {
-						owes_obligation_to = scope:target_country
-					}
-					NOT = {
-						scope:target_country = {
-							owes_obligation_to = root
-						}
-					}
-					AND = {
-						is_at_war = no
-						scope:target_country = {
-							is_at_war = yes
-						}
-					}
-				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at weekly_net_fixed_income here since starting a bankroll changes it
-				NOR = {
-					AND = {
-						income >= 40000
-						scope:target_country.income <= 12500
-					}
-					AND = {
-						income >= 50000
-						scope:target_country.income <= 15000
-					}
-					AND = {
-						income >= 75000
-						scope:target_country.income <= 20000
-					}
-					AND = {
-						income >= 100000
-						scope:target_country.income <= 25000
-					}
-					AND = {
-						income >= 125000
-						scope:target_country.income <= 30000
-					}
-					AND = {
-						income >= 150000
-						scope:target_country.income <= 35000
-					}
-					AND = {
-						income >= 175000
-						scope:target_country.income <= 40000
-					}
-					AND = {
-						income >= 200000
-						scope:target_country.income <= 45000
-					}
-					AND = {
-						income >= 225000
-						scope:target_country.income <= 50000
-					}
-					AND = {
-						income >= 250000
-						scope:target_country.income <= 55000
-					}
-				}
-			}
+			in_default = yes
 		}
 	}
 }
 
-# 泣きの融資
 nvgm_bankroll_4 = {
 	groups = {
 		general
 	}
 	requires_approval = no
 	should_notify_third_parties = no
+	texture = "gfx/interface/icons/lens_toolbar_icons/nvgm_bankroll_4.dds"
 	unlocking_technologies = {
 		central_banking
 	}
 	selectable = {
+		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
-		is_revolutionary = no
 	}
 	potential = {
 		scope:target_country = {
+			is_revolutionary = no
 			NOT = {
 				is_country_type = decentralized
 			}
 		}
 	}
 	possible = {
+		in_default = no
+		NOT = {
+			has_war_with = scope:target_country
+		}
+		nvgm_money_transfer_from_to = {
+			SOURCE = root
+			TARGET = scope:target_country
+		}
 		has_diplomatic_pact = {
 			who = scope:target_country
 			type = nvgm_bankroll_3
 		}
 	}
 	pact = {
+		cost = 0
 		is_two_sided_pact = no
-		show_in_outliner = yes
-		can_be_used_in_sway_offers = yes
-		sway_maneuvers_cost = 10
-		relations_progress_per_day = 3		# At 100, +1 relations
-		relations_improvement_max = 80
+		maintenance_paid_by = first_country
 		income_transfer = 0.35
 		max_paying_country_income_to_transfer = 0.1
 		second_country_gets_income_transfer = yes
 		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_pact_leverage_generation_add = 50
-		}
-		weekly_effect = {
-			if = {
-				limit = {
-					NOT = {
-						scope:diplomatic_pact ?= {
-							is_forced_pact = yes
-						}
-					}
-				}
-				custom_tooltip = {
-					text = bankroll_weekly_obligation_effect
-					if = {
-						limit = {
-							root = {
-								owes_obligation_to = scope:target_country
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								root = {
-									set_owes_obligation_to = {
-										country = scope:target_country
-										setting = no
-									}
-								}
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							NOT = {
-								scope:target_country = {
-									owes_obligation_to = root
-								}
-							}
-						}
-						random_list = {
-							998 = {
-							}
-							2 = {
-								scope:target_country = {
-									set_owes_obligation_to = {
-										country = root
-										setting = yes
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				has_diplomatic_relevance = scope:target_country
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS_NOT
-					scope:target_country.relations:root > relations_threshold:poor
-				}
-			}
-			show_about_to_break_warning = {
-				scope:target_country.relations:root <= -17				# this is: poor + 3
-				scope:target_country.relations_change_rate:root < 0
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
-					NOT = {
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						NOT = {
-							is_country_type = decentralized
-						}
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				country_rank >= scope:target_country.country_rank
-			}
+		relations_progress_per_day = 3
+		relations_improvement_max = 80
+		actor_can_break = {
+			always = yes
 		}
 		requirement_to_maintain = {
 			trigger = {
 				in_default = no
-			}
-		}
-	}
-	ai = {
-		max_influence_spending_fraction = 0.2
-		evaluation_chance = {
-			value = 0
-			if = {
-				limit = {
-					country_rank >= rank_value:major_power
-				}
-				add = {
-					value = country_rank
-					multiply = 0.05
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking if root wants a bankroll
-		accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = 5
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				max = 20
-				min = -20
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 30
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 20
-					min = 1
-				}
-			}
-		}
-		# This is only used for determining the value of a bankroll in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking for a bankroll from root
-		junior_accept_score = {
-			value = 0
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -10
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank > root.country_rank
-						}
-					}
-					value = -5
-				}
-				if = {
-					limit = {
-						scope:actor = {
-							country_rank < root.country_rank
-						}
-					}
-					value = 5
-				}
-			}
-			subtract = {
-				value = 10
-				multiply = scope:actor.num_income_transfer_pacts
-			}
-			subtract = {
-				value = 10
-				multiply = num_income_transfer_pacts
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-				value = "scope:actor.ai_gdp_comparison(root)"
-				add = 2
-				multiply = -10
-				min = -100
-				max = 0
-			}
-			if = {
-				limit = {
-					scaled_debt >= 0.05
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DEBT"
-					value = scaled_debt
-					multiply = 100
-					min = 1
-				}
-			}
-			else_if = {
-				limit = {
-					scaled_gold_reserves >= 0.05
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GOLD_RESERVES"
-					value = scaled_gold_reserves
-					multiply = 25
-					min = 1
-				}
-			}
-		}
-		propose_score = {
-			value = 10
-			if = {
-				limit = {
-					exists = c:CIR
-					has_journal_entry = je_great_game_control
-					country_has_primary_culture = cu:british
-					scope:target_country = {
-						c:CIR ?= this
-					}
-				}
-				add = {
-					value = 50
-				}
-			}
-		}
-		will_propose = {
-			scaled_debt <= 0
-			is_at_war = no
-			weekly_net_fixed_income > 0
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
-			}
-			OR = {
-				num_income_transfer_pacts < 1
-				AND = {
-					num_income_transfer_pacts < 2
-					income >= 200000
-				}
-				AND = {
-					num_income_transfer_pacts < 3
-					income >= 400000
-				}
-			}
-			OR = {
-				root = {
-					owes_obligation_to = scope:target_country
-				}
 				NOT = {
-					scope:target_country = {
-						owes_obligation_to = root
-					}
+					has_war_with = scope:target_country
 				}
-				AND = {
-					is_at_war = no
-					scope:target_country = {
-						is_at_war = yes
-					}
+				nvgm_money_transfer_from_to = {
+					SOURCE = root
+					TARGET = scope:target_country
 				}
-			}
-			# We want to have at least five times their income, and at least 50k income in general
-			OR = {
-				AND = {
-					income >= 50000
-					weekly_net_fixed_income >= 4000
-					scope:target_country.income <= 10000
-				}
-				AND = {
-					income >= 75000
-					weekly_net_fixed_income >= 6000
-					scope:target_country.income <= 15000
-				}
-				AND = {
-					income >= 100000
-					weekly_net_fixed_income >= 8000
-					scope:target_country.income <= 20000
-				}
-				AND = {
-					income >= 125000
-					weekly_net_fixed_income >= 10000
-					scope:target_country.income <= 25000
-				}
-				AND = {
-					income >= 150000
-					weekly_net_fixed_income >= 12000
-					scope:target_country.income <= 30000
-				}
-				AND = {
-					income >= 175000
-					weekly_net_fixed_income >= 14000
-					scope:target_country.income <= 35000
-				}
-				AND = {
-					income >= 200000
-					weekly_net_fixed_income >= 16000
-					scope:target_country.income <= 40000
-				}
-				AND = {
-					income >= 225000
-					weekly_net_fixed_income >= 18000
-					scope:target_country.income <= 45000
-				}
-				AND = {
-					income >= 250000
-					weekly_net_fixed_income >= 20000
-					scope:target_country.income <= 50000
-				}
-			}
-		}
-		will_break = {
-			NOT = {
-				AND = {
-					has_variable = forced_bankroll_time
-					var:forced_bankroll_time ?= scope:target_country
-				}
-			}
-			OR = {
-				scaled_debt > 0.25
-				AND = {
-					scaled_debt > 0
-					OR = {
-						weekly_net_fixed_income < 0
-						is_at_war = yes
-					}
-				}
-				NOT = {
-					has_attitude = {
-						who = scope:target_country
-						attitude = protective
-					}
-				}
-				num_income_transfer_pacts > 3
-				AND = {
-					num_income_transfer_pacts > 1
-					OR = {
-						weekly_net_fixed_income < -10000
-						income < 300000
-					}
-				}
-				AND = {
-					num_income_transfer_pacts > 2
-					OR = {
-						weekly_net_fixed_income < -5000
-						income < 500000
-					}
-				}
-				NOR = {
-					root = {
-						owes_obligation_to = scope:target_country
-					}
-					NOT = {
-						scope:target_country = {
-							owes_obligation_to = root
-						}
-					}
-					AND = {
-						is_at_war = no
-						scope:target_country = {
-							is_at_war = yes
-						}
-					}
-				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at weekly_net_fixed_income here since starting a bankroll changes it
-				NOR = {
-					AND = {
-						income >= 40000
-						scope:target_country.income <= 12500
-					}
-					AND = {
-						income >= 50000
-						scope:target_country.income <= 15000
-					}
-					AND = {
-						income >= 75000
-						scope:target_country.income <= 20000
-					}
-					AND = {
-						income >= 100000
-						scope:target_country.income <= 25000
-					}
-					AND = {
-						income >= 125000
-						scope:target_country.income <= 30000
-					}
-					AND = {
-						income >= 150000
-						scope:target_country.income <= 35000
-					}
-					AND = {
-						income >= 175000
-						scope:target_country.income <= 40000
-					}
-					AND = {
-						income >= 200000
-						scope:target_country.income <= 45000
-					}
-					AND = {
-						income >= 225000
-						scope:target_country.income <= 50000
-					}
-					AND = {
-						income >= 250000
-						scope:target_country.income <= 55000
-					}
-				}
-			}
-		}
-	}
-}
-
-raise_payments = {
-	requires_approval = no
-	groups = {
-		overlord
-		subject
-	}
-	# this is a subject action only for the sake of breaking it if LD is high enough
-	texture = "gfx/interface/icons/diplomatic_action_icons/raise_payments.dds"
-	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_01_raise_payments_benign"
-	selectable = {
-		has_dlc_feature = subject_and_bloc_actions
-	}
-	potential = {
-		any_scope_diplomatic_pact = {
-			"diplomatic_pact_other_country(root)" = scope:target_country
-			income_transfer > 0
-		}
-		OR = {
-			scope:target_country = {
-				is_subject_of = root
-				NOT = {
-					is_diplomatic_play_enemy_of = root
-				}
-			}
-			AND = {
-				# only valid for subject countries if a pact is already established
-				is_subject_of = scope:target_country
 				has_diplomatic_pact = {
 					who = scope:target_country
-					type = raise_payments
-				}
-			}
-		}
-	}
-	possible = {
-		scope:target_country = {
-			liberty_desire < 75
-		}
-		scope:target_country = {
-			in_default = no
-		}
-		NOR = {
-			has_diplomatic_pact = {
-				who = scope:target_country
-				type = decrease_payments
-			}
-			# NVGM
-			has_diplomatic_pact = {
-				who = scope:target_country
-				type = NVGM_decrease_payments
-			}
-			# NVGM
-		}
-	}
-	pact = {
-		cost = 25
-		recipient_pays_maintenance = no
-		relations_progress_per_day = -1
-		income_transfer = 0.1
-		second_country_gets_income_transfer = no
-		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_liberty_desire_add = 0.1
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_SUBJECT_WITH_INCOME_TRANSFER"
-					any_scope_diplomatic_pact = {
-						"diplomatic_pact_other_country(root)" = scope:target_country
-						income_transfer > 0
-					}
-				}
-			}
-		}
-	}
-	ai = {
-		max_influence_spending_fraction = 0.1
-		evaluation_chance = {
-			value = 0.25
-		}
-		propose_score = {
-			value = 10
-		}
-		will_propose = {
-			"relations(scope:target_country)" < relations_threshold:cordial
-			has_attitude = {
-				who = scope:target_country
-				attitude = domineering
-			}
-			OR = {
-				has_strategy = ai_strategy_economic_imperialism
-				has_strategy = ai_strategy_territorial_expansion
-				has_strategy = ai_strategy_world_revolution
-			}
-			scope:target_country = {
-				"potential_diplomatic_play_power_ratio(root)" <= 0.5
-			}
-		}
-		will_break = {
-			OR = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = protective
-				}
-				AND = {
-					scope:target_country = {
-						liberty_desire >= 50
-					}
-					"relations(scope:target_country)" >= relations_threshold:friendly
-					NOR = {
-						has_strategy = ai_strategy_economic_imperialism
-						has_strategy = ai_strategy_territorial_expansion
-						has_strategy = ai_strategy_world_revolution
-					}
-				}
-			}
-		}
-	}
-}
-
-decrease_payments = {
-	requires_approval = no
-	groups = {
-		overlord
-	}
-	texture = "gfx/interface/icons/diplomatic_action_icons/decrease_payments.dds"
-	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_02_decrease_payments_benign"
-	selectable = {
-		has_dlc_feature = subject_and_bloc_actions
-	}
-	potential = {
-		any_scope_diplomatic_pact = {
-			"diplomatic_pact_other_country(root)" = scope:target_country
-			income_transfer > 0
-		}
-		scope:target_country = {
-			NOT = {
-				is_diplomatic_play_enemy_of = root
-			}
-		}
-	}
-	possible = {
-		NOR = {
-			has_diplomatic_pact = {
-				who = scope:target_country
-				type = raise_payments
-			}
-			has_diplomatic_pact = {
-				who = scope:target_country
-				type = NVGM_decrease_payments
-			}
-		}
-	}
-	pact = {
-		cost = 0
-		forced_duration = 12
-		recipient_pays_maintenance = no
-		income_transfer = -0.1
-		second_country_gets_income_transfer = no
-		income_transfer_based_on_second_country = yes
-		second_modifier = {
-			country_liberty_desire_add = -0.05
-		}
-		manual_break_effect = {
-			scope:target_country = {
-				add_liberty_desire = 10
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
-					NOT = {
-						has_war_with = scope:target_country
-					}
-				}
-			}
-		}
-		requirement_to_maintain = {
-			trigger = {
-				custom_tooltip = {
-					text = "DIPLOMATIC_PACT_REQUIREMENT_SUBJECT_WITH_INCOME_TRANSFER"
-					any_scope_diplomatic_pact = {
-						"diplomatic_pact_other_country(root)" = scope:target_country
-						income_transfer > 0
-					}
+					type = nvgm_bankroll_3
 				}
 			}
 		}
@@ -2159,47 +327,17 @@ decrease_payments = {
 			value = 10
 		}
 		will_propose = {
-			"relations(scope:target_country)" >= relations_threshold:friendly
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
-			}
 			scope:target_country = {
-				liberty_desire >= 25
+				is_subject_of = root
 			}
-			OR = {
-				has_strategy = ai_strategy_maintain_power_balance
-				has_strategy = ai_strategy_armed_isolationism
-				has_strategy = ai_strategy_socialism_in_one_country
-				has_strategy = ai_strategy_anti_imperialism
-			}
+			fixed_income > 1000
 		}
 		will_break = {
-			OR = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = domineering
-				}
-				AND = {
-					scope:target_country = {
-						liberty_desire < 50
-					}
-					OR = {
-						"relations(scope:target_country)" < relations_threshold:amicable
-						NOR = {
-							has_strategy = ai_strategy_maintain_power_balance
-							has_strategy = ai_strategy_armed_isolationism
-							has_strategy = ai_strategy_socialism_in_one_country
-							has_strategy = ai_strategy_anti_imperialism
-						}
-					}
-				}
-			}
+			in_default = yes
 		}
 	}
 }
 
-# 支払義務を全額免除
 NVGM_decrease_payments = {
 	requires_approval = no
 	should_notify_third_parties = no
@@ -2221,6 +359,13 @@ NVGM_decrease_payments = {
 				is_diplomatic_play_enemy_of = root
 			}
 		}
+		scope:target_country = {
+			is_subject_of = root
+			NOR = {
+				is_subject_type = subject_type_protectorate
+				is_subject_type = subject_type_personal_union
+			}
+		}
 	}
 	possible = {
 		NOR = {
@@ -2237,12 +382,9 @@ NVGM_decrease_payments = {
 	pact = {
 		cost = 0
 		forced_duration = 12
-		recipient_pays_maintenance = no
-		income_transfer = -0.3
-		second_country_gets_income_transfer = no
-		income_transfer_based_on_second_country = yes
 		second_modifier = {
 			country_liberty_desire_add = -0.15
+			country_overlord_income_transfer_mult = -1
 		}
 		manual_break_effect = {
 			scope:target_country = {
@@ -2270,6 +412,7 @@ NVGM_decrease_payments = {
 				}
 			}
 		}
+		maintenance_paid_by = first_country
 	}
 	ai = {
 		evaluation_chance = {
@@ -2319,7 +462,6 @@ NVGM_decrease_payments = {
 	}
 }
 
-# 使節派遣
 NVGM_request_recognition = {
 	groups = {
 		overlord
@@ -2357,6 +499,12 @@ NVGM_request_recognition = {
 					}
 				}
 			}
+		}
+		scope:target_country = {
+			is_subject_of = root
+		}
+		NOT = {
+			has_war_with = scope:target_country
 		}
 	}
 	accept_effect = {
@@ -2419,7 +567,6 @@ NVGM_request_recognition = {
 	}
 }
 
-# 治安維持支援
 NVGM_violent_suppression = {
 	requires_approval = no
 	should_notify_third_parties = no
@@ -2434,6 +581,12 @@ NVGM_violent_suppression = {
 		has_technology_researched = standing_army
 	}
 	possible = {
+		scope:target_country = {
+			is_subject_of = root
+		}
+		NOT = {
+			has_war_with = scope:target_country
+		}
 	}
 	pact = {
 		cost = 100
@@ -2467,6 +620,21 @@ NVGM_violent_suppression = {
 						"diplomatic_pact_other_country(root)" = scope:target_country
 						income_transfer > 0
 					}
+				}
+			}
+		}
+		maintenance_paid_by = first_country
+		forced_duration = 12
+		actor_can_break = {
+			always = yes
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+				NOT = {
+					has_war_with = scope:target_country
 				}
 			}
 		}
@@ -2519,7 +687,6 @@ NVGM_violent_suppression = {
 	}
 }
 
-# 食糧支援
 NVGM_emergency_relief = {
 	requires_approval = no
 	should_notify_third_parties = no
@@ -2534,6 +701,12 @@ NVGM_emergency_relief = {
 		has_technology_researched = centralization
 	}
 	possible = {
+		scope:target_country = {
+			is_subject_of = root
+		}
+		NOT = {
+			has_war_with = scope:target_country
+		}
 	}
 	accept_effect = {
 		custom_tooltip = {
@@ -2552,9 +725,6 @@ NVGM_emergency_relief = {
 			interest_group_pop_attraction_mult = -0.05
 		}
 		income_transfer_to_pops = {
-			# 定義された場合、送金された所得は国庫ではなく、対象国のappro popsに送られる。
-			# ターゲットの各階層に配分される資金の割合のスクリプト値
-			# upper_strata_popsが100と評価され、合計値が1000である場合、upper strata popsは10％を得ることになる。
 			upper_strata_pops = {
 				value = 10
 			}
@@ -2626,6 +796,21 @@ NVGM_emergency_relief = {
 				}
 			}
 		}
+		maintenance_paid_by = first_country
+		forced_duration = 12
+		actor_can_break = {
+			always = yes
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+				NOT = {
+					has_war_with = scope:target_country
+				}
+			}
+		}
 	}
 	ai = {
 		evaluation_chance = {
@@ -2675,7 +860,6 @@ NVGM_emergency_relief = {
 	}
 }
 
-# 政策支援
 NVGM_fund_lobbies = {
 	requires_approval = no
 	should_notify_third_parties = no
@@ -2714,8 +898,8 @@ NVGM_fund_lobbies = {
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_autocracy
-							has_law = law_type:law_oligarchy
+							has_law_or_variant = law_type:law_autocracy
+							has_law_or_variant = law_type:law_oligarchy
 						}
 					}
 					add = 0.5
@@ -2723,15 +907,15 @@ NVGM_fund_lobbies = {
 				else_if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_wealth_voting
-							has_law = law_type:law_landed_voting
+							has_law_or_variant = law_type:law_wealth_voting
+							has_law_or_variant = law_type:law_landed_voting
 						}
 					}
 					add = 0.25
 				}
 				else_if = {
 					limit = {
-						has_law = law_type:law_anarchy
+						has_law_or_variant = law_type:law_anarchy
 					}
 					subtract = 0.25
 				}
@@ -2743,8 +927,8 @@ NVGM_fund_lobbies = {
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_census_voting
-							has_law = law_type:law_universal_suffrage
+							has_law_or_variant = law_type:law_census_voting
+							has_law_or_variant = law_type:law_universal_suffrage
 						}
 					}
 					add = 0.25
@@ -2757,8 +941,8 @@ NVGM_fund_lobbies = {
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_universal_suffrage
-							has_law = law_type:law_anarchy
+							has_law_or_variant = law_type:law_universal_suffrage
+							has_law_or_variant = law_type:law_anarchy
 						}
 					}
 					add = 0.25
@@ -2772,7 +956,7 @@ NVGM_fund_lobbies = {
 		second_modifier = {
 			country_law_enactment_imposition_success_add = 0.20
 			country_law_enactment_stall_mult = -0.20
-			country_law_enactment_time_mult = -0.20
+			country_law_enactment_speed_mult = 0.25
 		}
 		requirement_to_maintain = {
 			trigger = {
@@ -2787,7 +971,7 @@ NVGM_fund_lobbies = {
 				}
 			}
 			show_about_to_break_warning = {
-				scope:target_country.relations:root <= -17				# this is: poor + 3
+				scope:target_country.relations:root <= -17
 				scope:target_country.relations_change_rate:root < 0
 			}
 		}
@@ -2829,6 +1013,21 @@ NVGM_fund_lobbies = {
 				in_default = no
 			}
 		}
+		maintenance_paid_by = first_country
+		forced_duration = 12
+		actor_can_break = {
+			always = yes
+		}
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = {
+					is_subject_of = root
+				}
+				NOT = {
+					has_war_with = scope:target_country
+				}
+			}
+		}
 	}
 	ai = {
 		max_influence_spending_fraction = 0.2
@@ -2845,7 +1044,7 @@ NVGM_fund_lobbies = {
 		will_propose = {
 			scaled_debt <= 0
 			is_at_war = no
-			weekly_net_fixed_income > 0
+			net_fixed_income > 0
 			has_attitude = {
 				who = scope:target_country
 				attitude = protective
@@ -2877,51 +1076,50 @@ NVGM_fund_lobbies = {
 					}
 				}
 			}
-			# We want to have at least five times their income, and at least 50k income in general
 			OR = {
 				AND = {
 					income >= 50000
-					weekly_net_fixed_income >= 4000
+					net_fixed_income >= 4000
 					scope:target_country.income <= 10000
 				}
 				AND = {
 					income >= 75000
-					weekly_net_fixed_income >= 6000
+					net_fixed_income >= 6000
 					scope:target_country.income <= 15000
 				}
 				AND = {
 					income >= 100000
-					weekly_net_fixed_income >= 8000
+					net_fixed_income >= 8000
 					scope:target_country.income <= 20000
 				}
 				AND = {
 					income >= 125000
-					weekly_net_fixed_income >= 10000
+					net_fixed_income >= 10000
 					scope:target_country.income <= 25000
 				}
 				AND = {
 					income >= 150000
-					weekly_net_fixed_income >= 12000
+					net_fixed_income >= 12000
 					scope:target_country.income <= 30000
 				}
 				AND = {
 					income >= 175000
-					weekly_net_fixed_income >= 14000
+					net_fixed_income >= 14000
 					scope:target_country.income <= 35000
 				}
 				AND = {
 					income >= 200000
-					weekly_net_fixed_income >= 16000
+					net_fixed_income >= 16000
 					scope:target_country.income <= 40000
 				}
 				AND = {
 					income >= 225000
-					weekly_net_fixed_income >= 18000
+					net_fixed_income >= 18000
 					scope:target_country.income <= 45000
 				}
 				AND = {
 					income >= 250000
-					weekly_net_fixed_income >= 20000
+					net_fixed_income >= 20000
 					scope:target_country.income <= 50000
 				}
 			}
@@ -2932,7 +1130,7 @@ NVGM_fund_lobbies = {
 				AND = {
 					scaled_debt > 0
 					OR = {
-						weekly_net_fixed_income < 0
+						net_fixed_income < 0
 						is_at_war = yes
 					}
 				}
@@ -2946,14 +1144,14 @@ NVGM_fund_lobbies = {
 				AND = {
 					num_income_transfer_pacts > 1
 					OR = {
-						weekly_net_fixed_income < -10000
+						net_fixed_income < -10000
 						income < 300000
 					}
 				}
 				AND = {
 					num_income_transfer_pacts > 2
 					OR = {
-						weekly_net_fixed_income < -5000
+						net_fixed_income < -5000
 						income < 500000
 					}
 				}
@@ -2973,8 +1171,6 @@ NVGM_fund_lobbies = {
 						}
 					}
 				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at weekly_net_fixed_income here since starting a bankroll changes it
 				NOR = {
 					AND = {
 						income >= 40000
@@ -3018,6 +1214,14 @@ NVGM_fund_lobbies = {
 					}
 				}
 			}
+		}
+	}
+	possible = {
+		scope:target_country = {
+			is_subject_of = root
+		}
+		NOT = {
+			has_war_with = scope:target_country
 		}
 	}
 }

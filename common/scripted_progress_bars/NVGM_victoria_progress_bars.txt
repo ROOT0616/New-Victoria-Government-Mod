@@ -6,8 +6,7 @@
 		add = 10
 		if = {
 			limit = {
-				# Your GDP per Capita is relatively high
-				gdp_per_capita_ranking <= 20				# Lower = better
+				gdp_per_capita_ranking <= 20
 			}
 			add = {
 				desc = "earning_recognition_progress_gdpc_tt"
@@ -16,7 +15,6 @@
 		}
 		if = {
 			limit = {
-				# Your Standard of Living is relatively high
 				sol_ranking <= 20
 			}
 			add = {
@@ -63,7 +61,6 @@
 	max_value = 600
 }
 
-# 棄民政策
 nvgm_abandonment_policy_progress_bar = {
 	name = "nvgm_abandonment_policy_progress_bar"
 	desc = "nvgm_abandonment_policy_progress_bar_desc"

@@ -1,7 +1,4 @@
-﻿# 都市セクター「交通」
-# 	農道(馬)		なし				→インフラ+1
-# 農道  労働者+200
-pm_nvgm_traffic_farm_road = {
+﻿pm_nvgm_traffic_farm_road = {
 	texture = "gfx/interface/icons/production_method_icons/trains_steam.dds"
 	building_modifiers = {
 		level_scaled = {
@@ -15,8 +12,6 @@ pm_nvgm_traffic_farm_road = {
 	}
 }
 
-# 	石畳(馬)		工具+1				→インフラ+5
-# 石畳  機械工+50、労働者+300
 pm_nvgm_traffic_flagstone = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 	building_modifiers = {
@@ -36,8 +31,6 @@ pm_nvgm_traffic_flagstone = {
 	}
 }
 
-# 	アスファルト(車)	工具+2、自動車+2		→インフラ+10(内燃機関で解放)
-# アスファルト  技師+20、機械工+100、事務員+50、労働者+500
 pm_nvgm_traffic_asphalt = {
 	texture = "gfx/interface/icons/production_method_icons/trains_diesel.dds"
 	unlocking_technologies = {
@@ -63,8 +56,6 @@ pm_nvgm_traffic_asphalt = {
 	}
 }
 
-# 	高速道路(車)	工具+2、自動車+5、無線+1	→インフラ+15(内燃機関で解放)
-# 高速道路  技師+50、機械工+250、事務員+200、労働者+750
 pm_nvgm_traffic_expressway = {
 	texture = "gfx/interface/icons/production_method_icons/trains_diesel.dds"
 	unlocking_technologies = {
@@ -91,8 +82,6 @@ pm_nvgm_traffic_expressway = {
 	}
 }
 
-# 病院
-# 非宗教的管理
 pm_secular_nvgm_clinic = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
 	disallowing_laws = {
@@ -107,50 +96,15 @@ pm_secular_nvgm_clinic = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			################# V1 400 (400 x 52 / 4875 = 4.3) ####################### 企業バフ乗っても黒字化厳しい
-			# # input goods 200
-			# goods_input_fabric_add = 4				# x20 = 80
-			# goods_input_paper_add = 1				# x30 = 30
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 600
-			# goods_output_services_add = 20				# x30 = 600
-			################# V2 520 (520 x 52 / 4875 = 5.5) #######################
-			# # input goods 200
-			# goods_input_fabric_add = 4				# x20 = 80
-			# goods_input_paper_add = 1				# x30 = 30
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 720
-			# goods_output_services_add = 24				# x30 = 720
-			################# V3 590 (590 x 52 / 4875 = 6.3) #######################
-			# input goods 250
-			goods_input_fabric_add = 5				# x20 = 100
-			goods_input_paper_add = 2				# x30 = 60
-			goods_input_liquor_add = 3				# x30 = 90
-			# output goods 840
-			goods_output_services_add = 28				# x30 = 840
-			################# V4 710 (710 x 52 / 4875 = 7.6) #######################
-			# # input goods 250
-			# goods_input_fabric_add = 5				# x20 = 100
-			# goods_input_paper_add = 2				# x30 = 60
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 960
-			# goods_output_services_add = 32				# x30 = 960
-			################# V5 830 (830 x 52 / 4875 = 8.9) #######################
-			# # input goods 250
-			# goods_input_fabric_add = 5				# x20 = 100
-			# goods_input_paper_add = 2				# x30 = 60
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 1080
-			# goods_output_services_add = 36				# x30 = 1080
-			################# test #################################################
-			# # goods_output_gold_add = 32				# x30 = 960
-			# goods_output_oil_add = 60
+			goods_input_fabric_add = 5
+			goods_input_paper_add = 2
+			goods_input_liquor_add = 3
+			goods_output_services_add = 28
 		}
 		level_scaled = {
-			# 4875 total laborer wages
-			building_employment_clerks_add = 250	# x1.5 = 375 laborer wages
-			building_employment_academics_add = 750	# x4 = 3000 laborer wages
-			building_employment_shopkeepers_add = 500	# x3 = 1500 laborer wages
+			building_employment_clerks_add = 250
+			building_employment_academics_add = 750
+			building_employment_shopkeepers_add = 500
 		}
 		unscaled = {
 			building_academics_shares_add = 50
@@ -158,7 +112,6 @@ pm_secular_nvgm_clinic = {
 	}
 }
 
-# 宗教的管理
 pm_religious_nvgm_clinic = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	disallowing_laws = {
@@ -174,48 +127,16 @@ pm_religious_nvgm_clinic = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			################# V1 400 (400 x 52 / 4500 = 4.6) ####################### 企業バフ乗っても黒字化厳しい
-			# # input goods 200
-			# goods_input_fabric_add = 4				# x20 = 80
-			# goods_input_paper_add = 1				# x30 = 30
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 600
-			# goods_output_services_add = 20				# x30 = 600
-			################# V2 520 (520 x 52 / 4500 = 6.0) #######################
-			# # input goods 200
-			# goods_input_fabric_add = 4				# x20 = 80
-			# goods_input_paper_add = 1				# x30 = 30
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 720
-			# goods_output_services_add = 24				# x30 = 720
-			################# V3 590 (590 x 52 / 4500 = 6.8) #######################
-			# input goods 250
-			goods_input_fabric_add = 5				# x20 = 100
-			goods_input_paper_add = 2				# x30 = 60
-			goods_input_liquor_add = 3				# x30 = 90
-			# output goods 840
-			goods_output_services_add = 28				# x30 = 840
-			################# V4 710 (710 x 52 / 4500 = 8.2) #######################
-			# # input goods 250
-			# goods_input_fabric_add = 5				# x20 = 100
-			# goods_input_paper_add = 2				# x30 = 60
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 960
-			# goods_output_services_add = 32				# x30 = 960
-			################# V5 830 (830 x 52 / 4500 = 9.6) #######################
-			# # input goods 250
-			# goods_input_fabric_add = 5				# x20 = 100
-			# goods_input_paper_add = 2				# x30 = 60
-			# goods_input_liquor_add = 3				# x30 = 90
-			# # output goods 1080
-			# goods_output_services_add = 36				# x30 = 1080
+			goods_input_fabric_add = 5
+			goods_input_paper_add = 2
+			goods_input_liquor_add = 3
+			goods_output_services_add = 28
 		}
 		level_scaled = {
-			# 4500 total laborer wages
-			building_employment_clerks_add = 250	# x1.5 = 375 laborer wages
-			building_employment_clergymen_add = 375	# x3 = 1125 laborer wages
-			building_employment_academics_add = 375	# x4 = 1500 laborer wages
-			building_employment_shopkeepers_add = 500	# x3 = 1500 laborer wages
+			building_employment_clerks_add = 250
+			building_employment_clergymen_add = 375
+			building_employment_academics_add = 375
+			building_employment_shopkeepers_add = 500
 		}
 		unscaled = {
 			building_academics_shares_add = 40
@@ -223,107 +144,3 @@ pm_religious_nvgm_clinic = {
 		}
 	}
 }
-
-# 人間牧場
-pm_nvgm_compulsory_human_ranch = {
-	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
-	disallowing_laws = {
-		law_state_religion
-	}
-	state_modifiers = {
-		workforce_scaled = {
-			state_turmoil_effects_mult = 0.25
-			state_birth_rate_mult = 0.2
-		}
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_grain_add = 20
-		}
-		level_scaled = {
-			building_employment_bureaucrats_add = 1500
-		}
-	}
-}
-
-pm_nvgm_volunteer_human_ranch = {
-	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
-	disallowing_laws = {
-		law_total_separation
-		law_state_atheism
-	}
-	state_modifiers = {
-		workforce_scaled = {
-			state_birth_rate_mult = 0.05
-		}
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_grain_add = 15
-			goods_input_groceries_add = 5
-		}
-		level_scaled = {
-			building_employment_bureaucrats_add = 1500
-		}
-	}
-}
-
-# # 医師信用組合
-# pm_nvgm_doctors_credit_union_privately_owned = {
-# 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
-# 	replacement_if_valid = pm_nvgm_doctors_credit_union_principle_divine_economics_2
-	
-# 	building_modifiers = { 
-# 		level_scaled = {
-# 			building_employment_capitalists_add = 50
-# 			building_employment_shopkeepers_add = 50
-# 			building_employment_academics_add = 50
-# 			building_employment_clerks_add = 100
-# 		}
-# 		unscaled = {
-# 			building_capitalists_shares_add = 10
-# 			building_academics_shares_add = 2
-# 		}
-# 	}
-# }
-
-# pm_nvgm_doctors_credit_union_publicly_traded = {
-# 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
-	
-# 	unlocking_technologies = { mutual_funds }
-	
-# 	building_modifiers = { 
-# 		level_scaled = {
-# 			building_employment_capitalists_add = 50
-# 			building_employment_bureaucrats_add = 50
-# 			building_employment_academics_add = 50
-# 			building_employment_clerks_add = 100
-# 		}
-# 		unscaled = {
-# 			building_capitalists_shares_add = 10
-# 		}			
-# 	}	
-# }
-
-# pm_nvgm_doctors_credit_union_principle_divine_economics_2 = {
-# 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
-# 	is_hidden_when_unavailable = yes
-	
-# 	unlocking_principles = {
-# 		principle_divine_economics_2
-# 		principle_divine_economics_3
-# 	}
-
-# 	building_modifiers = { 
-# 		level_scaled = {
-# 			building_employment_capitalists_add = 50
-# 			building_employment_clergymen_add = 50
-# 			building_employment_academics_add = 50
-# 			building_employment_clerks_add = 100
-# 		}
-# 		unscaled = {
-# 			building_capitalists_shares_add = 10
-# 			building_clergymen_shares_add = 2
-# 		}
-# 	}
-# }

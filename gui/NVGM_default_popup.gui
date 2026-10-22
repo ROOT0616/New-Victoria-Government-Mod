@@ -4,7 +4,7 @@
 		layer = top
 		visible = "[GetVariableSystem.Exists('show_nvgm_default_popup')]"
 		blockoverride "window_header_name" {
-			text = "NVGM Menu"
+			text = "nvgm_menu_title"
 		}
 		blockoverride "header_close_button_visibility" {
 			visible = yes
@@ -42,7 +42,7 @@
 								parentanchor = vcenter|left
 								checked = "[GetVariableSystem.Exists('show_nvgm_data_popup')]"
 								onclick = "[GetVariableSystem.Toggle('show_nvgm_data_popup')]"
-								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.3')]"
+								onclick = "[GetScriptedGui('nvgm_refresh_statistics_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -60,7 +60,7 @@
 								size = { 24 24 }
 								parentanchor = vcenter|left
 								checked = "[GetVariableSystem.Exists('show_nvgm_ranking_chart_popup')]"
-								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
+								onclick = "[GetScriptedGui('nvgm_refresh_statistics_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 								onclick = "[GetVariableSystem.Toggle('show_nvgm_ranking_chart_popup')]"
 								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
 								onclick = "[GetVariableSystem.Toggle('show_not_nvgm_2_ranking')]"
@@ -91,11 +91,11 @@
 								parentanchor = vcenter|left
 								checked = "[GetVariableSystem.Exists('show_nvgm_subject_popup')]"
 								onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup')]"
-								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+								onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 								onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_investment_pool')]"
-								onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+								onclick = "[GetScriptedGui('nvgm_refresh_statistics_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 					}
@@ -108,7 +108,7 @@
 		layer = top
 		visible = "[GetVariableSystem.Exists('show_nvgm_data_popup')]"
 		blockoverride "window_header_name" {
-			text = "Global Data Menu"
+			text = "nvgm_global_data_title"
 		}
 		blockoverride "header_back_button_visibility" {
 			visible = yes
@@ -117,9 +117,9 @@
 			visible = yes
 		}
     blockoverride "header_back_button" {
-			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_data_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_data_popup')]"
     }
 		blockoverride "header_close_button" {
 			onclick = "[GetVariableSystem.Clear('show_nvgm_data_popup')]"
@@ -274,7 +274,7 @@
 					button_icon_reset = {
 						parentanchor = vcenter|left
 						tooltip = "TOOLTIP_RESET"
-						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.3')]"
+						onclick = "[GetScriptedGui('nvgm_refresh_statistics_3').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						size = { 24 24 }
 					}
 				}
@@ -295,7 +295,7 @@
 			visible = yes
 		}
     blockoverride "header_back_button" {
-			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Clear('show_nvgm_ranking_chart_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_not_nvgm_1_ranking')]"
@@ -594,7 +594,7 @@
 						button_icon_reset = {
 							parentanchor = vcenter|left
 							tooltip = "TOOLTIP_RESET"
-							onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.1')]"
+							onclick = "[GetScriptedGui('nvgm_refresh_statistics_1').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_my_ranking' )]"
 							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_1_ranking' )]"
 							onclick = "[GetVariableSystem.Clear( 'show_not_nvgm_2_ranking' )]"
@@ -639,18 +639,18 @@
 			visible = yes
 		}
     blockoverride "header_back_button" {
-			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
     }
 		blockoverride "header_close_button" {
 			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 		}
 		blockoverride "scrollarea_content" {
 			nvgm_subject_popup_investment_pool = {}
@@ -665,9 +665,9 @@
 						size = { 200 40 }
 						text = "[concept_investment_pool]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_investment_pool')]"
 					}
 					button = {
@@ -675,9 +675,9 @@
 						size = { 200 40 }
 						text = "NVGM_SUBJECT_POP_STRATA"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_pop_strata')]"
 					}
 					button = {
@@ -685,9 +685,9 @@
 						size = { 200 40 }
 						text = "[concept_technology]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_techs_researched')]"
 					}
 				}
@@ -702,7 +702,7 @@
 					button_icon_reset = {
 						parentanchor = vcenter|left
 						tooltip = "TOOLTIP_RESET"
-						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+						onclick = "[GetScriptedGui('nvgm_refresh_statistics_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						size = { 24 24 }
 					}
 				}
@@ -723,18 +723,18 @@
 			visible = yes
 		}
     blockoverride "header_back_button" {
-			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
     }
 		blockoverride "header_close_button" {
 			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 		}
 		blockoverride "scrollarea_content" {
 			nvgm_subject_popup_pop_strata = {}
@@ -749,9 +749,9 @@
 						size = { 200 40 }
 						text = "[concept_investment_pool]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_investment_pool')]"
 					}
 					button = {
@@ -759,9 +759,9 @@
 						size = { 200 40 }
 						text = "NVGM_SUBJECT_POP_STRATA"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_pop_strata')]"
 					}
 					button = {
@@ -769,9 +769,9 @@
 						size = { 200 40 }
 						text = "[concept_technology]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_techs_researched')]"
 					}
 				}
@@ -786,7 +786,7 @@
 					button_icon_reset = {
 						parentanchor = vcenter|left
 						tooltip = "TOOLTIP_RESET"
-						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+						onclick = "[GetScriptedGui('nvgm_refresh_statistics_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						size = { 24 24 }
 					}
 				}
@@ -807,18 +807,18 @@
 			visible = yes
 		}
     blockoverride "header_back_button" {
-			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_default_popup')]"
 			onclick = "[GetVariableSystem.Toggle('show_nvgm_default_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
     }
 		blockoverride "header_close_button" {
 			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup')]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+			onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 		}
 		blockoverride "scrollarea_content" {
 			nvgm_subject_popup_techs_researched = {}
@@ -833,9 +833,9 @@
 						size = { 200 40 }
 						text = "[concept_investment_pool]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_investment_pool')]"
 					}
 					button = {
@@ -843,9 +843,9 @@
 						size = { 200 40 }
 						text = "NVGM_SUBJECT_POP_STRATA"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_pop_strata')]"
 					}
 					button = {
@@ -853,9 +853,9 @@
 						size = { 200 40 }
 						text = "[concept_technology]"
 						# parentanchor = hcenter
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata'))]"
-						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched'))]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_investment_pool')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_pop_strata')]"
+						onclick = "[GetVariableSystem.Clear('show_nvgm_subject_popup_techs_researched')]"
 						onclick = "[GetVariableSystem.Toggle('show_nvgm_subject_popup_techs_researched')]"
 					}
 				}
@@ -870,7 +870,7 @@
 					button_icon_reset = {
 						parentanchor = vcenter|left
 						tooltip = "TOOLTIP_RESET"
-						onclick = "[ExecuteConsoleCommand('event nvgm_ranking_chart.2')]"
+						onclick = "[GetScriptedGui('nvgm_refresh_statistics_2').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						size = { 24 24 }
 					}
 				}
@@ -976,7 +976,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_gdp_country_gvar').GetCountry.GetGDPTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_gdp_country_gvar').GetCountry.GetGDPTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGDPTrend) )]"
 							}
 						}
@@ -1332,7 +1332,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
 							}
 						}
@@ -1376,7 +1376,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
 							}
 						}
@@ -1398,7 +1398,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
 							}
 						}
@@ -1420,7 +1420,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
 							}
 						}
@@ -1442,7 +1442,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_prestige_country_gvar').GetCountry.GetPrestigeTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_prestige_country_gvar').GetCountry.GetPrestigeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_prestige_country_gvar').GetCountry.GetPrestigeTrend) )]"
 							}
 						}
@@ -1710,7 +1710,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -1732,7 +1732,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -1754,7 +1754,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -1776,7 +1776,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -1798,7 +1798,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -1820,7 +1820,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_total_population_country_gvar').GetCountry.GetPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_total_population_country_gvar').GetCountry.GetPopulationTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_total_population_country_gvar').GetCountry.GetPopulationTrend) )]"
 							}
 						}
@@ -2088,7 +2088,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2110,7 +2110,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2132,7 +2132,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2154,7 +2154,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2176,7 +2176,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2198,7 +2198,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_gdp_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_6_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend)),GetVariableSystem.Exists('show_not_nvgm_6_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_6_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend, '(CFixedPoint)5', GetMax(GetGlobalVariable('nvgm_1_average_sol_country_gvar').GetCountry.GetAverageSoLByPopulationTrend) )]"
 							}
 						}
@@ -2466,7 +2466,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
 							}
 						}
@@ -2488,7 +2488,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
 							}
 						}
@@ -2510,7 +2510,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
 							}
 						}
@@ -2532,7 +2532,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
 							}
 						}
@@ -2554,7 +2554,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend, '(CFixedPoint)0.2', GetMax(GetGlobalVariable('nvgm_1_literacy_rate_country_gvar').GetCountry.GetIncorporatedLiteracyTrend) )]"
 							}
 						}
@@ -2844,7 +2844,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
 							}
 						}
@@ -2866,7 +2866,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
 							}
 						}
@@ -2888,7 +2888,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
 							}
 						}
@@ -2910,7 +2910,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
 							}
 						}
@@ -2932,7 +2932,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_investment_pool_country_gvar').GetCountry.GetInvestmentFundTrend) )]"
 							}
 						}
@@ -3222,7 +3222,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
 							}
 						}
@@ -3244,7 +3244,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
 							}
 						}
@@ -3266,7 +3266,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
 							}
 						}
@@ -3288,7 +3288,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
 							}
 						}
@@ -3310,7 +3310,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_gold_reserves_country_gvar').GetCountry.GetGoldReservesTrend) )]"
 							}
 						}
@@ -3600,7 +3600,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
 							}
 						}
@@ -3622,7 +3622,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
 							}
 						}
@@ -3644,7 +3644,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
 							}
 						}
@@ -3666,7 +3666,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
 							}
 						}
@@ -3688,7 +3688,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_income_country_gvar').GetCountry.GetTotalIncomeTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_income_country_gvar').GetCountry.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_income_country_gvar').GetCountry.GetTotalIncomeTrend) )]"
 							}
 						}
@@ -3978,7 +3978,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_1_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
 							}
 						}
@@ -4000,7 +4000,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_prestige_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_2_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_2_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_2_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
 							}
 						}
@@ -4022,7 +4022,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_3_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_3_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_3_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
 							}
 						}
@@ -4044,7 +4044,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_4_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_4_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_4_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
 							}
 						}
@@ -4066,7 +4066,7 @@ types NVGM_ranking_chart_types {
 							}
 							block "tooltip" {}
 							block "line_plotpoints" {
-								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_gdp_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
+								visible = "[And(Not(IsEmpty(GetGlobalVariable('nvgm_5_expenses_country_gvar').GetCountry.GetTotalExpensesTrend)),GetVariableSystem.Exists('show_not_nvgm_5_ranking'))]"
 								plotpoints = "[GetTrendPlotPointsNormalized(GetGlobalVariable('nvgm_5_expenses_country_gvar').GetCountry.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetGlobalVariable('nvgm_1_expenses_country_gvar').GetCountry.GetTotalExpensesTrend) )]"
 							}
 						}
@@ -4392,7 +4392,7 @@ types NVGM_subject_popup_types {
 							fontsize = 12
 							parentanchor = vcenter
 							align = nobaseline|left
-							raw_text = "#O [Country.MakeScope.Var('nvgm_subject_lower_strata_value').GetValue)|2] #!: #U [Country.MakeScope.Var('nvgm_subject_middle_strata_value').GetValue)|2] #!: #green [Country.MakeScope.Var('nvgm_subject_upper_strata_value').GetValue)|2] #!"
+							raw_text = "#O [Country.MakeScope.Var('nvgm_subject_lower_strata_value').GetValue|2] #!: #U [Country.MakeScope.Var('nvgm_subject_middle_strata_value').GetValue|2] #!: #green [Country.MakeScope.Var('nvgm_subject_upper_strata_value').GetValue|2] #!"
 						}
 					}
 					flowcontainer = {
@@ -4503,7 +4503,7 @@ types NVGM_subject_popup_types {
 							fontsize = 17
 							parentanchor = vcenter
 							align = nobaseline|left
-							raw_text = "[Country.MakeScope.Var('nvgm_subject_techs_researched_value').GetValue)|v0]"
+							raw_text = "[Country.MakeScope.Var('nvgm_subject_techs_researched_value').GetValue|v0]"
 						}
 					}
 					widget = {
@@ -4654,7 +4654,7 @@ types NVGM_subject_popup_types {
 	# 						fontsize = 17
 	# 						parentanchor = vcenter
 	# 						align = nobaseline|left
-	# 						raw_text = "[Country.MakeScope.Var('nvgm_subject_techs_researched_value').GetValue)|v0]"
+	# 						raw_text = "[Country.MakeScope.Var('nvgm_subject_techs_researched_value').GetValue|v0]"
 	# 					}
 	# 				}
 	# 				widget = {

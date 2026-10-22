@@ -34,12 +34,10 @@
 	on_monthly_pulse = {
 	}
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-# 棄民政策
-je_nvgm_abandonment_policy	 = {
-	# icon = "gfx/interface/icons/alert_icons/can_establish_company.dds"
+je_nvgm_abandonment_policy = {
 	icon = "gfx/interface/icons/acceptance_icons/acceptance_tier2.dds"
 	group = je_group_internal_affairs
 	scripted_progress_bar = nvgm_abandonment_policy_progress_bar
@@ -58,14 +56,6 @@ je_nvgm_abandonment_policy	 = {
 		}
 	}
 	on_complete = {
-		# custom_tooltip = {
-		# 	text = je_nvgm_abandonment_policy_tt
-		# 	trigger_event = {
-		# 		id = nvgm_migration_events.8
-		# 		days = 0
-		# 		popup = yes
-		# 	}
-		# }
 		remove_variable = nvgm_migration_events_now_var
 		remove_variable = nvgm_abandonment_policy_var
 		set_variable = {
@@ -84,5 +74,5 @@ je_nvgm_abandonment_policy	 = {
 		}
 	}
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

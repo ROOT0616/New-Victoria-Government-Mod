@@ -1,0 +1,2921 @@
+﻿nvgm_bur_reset_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	var:nvgm_bur_donor ?= {
+		if = {
+			limit = {
+				var:nvgm_bur_slot_1_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_1_country_modifier
+			remove_variable = nvgm_given_bur_1_var
+			remove_variable = nvgm_bur_slot_1_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_2_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_2_country_modifier
+			remove_variable = nvgm_given_bur_2_var
+			remove_variable = nvgm_bur_slot_2_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_3_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_3_country_modifier
+			remove_variable = nvgm_given_bur_3_var
+			remove_variable = nvgm_bur_slot_3_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_4_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_4_country_modifier
+			remove_variable = nvgm_given_bur_4_var
+			remove_variable = nvgm_bur_slot_4_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_5_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_5_country_modifier
+			remove_variable = nvgm_given_bur_5_var
+			remove_variable = nvgm_bur_slot_5_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_6_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_6_country_modifier
+			remove_variable = nvgm_given_bur_6_var
+			remove_variable = nvgm_bur_slot_6_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_7_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_7_country_modifier
+			remove_variable = nvgm_given_bur_7_var
+			remove_variable = nvgm_bur_slot_7_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_8_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_8_country_modifier
+			remove_variable = nvgm_given_bur_8_var
+			remove_variable = nvgm_bur_slot_8_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_9_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_9_country_modifier
+			remove_variable = nvgm_given_bur_9_var
+			remove_variable = nvgm_bur_slot_9_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_10_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_10_country_modifier
+			remove_variable = nvgm_given_bur_10_var
+			remove_variable = nvgm_bur_slot_10_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_11_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_11_country_modifier
+			remove_variable = nvgm_given_bur_11_var
+			remove_variable = nvgm_bur_slot_11_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_12_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_12_country_modifier
+			remove_variable = nvgm_given_bur_12_var
+			remove_variable = nvgm_bur_slot_12_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_13_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_13_country_modifier
+			remove_variable = nvgm_given_bur_13_var
+			remove_variable = nvgm_bur_slot_13_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_14_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_14_country_modifier
+			remove_variable = nvgm_given_bur_14_var
+			remove_variable = nvgm_bur_slot_14_target
+		}
+		if = {
+			limit = {
+				var:nvgm_bur_slot_15_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_bur_15_country_modifier
+			remove_variable = nvgm_given_bur_15_var
+			remove_variable = nvgm_bur_slot_15_target
+		}
+	}
+	remove_modifier = nvgm_give_bur_1_country_modifier
+	remove_variable = nvgm_give_bur_1_var
+	remove_modifier = nvgm_give_bur_2_country_modifier
+	remove_variable = nvgm_give_bur_2_var
+	remove_modifier = nvgm_give_bur_3_country_modifier
+	remove_variable = nvgm_give_bur_3_var
+	remove_modifier = nvgm_give_bur_4_country_modifier
+	remove_variable = nvgm_give_bur_4_var
+	remove_modifier = nvgm_give_bur_5_country_modifier
+	remove_variable = nvgm_give_bur_5_var
+	remove_modifier = nvgm_give_bur_6_country_modifier
+	remove_variable = nvgm_give_bur_6_var
+	remove_modifier = nvgm_give_bur_7_country_modifier
+	remove_variable = nvgm_give_bur_7_var
+	remove_modifier = nvgm_give_bur_8_country_modifier
+	remove_variable = nvgm_give_bur_8_var
+	remove_modifier = nvgm_give_bur_9_country_modifier
+	remove_variable = nvgm_give_bur_9_var
+	remove_modifier = nvgm_give_bur_10_country_modifier
+	remove_variable = nvgm_give_bur_10_var
+	remove_modifier = nvgm_give_bur_11_country_modifier
+	remove_variable = nvgm_give_bur_11_var
+	remove_modifier = nvgm_give_bur_12_country_modifier
+	remove_variable = nvgm_give_bur_12_var
+	remove_modifier = nvgm_give_bur_13_country_modifier
+	remove_variable = nvgm_give_bur_13_var
+	remove_modifier = nvgm_give_bur_14_country_modifier
+	remove_variable = nvgm_give_bur_14_var
+	remove_modifier = nvgm_give_bur_15_country_modifier
+	remove_variable = nvgm_give_bur_15_var
+	remove_variable = nvgm_bur_donor
+	set_variable = {
+		name = nvgm_given_bur_modifier_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_bur_modifier_preve_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_bur_modifier_x10_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_bur_modifier_preve_x10_var
+		value = 0
+	}
+}
+
+nvgm_bur_refresh_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_1_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_1_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_1_country_modifier
+			multiplier = var:nvgm_give_bur_1_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_1_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_1_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_1_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_1_country_modifier
+				multiplier = var:nvgm_given_bur_1_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_1_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_1_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_2_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_2_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_2_country_modifier
+			multiplier = var:nvgm_give_bur_2_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_2_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_2_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_2_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_2_country_modifier
+				multiplier = var:nvgm_given_bur_2_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_2_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_2_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_3_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_3_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_3_country_modifier
+			multiplier = var:nvgm_give_bur_3_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_3_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_3_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_3_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_3_country_modifier
+				multiplier = var:nvgm_given_bur_3_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_3_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_3_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_4_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_4_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_4_country_modifier
+			multiplier = var:nvgm_give_bur_4_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_4_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_4_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_4_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_4_country_modifier
+				multiplier = var:nvgm_given_bur_4_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_4_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_4_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_5_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_5_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_5_country_modifier
+			multiplier = var:nvgm_give_bur_5_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_5_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_5_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_5_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_5_country_modifier
+				multiplier = var:nvgm_given_bur_5_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_5_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_5_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_6_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_6_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_6_country_modifier
+			multiplier = var:nvgm_give_bur_6_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_6_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_6_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_6_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_6_country_modifier
+				multiplier = var:nvgm_given_bur_6_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_6_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_6_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_7_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_7_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_7_country_modifier
+			multiplier = var:nvgm_give_bur_7_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_7_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_7_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_7_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_7_country_modifier
+				multiplier = var:nvgm_given_bur_7_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_7_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_7_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_8_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_8_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_8_country_modifier
+			multiplier = var:nvgm_give_bur_8_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_8_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_8_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_8_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_8_country_modifier
+				multiplier = var:nvgm_given_bur_8_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_8_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_8_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_9_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_9_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_9_country_modifier
+			multiplier = var:nvgm_give_bur_9_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_9_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_9_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_9_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_9_country_modifier
+				multiplier = var:nvgm_given_bur_9_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_9_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_9_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_10_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_10_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_10_country_modifier
+			multiplier = var:nvgm_give_bur_10_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_10_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_10_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_10_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_10_country_modifier
+				multiplier = var:nvgm_given_bur_10_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_10_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_10_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_11_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_11_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_11_country_modifier
+			multiplier = var:nvgm_give_bur_11_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_11_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_11_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_11_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_11_country_modifier
+				multiplier = var:nvgm_given_bur_11_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_11_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_11_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_12_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_12_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_12_country_modifier
+			multiplier = var:nvgm_give_bur_12_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_12_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_12_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_12_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_12_country_modifier
+				multiplier = var:nvgm_given_bur_12_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_12_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_12_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_13_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_13_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_13_country_modifier
+			multiplier = var:nvgm_give_bur_13_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_13_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_13_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_13_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_13_country_modifier
+				multiplier = var:nvgm_given_bur_13_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_13_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_13_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_14_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_14_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_14_country_modifier
+			multiplier = var:nvgm_give_bur_14_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_14_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_14_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_14_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_14_country_modifier
+				multiplier = var:nvgm_given_bur_14_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_14_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_14_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_bur_15_var
+			exists = var:nvgm_bur_donor
+		}
+		remove_modifier = nvgm_give_bur_15_country_modifier
+		add_modifier = {
+			name = nvgm_give_bur_15_country_modifier
+			multiplier = var:nvgm_give_bur_15_var
+		}
+		var:nvgm_bur_donor = {
+			remove_modifier = nvgm_given_bur_15_country_modifier
+			set_variable = {
+				name = nvgm_given_bur_15_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_bur_15_var
+			}
+			add_modifier = {
+				name = nvgm_given_bur_15_country_modifier
+				multiplier = var:nvgm_given_bur_15_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_var
+			value = var:nvgm_give_bur_15_var
+		}
+		set_variable = {
+			name = nvgm_given_bur_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_bur_15_var
+				multiply = 10
+			}
+		}
+	}
+}
+
+nvgm_innovation_reset_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	var:nvgm_innovation_donor ?= {
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_1_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_1_country_modifier
+			remove_variable = nvgm_given_innovation_1_var
+			remove_variable = nvgm_innovation_slot_1_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_2_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_2_country_modifier
+			remove_variable = nvgm_given_innovation_2_var
+			remove_variable = nvgm_innovation_slot_2_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_3_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_3_country_modifier
+			remove_variable = nvgm_given_innovation_3_var
+			remove_variable = nvgm_innovation_slot_3_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_4_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_4_country_modifier
+			remove_variable = nvgm_given_innovation_4_var
+			remove_variable = nvgm_innovation_slot_4_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_5_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_5_country_modifier
+			remove_variable = nvgm_given_innovation_5_var
+			remove_variable = nvgm_innovation_slot_5_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_6_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_6_country_modifier
+			remove_variable = nvgm_given_innovation_6_var
+			remove_variable = nvgm_innovation_slot_6_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_7_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_7_country_modifier
+			remove_variable = nvgm_given_innovation_7_var
+			remove_variable = nvgm_innovation_slot_7_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_8_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_8_country_modifier
+			remove_variable = nvgm_given_innovation_8_var
+			remove_variable = nvgm_innovation_slot_8_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_9_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_9_country_modifier
+			remove_variable = nvgm_given_innovation_9_var
+			remove_variable = nvgm_innovation_slot_9_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_10_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_10_country_modifier
+			remove_variable = nvgm_given_innovation_10_var
+			remove_variable = nvgm_innovation_slot_10_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_11_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_11_country_modifier
+			remove_variable = nvgm_given_innovation_11_var
+			remove_variable = nvgm_innovation_slot_11_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_12_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_12_country_modifier
+			remove_variable = nvgm_given_innovation_12_var
+			remove_variable = nvgm_innovation_slot_12_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_13_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_13_country_modifier
+			remove_variable = nvgm_given_innovation_13_var
+			remove_variable = nvgm_innovation_slot_13_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_14_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_14_country_modifier
+			remove_variable = nvgm_given_innovation_14_var
+			remove_variable = nvgm_innovation_slot_14_target
+		}
+		if = {
+			limit = {
+				var:nvgm_innovation_slot_15_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_innovation_15_country_modifier
+			remove_variable = nvgm_given_innovation_15_var
+			remove_variable = nvgm_innovation_slot_15_target
+		}
+	}
+	remove_modifier = nvgm_give_innovation_1_country_modifier
+	remove_variable = nvgm_give_innovation_1_var
+	remove_modifier = nvgm_give_innovation_2_country_modifier
+	remove_variable = nvgm_give_innovation_2_var
+	remove_modifier = nvgm_give_innovation_3_country_modifier
+	remove_variable = nvgm_give_innovation_3_var
+	remove_modifier = nvgm_give_innovation_4_country_modifier
+	remove_variable = nvgm_give_innovation_4_var
+	remove_modifier = nvgm_give_innovation_5_country_modifier
+	remove_variable = nvgm_give_innovation_5_var
+	remove_modifier = nvgm_give_innovation_6_country_modifier
+	remove_variable = nvgm_give_innovation_6_var
+	remove_modifier = nvgm_give_innovation_7_country_modifier
+	remove_variable = nvgm_give_innovation_7_var
+	remove_modifier = nvgm_give_innovation_8_country_modifier
+	remove_variable = nvgm_give_innovation_8_var
+	remove_modifier = nvgm_give_innovation_9_country_modifier
+	remove_variable = nvgm_give_innovation_9_var
+	remove_modifier = nvgm_give_innovation_10_country_modifier
+	remove_variable = nvgm_give_innovation_10_var
+	remove_modifier = nvgm_give_innovation_11_country_modifier
+	remove_variable = nvgm_give_innovation_11_var
+	remove_modifier = nvgm_give_innovation_12_country_modifier
+	remove_variable = nvgm_give_innovation_12_var
+	remove_modifier = nvgm_give_innovation_13_country_modifier
+	remove_variable = nvgm_give_innovation_13_var
+	remove_modifier = nvgm_give_innovation_14_country_modifier
+	remove_variable = nvgm_give_innovation_14_var
+	remove_modifier = nvgm_give_innovation_15_country_modifier
+	remove_variable = nvgm_give_innovation_15_var
+	remove_variable = nvgm_innovation_donor
+	set_variable = {
+		name = nvgm_given_innovation_modifier_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_innovation_modifier_preve_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_innovation_modifier_x5_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_innovation_modifier_preve_x5_var
+		value = 0
+	}
+}
+
+nvgm_innovation_refresh_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_1_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_1_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_1_country_modifier
+			multiplier = var:nvgm_give_innovation_1_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_1_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_1_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_1_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_1_country_modifier
+				multiplier = var:nvgm_given_innovation_1_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_1_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_1_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_2_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_2_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_2_country_modifier
+			multiplier = var:nvgm_give_innovation_2_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_2_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_2_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_2_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_2_country_modifier
+				multiplier = var:nvgm_given_innovation_2_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_2_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_2_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_3_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_3_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_3_country_modifier
+			multiplier = var:nvgm_give_innovation_3_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_3_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_3_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_3_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_3_country_modifier
+				multiplier = var:nvgm_given_innovation_3_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_3_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_3_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_4_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_4_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_4_country_modifier
+			multiplier = var:nvgm_give_innovation_4_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_4_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_4_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_4_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_4_country_modifier
+				multiplier = var:nvgm_given_innovation_4_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_4_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_4_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_5_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_5_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_5_country_modifier
+			multiplier = var:nvgm_give_innovation_5_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_5_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_5_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_5_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_5_country_modifier
+				multiplier = var:nvgm_given_innovation_5_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_5_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_5_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_6_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_6_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_6_country_modifier
+			multiplier = var:nvgm_give_innovation_6_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_6_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_6_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_6_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_6_country_modifier
+				multiplier = var:nvgm_given_innovation_6_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_6_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_6_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_7_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_7_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_7_country_modifier
+			multiplier = var:nvgm_give_innovation_7_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_7_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_7_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_7_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_7_country_modifier
+				multiplier = var:nvgm_given_innovation_7_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_7_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_7_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_8_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_8_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_8_country_modifier
+			multiplier = var:nvgm_give_innovation_8_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_8_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_8_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_8_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_8_country_modifier
+				multiplier = var:nvgm_given_innovation_8_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_8_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_8_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_9_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_9_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_9_country_modifier
+			multiplier = var:nvgm_give_innovation_9_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_9_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_9_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_9_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_9_country_modifier
+				multiplier = var:nvgm_given_innovation_9_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_9_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_9_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_10_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_10_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_10_country_modifier
+			multiplier = var:nvgm_give_innovation_10_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_10_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_10_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_10_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_10_country_modifier
+				multiplier = var:nvgm_given_innovation_10_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_10_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_10_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_11_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_11_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_11_country_modifier
+			multiplier = var:nvgm_give_innovation_11_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_11_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_11_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_11_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_11_country_modifier
+				multiplier = var:nvgm_given_innovation_11_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_11_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_11_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_12_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_12_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_12_country_modifier
+			multiplier = var:nvgm_give_innovation_12_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_12_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_12_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_12_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_12_country_modifier
+				multiplier = var:nvgm_given_innovation_12_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_12_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_12_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_13_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_13_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_13_country_modifier
+			multiplier = var:nvgm_give_innovation_13_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_13_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_13_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_13_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_13_country_modifier
+				multiplier = var:nvgm_given_innovation_13_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_13_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_13_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_14_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_14_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_14_country_modifier
+			multiplier = var:nvgm_give_innovation_14_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_14_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_14_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_14_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_14_country_modifier
+				multiplier = var:nvgm_given_innovation_14_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_14_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_14_var
+				multiply = 5
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_innovation_15_var
+			exists = var:nvgm_innovation_donor
+		}
+		remove_modifier = nvgm_give_innovation_15_country_modifier
+		add_modifier = {
+			name = nvgm_give_innovation_15_country_modifier
+			multiplier = var:nvgm_give_innovation_15_var
+		}
+		var:nvgm_innovation_donor = {
+			remove_modifier = nvgm_given_innovation_15_country_modifier
+			set_variable = {
+				name = nvgm_given_innovation_15_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_innovation_15_var
+			}
+			add_modifier = {
+				name = nvgm_given_innovation_15_country_modifier
+				multiplier = var:nvgm_given_innovation_15_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_var
+			value = var:nvgm_give_innovation_15_var
+		}
+		set_variable = {
+			name = nvgm_given_innovation_modifier_preve_x5_var
+			value = {
+				value = var:nvgm_give_innovation_15_var
+				multiply = 5
+			}
+		}
+	}
+}
+
+nvgm_construction_reset_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	var:nvgm_construction_donor ?= {
+		if = {
+			limit = {
+				var:nvgm_construction_slot_1_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_1_country_modifier
+			remove_variable = nvgm_given_construction_1_var
+			remove_variable = nvgm_construction_slot_1_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_2_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_2_country_modifier
+			remove_variable = nvgm_given_construction_2_var
+			remove_variable = nvgm_construction_slot_2_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_3_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_3_country_modifier
+			remove_variable = nvgm_given_construction_3_var
+			remove_variable = nvgm_construction_slot_3_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_4_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_4_country_modifier
+			remove_variable = nvgm_given_construction_4_var
+			remove_variable = nvgm_construction_slot_4_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_5_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_5_country_modifier
+			remove_variable = nvgm_given_construction_5_var
+			remove_variable = nvgm_construction_slot_5_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_6_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_6_country_modifier
+			remove_variable = nvgm_given_construction_6_var
+			remove_variable = nvgm_construction_slot_6_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_7_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_7_country_modifier
+			remove_variable = nvgm_given_construction_7_var
+			remove_variable = nvgm_construction_slot_7_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_8_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_8_country_modifier
+			remove_variable = nvgm_given_construction_8_var
+			remove_variable = nvgm_construction_slot_8_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_9_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_9_country_modifier
+			remove_variable = nvgm_given_construction_9_var
+			remove_variable = nvgm_construction_slot_9_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_10_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_10_country_modifier
+			remove_variable = nvgm_given_construction_10_var
+			remove_variable = nvgm_construction_slot_10_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_11_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_11_country_modifier
+			remove_variable = nvgm_given_construction_11_var
+			remove_variable = nvgm_construction_slot_11_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_12_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_12_country_modifier
+			remove_variable = nvgm_given_construction_12_var
+			remove_variable = nvgm_construction_slot_12_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_13_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_13_country_modifier
+			remove_variable = nvgm_given_construction_13_var
+			remove_variable = nvgm_construction_slot_13_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_14_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_14_country_modifier
+			remove_variable = nvgm_given_construction_14_var
+			remove_variable = nvgm_construction_slot_14_target
+		}
+		if = {
+			limit = {
+				var:nvgm_construction_slot_15_target ?= scope:nvgm_transfer_recipient
+			}
+			remove_modifier = nvgm_given_construction_15_country_modifier
+			remove_variable = nvgm_given_construction_15_var
+			remove_variable = nvgm_construction_slot_15_target
+		}
+	}
+	remove_modifier = nvgm_give_construction_1_country_modifier
+	remove_variable = nvgm_give_construction_1_var
+	remove_modifier = nvgm_give_construction_2_country_modifier
+	remove_variable = nvgm_give_construction_2_var
+	remove_modifier = nvgm_give_construction_3_country_modifier
+	remove_variable = nvgm_give_construction_3_var
+	remove_modifier = nvgm_give_construction_4_country_modifier
+	remove_variable = nvgm_give_construction_4_var
+	remove_modifier = nvgm_give_construction_5_country_modifier
+	remove_variable = nvgm_give_construction_5_var
+	remove_modifier = nvgm_give_construction_6_country_modifier
+	remove_variable = nvgm_give_construction_6_var
+	remove_modifier = nvgm_give_construction_7_country_modifier
+	remove_variable = nvgm_give_construction_7_var
+	remove_modifier = nvgm_give_construction_8_country_modifier
+	remove_variable = nvgm_give_construction_8_var
+	remove_modifier = nvgm_give_construction_9_country_modifier
+	remove_variable = nvgm_give_construction_9_var
+	remove_modifier = nvgm_give_construction_10_country_modifier
+	remove_variable = nvgm_give_construction_10_var
+	remove_modifier = nvgm_give_construction_11_country_modifier
+	remove_variable = nvgm_give_construction_11_var
+	remove_modifier = nvgm_give_construction_12_country_modifier
+	remove_variable = nvgm_give_construction_12_var
+	remove_modifier = nvgm_give_construction_13_country_modifier
+	remove_variable = nvgm_give_construction_13_var
+	remove_modifier = nvgm_give_construction_14_country_modifier
+	remove_variable = nvgm_give_construction_14_var
+	remove_modifier = nvgm_give_construction_15_country_modifier
+	remove_variable = nvgm_give_construction_15_var
+	remove_variable = nvgm_construction_donor
+	set_variable = {
+		name = nvgm_given_construction_modifier_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_construction_modifier_preve_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_construction_modifier_x10_var
+		value = 0
+	}
+	set_variable = {
+		name = nvgm_given_construction_modifier_preve_x10_var
+		value = 0
+	}
+}
+
+nvgm_construction_refresh_effect = {
+	save_temporary_scope_as = nvgm_transfer_recipient
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_1_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_1_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_1_country_modifier
+			multiplier = var:nvgm_give_construction_1_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_1_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_1_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_1_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_1_country_modifier
+				multiplier = var:nvgm_given_construction_1_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_1_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_1_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_2_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_2_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_2_country_modifier
+			multiplier = var:nvgm_give_construction_2_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_2_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_2_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_2_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_2_country_modifier
+				multiplier = var:nvgm_given_construction_2_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_2_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_2_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_3_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_3_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_3_country_modifier
+			multiplier = var:nvgm_give_construction_3_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_3_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_3_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_3_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_3_country_modifier
+				multiplier = var:nvgm_given_construction_3_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_3_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_3_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_4_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_4_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_4_country_modifier
+			multiplier = var:nvgm_give_construction_4_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_4_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_4_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_4_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_4_country_modifier
+				multiplier = var:nvgm_given_construction_4_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_4_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_4_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_5_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_5_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_5_country_modifier
+			multiplier = var:nvgm_give_construction_5_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_5_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_5_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_5_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_5_country_modifier
+				multiplier = var:nvgm_given_construction_5_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_5_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_5_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_6_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_6_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_6_country_modifier
+			multiplier = var:nvgm_give_construction_6_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_6_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_6_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_6_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_6_country_modifier
+				multiplier = var:nvgm_given_construction_6_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_6_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_6_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_7_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_7_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_7_country_modifier
+			multiplier = var:nvgm_give_construction_7_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_7_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_7_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_7_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_7_country_modifier
+				multiplier = var:nvgm_given_construction_7_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_7_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_7_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_8_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_8_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_8_country_modifier
+			multiplier = var:nvgm_give_construction_8_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_8_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_8_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_8_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_8_country_modifier
+				multiplier = var:nvgm_given_construction_8_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_8_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_8_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_9_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_9_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_9_country_modifier
+			multiplier = var:nvgm_give_construction_9_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_9_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_9_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_9_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_9_country_modifier
+				multiplier = var:nvgm_given_construction_9_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_9_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_9_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_10_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_10_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_10_country_modifier
+			multiplier = var:nvgm_give_construction_10_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_10_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_10_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_10_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_10_country_modifier
+				multiplier = var:nvgm_given_construction_10_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_10_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_10_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_11_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_11_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_11_country_modifier
+			multiplier = var:nvgm_give_construction_11_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_11_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_11_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_11_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_11_country_modifier
+				multiplier = var:nvgm_given_construction_11_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_11_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_11_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_12_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_12_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_12_country_modifier
+			multiplier = var:nvgm_give_construction_12_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_12_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_12_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_12_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_12_country_modifier
+				multiplier = var:nvgm_given_construction_12_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_12_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_12_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_13_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_13_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_13_country_modifier
+			multiplier = var:nvgm_give_construction_13_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_13_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_13_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_13_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_13_country_modifier
+				multiplier = var:nvgm_given_construction_13_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_13_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_13_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_14_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_14_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_14_country_modifier
+			multiplier = var:nvgm_give_construction_14_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_14_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_14_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_14_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_14_country_modifier
+				multiplier = var:nvgm_given_construction_14_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_14_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_14_var
+				multiply = 10
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_give_construction_15_var
+			exists = var:nvgm_construction_donor
+		}
+		remove_modifier = nvgm_give_construction_15_country_modifier
+		add_modifier = {
+			name = nvgm_give_construction_15_country_modifier
+			multiplier = var:nvgm_give_construction_15_var
+		}
+		var:nvgm_construction_donor = {
+			remove_modifier = nvgm_given_construction_15_country_modifier
+			set_variable = {
+				name = nvgm_given_construction_15_var
+				value = scope:nvgm_transfer_recipient.var:nvgm_give_construction_15_var
+			}
+			add_modifier = {
+				name = nvgm_given_construction_15_country_modifier
+				multiplier = var:nvgm_given_construction_15_var
+			}
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_var
+			value = var:nvgm_give_construction_15_var
+		}
+		set_variable = {
+			name = nvgm_given_construction_modifier_preve_x10_var
+			value = {
+				value = var:nvgm_give_construction_15_var
+				multiply = 10
+			}
+		}
+	}
+}
+
+nvgm_transfer_cleanup_effect = {
+	if = {
+		limit = {
+			has_variable = nvgm_bur_donor
+			NOT = {
+				is_subject_of = var:nvgm_bur_donor
+			}
+		}
+		nvgm_bur_reset_effect = yes
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = nvgm_bur_donor
+			}
+		}
+		remove_modifier = nvgm_give_bur_1_country_modifier
+		remove_variable = nvgm_give_bur_1_var
+		remove_modifier = nvgm_give_bur_2_country_modifier
+		remove_variable = nvgm_give_bur_2_var
+		remove_modifier = nvgm_give_bur_3_country_modifier
+		remove_variable = nvgm_give_bur_3_var
+		remove_modifier = nvgm_give_bur_4_country_modifier
+		remove_variable = nvgm_give_bur_4_var
+		remove_modifier = nvgm_give_bur_5_country_modifier
+		remove_variable = nvgm_give_bur_5_var
+		remove_modifier = nvgm_give_bur_6_country_modifier
+		remove_variable = nvgm_give_bur_6_var
+		remove_modifier = nvgm_give_bur_7_country_modifier
+		remove_variable = nvgm_give_bur_7_var
+		remove_modifier = nvgm_give_bur_8_country_modifier
+		remove_variable = nvgm_give_bur_8_var
+		remove_modifier = nvgm_give_bur_9_country_modifier
+		remove_variable = nvgm_give_bur_9_var
+		remove_modifier = nvgm_give_bur_10_country_modifier
+		remove_variable = nvgm_give_bur_10_var
+		remove_modifier = nvgm_give_bur_11_country_modifier
+		remove_variable = nvgm_give_bur_11_var
+		remove_modifier = nvgm_give_bur_12_country_modifier
+		remove_variable = nvgm_give_bur_12_var
+		remove_modifier = nvgm_give_bur_13_country_modifier
+		remove_variable = nvgm_give_bur_13_var
+		remove_modifier = nvgm_give_bur_14_country_modifier
+		remove_variable = nvgm_give_bur_14_var
+		remove_modifier = nvgm_give_bur_15_country_modifier
+		remove_variable = nvgm_give_bur_15_var
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_1_target
+				}
+				var:nvgm_bur_slot_1_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_1_country_modifier
+		remove_variable = nvgm_given_bur_1_var
+		remove_variable = nvgm_bur_slot_1_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_2_target
+				}
+				var:nvgm_bur_slot_2_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_2_country_modifier
+		remove_variable = nvgm_given_bur_2_var
+		remove_variable = nvgm_bur_slot_2_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_3_target
+				}
+				var:nvgm_bur_slot_3_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_3_country_modifier
+		remove_variable = nvgm_given_bur_3_var
+		remove_variable = nvgm_bur_slot_3_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_4_target
+				}
+				var:nvgm_bur_slot_4_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_4_country_modifier
+		remove_variable = nvgm_given_bur_4_var
+		remove_variable = nvgm_bur_slot_4_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_5_target
+				}
+				var:nvgm_bur_slot_5_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_5_country_modifier
+		remove_variable = nvgm_given_bur_5_var
+		remove_variable = nvgm_bur_slot_5_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_6_target
+				}
+				var:nvgm_bur_slot_6_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_6_country_modifier
+		remove_variable = nvgm_given_bur_6_var
+		remove_variable = nvgm_bur_slot_6_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_7_target
+				}
+				var:nvgm_bur_slot_7_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_7_country_modifier
+		remove_variable = nvgm_given_bur_7_var
+		remove_variable = nvgm_bur_slot_7_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_8_target
+				}
+				var:nvgm_bur_slot_8_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_8_country_modifier
+		remove_variable = nvgm_given_bur_8_var
+		remove_variable = nvgm_bur_slot_8_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_9_target
+				}
+				var:nvgm_bur_slot_9_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_9_country_modifier
+		remove_variable = nvgm_given_bur_9_var
+		remove_variable = nvgm_bur_slot_9_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_10_target
+				}
+				var:nvgm_bur_slot_10_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_10_country_modifier
+		remove_variable = nvgm_given_bur_10_var
+		remove_variable = nvgm_bur_slot_10_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_11_target
+				}
+				var:nvgm_bur_slot_11_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_11_country_modifier
+		remove_variable = nvgm_given_bur_11_var
+		remove_variable = nvgm_bur_slot_11_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_12_target
+				}
+				var:nvgm_bur_slot_12_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_12_country_modifier
+		remove_variable = nvgm_given_bur_12_var
+		remove_variable = nvgm_bur_slot_12_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_13_target
+				}
+				var:nvgm_bur_slot_13_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_13_country_modifier
+		remove_variable = nvgm_given_bur_13_var
+		remove_variable = nvgm_bur_slot_13_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_14_target
+				}
+				var:nvgm_bur_slot_14_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_14_country_modifier
+		remove_variable = nvgm_given_bur_14_var
+		remove_variable = nvgm_bur_slot_14_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_bur_slot_15_target
+				}
+				var:nvgm_bur_slot_15_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_bur_15_country_modifier
+		remove_variable = nvgm_given_bur_15_var
+		remove_variable = nvgm_bur_slot_15_target
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_innovation_donor
+			NOT = {
+				is_subject_of = var:nvgm_innovation_donor
+			}
+		}
+		nvgm_innovation_reset_effect = yes
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = nvgm_innovation_donor
+			}
+		}
+		remove_modifier = nvgm_give_innovation_1_country_modifier
+		remove_variable = nvgm_give_innovation_1_var
+		remove_modifier = nvgm_give_innovation_2_country_modifier
+		remove_variable = nvgm_give_innovation_2_var
+		remove_modifier = nvgm_give_innovation_3_country_modifier
+		remove_variable = nvgm_give_innovation_3_var
+		remove_modifier = nvgm_give_innovation_4_country_modifier
+		remove_variable = nvgm_give_innovation_4_var
+		remove_modifier = nvgm_give_innovation_5_country_modifier
+		remove_variable = nvgm_give_innovation_5_var
+		remove_modifier = nvgm_give_innovation_6_country_modifier
+		remove_variable = nvgm_give_innovation_6_var
+		remove_modifier = nvgm_give_innovation_7_country_modifier
+		remove_variable = nvgm_give_innovation_7_var
+		remove_modifier = nvgm_give_innovation_8_country_modifier
+		remove_variable = nvgm_give_innovation_8_var
+		remove_modifier = nvgm_give_innovation_9_country_modifier
+		remove_variable = nvgm_give_innovation_9_var
+		remove_modifier = nvgm_give_innovation_10_country_modifier
+		remove_variable = nvgm_give_innovation_10_var
+		remove_modifier = nvgm_give_innovation_11_country_modifier
+		remove_variable = nvgm_give_innovation_11_var
+		remove_modifier = nvgm_give_innovation_12_country_modifier
+		remove_variable = nvgm_give_innovation_12_var
+		remove_modifier = nvgm_give_innovation_13_country_modifier
+		remove_variable = nvgm_give_innovation_13_var
+		remove_modifier = nvgm_give_innovation_14_country_modifier
+		remove_variable = nvgm_give_innovation_14_var
+		remove_modifier = nvgm_give_innovation_15_country_modifier
+		remove_variable = nvgm_give_innovation_15_var
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_1_target
+				}
+				var:nvgm_innovation_slot_1_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_1_country_modifier
+		remove_variable = nvgm_given_innovation_1_var
+		remove_variable = nvgm_innovation_slot_1_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_2_target
+				}
+				var:nvgm_innovation_slot_2_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_2_country_modifier
+		remove_variable = nvgm_given_innovation_2_var
+		remove_variable = nvgm_innovation_slot_2_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_3_target
+				}
+				var:nvgm_innovation_slot_3_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_3_country_modifier
+		remove_variable = nvgm_given_innovation_3_var
+		remove_variable = nvgm_innovation_slot_3_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_4_target
+				}
+				var:nvgm_innovation_slot_4_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_4_country_modifier
+		remove_variable = nvgm_given_innovation_4_var
+		remove_variable = nvgm_innovation_slot_4_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_5_target
+				}
+				var:nvgm_innovation_slot_5_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_5_country_modifier
+		remove_variable = nvgm_given_innovation_5_var
+		remove_variable = nvgm_innovation_slot_5_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_6_target
+				}
+				var:nvgm_innovation_slot_6_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_6_country_modifier
+		remove_variable = nvgm_given_innovation_6_var
+		remove_variable = nvgm_innovation_slot_6_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_7_target
+				}
+				var:nvgm_innovation_slot_7_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_7_country_modifier
+		remove_variable = nvgm_given_innovation_7_var
+		remove_variable = nvgm_innovation_slot_7_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_8_target
+				}
+				var:nvgm_innovation_slot_8_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_8_country_modifier
+		remove_variable = nvgm_given_innovation_8_var
+		remove_variable = nvgm_innovation_slot_8_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_9_target
+				}
+				var:nvgm_innovation_slot_9_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_9_country_modifier
+		remove_variable = nvgm_given_innovation_9_var
+		remove_variable = nvgm_innovation_slot_9_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_10_target
+				}
+				var:nvgm_innovation_slot_10_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_10_country_modifier
+		remove_variable = nvgm_given_innovation_10_var
+		remove_variable = nvgm_innovation_slot_10_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_11_target
+				}
+				var:nvgm_innovation_slot_11_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_11_country_modifier
+		remove_variable = nvgm_given_innovation_11_var
+		remove_variable = nvgm_innovation_slot_11_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_12_target
+				}
+				var:nvgm_innovation_slot_12_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_12_country_modifier
+		remove_variable = nvgm_given_innovation_12_var
+		remove_variable = nvgm_innovation_slot_12_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_13_target
+				}
+				var:nvgm_innovation_slot_13_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_13_country_modifier
+		remove_variable = nvgm_given_innovation_13_var
+		remove_variable = nvgm_innovation_slot_13_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_14_target
+				}
+				var:nvgm_innovation_slot_14_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_14_country_modifier
+		remove_variable = nvgm_given_innovation_14_var
+		remove_variable = nvgm_innovation_slot_14_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_innovation_slot_15_target
+				}
+				var:nvgm_innovation_slot_15_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_innovation_15_country_modifier
+		remove_variable = nvgm_given_innovation_15_var
+		remove_variable = nvgm_innovation_slot_15_target
+	}
+	if = {
+		limit = {
+			has_variable = nvgm_construction_donor
+			NOT = {
+				is_subject_of = var:nvgm_construction_donor
+			}
+		}
+		nvgm_construction_reset_effect = yes
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = nvgm_construction_donor
+			}
+		}
+		remove_modifier = nvgm_give_construction_1_country_modifier
+		remove_variable = nvgm_give_construction_1_var
+		remove_modifier = nvgm_give_construction_2_country_modifier
+		remove_variable = nvgm_give_construction_2_var
+		remove_modifier = nvgm_give_construction_3_country_modifier
+		remove_variable = nvgm_give_construction_3_var
+		remove_modifier = nvgm_give_construction_4_country_modifier
+		remove_variable = nvgm_give_construction_4_var
+		remove_modifier = nvgm_give_construction_5_country_modifier
+		remove_variable = nvgm_give_construction_5_var
+		remove_modifier = nvgm_give_construction_6_country_modifier
+		remove_variable = nvgm_give_construction_6_var
+		remove_modifier = nvgm_give_construction_7_country_modifier
+		remove_variable = nvgm_give_construction_7_var
+		remove_modifier = nvgm_give_construction_8_country_modifier
+		remove_variable = nvgm_give_construction_8_var
+		remove_modifier = nvgm_give_construction_9_country_modifier
+		remove_variable = nvgm_give_construction_9_var
+		remove_modifier = nvgm_give_construction_10_country_modifier
+		remove_variable = nvgm_give_construction_10_var
+		remove_modifier = nvgm_give_construction_11_country_modifier
+		remove_variable = nvgm_give_construction_11_var
+		remove_modifier = nvgm_give_construction_12_country_modifier
+		remove_variable = nvgm_give_construction_12_var
+		remove_modifier = nvgm_give_construction_13_country_modifier
+		remove_variable = nvgm_give_construction_13_var
+		remove_modifier = nvgm_give_construction_14_country_modifier
+		remove_variable = nvgm_give_construction_14_var
+		remove_modifier = nvgm_give_construction_15_country_modifier
+		remove_variable = nvgm_give_construction_15_var
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_1_target
+				}
+				var:nvgm_construction_slot_1_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_1_country_modifier
+		remove_variable = nvgm_given_construction_1_var
+		remove_variable = nvgm_construction_slot_1_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_2_target
+				}
+				var:nvgm_construction_slot_2_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_2_country_modifier
+		remove_variable = nvgm_given_construction_2_var
+		remove_variable = nvgm_construction_slot_2_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_3_target
+				}
+				var:nvgm_construction_slot_3_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_3_country_modifier
+		remove_variable = nvgm_given_construction_3_var
+		remove_variable = nvgm_construction_slot_3_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_4_target
+				}
+				var:nvgm_construction_slot_4_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_4_country_modifier
+		remove_variable = nvgm_given_construction_4_var
+		remove_variable = nvgm_construction_slot_4_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_5_target
+				}
+				var:nvgm_construction_slot_5_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_5_country_modifier
+		remove_variable = nvgm_given_construction_5_var
+		remove_variable = nvgm_construction_slot_5_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_6_target
+				}
+				var:nvgm_construction_slot_6_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_6_country_modifier
+		remove_variable = nvgm_given_construction_6_var
+		remove_variable = nvgm_construction_slot_6_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_7_target
+				}
+				var:nvgm_construction_slot_7_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_7_country_modifier
+		remove_variable = nvgm_given_construction_7_var
+		remove_variable = nvgm_construction_slot_7_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_8_target
+				}
+				var:nvgm_construction_slot_8_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_8_country_modifier
+		remove_variable = nvgm_given_construction_8_var
+		remove_variable = nvgm_construction_slot_8_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_9_target
+				}
+				var:nvgm_construction_slot_9_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_9_country_modifier
+		remove_variable = nvgm_given_construction_9_var
+		remove_variable = nvgm_construction_slot_9_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_10_target
+				}
+				var:nvgm_construction_slot_10_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_10_country_modifier
+		remove_variable = nvgm_given_construction_10_var
+		remove_variable = nvgm_construction_slot_10_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_11_target
+				}
+				var:nvgm_construction_slot_11_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_11_country_modifier
+		remove_variable = nvgm_given_construction_11_var
+		remove_variable = nvgm_construction_slot_11_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_12_target
+				}
+				var:nvgm_construction_slot_12_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_12_country_modifier
+		remove_variable = nvgm_given_construction_12_var
+		remove_variable = nvgm_construction_slot_12_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_13_target
+				}
+				var:nvgm_construction_slot_13_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_13_country_modifier
+		remove_variable = nvgm_given_construction_13_var
+		remove_variable = nvgm_construction_slot_13_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_14_target
+				}
+				var:nvgm_construction_slot_14_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_14_country_modifier
+		remove_variable = nvgm_given_construction_14_var
+		remove_variable = nvgm_construction_slot_14_target
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					exists = var:nvgm_construction_slot_15_target
+				}
+				var:nvgm_construction_slot_15_target ?= {
+					NOT = {
+						is_subject_of = prev
+					}
+				}
+			}
+		}
+		remove_modifier = nvgm_given_construction_15_country_modifier
+		remove_variable = nvgm_given_construction_15_var
+		remove_variable = nvgm_construction_slot_15_target
+	}
+}

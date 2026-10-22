@@ -1,12 +1,17 @@
 {
-  "name" : "New Victoria Government Mod",
-	"id" : "3417228168",
-  "version" : "1.7.8",
-  "supported_game_version" : "1.8.*",
-  "short_description" : "",
-  "tags" : ["Economy and Buildings", "Journal Entries", "Diplomacy", "Gameplay"],
-  "relationships" : [],
-  "game_custom_data" : {
-    "multiplayer_synchronized" : true
+  "name": "New Victoria Government Mod",
+  "id": "3417228168",
+  "version": "2.1.0",
+  "supported_game_version": "1.13.*",
+  "short_description": "",
+  "tags": [
+    "Economy and Buildings",
+    "Journal Entries",
+    "Diplomacy",
+    "Gameplay"
+  ],
+  "relationships": [],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
   }
 }

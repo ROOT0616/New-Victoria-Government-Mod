@@ -1,0 +1,23 @@
+﻿on_become_independent = {
+	on_actions = {
+		nvgm_transfer_cleanup
+	}
+}
+
+on_become_subject = {
+	on_actions = {
+		nvgm_transfer_cleanup
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = {
+		nvgm_transfer_cleanup
+	}
+}
+
+nvgm_transfer_cleanup = {
+	effect = {
+		nvgm_transfer_cleanup_effect = yes
+	}
+}

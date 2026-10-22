@@ -98,7 +98,6 @@ can_nvgm_establish_company_basic_food = {
 		has_company = company_type:company_basic_food
 	}
 	has_technology_researched = manufacturies
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_paper = {
@@ -106,7 +105,6 @@ can_nvgm_establish_company_basic_paper = {
 		has_company = company_type:company_basic_paper
 	}
 	has_technology_researched = manufacturies
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_home_goods = {
@@ -114,7 +112,6 @@ can_nvgm_establish_company_basic_home_goods = {
 		has_company = company_type:company_basic_home_goods
 	}
 	has_technology_researched = manufacturies
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_textiles = {
@@ -122,7 +119,6 @@ can_nvgm_establish_company_basic_textiles = {
 		has_company = company_type:company_basic_textiles
 	}
 	has_technology_researched = manufacturies
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_steel = {
@@ -130,7 +126,6 @@ can_nvgm_establish_company_basic_steel = {
 		has_company = company_type:company_basic_steel
 	}
 	has_technology_researched = steelworking
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_metalworks = {
@@ -138,7 +133,6 @@ can_nvgm_establish_company_basic_metalworks = {
 		has_company = company_type:company_basic_metalworks
 	}
 	has_technology_researched = manufacturies
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_shipyards = {
@@ -146,7 +140,6 @@ can_nvgm_establish_company_basic_shipyards = {
 		has_company = company_type:company_basic_shipyards
 	}
 	has_technology_researched = navigation
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_chemicals = {
@@ -154,7 +147,6 @@ can_nvgm_establish_company_basic_chemicals = {
 		has_company = company_type:company_basic_chemicals
 	}
 	has_technology_researched = intensive_agriculture
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_motors = {
@@ -162,7 +154,6 @@ can_nvgm_establish_company_basic_motors = {
 		has_company = company_type:company_basic_motors
 	}
 	has_technology_researched = atmospheric_engine
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_munitions = {
@@ -173,7 +164,6 @@ can_nvgm_establish_company_basic_munitions = {
 		has_technology_researched = intensive_agriculture
 		has_technology_researched = percussion_cap
 	}
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_basic_electrics = {
@@ -181,17 +171,60 @@ can_nvgm_establish_company_basic_electrics = {
 		has_company = company_type:company_basic_electrics
 	}
 	has_technology_researched = telephone
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_company_construction_power_bloc = {
 	NOT = {
 		has_company = company_type:company_basic_chemicals
 	}
-	# has_technology_researched = intensive_agriculture
-	# nvgm_free_sulfur_coal_arable_land > 5
 }
 
 can_nvgm_establish_construction_sector = {
 	nvgm_construction_sector_arable_land > 5
+}
+
+nvgm_money_transfer_from_to = {
+	any_scope_treaty = {
+		binds = $TARGET$
+		is_fulfilled_by = $SOURCE$
+		any_scope_article = {
+			has_type = money_transfer
+			source_country = $SOURCE$
+			target_country = $TARGET$
+			input_quantity > 0
+			source_country = {
+				in_default = no
+			}
+		}
+	}
+}
+
+nvgm_has_funded_overlord = {
+	is_subject = yes
+	OR = {
+		nvgm_money_transfer_from_to = {
+			SOURCE = root.overlord
+			TARGET = root
+		}
+		overlord = {
+			has_diplomatic_pact = {
+				who = root
+				type = NVGM_decrease_payments
+			}
+		}
+	}
+}
+
+nvgm_investment_ranking_eligible = {
+	OR = {
+		this = root
+		is_subject_of = root
+		any_scope_treaty = {
+			binds = root
+			any_scope_article = {
+				has_type = foreign_investment_rights
+				source_country = root
+			}
+		}
+	}
 }

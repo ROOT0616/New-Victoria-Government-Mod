@@ -1,5 +1,4 @@
-﻿# ステートの人口100人以下四捨五入
-nvgm_state_population = {
+﻿nvgm_state_population = {
 	value = scope:nvgm_target_state.state_population
 	divide = 100
 	round = yes
@@ -7,7 +6,6 @@ nvgm_state_population = {
 	min = 0
 }
 
-# ステートの人口の１％四捨五入
 nvgm_state_1_per_population = {
 	value = state_population
 	divide = 100
@@ -15,7 +13,6 @@ nvgm_state_1_per_population = {
 	min = 0
 }
 
-# 下層階級の人口 strata = lower
 nvgm_lower_strata_total_size = {
 	value = 0
 	every_scope_pop = {
@@ -26,13 +23,15 @@ nvgm_lower_strata_total_size = {
 			add = this.total_size
 		}
 	}
-	divide = this.total_population
+	divide = {
+		value = this.total_population
+		min = 1
+	}
 	multiply = 100
 	max = 100
 	min = 0
 }
 
-# 中流階級の人口 strata = middle
 nvgm_middle_strata_total_size = {
 	value = 0
 	every_scope_pop = {
@@ -43,13 +42,15 @@ nvgm_middle_strata_total_size = {
 			add = this.total_size
 		}
 	}
-	divide = this.total_population
+	divide = {
+		value = this.total_population
+		min = 1
+	}
 	multiply = 100
 	max = 100
 	min = 0
 }
 
-# 上層階級の人口 strata = upper
 nvgm_upper_strata_total_size = {
 	value = 0
 	every_scope_pop = {
@@ -60,7 +61,10 @@ nvgm_upper_strata_total_size = {
 			add = this.total_size
 		}
 	}
-	divide = this.total_population
+	divide = {
+		value = this.total_population
+		min = 1
+	}
 	multiply = 100
 	max = 100
 	min = 0

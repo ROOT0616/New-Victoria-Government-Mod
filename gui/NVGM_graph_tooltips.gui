@@ -1,4 +1,4 @@
-template nvgm_money_tooltip_with_graph 
+﻿template nvgm_money_tooltip_with_graph 
 {
 	tooltip = "CAPITAL_MONEY"
 	tooltipwidget = {
