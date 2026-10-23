@@ -1385,6 +1385,42 @@ types diplomatic_panel
 			}
 		}
 
+ # NVGM subject statistics: Country is the subject, never GetPlayer.
+ flowcontainer = { parentanchor = hcenter direction = vertical spacing = 3 margin_top = 6 margin_bottom = 4
+ flowcontainer = { spacing = 8
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_bureaucracy" tooltip = "[Country.GetPowerTooltip('bureaucracy')]" }
+ }
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_innovation" tooltip = "INNOVATION_TOOLTIP" }
+ }
+ }
+ flowcontainer = { spacing = 8
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_construction" tooltip = "CONSTRUCTION_SPEED_BASE_TOOLTIP" }
+ }
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_balance" tooltip = "nvgm_subject_stat_balance_tt" }
+ }
+ }
+ flowcontainer = { spacing = 8
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_gdp" tooltip = "GDP_TOOLTIP" }
+ }
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_population" tooltip = "nvgm_subject_stat_population_tt" }
+ }
+ }
+ flowcontainer = { spacing = 8
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_sol" tooltip = "nvgm_subject_stat_sol_tt" }
+ }
+ widget = { size = { 245 24 }
+ textbox = { autoresize = yes max_width = 245 using = fontsize_normal text = "nvgm_subject_stat_literacy" tooltip = "LITERACY_TOOLTIP" }
+ }
+ }
+ }
+
  flowcontainer = { parentanchor = hcenter direction = vertical spacing = 5 margin_top = 6 margin_bottom = 6
  minimumsize = { @panel_width_minus_10 0 } maximumsize = { @panel_width_minus_10 -1 }
  flowcontainer = { parentanchor = hcenter direction = vertical spacing = 2
