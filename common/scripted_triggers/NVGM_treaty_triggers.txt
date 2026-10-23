@@ -1,0 +1,8 @@
+﻿# Article scope; both parties must still exist and retain their relationship.
+nvgm_treaty_article_valid = {
+ OR = { has_type = nvgm_construction_transfer has_type = nvgm_bureaucracy_transfer has_type = nvgm_innovation_transfer has_type = nvgm_industry_subsidy }
+ exists = source_country exists = target_country
+ target_country = { is_direct_subject_of = prev.source_country NOT = { has_war_with = prev.source_country } }
+ treaty = { is_fulfilled_by = prev.source_country is_fulfilled_by = prev.target_country }
+}
+nvgm_has_resource_treaty = { any_scope_treaty = { any_scope_article = { OR = { has_type = nvgm_construction_transfer has_type = nvgm_bureaucracy_transfer has_type = nvgm_innovation_transfer has_type = nvgm_industry_subsidy } } } }

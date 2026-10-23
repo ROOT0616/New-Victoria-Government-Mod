@@ -1,0 +1,22 @@
+﻿# Native hooks are appended, never replaced.
+on_treaty_entered_into_force = { on_actions = { nvgm_treaty_changed } }
+on_country_withdrawn_from_treaty = { on_actions = { nvgm_treaty_changed } }
+on_country_broke_treaty = { on_actions = { nvgm_treaty_changed } }
+on_treaty_dissolved = { on_actions = { nvgm_treaty_changed } }
+on_treaty_article_removed = { on_actions = { nvgm_treaty_changed } }
+nvgm_treaty_changed = { effect = {
+ first_country = { nvgm_treaty_schedule_effect = yes }
+ second_country = { nvgm_treaty_schedule_effect = yes }
+} }
+nvgm_treaty_tick = { effect = {
+ remove_variable = nvgm_treaty_queued
+ nvgm_treaty_reconcile_effect = yes
+} }
+on_monthly_pulse_country = { on_actions = { nvgm_treaty_recovery } }
+on_become_independent = { on_actions = { nvgm_treaty_recovery } }
+on_become_subject = { on_actions = { nvgm_treaty_recovery } }
+nvgm_treaty_recovery = { effect = {
+ if = { limit = { OR = { has_variable = nvgm_treaty_active nvgm_has_resource_treaty = yes has_variable_list = nvgm_treaty_managed_buildings } }
+  nvgm_treaty_reconcile_effect = yes
+ }
+} }

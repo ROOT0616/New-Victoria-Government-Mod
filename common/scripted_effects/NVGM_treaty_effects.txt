@@ -1,0 +1,133 @@
+﻿# Country scope. A single queued update per country; finite modifier leases.
+nvgm_treaty_schedule_effect = {
+ if = { limit = { NOT = { has_variable = nvgm_treaty_queued } }
+  set_variable = { name = nvgm_treaty_queued days = 2 }
+  trigger_event = { on_action = nvgm_treaty_tick days = 1 }
+ }
+}
+nvgm_treaty_reconcile_effect = {
+ save_temporary_scope_as = nvgm_treaty_country
+ set_variable = { name = nvgm_treaty_active value = 0 }
+ set_local_variable = { name = nvgm_treaty_construction_out_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_construction_in_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_bureaucracy_out_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_bureaucracy_in_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_innovation_out_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_innovation_in_sum value = 0 }
+ clear_variable_list = nvgm_treaty_subsidy_wanted
+ every_scope_treaty = {
+  every_scope_article = {
+   limit = { nvgm_treaty_article_valid = yes }
+   save_temporary_scope_as = nvgm_active_article
+   if = { limit = { has_type = nvgm_construction_transfer }
+    if = { limit = { source_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_construction_out_sum value = { value = local_var:nvgm_treaty_construction_out_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+    if = { limit = { target_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_construction_in_sum value = { value = local_var:nvgm_treaty_construction_in_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+   }
+   if = { limit = { has_type = nvgm_bureaucracy_transfer }
+    if = { limit = { source_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_bureaucracy_out_sum value = { value = local_var:nvgm_treaty_bureaucracy_out_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+    if = { limit = { target_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_bureaucracy_in_sum value = { value = local_var:nvgm_treaty_bureaucracy_in_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+   }
+   if = { limit = { has_type = nvgm_innovation_transfer }
+    if = { limit = { source_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_innovation_out_sum value = { value = local_var:nvgm_treaty_innovation_out_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+    if = { limit = { target_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_innovation_in_sum value = { value = local_var:nvgm_treaty_innovation_in_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+   }
+   if = { limit = { has_type = nvgm_industry_subsidy target_country = scope:nvgm_treaty_country }
+    scope:nvgm_treaty_country = {
+     set_variable = { name = nvgm_treaty_active value = 1 }
+     every_scope_building = {
+      limit = { type = scope:nvgm_active_article.input_building_type }
+      save_temporary_scope_as = nvgm_treaty_building
+      if = { limit = { is_subsidized = no }
+       set_subsidized = yes
+       scope:nvgm_treaty_country = {
+        if = { limit = { NOT = { is_target_in_variable_list = { name = nvgm_treaty_managed_buildings target = scope:nvgm_treaty_building } } }
+         add_to_variable_list = { name = nvgm_treaty_managed_buildings target = scope:nvgm_treaty_building }
+        }
+       }
+      }
+      # Preserve already-subsidized buildings as unmanaged.
+      scope:nvgm_treaty_country = {
+       if = { limit = { NOT = { is_target_in_variable_list = { name = nvgm_treaty_subsidy_wanted target = scope:nvgm_treaty_building } } }
+        add_to_variable_list = { name = nvgm_treaty_subsidy_wanted target = scope:nvgm_treaty_building }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ set_variable = { name = nvgm_treaty_construction_out_amount value = local_var:nvgm_treaty_construction_out_sum }
+ if = { limit = { has_modifier = nvgm_treaty_construction_out } remove_modifier = nvgm_treaty_construction_out }
+ if = { limit = { local_var:nvgm_treaty_construction_out_sum > 0 }
+  add_modifier = { name = nvgm_treaty_construction_out multiplier = local_var:nvgm_treaty_construction_out_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_construction_in_amount value = local_var:nvgm_treaty_construction_in_sum }
+ if = { limit = { has_modifier = nvgm_treaty_construction_in } remove_modifier = nvgm_treaty_construction_in }
+ if = { limit = { local_var:nvgm_treaty_construction_in_sum > 0 }
+  add_modifier = { name = nvgm_treaty_construction_in multiplier = local_var:nvgm_treaty_construction_in_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_bureaucracy_out_amount value = local_var:nvgm_treaty_bureaucracy_out_sum }
+ if = { limit = { has_modifier = nvgm_treaty_bureaucracy_out } remove_modifier = nvgm_treaty_bureaucracy_out }
+ if = { limit = { local_var:nvgm_treaty_bureaucracy_out_sum > 0 }
+  add_modifier = { name = nvgm_treaty_bureaucracy_out multiplier = local_var:nvgm_treaty_bureaucracy_out_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_bureaucracy_in_amount value = local_var:nvgm_treaty_bureaucracy_in_sum }
+ if = { limit = { has_modifier = nvgm_treaty_bureaucracy_in } remove_modifier = nvgm_treaty_bureaucracy_in }
+ if = { limit = { local_var:nvgm_treaty_bureaucracy_in_sum > 0 }
+  add_modifier = { name = nvgm_treaty_bureaucracy_in multiplier = local_var:nvgm_treaty_bureaucracy_in_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_innovation_out_amount value = local_var:nvgm_treaty_innovation_out_sum }
+ if = { limit = { has_modifier = nvgm_treaty_innovation_out } remove_modifier = nvgm_treaty_innovation_out }
+ if = { limit = { local_var:nvgm_treaty_innovation_out_sum > 0 }
+  add_modifier = { name = nvgm_treaty_innovation_out multiplier = local_var:nvgm_treaty_innovation_out_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_innovation_in_amount value = local_var:nvgm_treaty_innovation_in_sum }
+ if = { limit = { has_modifier = nvgm_treaty_innovation_in } remove_modifier = nvgm_treaty_innovation_in }
+ if = { limit = { local_var:nvgm_treaty_innovation_in_sum > 0 }
+  add_modifier = { name = nvgm_treaty_innovation_in multiplier = local_var:nvgm_treaty_innovation_in_sum days = 3 }
+ }
+ every_in_list = {
+  variable = nvgm_treaty_managed_buildings
+  save_temporary_scope_as = nvgm_treaty_building
+  if = { limit = { OR = {
+   NOT = { owner = scope:nvgm_treaty_country }
+   scope:nvgm_treaty_country = { NOT = { is_target_in_variable_list = { name = nvgm_treaty_subsidy_wanted target = scope:nvgm_treaty_building } } }
+  } }
+   # A different owner's policy is not changed by the former owner's cleanup.
+   if = { limit = { owner = scope:nvgm_treaty_country } set_subsidized = no }
+   scope:nvgm_treaty_country = { remove_list_variable = { name = nvgm_treaty_managed_buildings target = scope:nvgm_treaty_building } }
+  }
+  else = { set_subsidized = yes }
+ }
+ if = { limit = { var:nvgm_treaty_active > 0 } nvgm_treaty_schedule_effect = yes }
+}

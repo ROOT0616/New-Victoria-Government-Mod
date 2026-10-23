@@ -1,30 +1,11 @@
-# v2.2.0 — 2026-10-23
+# 2.3.0
 
-- Add schema-3 contract generations and recorded recipient/issuer identity.
-- Rebuild donor resource burdens from authoritative recipient amounts; retain 15 recipients per resource.
-- Import valid v2.1.1 records without inferring financial consent.
-- Add subsidy batch membership, close/resume controls and a daily relation/lease watchdog.
-- Preserve per-building general-aid conditions and spontaneous preexisting subsidies.
-- Prevent stale donor indices from closing a new generation.
-- Keep exact full-cost reimbursement disabled pending a verified server expenditure API.
-- Add Japanese/English strings; other six locales use the new English fallback strings.
+- 3種類の能力移譲と産業助成を条約へ移行。
+- 旧独自資金援助、増額・再適用操作、全額補填ボタンを廃止。
+- 従属国カードの幅、中央配置、折り返しを修正。
+- 有効な条約から毎日両国の移譲量を再計算。属国関係喪失・条約終了後に解除。
+- 能力modifierには3日間の期限を設定し、更新停止時の永続残留を防止。
+- 助成管理は国の建物参照リストへ変更。建物変数には依存しません。
+- 条約開始時点の既存助成を保護し、MODが開始した助成だけを終了時に解除。
+- Vanillaのraise_payments/decrease_payments上書きを廃止。
 
-# v2.1.1
-
-独立・宗主国変更後の支援残留に対策。移譲の双方向検査・45日期限・翌日再検査、外交支援の固定期間撤去、元契約からの停止、常設の修復/停止決断を追加。新規助成の追跡、人口移動先の消し忘れ、企業イベントの実行前検査・建設企業の誤参照を修正。旧NVGM外交支援は移行時に終了し、再設定が必要。
-
-# Changelog
-
-## 2.1.0 — 2026-10-22
-
-Victoria 3 1.13.11向けに、確認済みv1.7.8から再構築。
-
-- 現行Vanillaの外交画面・HUD・都市タイプを基準に差分移植。
-- 現行送金条約と投資権判定、維持費・法制定modifier・DecisionのAI構文へ追従。
-- 支払増減の同名定義はVanillaと同じファイルパスで置換し、全額免除と排他化。
-- 移譲の誤参照とslot識別を修正し、関係変更時・月次のcleanupを追加。
-- ガラス工場SGUI、統計の参照・括弧・旧支出値・list選択指定、企業設立と人口移動のscopeを修正。
-- debug consoleによる統計更新をSGUIへ変更。
-- 8言語のlocalizationキーを統一。試作・生成ツール・メモは配布領域から分離。
-
-過去会話で案内されたv2.0.0は実体を回収できていないため、この版との直接差分は未確認です。

@@ -1,0 +1,105 @@
+﻿nvgm_construction_transfer = {
+ kind = directed cost = 0
+ icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ flags = { can_be_renegotiated friendly giftable }
+ maintenance_paid_by = source_country usage_limit = once_per_treaty
+ required_inputs = { quantity }
+ quantity_min_value = { value = 1 } quantity_max_value = { value = 10000 }
+ visible = { always = yes }
+ possible = { OR = { is_direct_subject_of = scope:other_country scope:other_country = { is_direct_subject_of = root } } }
+ requirement_to_maintain = { trigger = {
+  scope:target_country = { is_direct_subject_of = scope:source_country NOT = { has_war_with = scope:source_country } }
+ } }
+ can_ratify = { scope:article.input_quantity > 0 scope:article.input_quantity <= 10000 }
+ on_entry_into_force = {
+  # Retire only the recipient's legacy contract for this resource, once.
+  scope:article_options.target_country = { nvgm_construction_reset_effect = yes }
+ }
+ on_withdrawal = {
+  scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+  scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+ }
+ ai = { treaty_categories = { economy } evaluation_chance = { value = 0 }
+  inherent_accept_score = { value = 0
+   if = { limit = { this = scope:target_country } add = 30 }
+   if = { limit = { this = scope:source_country } subtract = 30 }
+  }
+ }
+}
+nvgm_bureaucracy_transfer = {
+ kind = directed cost = 0
+ icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ flags = { can_be_renegotiated friendly giftable }
+ maintenance_paid_by = source_country usage_limit = once_per_treaty
+ required_inputs = { quantity }
+ quantity_min_value = { value = 1 } quantity_max_value = { value = 10000 }
+ visible = { always = yes }
+ possible = { OR = { is_direct_subject_of = scope:other_country scope:other_country = { is_direct_subject_of = root } } }
+ requirement_to_maintain = { trigger = {
+  scope:target_country = { is_direct_subject_of = scope:source_country NOT = { has_war_with = scope:source_country } }
+ } }
+ can_ratify = { scope:article.input_quantity > 0 scope:article.input_quantity <= 10000 }
+ on_entry_into_force = {
+  # Retire only the recipient's legacy contract for this resource, once.
+  scope:article_options.target_country = { nvgm_bur_reset_effect = yes }
+ }
+ on_withdrawal = {
+  scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+  scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+ }
+ ai = { treaty_categories = { economy } evaluation_chance = { value = 0 }
+  inherent_accept_score = { value = 0
+   if = { limit = { this = scope:target_country } add = 30 }
+   if = { limit = { this = scope:source_country } subtract = 30 }
+  }
+ }
+}
+nvgm_innovation_transfer = {
+ kind = directed cost = 0
+ icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ flags = { can_be_renegotiated friendly giftable }
+ maintenance_paid_by = source_country usage_limit = once_per_treaty
+ required_inputs = { quantity }
+ quantity_min_value = { value = 1 } quantity_max_value = { value = 10000 }
+ visible = { always = yes }
+ possible = { OR = { is_direct_subject_of = scope:other_country scope:other_country = { is_direct_subject_of = root } } }
+ requirement_to_maintain = { trigger = {
+  scope:target_country = { is_direct_subject_of = scope:source_country NOT = { has_war_with = scope:source_country } }
+ } }
+ can_ratify = { scope:article.input_quantity > 0 scope:article.input_quantity <= 10000 }
+ on_entry_into_force = {
+  # Retire only the recipient's legacy contract for this resource, once.
+  scope:article_options.target_country = { nvgm_innovation_reset_effect = yes }
+ }
+ on_withdrawal = {
+  scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+  scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+ }
+ ai = { treaty_categories = { economy } evaluation_chance = { value = 0 }
+  inherent_accept_score = { value = 0
+   if = { limit = { this = scope:target_country } add = 30 }
+   if = { limit = { this = scope:source_country } subtract = 30 }
+  }
+ }
+}
+nvgm_industry_subsidy = {
+ kind = directed cost = 0
+ icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ flags = { can_be_renegotiated } maintenance_paid_by = source_country
+ usage_limit = once_per_side_with_same_inputs required_inputs = { building_type }
+ visible = { always = yes }
+ possible = { OR = { is_direct_subject_of = scope:other_country scope:other_country = { is_direct_subject_of = root } } }
+ requirement_to_maintain = { trigger = { scope:target_country = {
+  is_direct_subject_of = scope:source_country NOT = { has_war_with = scope:source_country }
+ } } }
+ building_type_valid_trigger = { OR = { scope:input = bt:building_arms_industry scope:input = bt:building_art_academy scope:input = bt:building_artillery_foundry scope:input = bt:building_automotive_industry scope:input = bt:building_banana_plantation scope:input = bt:building_chemical_plant scope:input = bt:building_coal_mine scope:input = bt:building_coffee_plantation scope:input = bt:building_cotton_plantation scope:input = bt:building_dye_plantation scope:input = bt:building_electrics_industry scope:input = bt:building_explosives_factory scope:input = bt:building_fishing_wharf scope:input = bt:building_food_industry scope:input = bt:building_furniture_manufactory scope:input = bt:building_glassworks scope:input = bt:building_gold_field scope:input = bt:building_gold_mine scope:input = bt:building_iron_mine scope:input = bt:building_lead_mine scope:input = bt:building_livestock_ranch scope:input = bt:building_logging_camp scope:input = bt:building_maize_farm scope:input = bt:building_millet_farm scope:input = bt:building_motor_industry scope:input = bt:building_munition_plant scope:input = bt:building_nvgm_clinic scope:input = bt:building_oil_rig scope:input = bt:building_opium_plantation scope:input = bt:building_paper_mill scope:input = bt:building_power_plant scope:input = bt:building_railway scope:input = bt:building_rice_farm scope:input = bt:building_rubber_plantation scope:input = bt:building_rye_farm scope:input = bt:building_shipyard scope:input = bt:building_silk_plantation scope:input = bt:building_steel_mill scope:input = bt:building_sugar_plantation scope:input = bt:building_sulfur_mine scope:input = bt:building_synthetics_plant scope:input = bt:building_tea_plantation scope:input = bt:building_textile_mill scope:input = bt:building_tobacco_plantation scope:input = bt:building_tooling_workshop scope:input = bt:building_urban_center scope:input = bt:building_vineyard scope:input = bt:building_whaling_station scope:input = bt:building_wheat_farm } }
+ on_entry_into_force = {
+  # End the old managed subsidy contract before the treaty assumes ownership.
+  scope:article_options.target_country = { nvgm_subsidy_close_effect = yes }
+ }
+ on_withdrawal = {
+  scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+  scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+ }
+ ai = { treaty_categories = { economy } evaluation_chance = { value = 0 } inherent_accept_score = { value = -20 } }
+}

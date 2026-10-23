@@ -328,7 +328,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_1_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_1_country_modifier } remove_modifier = nvgm_given_bur_1_country_modifier }
 		remove_variable = nvgm_given_bur_1_var
 		remove_variable = nvgm_bur_slot_1_target
 		var:nvgm_bur_slot_2_target ?= {
@@ -340,7 +340,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_2_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_2_country_modifier } remove_modifier = nvgm_given_bur_2_country_modifier }
 		remove_variable = nvgm_given_bur_2_var
 		remove_variable = nvgm_bur_slot_2_target
 		var:nvgm_bur_slot_3_target ?= {
@@ -352,7 +352,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_3_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_3_country_modifier } remove_modifier = nvgm_given_bur_3_country_modifier }
 		remove_variable = nvgm_given_bur_3_var
 		remove_variable = nvgm_bur_slot_3_target
 		var:nvgm_bur_slot_4_target ?= {
@@ -364,7 +364,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_4_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_4_country_modifier } remove_modifier = nvgm_given_bur_4_country_modifier }
 		remove_variable = nvgm_given_bur_4_var
 		remove_variable = nvgm_bur_slot_4_target
 		var:nvgm_bur_slot_5_target ?= {
@@ -376,7 +376,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_5_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_5_country_modifier } remove_modifier = nvgm_given_bur_5_country_modifier }
 		remove_variable = nvgm_given_bur_5_var
 		remove_variable = nvgm_bur_slot_5_target
 		var:nvgm_bur_slot_6_target ?= {
@@ -388,7 +388,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_6_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_6_country_modifier } remove_modifier = nvgm_given_bur_6_country_modifier }
 		remove_variable = nvgm_given_bur_6_var
 		remove_variable = nvgm_bur_slot_6_target
 		var:nvgm_bur_slot_7_target ?= {
@@ -400,7 +400,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_7_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_7_country_modifier } remove_modifier = nvgm_given_bur_7_country_modifier }
 		remove_variable = nvgm_given_bur_7_var
 		remove_variable = nvgm_bur_slot_7_target
 		var:nvgm_bur_slot_8_target ?= {
@@ -412,7 +412,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_8_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_8_country_modifier } remove_modifier = nvgm_given_bur_8_country_modifier }
 		remove_variable = nvgm_given_bur_8_var
 		remove_variable = nvgm_bur_slot_8_target
 		var:nvgm_bur_slot_9_target ?= {
@@ -424,7 +424,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_9_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_9_country_modifier } remove_modifier = nvgm_given_bur_9_country_modifier }
 		remove_variable = nvgm_given_bur_9_var
 		remove_variable = nvgm_bur_slot_9_target
 		var:nvgm_bur_slot_10_target ?= {
@@ -436,7 +436,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_10_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_10_country_modifier } remove_modifier = nvgm_given_bur_10_country_modifier }
 		remove_variable = nvgm_given_bur_10_var
 		remove_variable = nvgm_bur_slot_10_target
 		var:nvgm_bur_slot_11_target ?= {
@@ -448,7 +448,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_11_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_11_country_modifier } remove_modifier = nvgm_given_bur_11_country_modifier }
 		remove_variable = nvgm_given_bur_11_var
 		remove_variable = nvgm_bur_slot_11_target
 		var:nvgm_bur_slot_12_target ?= {
@@ -460,7 +460,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_12_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_12_country_modifier } remove_modifier = nvgm_given_bur_12_country_modifier }
 		remove_variable = nvgm_given_bur_12_var
 		remove_variable = nvgm_bur_slot_12_target
 		var:nvgm_bur_slot_13_target ?= {
@@ -472,7 +472,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_13_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_13_country_modifier } remove_modifier = nvgm_given_bur_13_country_modifier }
 		remove_variable = nvgm_given_bur_13_var
 		remove_variable = nvgm_bur_slot_13_target
 		var:nvgm_bur_slot_14_target ?= {
@@ -484,7 +484,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_14_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_14_country_modifier } remove_modifier = nvgm_given_bur_14_country_modifier }
 		remove_variable = nvgm_given_bur_14_var
 		remove_variable = nvgm_bur_slot_14_target
 		var:nvgm_bur_slot_15_target ?= {
@@ -496,7 +496,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_bur_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_bur_15_country_modifier
+		if = { limit = { has_modifier = nvgm_given_bur_15_country_modifier } remove_modifier = nvgm_given_bur_15_country_modifier }
 		remove_variable = nvgm_given_bur_15_var
 		remove_variable = nvgm_bur_slot_15_target
 		nvgm_innovation_reset_effect = yes
@@ -509,7 +509,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_1_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_1_country_modifier } remove_modifier = nvgm_given_innovation_1_country_modifier }
 		remove_variable = nvgm_given_innovation_1_var
 		remove_variable = nvgm_innovation_slot_1_target
 		var:nvgm_innovation_slot_2_target ?= {
@@ -521,7 +521,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_2_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_2_country_modifier } remove_modifier = nvgm_given_innovation_2_country_modifier }
 		remove_variable = nvgm_given_innovation_2_var
 		remove_variable = nvgm_innovation_slot_2_target
 		var:nvgm_innovation_slot_3_target ?= {
@@ -533,7 +533,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_3_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_3_country_modifier } remove_modifier = nvgm_given_innovation_3_country_modifier }
 		remove_variable = nvgm_given_innovation_3_var
 		remove_variable = nvgm_innovation_slot_3_target
 		var:nvgm_innovation_slot_4_target ?= {
@@ -545,7 +545,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_4_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_4_country_modifier } remove_modifier = nvgm_given_innovation_4_country_modifier }
 		remove_variable = nvgm_given_innovation_4_var
 		remove_variable = nvgm_innovation_slot_4_target
 		var:nvgm_innovation_slot_5_target ?= {
@@ -557,7 +557,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_5_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_5_country_modifier } remove_modifier = nvgm_given_innovation_5_country_modifier }
 		remove_variable = nvgm_given_innovation_5_var
 		remove_variable = nvgm_innovation_slot_5_target
 		var:nvgm_innovation_slot_6_target ?= {
@@ -569,7 +569,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_6_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_6_country_modifier } remove_modifier = nvgm_given_innovation_6_country_modifier }
 		remove_variable = nvgm_given_innovation_6_var
 		remove_variable = nvgm_innovation_slot_6_target
 		var:nvgm_innovation_slot_7_target ?= {
@@ -581,7 +581,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_7_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_7_country_modifier } remove_modifier = nvgm_given_innovation_7_country_modifier }
 		remove_variable = nvgm_given_innovation_7_var
 		remove_variable = nvgm_innovation_slot_7_target
 		var:nvgm_innovation_slot_8_target ?= {
@@ -593,7 +593,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_8_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_8_country_modifier } remove_modifier = nvgm_given_innovation_8_country_modifier }
 		remove_variable = nvgm_given_innovation_8_var
 		remove_variable = nvgm_innovation_slot_8_target
 		var:nvgm_innovation_slot_9_target ?= {
@@ -605,7 +605,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_9_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_9_country_modifier } remove_modifier = nvgm_given_innovation_9_country_modifier }
 		remove_variable = nvgm_given_innovation_9_var
 		remove_variable = nvgm_innovation_slot_9_target
 		var:nvgm_innovation_slot_10_target ?= {
@@ -617,7 +617,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_10_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_10_country_modifier } remove_modifier = nvgm_given_innovation_10_country_modifier }
 		remove_variable = nvgm_given_innovation_10_var
 		remove_variable = nvgm_innovation_slot_10_target
 		var:nvgm_innovation_slot_11_target ?= {
@@ -629,7 +629,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_11_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_11_country_modifier } remove_modifier = nvgm_given_innovation_11_country_modifier }
 		remove_variable = nvgm_given_innovation_11_var
 		remove_variable = nvgm_innovation_slot_11_target
 		var:nvgm_innovation_slot_12_target ?= {
@@ -641,7 +641,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_12_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_12_country_modifier } remove_modifier = nvgm_given_innovation_12_country_modifier }
 		remove_variable = nvgm_given_innovation_12_var
 		remove_variable = nvgm_innovation_slot_12_target
 		var:nvgm_innovation_slot_13_target ?= {
@@ -653,7 +653,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_13_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_13_country_modifier } remove_modifier = nvgm_given_innovation_13_country_modifier }
 		remove_variable = nvgm_given_innovation_13_var
 		remove_variable = nvgm_innovation_slot_13_target
 		var:nvgm_innovation_slot_14_target ?= {
@@ -665,7 +665,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_14_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_14_country_modifier } remove_modifier = nvgm_given_innovation_14_country_modifier }
 		remove_variable = nvgm_given_innovation_14_var
 		remove_variable = nvgm_innovation_slot_14_target
 		var:nvgm_innovation_slot_15_target ?= {
@@ -677,7 +677,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_innovation_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_innovation_15_country_modifier
+		if = { limit = { has_modifier = nvgm_given_innovation_15_country_modifier } remove_modifier = nvgm_given_innovation_15_country_modifier }
 		remove_variable = nvgm_given_innovation_15_var
 		remove_variable = nvgm_innovation_slot_15_target
 		nvgm_construction_reset_effect = yes
@@ -690,7 +690,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_1_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_1_country_modifier } remove_modifier = nvgm_given_construction_1_country_modifier }
 		remove_variable = nvgm_given_construction_1_var
 		remove_variable = nvgm_construction_slot_1_target
 		var:nvgm_construction_slot_2_target ?= {
@@ -702,7 +702,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_2_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_2_country_modifier } remove_modifier = nvgm_given_construction_2_country_modifier }
 		remove_variable = nvgm_given_construction_2_var
 		remove_variable = nvgm_construction_slot_2_target
 		var:nvgm_construction_slot_3_target ?= {
@@ -714,7 +714,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_3_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_3_country_modifier } remove_modifier = nvgm_given_construction_3_country_modifier }
 		remove_variable = nvgm_given_construction_3_var
 		remove_variable = nvgm_construction_slot_3_target
 		var:nvgm_construction_slot_4_target ?= {
@@ -726,7 +726,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_4_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_4_country_modifier } remove_modifier = nvgm_given_construction_4_country_modifier }
 		remove_variable = nvgm_given_construction_4_var
 		remove_variable = nvgm_construction_slot_4_target
 		var:nvgm_construction_slot_5_target ?= {
@@ -738,7 +738,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_5_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_5_country_modifier } remove_modifier = nvgm_given_construction_5_country_modifier }
 		remove_variable = nvgm_given_construction_5_var
 		remove_variable = nvgm_construction_slot_5_target
 		var:nvgm_construction_slot_6_target ?= {
@@ -750,7 +750,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_6_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_6_country_modifier } remove_modifier = nvgm_given_construction_6_country_modifier }
 		remove_variable = nvgm_given_construction_6_var
 		remove_variable = nvgm_construction_slot_6_target
 		var:nvgm_construction_slot_7_target ?= {
@@ -762,7 +762,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_7_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_7_country_modifier } remove_modifier = nvgm_given_construction_7_country_modifier }
 		remove_variable = nvgm_given_construction_7_var
 		remove_variable = nvgm_construction_slot_7_target
 		var:nvgm_construction_slot_8_target ?= {
@@ -774,7 +774,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_8_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_8_country_modifier } remove_modifier = nvgm_given_construction_8_country_modifier }
 		remove_variable = nvgm_given_construction_8_var
 		remove_variable = nvgm_construction_slot_8_target
 		var:nvgm_construction_slot_9_target ?= {
@@ -786,7 +786,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_9_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_9_country_modifier } remove_modifier = nvgm_given_construction_9_country_modifier }
 		remove_variable = nvgm_given_construction_9_var
 		remove_variable = nvgm_construction_slot_9_target
 		var:nvgm_construction_slot_10_target ?= {
@@ -798,7 +798,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_10_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_10_country_modifier } remove_modifier = nvgm_given_construction_10_country_modifier }
 		remove_variable = nvgm_given_construction_10_var
 		remove_variable = nvgm_construction_slot_10_target
 		var:nvgm_construction_slot_11_target ?= {
@@ -810,7 +810,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_11_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_11_country_modifier } remove_modifier = nvgm_given_construction_11_country_modifier }
 		remove_variable = nvgm_given_construction_11_var
 		remove_variable = nvgm_construction_slot_11_target
 		var:nvgm_construction_slot_12_target ?= {
@@ -822,7 +822,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_12_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_12_country_modifier } remove_modifier = nvgm_given_construction_12_country_modifier }
 		remove_variable = nvgm_given_construction_12_var
 		remove_variable = nvgm_construction_slot_12_target
 		var:nvgm_construction_slot_13_target ?= {
@@ -834,7 +834,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_13_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_13_country_modifier } remove_modifier = nvgm_given_construction_13_country_modifier }
 		remove_variable = nvgm_given_construction_13_var
 		remove_variable = nvgm_construction_slot_13_target
 		var:nvgm_construction_slot_14_target ?= {
@@ -846,7 +846,7 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_14_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_14_country_modifier } remove_modifier = nvgm_given_construction_14_country_modifier }
 		remove_variable = nvgm_given_construction_14_var
 		remove_variable = nvgm_construction_slot_14_target
 		var:nvgm_construction_slot_15_target ?= {
@@ -858,15 +858,11 @@ nvgm_stop_all_support_effect = {
 				nvgm_construction_reset_effect = yes
 			}
 		}
-		remove_modifier = nvgm_given_construction_15_country_modifier
+		if = { limit = { has_modifier = nvgm_given_construction_15_country_modifier } remove_modifier = nvgm_given_construction_15_country_modifier }
 		remove_variable = nvgm_given_construction_15_var
 		remove_variable = nvgm_construction_slot_15_target
-		every_scope_building = {
-			limit = {
-				has_variable = nvgm_subsidy_sponsor
-			}
-			nvgm_stop_managed_subsidy_effect = yes
-		}
+		# Retired unsupported building-variable subsidy ledger.
+
 		every_country = {
 			limit = {
 				nvgm_contract_schema_supported = yes
@@ -988,13 +984,8 @@ nvgm_stop_all_support_effect = {
 				}
 				nvgm_construction_reset_effect = yes
 			}
-			every_scope_building = {
-				limit = {
-					exists = var:nvgm_subsidy_sponsor
-					var:nvgm_subsidy_sponsor = root
-				}
-				nvgm_stop_managed_subsidy_effect = yes
-			}
+			# Retired unsupported building-variable subsidy ledger.
+
 		}
 		nvgm_subsidy_cleanup_effect = yes
 		nvgm_transfer_cleanup_effect = yes

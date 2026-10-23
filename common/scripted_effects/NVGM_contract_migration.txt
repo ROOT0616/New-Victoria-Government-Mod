@@ -1021,73 +1021,8 @@
 			name = nvgm_v3_subsidy_target_count
 			value = 0
 		}
-		every_scope_building = {
-			limit = {
-				has_variable = nvgm_subsidy_sponsor
-				NOT = {
-					has_variable = nvgm_v3_subsidy_recipient
-				}
-			}
-			if = {
-				limit = {
-					is_subsidized = yes
-					exists = var:nvgm_subsidy_sponsor
-					owner = {
-						is_direct_subject_of = prev.var:nvgm_subsidy_sponsor
-						NOT = {
-							has_war_with = prev.var:nvgm_subsidy_sponsor
-						}
-					}
-					var:nvgm_subsidy_sponsor = {
-						nvgm_contract_schema_supported = yes
-					}
-				}
-				owner = {
-					set_variable = {
-						name = nvgm_v3_subsidy_generation
-						value = 1
-					}
-					set_variable = {
-						name = nvgm_v3_subsidy_state
-						value = 1
-					}
-					set_variable = {
-						name = nvgm_v3_subsidy_funding
-						value = 0
-					}
-					set_variable = {
-						name = nvgm_v3_subsidy_issuer
-						value = prev.var:nvgm_subsidy_sponsor
-					}
-					set_variable = {
-						name = nvgm_v3_subsidy_payer
-						value = prev.var:nvgm_subsidy_sponsor
-					}
-					set_variable = {
-						name = nvgm_v3_subsidy_lease
-						days = 45
-					}
-					change_variable = {
-						name = nvgm_v3_subsidy_target_count
-						add = 1
-					}
-				}
-				set_variable = {
-					name = nvgm_v3_subsidy_recipient
-					value = owner
-				}
-				set_variable = {
-					name = nvgm_v3_subsidy_generation
-					value = owner.var:nvgm_v3_subsidy_generation
-				}
-				set_variable = nvgm_v3_subsidy_changed
-			}
-			else = {
-				set_subsidized = no
-				remove_variable = nvgm_subsidy_sponsor
-				remove_variable = nvgm_subsidy_requires_funding
-			}
-		}
+		# Retired unsupported building-variable subsidy ledger.
+
 		set_variable = {
 			name = nvgm_contract_schema
 			value = 3

@@ -9,12 +9,16 @@
 		central_banking
 	}
 	selectable = {
+ always = no # Retired: use the native money transfer treaty.
+
 		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
 	}
 	potential = {
+ always = no
+
 		scope:target_country = {
 			is_revolutionary = no
 			NOT = {
@@ -47,6 +51,8 @@
 		}
 		requirement_to_maintain = {
 			trigger = {
+ always = no # End existing legacy money pacts.
+
 				in_default = no
 				NOT = {
 					has_war_with = scope:target_country
@@ -127,12 +133,16 @@ nvgm_bankroll_2 = {
 		central_banking
 	}
 	selectable = {
+ always = no # Retired: use the native money transfer treaty.
+
 		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
 	}
 	potential = {
+ always = no
+
 		scope:target_country = {
 			is_revolutionary = no
 			NOT = {
@@ -169,6 +179,8 @@ nvgm_bankroll_2 = {
 		}
 		requirement_to_maintain = {
 			trigger = {
+ always = no # End existing legacy money pacts.
+
 				in_default = no
 				NOT = {
 					has_war_with = scope:target_country
@@ -253,12 +265,16 @@ nvgm_bankroll_3 = {
 		central_banking
 	}
 	selectable = {
+ always = no # Retired: use the native money transfer treaty.
+
 		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
 	}
 	potential = {
+ always = no
+
 		scope:target_country = {
 			is_revolutionary = no
 			NOT = {
@@ -295,6 +311,8 @@ nvgm_bankroll_3 = {
 		}
 		requirement_to_maintain = {
 			trigger = {
+ always = no # End existing legacy money pacts.
+
 				in_default = no
 				NOT = {
 					has_war_with = scope:target_country
@@ -379,12 +397,16 @@ nvgm_bankroll_4 = {
 		central_banking
 	}
 	selectable = {
+ always = no # Retired: use the native money transfer treaty.
+
 		is_revolutionary = no
 		NOT = {
 			is_country_type = decentralized
 		}
 	}
 	potential = {
+ always = no
+
 		scope:target_country = {
 			is_revolutionary = no
 			NOT = {
@@ -421,6 +443,8 @@ nvgm_bankroll_4 = {
 		}
 		requirement_to_maintain = {
 			trigger = {
+ always = no # End existing legacy money pacts.
+
 				in_default = no
 				NOT = {
 					has_war_with = scope:target_country
@@ -503,9 +527,13 @@ NVGM_decrease_payments = {
 	texture = "gfx/interface/icons/diplomatic_action_icons/decrease_payments.dds"
 	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_02_decrease_payments_benign"
 	selectable = {
+ always = no # Retired: use the native money transfer treaty.
+
 		has_dlc_feature = subject_and_bloc_actions
 	}
 	potential = {
+ always = no
+
 		any_scope_diplomatic_pact = {
 			"diplomatic_pact_other_country(root)" = scope:target_country
 			income_transfer > 0
@@ -557,6 +585,8 @@ NVGM_decrease_payments = {
 		}
 		requirement_to_maintain = {
 			trigger = {
+ always = no # End existing legacy money pacts.
+
 				custom_tooltip = {
 					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
 					NOT = {

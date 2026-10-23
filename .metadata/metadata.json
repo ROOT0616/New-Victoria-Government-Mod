@@ -1,9 +1,9 @@
 {
   "name": "New Victoria Government Mod",
   "id": "3417228168",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "supported_game_version": "1.13.*",
-  "short_description": "",
+  "short_description": "Resource transfers and industry subsidies through treaties.",
   "tags": [
     "Economy and Buildings",
     "Journal Entries",

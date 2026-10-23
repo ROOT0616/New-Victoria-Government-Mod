@@ -7,6 +7,8 @@
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -149,6 +151,8 @@ nvgm_give_bur_check_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -196,6 +200,8 @@ nvgm_give_innovation_plus_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -338,6 +344,8 @@ nvgm_give_innovation_check_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -385,6 +393,8 @@ nvgm_give_construction_plus_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -527,6 +537,8 @@ nvgm_give_construction_check_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -676,6 +688,8 @@ nvgm_subsidized_food_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -774,6 +788,8 @@ nvgm_subsidized_textile_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -872,6 +888,8 @@ nvgm_subsidized_furniture_manufacturies_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -970,6 +988,8 @@ nvgm_subsidized_tooling_workshops_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1068,6 +1088,8 @@ nvgm_subsidized_paper_mills_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1166,6 +1188,8 @@ nvgm_subsidized_chemicals_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1264,6 +1288,8 @@ nvgm_subsidized_explosives_factory_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1362,6 +1388,8 @@ nvgm_subsidized_synthetics_plants_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1460,6 +1488,8 @@ nvgm_subsidized_steel_mills_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1558,6 +1588,8 @@ nvgm_subsidized_motor_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1656,6 +1688,8 @@ nvgm_subsidized_shipyards_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1754,6 +1788,8 @@ nvgm_subsidized_military_shipyards_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1852,6 +1888,8 @@ nvgm_subsidized_vehicles_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -1950,6 +1988,8 @@ nvgm_subsidized_electrics_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2048,6 +2088,8 @@ nvgm_subsidized_arms_industry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2146,6 +2188,8 @@ nvgm_subsidized_artillery_foundry_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2244,6 +2288,8 @@ nvgm_subsidized_munition_plants_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2342,6 +2388,8 @@ nvgm_subsidized_urban_center_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2440,6 +2488,8 @@ nvgm_subsidized_arts_academy_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2538,6 +2588,8 @@ nvgm_subsidized_power_plant_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2636,6 +2688,8 @@ nvgm_subsidized_railway_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2734,6 +2788,8 @@ nvgm_subsidized_nvgm_clinic_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2832,6 +2888,8 @@ nvgm_subsidized_rye_farm_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -2930,6 +2988,8 @@ nvgm_subsidized_wheat_farm_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3028,6 +3088,8 @@ nvgm_subsidized_rice_farm_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3126,6 +3188,8 @@ nvgm_subsidized_maize_farm_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3224,6 +3288,8 @@ nvgm_subsidized_millet_farm_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3322,6 +3388,8 @@ nvgm_subsidized_livestock_ranch_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3420,6 +3488,8 @@ nvgm_subsidized_coffee_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3518,6 +3588,8 @@ nvgm_subsidized_cotton_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3616,6 +3688,8 @@ nvgm_subsidized_dye_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3714,6 +3788,8 @@ nvgm_subsidized_opium_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3812,6 +3888,8 @@ nvgm_subsidized_tea_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -3910,6 +3988,8 @@ nvgm_subsidized_tobacco_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4008,6 +4088,8 @@ nvgm_subsidized_sugar_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4106,6 +4188,8 @@ nvgm_subsidized_banana_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4204,6 +4288,8 @@ nvgm_subsidized_silk_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4302,6 +4388,8 @@ nvgm_subsidized_vineyard_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4400,6 +4488,8 @@ nvgm_subsidized_coal_mine_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4498,6 +4588,8 @@ nvgm_subsidized_iron_mine_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4596,6 +4688,8 @@ nvgm_subsidized_lead_mine_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4694,6 +4788,8 @@ nvgm_subsidized_sulfur_mine_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4792,6 +4888,8 @@ nvgm_subsidized_gold_mine_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4890,6 +4988,8 @@ nvgm_subsidized_gold_fields_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -4988,6 +5088,8 @@ nvgm_subsidized_logging_camp_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -5086,6 +5188,8 @@ nvgm_subsidized_rubber_plantation_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -5184,6 +5288,8 @@ nvgm_subsidized_fishing_wharf_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -5282,6 +5388,8 @@ nvgm_subsidized_whaling_station_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -5380,6 +5488,8 @@ nvgm_subsidized_oil_rig_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {
@@ -5478,6 +5588,8 @@ nvgm_subsidized_glassworks_scriptedgui = {
 		always = yes
 	}
 	ai_is_valid = {
+ always = no # Treaty-only in 2.3.0.
+
 		always = no
 	}
 	is_valid = {

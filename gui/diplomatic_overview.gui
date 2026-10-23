@@ -1,4 +1,4 @@
-# COPY-PASTED FOR NOW
+﻿# COPY-PASTED FOR NOW
 @panel_width_minus_10 = 530			# used to be 450
 @panel_width = 540  				# used to be 460
 @panel_width_half = 270				# used to be 230
@@ -1385,319 +1385,47 @@ types diplomatic_panel
 			}
 		}
 
-		flowcontainer = {
- visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- direction = vertical spacing = 3 margin_top = 4 margin_bottom = 6
- textbox = { text = "nvgm_subject_management_header" autoresize = yes }
-textbox = { text = "nvgm_contract_core_notice" autoresize = yes }
-flowcontainer = { spacing = 4
-button_standard = { size = { 160 28 } text = "nvgm_subsidy_contract_stop"
-enabled = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-tooltip = "nvgm_subsidy_contract_stop_tt"
-onclick = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 160 28 } text = "nvgm_subsidy_contract_resume"
-enabled = "[GetScriptedGui('nvgm_subsidy_contract_resume_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-tooltip = "nvgm_subsidy_contract_resume_tt"
-onclick = "[GetScriptedGui('nvgm_subsidy_contract_resume_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 160 28 } text = "nvgm_subsidy_full_cost"
-enabled = "[GetScriptedGui('nvgm_subsidy_full_cost_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-tooltip = "nvgm_subsidy_full_cost_unavailable_tt"
-onclick = "[GetScriptedGui('nvgm_subsidy_full_cost_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-
- flowcontainer = { spacing = 10
-  textbox = { raw_text = "NVGM_BALANCE" autoresize = yes }
-  textbox = { raw_text = "#gold GDP#!: [Country.GetGDP|Dv]" autoresize = yes }
+ flowcontainer = {
+  parentanchor = hcenter direction = vertical spacing = 5
+  minimumsize = { @panel_width_minus_10 0 } maximumsize = { @panel_width_minus_10 -1 }
+  margin_top = 6 margin_bottom = 8
+  visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+  textbox = { text = "nvgm_subject_management_header" size = { 500 26 } }
+  textbox = { text = "nvgm_treaty_card_help" size = { 500 72 } multiline = yes }
+  button_standard = { size = { 250 32 } text = "nvgm_open_resource_treaty"
+   onclick = "[InformationPanelBar.OpenTreatyDraftPanelForNewDraft(GetPlayer.Self, Country.Self)]"
+  }
+  flowcontainer = { spacing = 6
+   button_standard = { size = { 160 28 } text = "nvgm_legacy_bureaucracy_stop"
+    enabled = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    onclick = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   }
+   button_standard = { size = { 160 28 } text = "nvgm_legacy_innovation_stop"
+    enabled = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    onclick = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   }
+   button_standard = { size = { 160 28 } text = "nvgm_legacy_construction_stop"
+    enabled = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    onclick = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   }
+  }
+  button_standard = { size = { 250 28 } text = "nvgm_legacy_subsidy_stop"
+   enabled = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   onclick = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+  }
+  flowcontainer = { spacing = 6
+   button_standard = { size = { 240 28 } text = "nvgm_expand_army_infrastructure"
+    enabled = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    tooltip = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    onclick = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   }
+   button_standard = { size = { 240 28 } text = "nvgm_expand_navy_infrastructure"
+    enabled = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    tooltip = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+    onclick = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+   }
+  }
  }
-flowcontainer = { spacing = 4 textbox = { size = { 150 28 } text = "nvgm_transfer_bureaucracy" }
-button_standard = { size = { 75 28 } text = "nvgm_action_plus"
- enabled = "[GetScriptedGui('nvgm_give_bur_plus_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_bur_plus_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_bur_plus_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_refresh"
- enabled = "[GetScriptedGui('nvgm_give_bur_check_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_bur_check_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_bur_check_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_reset"
- enabled = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 4 textbox = { size = { 150 28 } text = "nvgm_transfer_innovation" }
-button_standard = { size = { 75 28 } text = "nvgm_action_plus"
- enabled = "[GetScriptedGui('nvgm_give_innovation_plus_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_innovation_plus_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_innovation_plus_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_refresh"
- enabled = "[GetScriptedGui('nvgm_give_innovation_check_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_innovation_check_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_innovation_check_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_reset"
- enabled = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 4 textbox = { size = { 150 28 } text = "nvgm_transfer_construction" }
-button_standard = { size = { 75 28 } text = "nvgm_action_plus"
- enabled = "[GetScriptedGui('nvgm_give_construction_plus_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_construction_plus_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_construction_plus_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_refresh"
- enabled = "[GetScriptedGui('nvgm_give_construction_check_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_construction_check_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_construction_check_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 75 28 } text = "nvgm_action_reset"
- enabled = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 5 button_standard = { size = { 150 28 } text = "nvgm_expand_army_infrastructure"
- enabled = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 150 28 } text = "nvgm_expand_navy_infrastructure"
- enabled = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-section_header_button = { blockoverride "left_text" { raw_text = "nvgm_subsidy_header" } blockoverride "onclick" { onclick = "[GetVariableSystem.Toggle(Concatenate('nvgm_subsidies_', Country.GetIDString))]" } }
-flowcontainer = { direction = vertical spacing = 3 visible = "[GetVariableSystem.Exists(Concatenate('nvgm_subsidies_', Country.GetIDString))]"
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_food_industry"
- enabled = "[GetScriptedGui('nvgm_subsidized_food_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_food_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_food_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_textile_mill"
- enabled = "[GetScriptedGui('nvgm_subsidized_textile_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_textile_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_textile_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_furniture_manufactory"
- enabled = "[GetScriptedGui('nvgm_subsidized_furniture_manufacturies_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_furniture_manufacturies_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_furniture_manufacturies_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_tooling_workshop"
- enabled = "[GetScriptedGui('nvgm_subsidized_tooling_workshops_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_tooling_workshops_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_tooling_workshops_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_paper_mill"
- enabled = "[GetScriptedGui('nvgm_subsidized_paper_mills_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_paper_mills_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_paper_mills_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_chemical_plant"
- enabled = "[GetScriptedGui('nvgm_subsidized_chemicals_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_chemicals_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_chemicals_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_explosives_factory"
- enabled = "[GetScriptedGui('nvgm_subsidized_explosives_factory_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_explosives_factory_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_explosives_factory_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_synthetics_plant"
- enabled = "[GetScriptedGui('nvgm_subsidized_synthetics_plants_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_synthetics_plants_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_synthetics_plants_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_steel_mill"
- enabled = "[GetScriptedGui('nvgm_subsidized_steel_mills_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_steel_mills_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_steel_mills_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_motor_industry"
- enabled = "[GetScriptedGui('nvgm_subsidized_motor_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_motor_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_motor_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_shipyard"
- enabled = "[GetScriptedGui('nvgm_subsidized_shipyards_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_shipyards_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_shipyards_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_shipyard"
- enabled = "[GetScriptedGui('nvgm_subsidized_military_shipyards_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_military_shipyards_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_military_shipyards_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_automotive_industry"
- enabled = "[GetScriptedGui('nvgm_subsidized_vehicles_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_vehicles_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_vehicles_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_electrics_industry"
- enabled = "[GetScriptedGui('nvgm_subsidized_electrics_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_electrics_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_electrics_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_arms_industry"
- enabled = "[GetScriptedGui('nvgm_subsidized_arms_industry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_arms_industry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_arms_industry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_artillery_foundry"
- enabled = "[GetScriptedGui('nvgm_subsidized_artillery_foundry_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_artillery_foundry_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_artillery_foundry_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_munition_plant"
- enabled = "[GetScriptedGui('nvgm_subsidized_munition_plants_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_munition_plants_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_munition_plants_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_urban_center"
- enabled = "[GetScriptedGui('nvgm_subsidized_urban_center_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_urban_center_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_urban_center_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_art_academy"
- enabled = "[GetScriptedGui('nvgm_subsidized_arts_academy_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_arts_academy_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_arts_academy_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_power_plant"
- enabled = "[GetScriptedGui('nvgm_subsidized_power_plant_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_power_plant_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_power_plant_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_railway"
- enabled = "[GetScriptedGui('nvgm_subsidized_railway_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_railway_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_railway_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_nvgm_clinic"
- enabled = "[GetScriptedGui('nvgm_subsidized_nvgm_clinic_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_nvgm_clinic_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_nvgm_clinic_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_rye_farm"
- enabled = "[GetScriptedGui('nvgm_subsidized_rye_farm_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_rye_farm_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_rye_farm_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_wheat_farm"
- enabled = "[GetScriptedGui('nvgm_subsidized_wheat_farm_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_wheat_farm_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_wheat_farm_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_rice_farm"
- enabled = "[GetScriptedGui('nvgm_subsidized_rice_farm_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_rice_farm_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_rice_farm_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_maize_farm"
- enabled = "[GetScriptedGui('nvgm_subsidized_maize_farm_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_maize_farm_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_maize_farm_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_millet_farm"
- enabled = "[GetScriptedGui('nvgm_subsidized_millet_farm_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_millet_farm_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_millet_farm_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_livestock_ranch"
- enabled = "[GetScriptedGui('nvgm_subsidized_livestock_ranch_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_livestock_ranch_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_livestock_ranch_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_coffee_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_coffee_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_coffee_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_coffee_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_cotton_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_cotton_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_cotton_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_cotton_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_dye_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_dye_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_dye_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_dye_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_opium_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_opium_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_opium_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_opium_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_tea_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_tea_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_tea_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_tea_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_tobacco_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_tobacco_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_tobacco_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_tobacco_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_sugar_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_sugar_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_sugar_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_sugar_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_banana_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_banana_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_banana_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_banana_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_silk_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_silk_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_silk_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_silk_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_vineyard"
- enabled = "[GetScriptedGui('nvgm_subsidized_vineyard_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_vineyard_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_vineyard_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_coal_mine"
- enabled = "[GetScriptedGui('nvgm_subsidized_coal_mine_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_coal_mine_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_coal_mine_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_iron_mine"
- enabled = "[GetScriptedGui('nvgm_subsidized_iron_mine_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_iron_mine_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_iron_mine_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_lead_mine"
- enabled = "[GetScriptedGui('nvgm_subsidized_lead_mine_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_lead_mine_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_lead_mine_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_sulfur_mine"
- enabled = "[GetScriptedGui('nvgm_subsidized_sulfur_mine_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_sulfur_mine_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_sulfur_mine_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_gold_mine"
- enabled = "[GetScriptedGui('nvgm_subsidized_gold_mine_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_gold_mine_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_gold_mine_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_gold_field"
- enabled = "[GetScriptedGui('nvgm_subsidized_gold_fields_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_gold_fields_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_gold_fields_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_logging_camp"
- enabled = "[GetScriptedGui('nvgm_subsidized_logging_camp_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_logging_camp_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_logging_camp_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_rubber_plantation"
- enabled = "[GetScriptedGui('nvgm_subsidized_rubber_plantation_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_rubber_plantation_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_rubber_plantation_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_fishing_wharf"
- enabled = "[GetScriptedGui('nvgm_subsidized_fishing_wharf_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_fishing_wharf_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_fishing_wharf_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_whaling_station"
- enabled = "[GetScriptedGui('nvgm_subsidized_whaling_station_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_whaling_station_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_whaling_station_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-flowcontainer = { spacing = 3
-button_standard = { size = { 130 28 } text = "building_oil_rig"
- enabled = "[GetScriptedGui('nvgm_subsidized_oil_rig_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_oil_rig_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_oil_rig_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-button_standard = { size = { 130 28 } text = "building_glassworks"
- enabled = "[GetScriptedGui('nvgm_subsidized_glassworks_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- tooltip = "[GetScriptedGui('nvgm_subsidized_glassworks_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
- onclick = "[GetScriptedGui('nvgm_subsidized_glassworks_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
-}
-}
-}
 
 ### IMPOSE LAWS DROPDOWN
 		section_header_button = {

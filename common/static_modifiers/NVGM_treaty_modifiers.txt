@@ -1,0 +1,6 @@
+﻿nvgm_treaty_construction_out = { country_construction_add = -1 }
+nvgm_treaty_construction_in = { country_construction_add = 1 }
+nvgm_treaty_bureaucracy_out = { country_bureaucracy_add = -1 }
+nvgm_treaty_bureaucracy_in = { country_bureaucracy_add = 1 }
+nvgm_treaty_innovation_out = { country_weekly_innovation_add = -1 }
+nvgm_treaty_innovation_in = { country_weekly_innovation_add = 1 }
