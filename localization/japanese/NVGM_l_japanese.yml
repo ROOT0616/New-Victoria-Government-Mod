@@ -167,7 +167,7 @@
  NVGM_request_recognition_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName]は、私たちの使節を受け入れるよう要請している"
  NVGM_request_recognition_proposal_third_party_accepted_name:0 "$NVGM_request_recognition_action_name$は受け入れられた"
  NVGM_request_recognition_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting]・[TARGET_COUNTRY.GetAdjectiveNoFormatting]間の使節派遣"
- NVGM_request_recognition_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName]は[TARGET_COUNTRY.GetName]が彼らの[Concept('concept_rivalry', '$concept_rival$')]であることを宣言しました。"
+ NVGM_request_recognition_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName]が[TARGET_COUNTRY.GetName]へ外交使節を派遣します。"
  NVGM_request_recognition_proposal_third_party_accepted_desc:0 "[TARGET_COUNTRY.GetName]は、[INITIATOR_COUNTRY.GetName]の使節を受け入れた：\n$STATES_DESC$"
  NVGM_request_recognition_proposal_third_party_declined_name:0 "$NVGM_request_recognition_action_name$は拒否された"
  NVGM_request_recognition_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName]は、[INITIATOR_COUNTRY.GetName]の使節を拒否した：\n$STATES_DESC$"

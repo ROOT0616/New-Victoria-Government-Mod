@@ -1,0 +1,45 @@
+{
+  "languages": {
+    "braz_por": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "english": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "french": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "german": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "japanese": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "korean": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "simp_chinese": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    },
+    "turkish": {
+      "entries": 616,
+      "missing_keys": [],
+      "extra_keys": []
+    }
+  },
+  "errors": []
+}

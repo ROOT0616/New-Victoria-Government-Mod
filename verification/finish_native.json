@@ -1,0 +1,47 @@
+{
+  "target_version": "1.13.11",
+  "tested_release": "2.4.3 localization with unchanged 2.4.2 game code",
+  "native_visual_checks": [
+    {
+      "language": "japanese",
+      "resolution": "2560x1440",
+      "gui_scale_percent": 100,
+      "subject_stats": 8,
+      "expansion_buttons": 2,
+      "overlap_or_missing": false
+    },
+    {
+      "language": "japanese",
+      "resolution": "2560x1440",
+      "gui_scale_percent": 150,
+      "subject_stats": 8,
+      "expansion_buttons": 2,
+      "overlap_or_missing": false
+    },
+    {
+      "language": "japanese",
+      "resolution": "1920x1080",
+      "gui_scale_percent": 100,
+      "subject_stats": 8,
+      "expansion_buttons": 2,
+      "overlap_or_missing": false
+    }
+  ],
+  "continuity": {
+    "start": "1836-01-01",
+    "observed": "1841-01-09",
+    "autosave_reloaded": "1841-03-01",
+    "reload_language": "french",
+    "reload_resolution": "1920x1080",
+    "crash_observed": false,
+    "automatic_saves": true,
+    "card_values_updated": true
+  },
+  "limitations": [
+    "All language/resolution/scale combinations not tested",
+    "New translated laws/events not all visually opened",
+    "No full century or multiplayer test",
+    "Native knowledge sharing Country context and naval battle power projection errors remain; isolated vanilla comparison not performed"
+  ],
+  "test_profile_settings_restored": true
+}
