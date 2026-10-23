@@ -992,6 +992,8 @@ types treaty_draft_panel_types
 					multiline = yes
 				}
 
+ textbox = { visible = "[ArticleDraft.HasType('nvgm_industry_subsidy')]" text = "[ArticleDraft.GetBuildingType.GetNameNoFormatting]" autoresize = yes max_width = 180 }
+
 				### MONEY TRANSFER
 				button = {
 					visible = "[ArticleDraft.HasType('money_transfer')]"
@@ -1016,7 +1018,7 @@ types treaty_draft_panel_types
 					}
 				}
 				button = {
-					visible = "[Or(Or(ArticleDraft.HasType('nvgm_construction_transfer'), ArticleDraft.HasType('nvgm_bureaucracy_transfer')), ArticleDraft.HasType('nvgm_innovation_transfer'))]"
+					visible = "[Or(Or(ArticleDraft.HasType('nvgm_construction_transfer'), ArticleDraft.HasType('nvgm_bureaucracy_transfer')), Or(ArticleDraft.HasType('nvgm_innovation_transfer'), ArticleDraft.HasType('nvgm_shipbuilding_transfer')))]"
 					tooltip = "ARTICLE_DRAFT_CLICK_TO_CHANGE"
 					enabled = "[ArticleDraft.CanBeModified]"
 					size = { 130 30 }
@@ -1034,7 +1036,7 @@ types treaty_draft_panel_types
 						max_width = 100
 						margin_left = 10
 						using = elide_fontsize_min
-						raw_text = "[ArticleDraft.GetQuantity|0]"
+						text = "nvgm_draft_capacity_amount"
 					}
 				}
 

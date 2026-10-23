@@ -1,6 +1,6 @@
 ﻿nvgm_construction_transfer = {
  kind = directed cost = 0
- icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ icon = "gfx/interface/icons/state_status_icons/has_construction.dds"
  flags = { can_be_renegotiated friendly giftable }
  maintenance_paid_by = source_country usage_limit = once_per_treaty
  required_inputs = { quantity }
@@ -28,7 +28,7 @@
 }
 nvgm_bureaucracy_transfer = {
  kind = directed cost = 0
- icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ icon = "gfx/interface/icons/topbar/bureaucracy_icon.dds"
  flags = { can_be_renegotiated friendly giftable }
  maintenance_paid_by = source_country usage_limit = once_per_treaty
  required_inputs = { quantity }
@@ -56,7 +56,7 @@ nvgm_bureaucracy_transfer = {
 }
 nvgm_innovation_transfer = {
  kind = directed cost = 0
- icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
+ icon = "gfx/interface/icons/generic_icons/innovation.dds"
  flags = { can_be_renegotiated friendly giftable }
  maintenance_paid_by = source_country usage_limit = once_per_treaty
  required_inputs = { quantity }
@@ -71,6 +71,31 @@ nvgm_innovation_transfer = {
   # Retire only the recipient's legacy contract for this resource, once.
   scope:article_options.target_country = { nvgm_innovation_reset_effect = yes }
  }
+ on_withdrawal = {
+  scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+  scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }
+ }
+ ai = { treaty_categories = { economy } evaluation_chance = { value = 0 }
+  inherent_accept_score = { value = 0
+   if = { limit = { this = scope:target_country } add = 30 }
+   if = { limit = { this = scope:source_country } subtract = 30 }
+  }
+ }
+}
+nvgm_shipbuilding_transfer = {
+ kind = directed cost = 0
+ icon = "gfx/interface/icons/state_status_icons/ship_construction.dds"
+ flags = { can_be_renegotiated friendly giftable }
+ maintenance_paid_by = source_country usage_limit = once_per_treaty
+ required_inputs = { quantity }
+ quantity_min_value = { value = 1 } quantity_max_value = { value = 10000 }
+ visible = { always = yes }
+ possible = { OR = { is_direct_subject_of = scope:other_country scope:other_country = { is_direct_subject_of = root } } }
+ requirement_to_maintain = { trigger = {
+  scope:target_country = { is_direct_subject_of = scope:source_country NOT = { has_war_with = scope:source_country } }
+ } }
+ can_ratify = { scope:article.input_quantity > 0 scope:article.input_quantity <= 10000 }
+ on_entry_into_force = {}
  on_withdrawal = {
   scope:withdrawing_country = { nvgm_treaty_schedule_effect = yes }
   scope:non_withdrawing_country = { nvgm_treaty_schedule_effect = yes }

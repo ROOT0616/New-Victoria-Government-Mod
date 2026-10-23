@@ -1,6 +1,8 @@
-﻿nvgm_treaty_construction_out = { country_construction_add = -1 }
-nvgm_treaty_construction_in = { country_construction_add = 1 }
-nvgm_treaty_bureaucracy_out = { country_bureaucracy_add = -1 }
-nvgm_treaty_bureaucracy_in = { country_bureaucracy_add = 1 }
-nvgm_treaty_innovation_out = { country_weekly_innovation_add = -1 }
-nvgm_treaty_innovation_in = { country_weekly_innovation_add = 1 }
+﻿nvgm_treaty_construction_out = { icon = gfx/interface/icons/state_status_icons/has_construction.dds country_construction_add = -1 }
+nvgm_treaty_construction_in = { icon = gfx/interface/icons/state_status_icons/has_construction.dds country_construction_add = 1 }
+nvgm_treaty_bureaucracy_out = { icon = gfx/interface/icons/topbar/bureaucracy_icon.dds country_bureaucracy_add = -1 }
+nvgm_treaty_bureaucracy_in = { icon = gfx/interface/icons/topbar/bureaucracy_icon.dds country_bureaucracy_add = 1 }
+nvgm_treaty_innovation_out = { icon = gfx/interface/icons/generic_icons/innovation.dds country_weekly_innovation_add = -1 }
+nvgm_treaty_innovation_in = { icon = gfx/interface/icons/generic_icons/innovation.dds country_weekly_innovation_add = 1 }
+nvgm_treaty_shipbuilding_out = { icon = gfx/interface/icons/state_status_icons/ship_construction.dds country_ship_construction_add = -1 }
+nvgm_treaty_shipbuilding_in = { icon = gfx/interface/icons/state_status_icons/ship_construction.dds country_ship_construction_add = 1 }

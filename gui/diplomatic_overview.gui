@@ -1305,7 +1305,7 @@ types diplomatic_panel
 
 						### OVERLORD ACTIONS
 						diplo_actions_button = {
-							visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+							visible = "[Country.IsSubjectOf(GetPlayer.Self)]"
 							widgetid = "[Concatenate('tutorial_highlight_overlord_actions_button_', Country.GetIDString)]"
 
 							blockoverride "onclick" {
@@ -1385,49 +1385,31 @@ types diplomatic_panel
 			}
 		}
 
- flowcontainer = {
-  parentanchor = hcenter direction = vertical spacing = 5
-  minimumsize = { @panel_width_minus_10 0 } maximumsize = { @panel_width_minus_10 -1 }
-  margin_top = 6 margin_bottom = 8
-  visible = "[GetScriptedGui('nvgm_support_visible_scriptedgui').IsShown(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-  textbox = { text = "nvgm_subject_management_header" size = { 500 26 } }
-  textbox = { text = "nvgm_treaty_card_help" size = { 500 72 } multiline = yes }
-  button_standard = { size = { 250 32 } text = "nvgm_open_resource_treaty"
-   onclick = "[InformationPanelBar.OpenTreatyDraftPanelForNewDraft(GetPlayer.Self, Country.Self)]"
-  }
-  flowcontainer = { spacing = 6
-   button_standard = { size = { 160 28 } text = "nvgm_legacy_bureaucracy_stop"
-    enabled = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    onclick = "[GetScriptedGui('nvgm_give_bur_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   }
-   button_standard = { size = { 160 28 } text = "nvgm_legacy_innovation_stop"
-    enabled = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    onclick = "[GetScriptedGui('nvgm_give_innovation_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   }
-   button_standard = { size = { 160 28 } text = "nvgm_legacy_construction_stop"
-    enabled = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    onclick = "[GetScriptedGui('nvgm_give_construction_reset_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   }
-  }
-  button_standard = { size = { 250 28 } text = "nvgm_legacy_subsidy_stop"
-   enabled = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   onclick = "[GetScriptedGui('nvgm_subsidy_contract_stop_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-  }
-  flowcontainer = { spacing = 6
-   button_standard = { size = { 240 28 } text = "nvgm_expand_army_infrastructure"
-    enabled = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    tooltip = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    onclick = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   }
-   button_standard = { size = { 240 28 } text = "nvgm_expand_navy_infrastructure"
-    enabled = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    tooltip = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-    onclick = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
-   }
-  }
+ flowcontainer = { parentanchor = hcenter direction = vertical spacing = 5 margin_top = 6 margin_bottom = 6
+ minimumsize = { @panel_width_minus_10 0 } maximumsize = { @panel_width_minus_10 -1 }
+ flowcontainer = { parentanchor = hcenter direction = vertical spacing = 2
+  datamodel = "[GetPlayer.GetEnforcedTreatiesWith(Country.Self)]"
+  item = { container = { compact_treaty_item = { visible = "[Not(Treaty.IsEnforced)]" } compact_war_reparation_treaty_item = { visible = "[Treaty.IsEnforced]" } } }
+ }
+ flowcontainer = { parentanchor = hcenter direction = vertical spacing = 2
+  datamodel = "[GetPlayer.GetUnenforcedTreatiesWith(Country.Self)]"
+  item = { container = { compact_treaty_item = { visible = "[Not(Treaty.IsEnforced)]" } compact_war_reparation_treaty_item = { visible = "[Treaty.IsEnforced]" } } }
+ }
+ flowcontainer = { spacing = 6 parentanchor = hcenter
+ button_standard = { size = { 240 28 } text = "nvgm_expand_army_infrastructure"
+ visible = "[Country.IsSubjectOf(GetPlayer.Self)]"
+ enabled = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+ tooltip = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+ onclick = "[GetScriptedGui('nvgm_army_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
+ button_standard = { size = { 240 28 } text = "nvgm_expand_navy_infrastructure"
+ visible = "[Country.IsSubjectOf(GetPlayer.Self)]"
+ enabled = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').IsValid(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+ tooltip = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').ExecuteTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]"
+ onclick = "[GetScriptedGui('nvgm_navy_build_up_scriptedgui').Execute(GuiScope.SetRoot(Country.MakeScope).AddScope('nvgm_actor', GetPlayer.MakeScope).End)]" }
+ }
  }
 
-### IMPOSE LAWS DROPDOWN
+		### IMPOSE LAWS DROPDOWN
 		section_header_button = {
 			block "impose_law_dropdown_visibility" {}
 

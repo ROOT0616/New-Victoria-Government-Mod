@@ -926,7 +926,8 @@ types treaty_panel_types
 
 				### MONEY TRANSFER
 				nvgm_resource_transfer_article = {}
-				money_transfer_article = {}
+ nvgm_subsidy_article = {}
+ money_transfer_article = {}
 
 				### STATE INPUT
 				state_input_article = {}
@@ -1022,6 +1023,28 @@ types treaty_panel_types
 		}
 	}
 
+type nvgm_resource_transfer_article = widget {
+ visible = "[Or(Or(Article.HasType('nvgm_construction_transfer'), Article.HasType('nvgm_bureaucracy_transfer')), Or(Article.HasType('nvgm_innovation_transfer'), Article.HasType('nvgm_shipbuilding_transfer')))]" size = { 180 30 }
+ flowcontainer = { parentanchor = vcenter spacing = 5
+ flowcontainer = { visible = "[Article.HasType('nvgm_construction_transfer')]" spacing = 5
+ icon = { parentanchor = vcenter size = { 24 24 } texture = "gfx/interface/icons/state_status_icons/has_construction.dds" }
+ textbox = { parentanchor = vcenter autoresize = yes max_width = 145 text = "nvgm_construction_amount" } }
+ flowcontainer = { visible = "[Article.HasType('nvgm_bureaucracy_transfer')]" spacing = 5
+ icon = { parentanchor = vcenter size = { 24 24 } texture = "gfx/interface/icons/topbar/bureaucracy_icon.dds" }
+ textbox = { parentanchor = vcenter autoresize = yes max_width = 145 text = "nvgm_bureaucracy_amount" } }
+ flowcontainer = { visible = "[Article.HasType('nvgm_innovation_transfer')]" spacing = 5
+ icon = { parentanchor = vcenter size = { 24 24 } texture = "gfx/interface/icons/generic_icons/innovation.dds" }
+ textbox = { parentanchor = vcenter autoresize = yes max_width = 145 text = "nvgm_innovation_amount" } }
+ flowcontainer = { visible = "[Article.HasType('nvgm_shipbuilding_transfer')]" spacing = 5
+ icon = { parentanchor = vcenter size = { 24 24 } texture = "gfx/interface/icons/state_status_icons/ship_construction.dds" }
+ textbox = { parentanchor = vcenter autoresize = yes max_width = 145 text = "nvgm_shipbuilding_amount" } }
+ }
+}
+type nvgm_subsidy_article = widget { visible = "[Article.HasType('nvgm_industry_subsidy')]" size = { 180 38 }
+ flowcontainer = { datacontext = "[Article.GetBuildingType]" spacing = 5
+ icon = { size = { 30 30 } texture = "[BuildingType.GetIcon]" }
+ textbox = { parentanchor = vcenter autoresize = yes max_width = 140 text = "[BuildingType.GetNameNoFormatting]" }
+ } }
 	type money_transfer_article = widget {
 		visible = "[Article.HasType('money_transfer')]"
 		size = { 145 30 }
@@ -1049,34 +1072,6 @@ types treaty_panel_types
 			}
 		}
 	}
-	type nvgm_resource_transfer_article = widget {
-		visible = "[Or(Or(Article.HasType('nvgm_construction_transfer'), Article.HasType('nvgm_bureaucracy_transfer')), Article.HasType('nvgm_innovation_transfer'))]"
-		size = { 145 30 }
-
-		flowcontainer = {
-			parentanchor = vcenter
-
-			icon = {
-				parentanchor = vcenter
-				size = { 18 18 }
-				texture = "gfx/interface/icons/diplomatic_treaties_articles_icons/military_assistance_treaties.dds"
-			}
-
-			textbox = {
-				parentanchor = vcenter
-				autoresize = yes
-				align = nobaseline
-				max_width = 110
-				using = elide_fontsize_min
-				raw_text = "[Article.GetQuantity|0]"
-
-				block "text_format" {
-					default_format = "#black"
-				}
-			}
-		}
-	}
-
 
 	type state_input_article = widget {
 		visible = "[Article.RequiresInput('state')]"

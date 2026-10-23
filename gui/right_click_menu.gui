@@ -8969,7 +8969,11 @@ template article_input_fixed_bottom {
 			parentanchor = hcenter
 			direction = vertical
 
-			nvgm_article_input_quantity = { visible = "[Or(Or(ArticleDraft.HasType('nvgm_construction_transfer'), ArticleDraft.HasType('nvgm_bureaucracy_transfer')), ArticleDraft.HasType('nvgm_innovation_transfer'))]" }
+			nvgm_construction_input_quantity = { visible = "[ArticleDraft.HasType('nvgm_construction_transfer')]" }
+nvgm_bureaucracy_input_quantity = { visible = "[ArticleDraft.HasType('nvgm_bureaucracy_transfer')]" }
+nvgm_innovation_input_quantity = { visible = "[ArticleDraft.HasType('nvgm_innovation_transfer')]" }
+nvgm_shipbuilding_input_quantity = { visible = "[ArticleDraft.HasType('nvgm_shipbuilding_transfer')]" }
+
 
 			### MONEY TRANSFER
 			article_input_select_money = {
@@ -9002,6 +9006,257 @@ template article_input_fixed_bottom {
 			selected_goods_and_amount = {
 				visible = "[ArticleDraft.HasType('goods_transfer')]"
 			}
+
+ widget = { visible = "[ArticleDraft.HasType('nvgm_industry_subsidy')]" size = { 460 350 }
+ scrollarea = { size = { 460 350 } scrollbarpolicy_horizontal = always_off
+ scrollbar_vertical = { using = vertical_scrollbar }
+ scrollwidget = { flowcontainer = { direction = vertical spacing = 2
+ flowcontainer = { datacontext = "[GetBuildingType('building_arms_industry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_art_academy')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_artillery_foundry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_automotive_industry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_banana_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_chemical_plant')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_coal_mine')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_coffee_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_cotton_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_dye_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_electrics_industry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_explosives_factory')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_fishing_wharf')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_food_industry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_furniture_manufactory')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_glassworks')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_gold_field')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_gold_mine')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_iron_mine')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_lead_mine')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_livestock_ranch')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_logging_camp')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_maize_farm')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_millet_farm')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_motor_industry')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_munition_plant')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_nvgm_clinic')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_oil_rig')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_opium_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_paper_mill')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_power_plant')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_railway')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_rice_farm')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_rubber_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_rye_farm')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_shipyard')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_silk_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_steel_mill')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_sugar_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_sulfur_mine')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_synthetics_plant')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_tea_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_textile_mill')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_tobacco_plantation')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_tooling_workshop')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_urban_center')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_vineyard')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_whaling_station')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ flowcontainer = { datacontext = "[GetBuildingType('building_wheat_farm')]" spacing = 8
+ icon = { size = { 36 36 } texture = "[BuildingType.GetIcon]" }
+ button_standard = { size = { 390 36 } text = "[BuildingType.GetNameNoFormatting]"
+ onclick = "[ArticleDraft.SetBuildingType(BuildingType.Self)]"
+ tooltip = "[BuildingType.GetNameNoFormatting]" } }
+ } } } }
 
 			### COMPANY MONOPOLY
 			selected_company_and_building_type = {
@@ -11662,6 +11917,334 @@ types article_input_types
 			}
 		}
 	}
+type nvgm_shipbuilding_input_quantity = container {
+		minimumsize = { 300 50 }
+
+		flowcontainer = {
+			parentanchor = center
+			direction = vertical
+			spacing = 5
+
+			scrollbar = {
+				parentanchor = hcenter
+				direction = horizontal
+				size = { 240 20 }
+				value = "[ArticleDraft.GetQuantity]"
+
+				min = "[ArticleDraft.GetMinValidQuantity]"
+				max = "[ArticleDraft.GetMaxValidQuantity]"
+				step = 1.0
+				wheelstep = 1.0
+
+				onvaluechanged = "[ArticleDraft.OnQuantityChangedSlider]"
+
+				track = {
+					using = SettingsValueTrack
+				}
+
+				slider = {
+					using = SettingsValueSlider
+				}
+
+				dec_button = {
+					using = SettingsValueDecButton
+				}
+
+				inc_button = {
+					using = SettingsValueIncButton
+				}
+			}
+
+			flowcontainer = {
+				parentanchor = hcenter
+
+				icon = {
+					parentanchor = vcenter
+					size = { 40 40 }
+					texture = "gfx/interface/icons/state_status_icons/ship_construction.dds"
+				}
+
+				# Set the amount
+				editbox = {
+					name = "nvgm_shipbuilding_quantity_edit"
+					parentanchor = vcenter
+					maxcharacters = 30
+					size = { 150 40 }
+					alwaystransparent = no
+					focuspolicy = click
+					focus_on_visible = no
+					align = nobaseline
+					margin_left = 10
+
+					background = {
+						using = text_edit_bg
+					}
+
+					text = "[ArticleDraft.GetQuantity]"
+					ontextedited = "[ArticleDraft.OnInputTextChanged]"
+					text_validator = "[ArticleDraft.GetQuantityValidator]"
+					oneditingfinished = "[ArticleDraft.OnQuantityChanged]"
+
+				}
+
+				textbox = {
+					parentanchor = vcenter
+					align = nobaseline
+					autoresize = yes
+					using = elide_fontsize_min
+					max_width = 100
+					text = "nvgm_label_shipbuilding"
+				}
+			}
+		}
+	}
+
+type nvgm_innovation_input_quantity = container {
+		minimumsize = { 300 50 }
+
+		flowcontainer = {
+			parentanchor = center
+			direction = vertical
+			spacing = 5
+
+			scrollbar = {
+				parentanchor = hcenter
+				direction = horizontal
+				size = { 240 20 }
+				value = "[ArticleDraft.GetQuantity]"
+
+				min = "[ArticleDraft.GetMinValidQuantity]"
+				max = "[ArticleDraft.GetMaxValidQuantity]"
+				step = 1.0
+				wheelstep = 1.0
+
+				onvaluechanged = "[ArticleDraft.OnQuantityChangedSlider]"
+
+				track = {
+					using = SettingsValueTrack
+				}
+
+				slider = {
+					using = SettingsValueSlider
+				}
+
+				dec_button = {
+					using = SettingsValueDecButton
+				}
+
+				inc_button = {
+					using = SettingsValueIncButton
+				}
+			}
+
+			flowcontainer = {
+				parentanchor = hcenter
+
+				icon = {
+					parentanchor = vcenter
+					size = { 40 40 }
+					texture = "gfx/interface/icons/generic_icons/innovation.dds"
+				}
+
+				# Set the amount
+				editbox = {
+					name = "nvgm_innovation_quantity_edit"
+					parentanchor = vcenter
+					maxcharacters = 30
+					size = { 150 40 }
+					alwaystransparent = no
+					focuspolicy = click
+					focus_on_visible = no
+					align = nobaseline
+					margin_left = 10
+
+					background = {
+						using = text_edit_bg
+					}
+
+					text = "[ArticleDraft.GetQuantity]"
+					ontextedited = "[ArticleDraft.OnInputTextChanged]"
+					text_validator = "[ArticleDraft.GetQuantityValidator]"
+					oneditingfinished = "[ArticleDraft.OnQuantityChanged]"
+
+				}
+
+				textbox = {
+					parentanchor = vcenter
+					align = nobaseline
+					autoresize = yes
+					using = elide_fontsize_min
+					max_width = 100
+					text = "nvgm_label_innovation"
+				}
+			}
+		}
+	}
+
+type nvgm_bureaucracy_input_quantity = container {
+		minimumsize = { 300 50 }
+
+		flowcontainer = {
+			parentanchor = center
+			direction = vertical
+			spacing = 5
+
+			scrollbar = {
+				parentanchor = hcenter
+				direction = horizontal
+				size = { 240 20 }
+				value = "[ArticleDraft.GetQuantity]"
+
+				min = "[ArticleDraft.GetMinValidQuantity]"
+				max = "[ArticleDraft.GetMaxValidQuantity]"
+				step = 1.0
+				wheelstep = 1.0
+
+				onvaluechanged = "[ArticleDraft.OnQuantityChangedSlider]"
+
+				track = {
+					using = SettingsValueTrack
+				}
+
+				slider = {
+					using = SettingsValueSlider
+				}
+
+				dec_button = {
+					using = SettingsValueDecButton
+				}
+
+				inc_button = {
+					using = SettingsValueIncButton
+				}
+			}
+
+			flowcontainer = {
+				parentanchor = hcenter
+
+				icon = {
+					parentanchor = vcenter
+					size = { 40 40 }
+					texture = "gfx/interface/icons/topbar/bureaucracy_icon.dds"
+				}
+
+				# Set the amount
+				editbox = {
+					name = "nvgm_bureaucracy_quantity_edit"
+					parentanchor = vcenter
+					maxcharacters = 30
+					size = { 150 40 }
+					alwaystransparent = no
+					focuspolicy = click
+					focus_on_visible = no
+					align = nobaseline
+					margin_left = 10
+
+					background = {
+						using = text_edit_bg
+					}
+
+					text = "[ArticleDraft.GetQuantity]"
+					ontextedited = "[ArticleDraft.OnInputTextChanged]"
+					text_validator = "[ArticleDraft.GetQuantityValidator]"
+					oneditingfinished = "[ArticleDraft.OnQuantityChanged]"
+
+				}
+
+				textbox = {
+					parentanchor = vcenter
+					align = nobaseline
+					autoresize = yes
+					using = elide_fontsize_min
+					max_width = 100
+					text = "nvgm_label_bureaucracy"
+				}
+			}
+		}
+	}
+
+type nvgm_construction_input_quantity = container {
+		minimumsize = { 300 50 }
+
+		flowcontainer = {
+			parentanchor = center
+			direction = vertical
+			spacing = 5
+
+			scrollbar = {
+				parentanchor = hcenter
+				direction = horizontal
+				size = { 240 20 }
+				value = "[ArticleDraft.GetQuantity]"
+
+				min = "[ArticleDraft.GetMinValidQuantity]"
+				max = "[ArticleDraft.GetMaxValidQuantity]"
+				step = 1.0
+				wheelstep = 1.0
+
+				onvaluechanged = "[ArticleDraft.OnQuantityChangedSlider]"
+
+				track = {
+					using = SettingsValueTrack
+				}
+
+				slider = {
+					using = SettingsValueSlider
+				}
+
+				dec_button = {
+					using = SettingsValueDecButton
+				}
+
+				inc_button = {
+					using = SettingsValueIncButton
+				}
+			}
+
+			flowcontainer = {
+				parentanchor = hcenter
+
+				icon = {
+					parentanchor = vcenter
+					size = { 40 40 }
+					texture = "gfx/interface/icons/state_status_icons/has_construction.dds"
+				}
+
+				# Set the amount
+				editbox = {
+					name = "nvgm_construction_quantity_edit"
+					parentanchor = vcenter
+					maxcharacters = 30
+					size = { 150 40 }
+					alwaystransparent = no
+					focuspolicy = click
+					focus_on_visible = no
+					align = nobaseline
+					margin_left = 10
+
+					background = {
+						using = text_edit_bg
+					}
+
+					text = "[ArticleDraft.GetQuantity]"
+					ontextedited = "[ArticleDraft.OnInputTextChanged]"
+					text_validator = "[ArticleDraft.GetQuantityValidator]"
+					oneditingfinished = "[ArticleDraft.OnQuantityChanged]"
+
+				}
+
+				textbox = {
+					parentanchor = vcenter
+					align = nobaseline
+					autoresize = yes
+					using = elide_fontsize_min
+					max_width = 100
+					text = "nvgm_label_construction"
+				}
+			}
+		}
+	}
+
 
 
 	type selected_state = container {

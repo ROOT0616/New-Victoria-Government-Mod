@@ -14,6 +14,8 @@ nvgm_treaty_reconcile_effect = {
  set_local_variable = { name = nvgm_treaty_bureaucracy_in_sum value = 0 }
  set_local_variable = { name = nvgm_treaty_innovation_out_sum value = 0 }
  set_local_variable = { name = nvgm_treaty_innovation_in_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_shipbuilding_out_sum value = 0 }
+ set_local_variable = { name = nvgm_treaty_shipbuilding_in_sum value = 0 }
  clear_variable_list = nvgm_treaty_subsidy_wanted
  every_scope_treaty = {
   every_scope_article = {
@@ -57,6 +59,20 @@ nvgm_treaty_reconcile_effect = {
     if = { limit = { target_country = scope:nvgm_treaty_country }
      scope:nvgm_treaty_country = {
       set_local_variable = { name = nvgm_treaty_innovation_in_sum value = { value = local_var:nvgm_treaty_innovation_in_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+   }
+   if = { limit = { has_type = nvgm_shipbuilding_transfer }
+    if = { limit = { source_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_shipbuilding_out_sum value = { value = local_var:nvgm_treaty_shipbuilding_out_sum add = scope:nvgm_active_article.input_quantity } }
+      set_variable = { name = nvgm_treaty_active value = 1 }
+     }
+    }
+    if = { limit = { target_country = scope:nvgm_treaty_country }
+     scope:nvgm_treaty_country = {
+      set_local_variable = { name = nvgm_treaty_shipbuilding_in_sum value = { value = local_var:nvgm_treaty_shipbuilding_in_sum add = scope:nvgm_active_article.input_quantity } }
       set_variable = { name = nvgm_treaty_active value = 1 }
      }
     }
@@ -115,6 +131,16 @@ nvgm_treaty_reconcile_effect = {
  if = { limit = { has_modifier = nvgm_treaty_innovation_in } remove_modifier = nvgm_treaty_innovation_in }
  if = { limit = { local_var:nvgm_treaty_innovation_in_sum > 0 }
   add_modifier = { name = nvgm_treaty_innovation_in multiplier = local_var:nvgm_treaty_innovation_in_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_shipbuilding_out_amount value = local_var:nvgm_treaty_shipbuilding_out_sum }
+ if = { limit = { has_modifier = nvgm_treaty_shipbuilding_out } remove_modifier = nvgm_treaty_shipbuilding_out }
+ if = { limit = { local_var:nvgm_treaty_shipbuilding_out_sum > 0 }
+  add_modifier = { name = nvgm_treaty_shipbuilding_out multiplier = local_var:nvgm_treaty_shipbuilding_out_sum days = 3 }
+ }
+ set_variable = { name = nvgm_treaty_shipbuilding_in_amount value = local_var:nvgm_treaty_shipbuilding_in_sum }
+ if = { limit = { has_modifier = nvgm_treaty_shipbuilding_in } remove_modifier = nvgm_treaty_shipbuilding_in }
+ if = { limit = { local_var:nvgm_treaty_shipbuilding_in_sum > 0 }
+  add_modifier = { name = nvgm_treaty_shipbuilding_in multiplier = local_var:nvgm_treaty_shipbuilding_in_sum days = 3 }
  }
  every_in_list = {
   variable = nvgm_treaty_managed_buildings
