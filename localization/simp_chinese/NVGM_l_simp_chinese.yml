@@ -543,9 +543,9 @@
  nvgm_transfer_plus_tt:0 "Transfers one unit from the overlord to this subject. Maximum 15 recipient slots per resource."
  nvgm_transfer_reset_tt:0 "Ends this transfer and releases the original overlord's slot."
  nvgm_transfer_refresh_tt:0 "Reapplies this subject's current transfer amount."
- nvgm_expand_army_infrastructure:0 "Expand barracks"
- nvgm_expand_navy_infrastructure:0 "Expand naval administration"
- nvgm_military_infrastructure_tt:0 "Queues one government-funded building in an eligible subject state. Naval administration does not create ships."
+ nvgm_expand_army_infrastructure:0 "扩建兵营"
+ nvgm_expand_navy_infrastructure:0 "扩建海军行政机构"
+ nvgm_military_infrastructure_tt:0 "在附属国符合条件的地区加入一个政府出资的建筑项目。海军行政机构不会建造舰船。"
 
  decisions_nvgm_repair_support:0 "Repair NVGM support records"
 

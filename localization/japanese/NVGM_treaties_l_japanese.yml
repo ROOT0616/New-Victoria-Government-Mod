@@ -34,7 +34,6 @@
  nvgm_industry_subsidy_desc:0 "従属国が選択した業種の建物へ助成します。費用は従属国が負担します。資金提供は別途送金条約で設定してください。"
  nvgm_industry_subsidy_effects_desc:0 "新設した対象建物にも助成します。条約終了時はこのMODが開始した助成だけを解除します。"
  nvgm_industry_subsidy_article_short_desc:0 "産業助成協定"
-
  nvgm_draft_capacity_amount:0 "[ArticleDraft.GetQuantity]"
  nvgm_construction_amount:0 "[Article.GetQuantity] 建設力"
  nvgm_label_construction:0 "建設力"
@@ -44,7 +43,6 @@
  nvgm_label_innovation:0 "革新"
  nvgm_shipbuilding_amount:0 "[Article.GetQuantity] 艦船建造能力"
  nvgm_label_shipbuilding:0 "艦船建造能力"
-
  nvgm_subject_stat_bureaucracy:0 "行政力収支：@bur! [Country.GetPowerDelta('bureaucracy')|D=+]"
  nvgm_subject_stat_innovation:0 "革新／週：@innovation! [Country.GetWeeklyInnovation|1]"
  nvgm_subject_stat_construction:0 "建設力：@construction! [Country.CalcUsedConstruction|0]/[Country.CalcBaseConstructionSpeed|0]"
@@ -53,6 +51,6 @@
  nvgm_subject_stat_population:0 "人口：[Country.GetTotalPopulation|D]"
  nvgm_subject_stat_sol:0 "生活水準：[Country.GetAverageSoLByPopulation|1]"
  nvgm_subject_stat_literacy:0 "識字率：[Country.GetIncorporatedLiteracyRate|%1]"
- nvgm_subject_stat_balance_tt:0 "資金収支／週：従属国自身の現在値です。"
+ nvgm_subject_stat_balance_tt:0 "この従属国の予測週次資金収支です。"
  nvgm_subject_stat_population_tt:0 "人口：従属国自身の現在値です。"
  nvgm_subject_stat_sol_tt:0 "生活水準：従属国自身の現在値です。"
