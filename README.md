@@ -2,7 +2,7 @@
 
 ## Screenshot gallery / 実機スクリーンショット
 
-[**Browse 27 English close-ups by feature / 機能別の英語版接写ギャラリー（27枚）**](docs/gallery/README.md)
+[**Feature guide & 27 English screenshots / 使い方・条件と英語版実機画像（27枚）**](docs/gallery/README.md)
 
 Treaties, subject statistics, roads, hospitals, medical companies, journals, diplomatic support and charts.
 移譲・助成条約、従属国の統計、道路、病院、医療企業、ジャーナル、外交支援、統計グラフを実機画像で紹介します。
