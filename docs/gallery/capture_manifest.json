@@ -1,0 +1,407 @@
+[
+  {
+    "file": "closeups/01_signed_treaty.png",
+    "category": "Treaties",
+    "title_en": "Signed capacity and subsidy treaty",
+    "title_ja": "締結済みの移譲・助成条約",
+    "crop": [
+      70,
+      110,
+      728,
+      1235
+    ],
+    "source": "originals/01_signed_treaty.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/02_subject_statistics.png",
+    "category": "Subjects",
+    "title_en": "Subject statistics at a glance",
+    "title_ja": "従属国の行政力・革新・建設力・経済",
+    "crop": [
+      75,
+      700,
+      710,
+      455
+    ],
+    "source": "originals/02_subject_statistics.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/03_subject_card_with_treaty.png",
+    "category": "Subjects",
+    "title_en": "Subject statistics, active treaty and expansion buttons",
+    "title_ja": "従属国カード・条約・兵舎と海軍管理局の拡張",
+    "crop": [
+      75,
+      710,
+      710,
+      645
+    ],
+    "source": "originals/03_subject_card_with_treaty.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/04_capacity_quantity_inputs.png",
+    "category": "Treaties",
+    "title_en": "Four directly editable transfer quantities",
+    "title_ja": "建設力・行政力・艦船建造能力・革新の直接入力",
+    "crop": [
+      960,
+      365,
+      650,
+      820
+    ],
+    "source": "originals/04_capacity_quantity_inputs.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/05_subsidy_selection_and_help.png",
+    "category": "Treaties",
+    "title_en": "Subsidy commitment and funding explanation",
+    "title_ja": "産業助成と資金負担の説明",
+    "crop": [
+      815,
+      60,
+      770,
+      960
+    ],
+    "source": "originals/05_subsidy_selection_and_help.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/06_subsidy_industry_selection.png",
+    "category": "Treaties",
+    "title_en": "Choose the industry to subsidize",
+    "title_ja": "産業助成の対象選択",
+    "crop": [
+      895,
+      355,
+      625,
+      665
+    ],
+    "source": "originals/06_subsidy_industry_selection.jpg",
+    "session": "earlier English photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/07_hospital_methods_effects.png",
+    "category": "Buildings",
+    "title_en": "Hospital administration methods and effects",
+    "title_ja": "病院の運営方式・汚染と死亡率への効果",
+    "crop": [
+      80,
+      115,
+      870,
+      720
+    ],
+    "source": "originals/07_hospital_methods_effects.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/08_hospital_production.png",
+    "category": "Buildings",
+    "title_en": "Hospital production, employment and input goods",
+    "title_ja": "病院の生産・雇用・投入財",
+    "crop": [
+      70,
+      110,
+      728,
+      1035
+    ],
+    "source": "originals/08_hospital_production.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/09_medical_company_prosperity.png",
+    "category": "Companies",
+    "title_en": "Medical corporation and prosperity bonuses",
+    "title_ja": "医療企業の繁栄ボーナス",
+    "crop": [
+      785,
+      807,
+      610,
+      632
+    ],
+    "source": "originals/09_medical_company_prosperity.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/10_transportation_methods.png",
+    "category": "Buildings",
+    "title_en": "Transportation: Farm Road, Flagstone, Asphalt and Expressway",
+    "title_ja": "道路の４種類の生産方式",
+    "crop": [
+      210,
+      560,
+      845,
+      740
+    ],
+    "source": "originals/10_transportation_methods.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/12_overseas_enterprises_journal.png",
+    "category": "Journals",
+    "title_en": "Establishment of Overseas Enterprises",
+    "title_ja": "従属国での企業設立ジャーナル",
+    "crop": [
+      70,
+      110,
+      728,
+      870
+    ],
+    "source": "originals/12_overseas_enterprises_journal.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/13_relocation_destination_selection.png",
+    "category": "Journals",
+    "title_en": "Choose a relocation destination",
+    "title_ja": "移住先の選択",
+    "crop": [
+      1303,
+      105,
+      695,
+      1310
+    ],
+    "source": "originals/13_relocation_destination_selection.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/14_relocation_journal.png",
+    "category": "Journals",
+    "title_en": "Abandonment Policy journal",
+    "title_ja": "移住政策ジャーナル",
+    "crop": [
+      70,
+      110,
+      728,
+      800
+    ],
+    "source": "originals/14_relocation_journal.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/15_overseas_company_location.png",
+    "category": "Journals",
+    "title_en": "Choose a subject for overseas company establishment",
+    "title_ja": "企業を設立する従属国の選択",
+    "crop": [
+      520,
+      190,
+      1525,
+      1065
+    ],
+    "source": "originals/15_overseas_company_location.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/16_overseas_company_type.png",
+    "category": "Journals",
+    "title_en": "Choose the company type",
+    "title_ja": "設立する企業の種類",
+    "crop": [
+      1295,
+      108,
+      700,
+      1305
+    ],
+    "source": "originals/16_overseas_company_type.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/17_nvgm_menu.png",
+    "category": "Statistics",
+    "title_en": "NVGM Menu",
+    "title_ja": "NVGM Menuの入口",
+    "crop": [
+      767,
+      608,
+      1028,
+      220
+    ],
+    "source": "originals/17_nvgm_menu.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/18_global_investment.png",
+    "category": "Statistics",
+    "title_en": "Global and foreign-investment-rights investment pools",
+    "title_ja": "世界と投資権保有国の投資プール",
+    "crop": [
+      312,
+      220,
+      1938,
+      1000
+    ],
+    "source": "originals/18_global_investment.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/19_global_ranking.png",
+    "category": "Statistics",
+    "title_en": "GDP Top 10 chart and comparison controls",
+    "title_ja": "GDP上位10か国と比較表示",
+    "crop": [
+      768,
+      160,
+      1028,
+      1120
+    ],
+    "source": "originals/19_global_ranking.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/20_subject_investment.png",
+    "category": "Statistics",
+    "title_en": "Overlord and subject investment pools",
+    "title_ja": "宗主国・従属国の投資プール",
+    "crop": [
+      768,
+      195,
+      1028,
+      905
+    ],
+    "source": "originals/20_subject_investment.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/21_subject_technology.png",
+    "category": "Statistics",
+    "title_en": "Compare researched technologies",
+    "title_ja": "従属国の研究済み技術数",
+    "crop": [
+      768,
+      195,
+      1028,
+      905
+    ],
+    "source": "originals/21_subject_technology.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/23_construction_quantity_dialog.png",
+    "category": "Treaties",
+    "title_en": "Enter a construction transfer quantity",
+    "title_ja": "建設力20の直接入力ダイアログ",
+    "crop": [
+      898,
+      478,
+      540,
+      288
+    ],
+    "source": "originals/23_construction_quantity_dialog.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/24_subject_actions.png",
+    "category": "Diplomacy",
+    "title_en": "Additional subject support actions",
+    "title_ja": "追加の従属国支援アクション",
+    "crop": [
+      80,
+      1110,
+      710,
+      195
+    ],
+    "source": "originals/24_subject_actions.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/25_security_assistance.png",
+    "category": "Diplomacy",
+    "title_en": "Security Maintenance Assistance: costs and effects",
+    "title_ja": "治安維持支援の費用・効果",
+    "crop": [
+      878,
+      385,
+      805,
+      666
+    ],
+    "source": "originals/25_security_assistance.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/26_food_aid.png",
+    "category": "Diplomacy",
+    "title_en": "Food Aid: weekly cost and effects",
+    "title_ja": "食糧支援の週次費用・効果",
+    "crop": [
+      878,
+      275,
+      805,
+      890
+    ],
+    "source": "originals/26_food_aid.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/27_policy_support.png",
+    "category": "Diplomacy",
+    "title_en": "Policy Support: enactment bonuses and costs",
+    "title_ja": "政策支援の立法ボーナス・費用",
+    "crop": [
+      878,
+      455,
+      805,
+      530
+    ],
+    "source": "originals/27_policy_support.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/28_relocation_event.png",
+    "category": "Journals",
+    "title_en": "Implementation of Relocation event",
+    "title_ja": "移住政策の継続イベント",
+    "crop": [
+      520,
+      255,
+      1525,
+      925
+    ],
+    "source": "originals/28_relocation_event.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  },
+  {
+    "file": "closeups/29_envoy_conditions.png",
+    "category": "Diplomacy",
+    "title_en": "Send Diplomatic Envoy: effects and eligibility",
+    "title_ja": "使節派遣の効果と実行条件（対象は条件未達）",
+    "crop": [
+      787,
+      1055,
+      733,
+      385
+    ],
+    "source": "originals/29_envoy_conditions.jpg",
+    "session": "expanded feature photography session",
+    "public_candidate": true
+  }
+]
