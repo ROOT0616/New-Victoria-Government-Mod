@@ -58,38 +58,3 @@ decisions_nvgm_abandonment_policy = {
 	}
 }
 
-decisions_nvgm_repair_support = {
-	is_shown = {
-		always = yes
-	}
-	possible = {
-		always = yes
-	}
-	when_taken = {
-		custom_tooltip = decisions_nvgm_repair_support_tt
-		hidden_effect = {
-			nvgm_repair_support_effect = yes
-		}
-	}
-	ai_chance = {
-		value = 0
-	}
-}
-
-decisions_nvgm_stop_all_support = {
-	is_shown = {
-		always = yes
-	}
-	possible = {
-		always = yes
-	}
-	when_taken = {
-		custom_tooltip = decisions_nvgm_stop_all_support_tt
-		hidden_effect = {
-			nvgm_stop_all_support_effect = yes
-		}
-	}
-	ai_chance = {
-		value = 0
-	}
-}

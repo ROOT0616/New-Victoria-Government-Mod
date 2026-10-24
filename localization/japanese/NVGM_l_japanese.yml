@@ -546,18 +546,6 @@
  nvgm_expand_army_infrastructure:0 "兵舎を拡張"
  nvgm_expand_navy_infrastructure:0 "海軍管理局を拡張"
  nvgm_military_infrastructure_tt:0 "建設可能な従属国の州に国費で1棟を建設予約します。海軍管理局の建設で艦船は生成されません。"
-
- decisions_nvgm_repair_support:0 "NVGM支援の記録を修復"
-
- decisions_nvgm_repair_support_desc:0 "支援契約の記録を照合し、不正な効果を回収します。有効な支援は維持します。2.1.1より前の、支払国を記録していないNVGM外交支援は終了するため、必要な支援を再設定してください。"
-
- decisions_nvgm_repair_support_tt:0 "移譲記録を修復し、関係や必要な資金援助が失効した支援を終了します。無関係な条約条項や、元からの助成は変更しません。"
-
- decisions_nvgm_stop_all_support:0 "自国に関わるNVGM支援をすべて停止"
-
- decisions_nvgm_stop_all_support_desc:0 "自国が受ける・与えるNVGM移譲、NVGM外交支援、このMODが新たに有効にした助成を終了します。独立後も利用できます。他国間の支援や一般の条約条項は維持します。"
-
- decisions_nvgm_stop_all_support_tt:0 "自国に関わるNVGM支援をすべて終了します。企業設立時を含め、NVGMが新たに有効にし記録した助成も停止します。継続したい支援は再設定してください。"
  nvgm_contract_core_notice:0 "支援契約：一般援助と助成を追跡します。助成実費の自動補填は未搭載です。"
  nvgm_subsidy_contract_stop:0 "管理中の助成を終了"
  nvgm_subsidy_contract_stop_tt:0 "この国の管理中の助成契約を終了します。NVGMが有効化した助成だけを解除します。独立後も、受益国または元の実行国から終了できます。"

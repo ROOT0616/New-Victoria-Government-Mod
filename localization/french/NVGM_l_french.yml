@@ -546,18 +546,6 @@
  nvgm_expand_army_infrastructure:0 "Agrandir les casernes"
  nvgm_expand_navy_infrastructure:0 "Agrandir l’admin. navale"
  nvgm_military_infrastructure_tt:0 "Ajoute un bâtiment financé par le gouvernement dans un État admissible du sujet. L’administration navale ne construit pas de navires."
-
- decisions_nvgm_repair_support:0 "Réparer les aides NVGM"
-
- decisions_nvgm_repair_support_desc:0 "Réconcilie les contrats et supprime les effets invalides. Les aides valides sont conservées. Les anciennes aides sans financeur enregistré prennent fin et doivent être recréées."
-
- decisions_nvgm_repair_support_tt:0 "Répare les transferts et termine les aides expirées. Préserve les autres clauses et les subventions préexistantes."
-
- decisions_nvgm_stop_all_support:0 "Arrêter toutes les aides NVGM de ce pays"
-
- decisions_nvgm_stop_all_support_desc:0 "Termine les transferts entrants et sortants, les aides diplomatiques et les subventions activées par NVGM, même après l’indépendance. Les autres traités sont préservés."
-
- decisions_nvgm_stop_all_support_tt:0 "Désactive aussi les subventions suivies par NVGM lors de la création d’entreprises. Recréez ensuite les aides souhaitées."
  nvgm_contract_core_notice:0 "Support contracts: tracked aid. Actual subsidy reimbursement is not enabled."
  nvgm_subsidy_contract_stop:0 "End managed subsidies"
  nvgm_subsidy_contract_stop_tt:0 "End this country’s managed subsidy contract. Only subsidies enabled by NVGM are disabled. The recipient or original sponsor can end the contract even after independence."

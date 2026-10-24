@@ -546,18 +546,6 @@
  nvgm_expand_army_infrastructure:0 "병영 확장"
  nvgm_expand_navy_infrastructure:0 "해군 행정청 확장"
  nvgm_military_infrastructure_tt:0 "조건을 충족하는 종속국 주에 정부 자금 건물 하나를 건설 대기열에 추가합니다. 해군 행정청은 함선을 건조하지 않습니다."
-
- decisions_nvgm_repair_support:0 "NVGM 지원 기록 복구"
-
- decisions_nvgm_repair_support_desc:0 "계약을 정리하고 무효 효과를 제거합니다. 유효한 지원은 유지됩니다. 후원국 기록이 없는 구버전 지원은 종료되므로 다시 설정해야 합니다."
-
- decisions_nvgm_repair_support_tt:0 "이전 기록을 복구하고 만료된 지원을 종료합니다. 다른 조항과 기존 보조금은 유지합니다."
-
- decisions_nvgm_stop_all_support:0 "이 국가의 모든 NVGM 지원 종료"
-
- decisions_nvgm_stop_all_support_desc:0 "독립 후에도 수신·제공 이전, 외교 지원, NVGM이 활성화한 보조금을 종료합니다. 다른 조약은 유지됩니다."
-
- decisions_nvgm_stop_all_support_tt:0 "기업 설립 지원을 포함해 NVGM이 추적하는 보조금도 해제합니다. 필요한 지원은 이후 다시 설정하십시오."
  nvgm_contract_core_notice:0 "Support contracts: tracked aid. Actual subsidy reimbursement is not enabled."
  nvgm_subsidy_contract_stop:0 "End managed subsidies"
  nvgm_subsidy_contract_stop_tt:0 "End this country’s managed subsidy contract. Only subsidies enabled by NVGM are disabled. The recipient or original sponsor can end the contract even after independence."

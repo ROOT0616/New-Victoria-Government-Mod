@@ -546,18 +546,6 @@
  nvgm_expand_army_infrastructure:0 "Kışlaları genişlet"
  nvgm_expand_navy_infrastructure:0 "Deniz idaresini genişlet"
  nvgm_military_infrastructure_tt:0 "Bağlı ülkenin uygun bir vilayetinde devlet tarafından finanse edilen bir binayı inşaat sırasına ekler. Deniz idaresi gemi inşa etmez."
-
- decisions_nvgm_repair_support:0 "NVGM destek kayıtlarını onar"
-
- decisions_nvgm_repair_support_desc:0 "Sözleşmeleri uzlaştırır ve geçersiz etkileri kaldırır. Geçerli destek korunur. Kayıtlı destekçisi olmayan eski destek sona erer ve yeniden kurulmalıdır."
-
- decisions_nvgm_repair_support_tt:0 "Aktarım kayıtlarını onarır ve süresi dolan desteği bitirir. İlgisiz maddeler ve önceden var olan sübvansiyonlar korunur."
-
- decisions_nvgm_stop_all_support:0 "Bu ülkenin tüm NVGM desteğini bitir"
-
- decisions_nvgm_stop_all_support_desc:0 "Bağımsızlıktan sonra da gelen ve giden aktarımları, diplomatik desteği ve NVGM’nin açtığı sübvansiyonları bitirir. Diğer antlaşmalar korunur."
-
- decisions_nvgm_stop_all_support_tt:0 "Şirket kuruluşunda NVGM’nin izlediği sübvansiyonları da kapatır. İstenen desteği daha sonra yeniden kurun."
  nvgm_contract_core_notice:0 "Support contracts: tracked aid. Actual subsidy reimbursement is not enabled."
  nvgm_subsidy_contract_stop:0 "End managed subsidies"
  nvgm_subsidy_contract_stop_tt:0 "End this country’s managed subsidy contract. Only subsidies enabled by NVGM are disabled. The recipient or original sponsor can end the contract even after independence."

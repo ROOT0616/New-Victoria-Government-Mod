@@ -546,18 +546,6 @@
  nvgm_expand_army_infrastructure:0 "扩建兵营"
  nvgm_expand_navy_infrastructure:0 "扩建海军行政机构"
  nvgm_military_infrastructure_tt:0 "在附属国符合条件的地区加入一个政府出资的建筑项目。海军行政机构不会建造舰船。"
-
- decisions_nvgm_repair_support:0 "修复NVGM支援记录"
-
- decisions_nvgm_repair_support_desc:0 "核对合同并移除无效效果，保留有效支援。没有资助国记录的旧版支援将结束，需要重新建立。"
-
- decisions_nvgm_repair_support_tt:0 "修复移交记录并终止失效支援，保留无关条款和原有补贴。"
-
- decisions_nvgm_stop_all_support:0 "终止涉及本国的所有NVGM支援"
-
- decisions_nvgm_stop_all_support_desc:0 "即使已独立，也会终止流入和流出的移交、外交支援及NVGM启用的补贴。保留其他条约。"
-
- decisions_nvgm_stop_all_support_tt:0 "也会关闭NVGM追踪的企业设立补贴。请在之后重新建立所需支援。"
  nvgm_contract_core_notice:0 "Support contracts: tracked aid. Actual subsidy reimbursement is not enabled."
  nvgm_subsidy_contract_stop:0 "End managed subsidies"
  nvgm_subsidy_contract_stop_tt:0 "End this country’s managed subsidy contract. Only subsidies enabled by NVGM are disabled. The recipient or original sponsor can end the contract even after independence."
